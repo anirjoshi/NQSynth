@@ -1,0 +1,1 @@
+delta >= 0 /\ [ skoS + 1 > 0 \/ skoS^6 + 6 skoS^5 - 5 skoS^4 + 24 skoS^3 + 111 skoS^2 + 34 skoS - 7 > 0 ]

@@ -1,0 +1,1685 @@
+DEBUG:__main__:Starting Log File: dm_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_Arthan_M2_ArthanM2-chunk-0007.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoSINS', 'skoM']
+DEBUG:__main__:op_vars: ['skoCOSS', 'skoS']
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(Not(And(skoSINS*skoSINS - (1 + skoCOSS*skoCOSS*-1) <=
+                delta,
+                1 + skoCOSS*skoCOSS*-1 - skoSINS*skoSINS <=
+                delta)),
+        And(2 <= skoS, 2 <= skoM)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (2 <= skoM) & (2 <= skoS) & ~((skoCOSS**2 + skoSINS**2 - 1 <= delta) & (-skoCOSS**2 - skoSINS**2 + 1 <= delta)), {}
+DEBUG:__main__:vars sympy:['delta', 'skoM', 'skoS', 'skoSINS', 'skoCOSS']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoM': skoM, 'skoS': skoS, 'skoCOSS': skoCOSS, 'skoSINS': skoSINS}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    2 <= skoM,
+    2 <= skoS,
+    Not(And(-1 + skoCOSS**2 + skoSINS**2 <= delta,
+            1 + -1*skoCOSS**2 + -1*skoSINS**2 <= delta)))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1/2, skoM=2, skoS=2, skoCOSS=1/8, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:PRECOND_0: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 - 63/64) | (delta < 63/64 - skoSINS**2))
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:PRECOND_1: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 - 63/64) | (delta < 63/64 - skoSINS**2))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=63/64, skoM=2, skoS=2, skoCOSS=0, skoSINS=0
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:PRECOND_2: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 - 1) | (delta < 1 - skoSINS**2))
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:PRECOND_3: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 - 1) | (delta < 1 - skoSINS**2))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1/2, skoM=2, skoS=2, skoCOSS=-1, skoSINS=-1
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:PRECOND_4: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2) | (delta < -skoSINS**2))
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:PRECOND_5: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2) | (delta < -skoSINS**2))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=5, skoM=2, skoS=2, skoCOSS=2, skoSINS=-2
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:PRECOND_6: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 3) | (delta < -skoSINS**2 - 3))
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:PRECOND_7: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 3) | (delta < -skoSINS**2 - 3))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=4, skoM=2, skoS=2, skoCOSS=3, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:PRECOND_8: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 8) | (delta < -skoSINS**2 - 8))
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:PRECOND_9: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 8) | (delta < -skoSINS**2 - 8))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=9, skoM=2, skoS=2, skoCOSS=4, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:PRECOND_10: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 15) | (delta < -skoSINS**2 - 15))
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:PRECOND_11: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 15) | (delta < -skoSINS**2 - 15))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=16, skoM=2, skoS=2, skoCOSS=5, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:PRECOND_12: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 24) | (delta < -skoSINS**2 - 24))
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:PRECOND_13: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 24) | (delta < -skoSINS**2 - 24))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=25, skoM=2, skoS=2, skoCOSS=6, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:PRECOND_14: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 35) | (delta < -skoSINS**2 - 35))
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:PRECOND_15: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 35) | (delta < -skoSINS**2 - 35))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=36, skoM=2, skoS=2, skoCOSS=7, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:PRECOND_16: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 48) | (delta < -skoSINS**2 - 48))
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:PRECOND_17: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 48) | (delta < -skoSINS**2 - 48))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=49, skoM=2, skoS=2, skoCOSS=8, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:PRECOND_18: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 63) | (delta < -skoSINS**2 - 63))
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:PRECOND_19: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 63) | (delta < -skoSINS**2 - 63))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=64, skoM=2, skoS=2, skoCOSS=9, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 20---------
+DEBUG:__main__:PRECOND_20: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 80) | (delta < -skoSINS**2 - 80))
+DEBUG:__main__:---------pre-condition 21---------
+DEBUG:__main__:PRECOND_21: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 80) | (delta < -skoSINS**2 - 80))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=81, skoM=2, skoS=2, skoCOSS=10, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 22---------
+DEBUG:__main__:PRECOND_22: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 99) | (delta < -skoSINS**2 - 99))
+DEBUG:__main__:---------pre-condition 23---------
+DEBUG:__main__:PRECOND_23: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 99) | (delta < -skoSINS**2 - 99))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=100, skoM=2, skoS=2, skoCOSS=11, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 24---------
+DEBUG:__main__:PRECOND_24: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 120) | (delta < -skoSINS**2 - 120))
+DEBUG:__main__:---------pre-condition 25---------
+DEBUG:__main__:PRECOND_25: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 120) | (delta < -skoSINS**2 - 120))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=121, skoM=2, skoS=2, skoCOSS=12, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 26---------
+DEBUG:__main__:PRECOND_26: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 143) | (delta < -skoSINS**2 - 143))
+DEBUG:__main__:---------pre-condition 27---------
+DEBUG:__main__:PRECOND_27: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 143) | (delta < -skoSINS**2 - 143))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=144, skoM=2, skoS=2, skoCOSS=13, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 28---------
+DEBUG:__main__:PRECOND_28: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 168) | (delta < -skoSINS**2 - 168))
+DEBUG:__main__:---------pre-condition 29---------
+DEBUG:__main__:PRECOND_29: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 168) | (delta < -skoSINS**2 - 168))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=169, skoM=2, skoS=2, skoCOSS=14, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 30---------
+DEBUG:__main__:PRECOND_30: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 195) | (delta < -skoSINS**2 - 195))
+DEBUG:__main__:---------pre-condition 31---------
+DEBUG:__main__:PRECOND_31: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 195) | (delta < -skoSINS**2 - 195))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=196, skoM=2, skoS=2, skoCOSS=15, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 32---------
+DEBUG:__main__:PRECOND_32: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 224) | (delta < -skoSINS**2 - 224))
+DEBUG:__main__:---------pre-condition 33---------
+DEBUG:__main__:PRECOND_33: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 224) | (delta < -skoSINS**2 - 224))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=225, skoM=2, skoS=2, skoCOSS=16, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 34---------
+DEBUG:__main__:PRECOND_34: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 255) | (delta < -skoSINS**2 - 255))
+DEBUG:__main__:---------pre-condition 35---------
+DEBUG:__main__:PRECOND_35: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 255) | (delta < -skoSINS**2 - 255))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=256, skoM=2, skoS=2, skoCOSS=17, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 36---------
+DEBUG:__main__:PRECOND_36: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 288) | (delta < -skoSINS**2 - 288))
+DEBUG:__main__:---------pre-condition 37---------
+DEBUG:__main__:PRECOND_37: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 288) | (delta < -skoSINS**2 - 288))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=289, skoM=2, skoS=2, skoCOSS=18, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 38---------
+DEBUG:__main__:PRECOND_38: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 323) | (delta < -skoSINS**2 - 323))
+DEBUG:__main__:---------pre-condition 39---------
+DEBUG:__main__:PRECOND_39: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 323) | (delta < -skoSINS**2 - 323))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=324, skoM=2, skoS=2, skoCOSS=19, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 40---------
+DEBUG:__main__:PRECOND_40: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 360) | (delta < -skoSINS**2 - 360))
+DEBUG:__main__:---------pre-condition 41---------
+DEBUG:__main__:PRECOND_41: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 360) | (delta < -skoSINS**2 - 360))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=361, skoM=2, skoS=2, skoCOSS=20, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 42---------
+DEBUG:__main__:PRECOND_42: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 399) | (delta < -skoSINS**2 - 399))
+DEBUG:__main__:---------pre-condition 43---------
+DEBUG:__main__:PRECOND_43: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 399) | (delta < -skoSINS**2 - 399))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=400, skoM=2, skoS=2, skoCOSS=21, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 44---------
+DEBUG:__main__:PRECOND_44: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 440) | (delta < -skoSINS**2 - 440))
+DEBUG:__main__:---------pre-condition 45---------
+DEBUG:__main__:PRECOND_45: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 440) | (delta < -skoSINS**2 - 440))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=441, skoM=2, skoS=2, skoCOSS=22, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 46---------
+DEBUG:__main__:PRECOND_46: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 483) | (delta < -skoSINS**2 - 483))
+DEBUG:__main__:---------pre-condition 47---------
+DEBUG:__main__:PRECOND_47: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 483) | (delta < -skoSINS**2 - 483))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=484, skoM=2, skoS=2, skoCOSS=23, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 48---------
+DEBUG:__main__:PRECOND_48: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 528) | (delta < -skoSINS**2 - 528))
+DEBUG:__main__:---------pre-condition 49---------
+DEBUG:__main__:PRECOND_49: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 528) | (delta < -skoSINS**2 - 528))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=529, skoM=2, skoS=2, skoCOSS=24, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 50---------
+DEBUG:__main__:PRECOND_50: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 575) | (delta < -skoSINS**2 - 575))
+DEBUG:__main__:---------pre-condition 51---------
+DEBUG:__main__:PRECOND_51: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 575) | (delta < -skoSINS**2 - 575))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=576, skoM=2, skoS=2, skoCOSS=25, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 52---------
+DEBUG:__main__:PRECOND_52: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 624) | (delta < -skoSINS**2 - 624))
+DEBUG:__main__:---------pre-condition 53---------
+DEBUG:__main__:PRECOND_53: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 624) | (delta < -skoSINS**2 - 624))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=625, skoM=2, skoS=2, skoCOSS=26, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 54---------
+DEBUG:__main__:PRECOND_54: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 675) | (delta < -skoSINS**2 - 675))
+DEBUG:__main__:---------pre-condition 55---------
+DEBUG:__main__:PRECOND_55: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 675) | (delta < -skoSINS**2 - 675))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=676, skoM=2, skoS=2, skoCOSS=27, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 56---------
+DEBUG:__main__:PRECOND_56: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 728) | (delta < -skoSINS**2 - 728))
+DEBUG:__main__:---------pre-condition 57---------
+DEBUG:__main__:PRECOND_57: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 728) | (delta < -skoSINS**2 - 728))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=729, skoM=2, skoS=2, skoCOSS=28, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 58---------
+DEBUG:__main__:PRECOND_58: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 783) | (delta < -skoSINS**2 - 783))
+DEBUG:__main__:---------pre-condition 59---------
+DEBUG:__main__:PRECOND_59: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 783) | (delta < -skoSINS**2 - 783))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=784, skoM=2, skoS=2, skoCOSS=29, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 60---------
+DEBUG:__main__:PRECOND_60: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 840) | (delta < -skoSINS**2 - 840))
+DEBUG:__main__:---------pre-condition 61---------
+DEBUG:__main__:PRECOND_61: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 840) | (delta < -skoSINS**2 - 840))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=841, skoM=2, skoS=2, skoCOSS=30, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 62---------
+DEBUG:__main__:PRECOND_62: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 899) | (delta < -skoSINS**2 - 899))
+DEBUG:__main__:---------pre-condition 63---------
+DEBUG:__main__:PRECOND_63: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 899) | (delta < -skoSINS**2 - 899))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=900, skoM=2, skoS=2, skoCOSS=31, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 64---------
+DEBUG:__main__:PRECOND_64: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 960) | (delta < -skoSINS**2 - 960))
+DEBUG:__main__:---------pre-condition 65---------
+DEBUG:__main__:PRECOND_65: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 960) | (delta < -skoSINS**2 - 960))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=961, skoM=2, skoS=2, skoCOSS=32, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 66---------
+DEBUG:__main__:PRECOND_66: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 1023) | (delta < -skoSINS**2 - 1023))
+DEBUG:__main__:---------pre-condition 67---------
+DEBUG:__main__:PRECOND_67: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 1023) | (delta < -skoSINS**2 - 1023))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1024, skoM=2, skoS=2, skoCOSS=33, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 68---------
+DEBUG:__main__:PRECOND_68: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 1088) | (delta < -skoSINS**2 - 1088))
+DEBUG:__main__:---------pre-condition 69---------
+DEBUG:__main__:PRECOND_69: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 1088) | (delta < -skoSINS**2 - 1088))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1089, skoM=2, skoS=2, skoCOSS=34, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 70---------
+DEBUG:__main__:PRECOND_70: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 1155) | (delta < -skoSINS**2 - 1155))
+DEBUG:__main__:---------pre-condition 71---------
+DEBUG:__main__:PRECOND_71: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 1155) | (delta < -skoSINS**2 - 1155))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1156, skoM=2, skoS=2, skoCOSS=35, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 72---------
+DEBUG:__main__:PRECOND_72: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 1224) | (delta < -skoSINS**2 - 1224))
+DEBUG:__main__:---------pre-condition 73---------
+DEBUG:__main__:PRECOND_73: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 1224) | (delta < -skoSINS**2 - 1224))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1225, skoM=2, skoS=2, skoCOSS=36, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 74---------
+DEBUG:__main__:PRECOND_74: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 1295) | (delta < -skoSINS**2 - 1295))
+DEBUG:__main__:---------pre-condition 75---------
+DEBUG:__main__:PRECOND_75: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 1295) | (delta < -skoSINS**2 - 1295))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1296, skoM=2, skoS=2, skoCOSS=37, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 76---------
+DEBUG:__main__:PRECOND_76: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 1368) | (delta < -skoSINS**2 - 1368))
+DEBUG:__main__:---------pre-condition 77---------
+DEBUG:__main__:PRECOND_77: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 1368) | (delta < -skoSINS**2 - 1368))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1369, skoM=2, skoS=2, skoCOSS=38, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 78---------
+DEBUG:__main__:PRECOND_78: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 1443) | (delta < -skoSINS**2 - 1443))
+DEBUG:__main__:---------pre-condition 79---------
+DEBUG:__main__:PRECOND_79: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 1443) | (delta < -skoSINS**2 - 1443))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1444, skoM=2, skoS=2, skoCOSS=39, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 80---------
+DEBUG:__main__:PRECOND_80: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 1520) | (delta < -skoSINS**2 - 1520))
+DEBUG:__main__:---------pre-condition 81---------
+DEBUG:__main__:PRECOND_81: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 1520) | (delta < -skoSINS**2 - 1520))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1521, skoM=2, skoS=2, skoCOSS=40, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 82---------
+DEBUG:__main__:PRECOND_82: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 1599) | (delta < -skoSINS**2 - 1599))
+DEBUG:__main__:---------pre-condition 83---------
+DEBUG:__main__:PRECOND_83: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 1599) | (delta < -skoSINS**2 - 1599))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1600, skoM=2, skoS=2, skoCOSS=41, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 84---------
+DEBUG:__main__:PRECOND_84: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 1680) | (delta < -skoSINS**2 - 1680))
+DEBUG:__main__:---------pre-condition 85---------
+DEBUG:__main__:PRECOND_85: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 1680) | (delta < -skoSINS**2 - 1680))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1681, skoM=2, skoS=2, skoCOSS=42, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 86---------
+DEBUG:__main__:PRECOND_86: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 1763) | (delta < -skoSINS**2 - 1763))
+DEBUG:__main__:---------pre-condition 87---------
+DEBUG:__main__:PRECOND_87: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 1763) | (delta < -skoSINS**2 - 1763))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1764, skoM=2, skoS=2, skoCOSS=43, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 88---------
+DEBUG:__main__:PRECOND_88: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 1848) | (delta < -skoSINS**2 - 1848))
+DEBUG:__main__:---------pre-condition 89---------
+DEBUG:__main__:PRECOND_89: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 1848) | (delta < -skoSINS**2 - 1848))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1849, skoM=2, skoS=2, skoCOSS=44, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 90---------
+DEBUG:__main__:PRECOND_90: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 1935) | (delta < -skoSINS**2 - 1935))
+DEBUG:__main__:---------pre-condition 91---------
+DEBUG:__main__:PRECOND_91: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 1935) | (delta < -skoSINS**2 - 1935))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1936, skoM=2, skoS=2, skoCOSS=45, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 92---------
+DEBUG:__main__:PRECOND_92: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 2024) | (delta < -skoSINS**2 - 2024))
+DEBUG:__main__:---------pre-condition 93---------
+DEBUG:__main__:PRECOND_93: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 2024) | (delta < -skoSINS**2 - 2024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=2025, skoM=2, skoS=2, skoCOSS=46, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 94---------
+DEBUG:__main__:PRECOND_94: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 2115) | (delta < -skoSINS**2 - 2115))
+DEBUG:__main__:---------pre-condition 95---------
+DEBUG:__main__:PRECOND_95: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 2115) | (delta < -skoSINS**2 - 2115))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=2116, skoM=2, skoS=2, skoCOSS=47, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 96---------
+DEBUG:__main__:PRECOND_96: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 2208) | (delta < -skoSINS**2 - 2208))
+DEBUG:__main__:---------pre-condition 97---------
+DEBUG:__main__:PRECOND_97: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 2208) | (delta < -skoSINS**2 - 2208))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=2209, skoM=2, skoS=2, skoCOSS=48, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 98---------
+DEBUG:__main__:PRECOND_98: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 2303) | (delta < -skoSINS**2 - 2303))
+DEBUG:__main__:---------pre-condition 99---------
+DEBUG:__main__:PRECOND_99: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 2303) | (delta < -skoSINS**2 - 2303))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=2304, skoM=2, skoS=2, skoCOSS=49, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 100---------
+DEBUG:__main__:PRECOND_100: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 2400) | (delta < -skoSINS**2 - 2400))
+DEBUG:__main__:---------pre-condition 101---------
+DEBUG:__main__:PRECOND_101: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 2400) | (delta < -skoSINS**2 - 2400))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=2401, skoM=2, skoS=2, skoCOSS=50, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 102---------
+DEBUG:__main__:PRECOND_102: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 2499) | (delta < -skoSINS**2 - 2499))
+DEBUG:__main__:---------pre-condition 103---------
+DEBUG:__main__:PRECOND_103: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 2499) | (delta < -skoSINS**2 - 2499))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=2500, skoM=2, skoS=2, skoCOSS=51, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 104---------
+DEBUG:__main__:PRECOND_104: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 2600) | (delta < -skoSINS**2 - 2600))
+DEBUG:__main__:---------pre-condition 105---------
+DEBUG:__main__:PRECOND_105: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 2600) | (delta < -skoSINS**2 - 2600))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=2601, skoM=2, skoS=2, skoCOSS=52, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 106---------
+DEBUG:__main__:PRECOND_106: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 2703) | (delta < -skoSINS**2 - 2703))
+DEBUG:__main__:---------pre-condition 107---------
+DEBUG:__main__:PRECOND_107: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 2703) | (delta < -skoSINS**2 - 2703))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=2704, skoM=2, skoS=2, skoCOSS=53, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 108---------
+DEBUG:__main__:PRECOND_108: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 2808) | (delta < -skoSINS**2 - 2808))
+DEBUG:__main__:---------pre-condition 109---------
+DEBUG:__main__:PRECOND_109: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 2808) | (delta < -skoSINS**2 - 2808))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=2809, skoM=2, skoS=2, skoCOSS=54, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 110---------
+DEBUG:__main__:PRECOND_110: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 2915) | (delta < -skoSINS**2 - 2915))
+DEBUG:__main__:---------pre-condition 111---------
+DEBUG:__main__:PRECOND_111: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 2915) | (delta < -skoSINS**2 - 2915))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=2916, skoM=2, skoS=2, skoCOSS=55, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 112---------
+DEBUG:__main__:PRECOND_112: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 3024) | (delta < -skoSINS**2 - 3024))
+DEBUG:__main__:---------pre-condition 113---------
+DEBUG:__main__:PRECOND_113: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 3024) | (delta < -skoSINS**2 - 3024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=3025, skoM=2, skoS=2, skoCOSS=56, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 114---------
+DEBUG:__main__:PRECOND_114: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 3135) | (delta < -skoSINS**2 - 3135))
+DEBUG:__main__:---------pre-condition 115---------
+DEBUG:__main__:PRECOND_115: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 3135) | (delta < -skoSINS**2 - 3135))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=3136, skoM=2, skoS=2, skoCOSS=57, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 116---------
+DEBUG:__main__:PRECOND_116: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 3248) | (delta < -skoSINS**2 - 3248))
+DEBUG:__main__:---------pre-condition 117---------
+DEBUG:__main__:PRECOND_117: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 3248) | (delta < -skoSINS**2 - 3248))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=3249, skoM=2, skoS=2, skoCOSS=58, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 118---------
+DEBUG:__main__:PRECOND_118: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 3363) | (delta < -skoSINS**2 - 3363))
+DEBUG:__main__:---------pre-condition 119---------
+DEBUG:__main__:PRECOND_119: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 3363) | (delta < -skoSINS**2 - 3363))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=3364, skoM=2, skoS=2, skoCOSS=59, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 120---------
+DEBUG:__main__:PRECOND_120: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 3480) | (delta < -skoSINS**2 - 3480))
+DEBUG:__main__:---------pre-condition 121---------
+DEBUG:__main__:PRECOND_121: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 3480) | (delta < -skoSINS**2 - 3480))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=3481, skoM=2, skoS=2, skoCOSS=60, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 122---------
+DEBUG:__main__:PRECOND_122: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 3599) | (delta < -skoSINS**2 - 3599))
+DEBUG:__main__:---------pre-condition 123---------
+DEBUG:__main__:PRECOND_123: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 3599) | (delta < -skoSINS**2 - 3599))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=3600, skoM=2, skoS=2, skoCOSS=61, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 124---------
+DEBUG:__main__:PRECOND_124: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 3720) | (delta < -skoSINS**2 - 3720))
+DEBUG:__main__:---------pre-condition 125---------
+DEBUG:__main__:PRECOND_125: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 3720) | (delta < -skoSINS**2 - 3720))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=3721, skoM=2, skoS=2, skoCOSS=62, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 126---------
+DEBUG:__main__:PRECOND_126: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 3843) | (delta < -skoSINS**2 - 3843))
+DEBUG:__main__:---------pre-condition 127---------
+DEBUG:__main__:PRECOND_127: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 3843) | (delta < -skoSINS**2 - 3843))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=3844, skoM=2, skoS=2, skoCOSS=63, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 128---------
+DEBUG:__main__:PRECOND_128: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 3968) | (delta < -skoSINS**2 - 3968))
+DEBUG:__main__:---------pre-condition 129---------
+DEBUG:__main__:PRECOND_129: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 3968) | (delta < -skoSINS**2 - 3968))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=3969, skoM=2, skoS=2, skoCOSS=64, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 130---------
+DEBUG:__main__:PRECOND_130: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 4095) | (delta < -skoSINS**2 - 4095))
+DEBUG:__main__:---------pre-condition 131---------
+DEBUG:__main__:PRECOND_131: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 4095) | (delta < -skoSINS**2 - 4095))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=4096, skoM=2, skoS=2, skoCOSS=65, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 132---------
+DEBUG:__main__:PRECOND_132: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 4224) | (delta < -skoSINS**2 - 4224))
+DEBUG:__main__:---------pre-condition 133---------
+DEBUG:__main__:PRECOND_133: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 4224) | (delta < -skoSINS**2 - 4224))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=4225, skoM=2, skoS=2, skoCOSS=66, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 134---------
+DEBUG:__main__:PRECOND_134: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 4355) | (delta < -skoSINS**2 - 4355))
+DEBUG:__main__:---------pre-condition 135---------
+DEBUG:__main__:PRECOND_135: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 4355) | (delta < -skoSINS**2 - 4355))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=4356, skoM=2, skoS=2, skoCOSS=67, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 136---------
+DEBUG:__main__:PRECOND_136: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 4488) | (delta < -skoSINS**2 - 4488))
+DEBUG:__main__:---------pre-condition 137---------
+DEBUG:__main__:PRECOND_137: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 4488) | (delta < -skoSINS**2 - 4488))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=4489, skoM=2, skoS=2, skoCOSS=68, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 138---------
+DEBUG:__main__:PRECOND_138: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 4623) | (delta < -skoSINS**2 - 4623))
+DEBUG:__main__:---------pre-condition 139---------
+DEBUG:__main__:PRECOND_139: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 4623) | (delta < -skoSINS**2 - 4623))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=4624, skoM=2, skoS=2, skoCOSS=69, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 140---------
+DEBUG:__main__:PRECOND_140: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 4760) | (delta < -skoSINS**2 - 4760))
+DEBUG:__main__:---------pre-condition 141---------
+DEBUG:__main__:PRECOND_141: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 4760) | (delta < -skoSINS**2 - 4760))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=4761, skoM=2, skoS=2, skoCOSS=70, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 142---------
+DEBUG:__main__:PRECOND_142: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 4899) | (delta < -skoSINS**2 - 4899))
+DEBUG:__main__:---------pre-condition 143---------
+DEBUG:__main__:PRECOND_143: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 4899) | (delta < -skoSINS**2 - 4899))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=4900, skoM=2, skoS=2, skoCOSS=71, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 144---------
+DEBUG:__main__:PRECOND_144: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 5040) | (delta < -skoSINS**2 - 5040))
+DEBUG:__main__:---------pre-condition 145---------
+DEBUG:__main__:PRECOND_145: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 5040) | (delta < -skoSINS**2 - 5040))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=5041, skoM=2, skoS=2, skoCOSS=72, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 146---------
+DEBUG:__main__:PRECOND_146: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 5183) | (delta < -skoSINS**2 - 5183))
+DEBUG:__main__:---------pre-condition 147---------
+DEBUG:__main__:PRECOND_147: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 5183) | (delta < -skoSINS**2 - 5183))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=5184, skoM=2, skoS=2, skoCOSS=73, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 148---------
+DEBUG:__main__:PRECOND_148: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 5328) | (delta < -skoSINS**2 - 5328))
+DEBUG:__main__:---------pre-condition 149---------
+DEBUG:__main__:PRECOND_149: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 5328) | (delta < -skoSINS**2 - 5328))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=5329, skoM=2, skoS=2, skoCOSS=74, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 150---------
+DEBUG:__main__:PRECOND_150: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 5475) | (delta < -skoSINS**2 - 5475))
+DEBUG:__main__:---------pre-condition 151---------
+DEBUG:__main__:PRECOND_151: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 5475) | (delta < -skoSINS**2 - 5475))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=5476, skoM=2, skoS=2, skoCOSS=75, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 152---------
+DEBUG:__main__:PRECOND_152: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 5624) | (delta < -skoSINS**2 - 5624))
+DEBUG:__main__:---------pre-condition 153---------
+DEBUG:__main__:PRECOND_153: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 5624) | (delta < -skoSINS**2 - 5624))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=5625, skoM=2, skoS=2, skoCOSS=76, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 154---------
+DEBUG:__main__:PRECOND_154: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 5775) | (delta < -skoSINS**2 - 5775))
+DEBUG:__main__:---------pre-condition 155---------
+DEBUG:__main__:PRECOND_155: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 5775) | (delta < -skoSINS**2 - 5775))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=5776, skoM=2, skoS=2, skoCOSS=77, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 156---------
+DEBUG:__main__:PRECOND_156: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 5928) | (delta < -skoSINS**2 - 5928))
+DEBUG:__main__:---------pre-condition 157---------
+DEBUG:__main__:PRECOND_157: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 5928) | (delta < -skoSINS**2 - 5928))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=5929, skoM=2, skoS=2, skoCOSS=78, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 158---------
+DEBUG:__main__:PRECOND_158: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 6083) | (delta < -skoSINS**2 - 6083))
+DEBUG:__main__:---------pre-condition 159---------
+DEBUG:__main__:PRECOND_159: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 6083) | (delta < -skoSINS**2 - 6083))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=6084, skoM=2, skoS=2, skoCOSS=79, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 160---------
+DEBUG:__main__:PRECOND_160: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 6240) | (delta < -skoSINS**2 - 6240))
+DEBUG:__main__:---------pre-condition 161---------
+DEBUG:__main__:PRECOND_161: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 6240) | (delta < -skoSINS**2 - 6240))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=6241, skoM=2, skoS=2, skoCOSS=80, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 162---------
+DEBUG:__main__:PRECOND_162: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 6399) | (delta < -skoSINS**2 - 6399))
+DEBUG:__main__:---------pre-condition 163---------
+DEBUG:__main__:PRECOND_163: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 6399) | (delta < -skoSINS**2 - 6399))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=6400, skoM=2, skoS=2, skoCOSS=81, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 164---------
+DEBUG:__main__:PRECOND_164: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 6560) | (delta < -skoSINS**2 - 6560))
+DEBUG:__main__:---------pre-condition 165---------
+DEBUG:__main__:PRECOND_165: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 6560) | (delta < -skoSINS**2 - 6560))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=6561, skoM=2, skoS=2, skoCOSS=82, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 166---------
+DEBUG:__main__:PRECOND_166: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 6723) | (delta < -skoSINS**2 - 6723))
+DEBUG:__main__:---------pre-condition 167---------
+DEBUG:__main__:PRECOND_167: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 6723) | (delta < -skoSINS**2 - 6723))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=6724, skoM=2, skoS=2, skoCOSS=83, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 168---------
+DEBUG:__main__:PRECOND_168: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 6888) | (delta < -skoSINS**2 - 6888))
+DEBUG:__main__:---------pre-condition 169---------
+DEBUG:__main__:PRECOND_169: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 6888) | (delta < -skoSINS**2 - 6888))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=6889, skoM=2, skoS=2, skoCOSS=84, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 170---------
+DEBUG:__main__:PRECOND_170: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 7055) | (delta < -skoSINS**2 - 7055))
+DEBUG:__main__:---------pre-condition 171---------
+DEBUG:__main__:PRECOND_171: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 7055) | (delta < -skoSINS**2 - 7055))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=7056, skoM=2, skoS=2, skoCOSS=85, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 172---------
+DEBUG:__main__:PRECOND_172: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 7224) | (delta < -skoSINS**2 - 7224))
+DEBUG:__main__:---------pre-condition 173---------
+DEBUG:__main__:PRECOND_173: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 7224) | (delta < -skoSINS**2 - 7224))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=7225, skoM=2, skoS=2, skoCOSS=86, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 174---------
+DEBUG:__main__:PRECOND_174: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 7395) | (delta < -skoSINS**2 - 7395))
+DEBUG:__main__:---------pre-condition 175---------
+DEBUG:__main__:PRECOND_175: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 7395) | (delta < -skoSINS**2 - 7395))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=7396, skoM=2, skoS=2, skoCOSS=87, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 176---------
+DEBUG:__main__:PRECOND_176: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 7568) | (delta < -skoSINS**2 - 7568))
+DEBUG:__main__:---------pre-condition 177---------
+DEBUG:__main__:PRECOND_177: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 7568) | (delta < -skoSINS**2 - 7568))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=7569, skoM=2, skoS=2, skoCOSS=88, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 178---------
+DEBUG:__main__:PRECOND_178: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 7743) | (delta < -skoSINS**2 - 7743))
+DEBUG:__main__:---------pre-condition 179---------
+DEBUG:__main__:PRECOND_179: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 7743) | (delta < -skoSINS**2 - 7743))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=7744, skoM=2, skoS=2, skoCOSS=89, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 180---------
+DEBUG:__main__:PRECOND_180: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 7920) | (delta < -skoSINS**2 - 7920))
+DEBUG:__main__:---------pre-condition 181---------
+DEBUG:__main__:PRECOND_181: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 7920) | (delta < -skoSINS**2 - 7920))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=7921, skoM=2, skoS=2, skoCOSS=90, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 182---------
+DEBUG:__main__:PRECOND_182: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 8099) | (delta < -skoSINS**2 - 8099))
+DEBUG:__main__:---------pre-condition 183---------
+DEBUG:__main__:PRECOND_183: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 8099) | (delta < -skoSINS**2 - 8099))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=8100, skoM=2, skoS=2, skoCOSS=91, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 184---------
+DEBUG:__main__:PRECOND_184: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 8280) | (delta < -skoSINS**2 - 8280))
+DEBUG:__main__:---------pre-condition 185---------
+DEBUG:__main__:PRECOND_185: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 8280) | (delta < -skoSINS**2 - 8280))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=8281, skoM=2, skoS=2, skoCOSS=92, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 186---------
+DEBUG:__main__:PRECOND_186: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 8463) | (delta < -skoSINS**2 - 8463))
+DEBUG:__main__:---------pre-condition 187---------
+DEBUG:__main__:PRECOND_187: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 8463) | (delta < -skoSINS**2 - 8463))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=8464, skoM=2, skoS=2, skoCOSS=93, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 188---------
+DEBUG:__main__:PRECOND_188: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 8648) | (delta < -skoSINS**2 - 8648))
+DEBUG:__main__:---------pre-condition 189---------
+DEBUG:__main__:PRECOND_189: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 8648) | (delta < -skoSINS**2 - 8648))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=8649, skoM=2, skoS=2, skoCOSS=94, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 190---------
+DEBUG:__main__:PRECOND_190: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 8835) | (delta < -skoSINS**2 - 8835))
+DEBUG:__main__:---------pre-condition 191---------
+DEBUG:__main__:PRECOND_191: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 8835) | (delta < -skoSINS**2 - 8835))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=8836, skoM=2, skoS=2, skoCOSS=95, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 192---------
+DEBUG:__main__:PRECOND_192: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 9024) | (delta < -skoSINS**2 - 9024))
+DEBUG:__main__:---------pre-condition 193---------
+DEBUG:__main__:PRECOND_193: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 9024) | (delta < -skoSINS**2 - 9024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=9025, skoM=2, skoS=2, skoCOSS=96, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 194---------
+DEBUG:__main__:PRECOND_194: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 9215) | (delta < -skoSINS**2 - 9215))
+DEBUG:__main__:---------pre-condition 195---------
+DEBUG:__main__:PRECOND_195: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 9215) | (delta < -skoSINS**2 - 9215))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=9216, skoM=2, skoS=2, skoCOSS=97, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 196---------
+DEBUG:__main__:PRECOND_196: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 9408) | (delta < -skoSINS**2 - 9408))
+DEBUG:__main__:---------pre-condition 197---------
+DEBUG:__main__:PRECOND_197: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 9408) | (delta < -skoSINS**2 - 9408))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=9409, skoM=2, skoS=2, skoCOSS=98, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 198---------
+DEBUG:__main__:PRECOND_198: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 9603) | (delta < -skoSINS**2 - 9603))
+DEBUG:__main__:---------pre-condition 199---------
+DEBUG:__main__:PRECOND_199: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 9603) | (delta < -skoSINS**2 - 9603))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=9604, skoM=2, skoS=2, skoCOSS=99, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 200---------
+DEBUG:__main__:PRECOND_200: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 9800) | (delta < -skoSINS**2 - 9800))
+DEBUG:__main__:---------pre-condition 201---------
+DEBUG:__main__:PRECOND_201: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 9800) | (delta < -skoSINS**2 - 9800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=9801, skoM=2, skoS=2, skoCOSS=100, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 202---------
+DEBUG:__main__:PRECOND_202: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 9999) | (delta < -skoSINS**2 - 9999))
+DEBUG:__main__:---------pre-condition 203---------
+DEBUG:__main__:PRECOND_203: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 9999) | (delta < -skoSINS**2 - 9999))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=10000, skoM=2, skoS=2, skoCOSS=101, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 204---------
+DEBUG:__main__:PRECOND_204: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 10200) | (delta < -skoSINS**2 - 10200))
+DEBUG:__main__:---------pre-condition 205---------
+DEBUG:__main__:PRECOND_205: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 10200) | (delta < -skoSINS**2 - 10200))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=10201, skoM=2, skoS=2, skoCOSS=102, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 206---------
+DEBUG:__main__:PRECOND_206: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 10403) | (delta < -skoSINS**2 - 10403))
+DEBUG:__main__:---------pre-condition 207---------
+DEBUG:__main__:PRECOND_207: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 10403) | (delta < -skoSINS**2 - 10403))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=10404, skoM=2, skoS=2, skoCOSS=103, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 208---------
+DEBUG:__main__:PRECOND_208: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 10608) | (delta < -skoSINS**2 - 10608))
+DEBUG:__main__:---------pre-condition 209---------
+DEBUG:__main__:PRECOND_209: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 10608) | (delta < -skoSINS**2 - 10608))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=10609, skoM=2, skoS=2, skoCOSS=104, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 210---------
+DEBUG:__main__:PRECOND_210: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 10815) | (delta < -skoSINS**2 - 10815))
+DEBUG:__main__:---------pre-condition 211---------
+DEBUG:__main__:PRECOND_211: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 10815) | (delta < -skoSINS**2 - 10815))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=10816, skoM=2, skoS=2, skoCOSS=105, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 212---------
+DEBUG:__main__:PRECOND_212: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 11024) | (delta < -skoSINS**2 - 11024))
+DEBUG:__main__:---------pre-condition 213---------
+DEBUG:__main__:PRECOND_213: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 11024) | (delta < -skoSINS**2 - 11024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=11025, skoM=2, skoS=2, skoCOSS=106, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 214---------
+DEBUG:__main__:PRECOND_214: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 11235) | (delta < -skoSINS**2 - 11235))
+DEBUG:__main__:---------pre-condition 215---------
+DEBUG:__main__:PRECOND_215: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 11235) | (delta < -skoSINS**2 - 11235))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=11236, skoM=2, skoS=2, skoCOSS=107, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 216---------
+DEBUG:__main__:PRECOND_216: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 11448) | (delta < -skoSINS**2 - 11448))
+DEBUG:__main__:---------pre-condition 217---------
+DEBUG:__main__:PRECOND_217: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 11448) | (delta < -skoSINS**2 - 11448))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=11449, skoM=2, skoS=2, skoCOSS=108, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 218---------
+DEBUG:__main__:PRECOND_218: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 11663) | (delta < -skoSINS**2 - 11663))
+DEBUG:__main__:---------pre-condition 219---------
+DEBUG:__main__:PRECOND_219: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 11663) | (delta < -skoSINS**2 - 11663))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=11664, skoM=2, skoS=2, skoCOSS=109, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 220---------
+DEBUG:__main__:PRECOND_220: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 11880) | (delta < -skoSINS**2 - 11880))
+DEBUG:__main__:---------pre-condition 221---------
+DEBUG:__main__:PRECOND_221: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 11880) | (delta < -skoSINS**2 - 11880))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=11881, skoM=2, skoS=2, skoCOSS=110, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 222---------
+DEBUG:__main__:PRECOND_222: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 12099) | (delta < -skoSINS**2 - 12099))
+DEBUG:__main__:---------pre-condition 223---------
+DEBUG:__main__:PRECOND_223: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 12099) | (delta < -skoSINS**2 - 12099))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12100, skoM=2, skoS=2, skoCOSS=111, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 224---------
+DEBUG:__main__:PRECOND_224: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 12320) | (delta < -skoSINS**2 - 12320))
+DEBUG:__main__:---------pre-condition 225---------
+DEBUG:__main__:PRECOND_225: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 12320) | (delta < -skoSINS**2 - 12320))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12321, skoM=2, skoS=2, skoCOSS=112, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 226---------
+DEBUG:__main__:PRECOND_226: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 12543) | (delta < -skoSINS**2 - 12543))
+DEBUG:__main__:---------pre-condition 227---------
+DEBUG:__main__:PRECOND_227: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 12543) | (delta < -skoSINS**2 - 12543))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12544, skoM=2, skoS=2, skoCOSS=113, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 228---------
+DEBUG:__main__:PRECOND_228: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 12768) | (delta < -skoSINS**2 - 12768))
+DEBUG:__main__:---------pre-condition 229---------
+DEBUG:__main__:PRECOND_229: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 12768) | (delta < -skoSINS**2 - 12768))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12769, skoM=2, skoS=2, skoCOSS=114, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 230---------
+DEBUG:__main__:PRECOND_230: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 12995) | (delta < -skoSINS**2 - 12995))
+DEBUG:__main__:---------pre-condition 231---------
+DEBUG:__main__:PRECOND_231: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 12995) | (delta < -skoSINS**2 - 12995))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12996, skoM=2, skoS=2, skoCOSS=115, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 232---------
+DEBUG:__main__:PRECOND_232: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 13224) | (delta < -skoSINS**2 - 13224))
+DEBUG:__main__:---------pre-condition 233---------
+DEBUG:__main__:PRECOND_233: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 13224) | (delta < -skoSINS**2 - 13224))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=13225, skoM=2, skoS=2, skoCOSS=116, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 234---------
+DEBUG:__main__:PRECOND_234: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 13455) | (delta < -skoSINS**2 - 13455))
+DEBUG:__main__:---------pre-condition 235---------
+DEBUG:__main__:PRECOND_235: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 13455) | (delta < -skoSINS**2 - 13455))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=13456, skoM=2, skoS=2, skoCOSS=117, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 236---------
+DEBUG:__main__:PRECOND_236: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 13688) | (delta < -skoSINS**2 - 13688))
+DEBUG:__main__:---------pre-condition 237---------
+DEBUG:__main__:PRECOND_237: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 13688) | (delta < -skoSINS**2 - 13688))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=13689, skoM=2, skoS=2, skoCOSS=118, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 238---------
+DEBUG:__main__:PRECOND_238: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 13923) | (delta < -skoSINS**2 - 13923))
+DEBUG:__main__:---------pre-condition 239---------
+DEBUG:__main__:PRECOND_239: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 13923) | (delta < -skoSINS**2 - 13923))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=13924, skoM=2, skoS=2, skoCOSS=119, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 240---------
+DEBUG:__main__:PRECOND_240: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 14160) | (delta < -skoSINS**2 - 14160))
+DEBUG:__main__:---------pre-condition 241---------
+DEBUG:__main__:PRECOND_241: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 14160) | (delta < -skoSINS**2 - 14160))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=14161, skoM=2, skoS=2, skoCOSS=120, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 242---------
+DEBUG:__main__:PRECOND_242: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 14399) | (delta < -skoSINS**2 - 14399))
+DEBUG:__main__:---------pre-condition 243---------
+DEBUG:__main__:PRECOND_243: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 14399) | (delta < -skoSINS**2 - 14399))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=14400, skoM=2, skoS=2, skoCOSS=121, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 244---------
+DEBUG:__main__:PRECOND_244: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 14640) | (delta < -skoSINS**2 - 14640))
+DEBUG:__main__:---------pre-condition 245---------
+DEBUG:__main__:PRECOND_245: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 14640) | (delta < -skoSINS**2 - 14640))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=14641, skoM=2, skoS=2, skoCOSS=122, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 246---------
+DEBUG:__main__:PRECOND_246: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 14883) | (delta < -skoSINS**2 - 14883))
+DEBUG:__main__:---------pre-condition 247---------
+DEBUG:__main__:PRECOND_247: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 14883) | (delta < -skoSINS**2 - 14883))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=14884, skoM=2, skoS=2, skoCOSS=123, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 248---------
+DEBUG:__main__:PRECOND_248: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 15128) | (delta < -skoSINS**2 - 15128))
+DEBUG:__main__:---------pre-condition 249---------
+DEBUG:__main__:PRECOND_249: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 15128) | (delta < -skoSINS**2 - 15128))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=15129, skoM=2, skoS=2, skoCOSS=124, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 250---------
+DEBUG:__main__:PRECOND_250: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 15375) | (delta < -skoSINS**2 - 15375))
+DEBUG:__main__:---------pre-condition 251---------
+DEBUG:__main__:PRECOND_251: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 15375) | (delta < -skoSINS**2 - 15375))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=15376, skoM=2, skoS=2, skoCOSS=125, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 252---------
+DEBUG:__main__:PRECOND_252: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 15624) | (delta < -skoSINS**2 - 15624))
+DEBUG:__main__:---------pre-condition 253---------
+DEBUG:__main__:PRECOND_253: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 15624) | (delta < -skoSINS**2 - 15624))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=15625, skoM=2, skoS=2, skoCOSS=126, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 254---------
+DEBUG:__main__:PRECOND_254: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 15875) | (delta < -skoSINS**2 - 15875))
+DEBUG:__main__:---------pre-condition 255---------
+DEBUG:__main__:PRECOND_255: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 15875) | (delta < -skoSINS**2 - 15875))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=15876, skoM=2, skoS=2, skoCOSS=127, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 256---------
+DEBUG:__main__:PRECOND_256: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 16128) | (delta < -skoSINS**2 - 16128))
+DEBUG:__main__:---------pre-condition 257---------
+DEBUG:__main__:PRECOND_257: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 16128) | (delta < -skoSINS**2 - 16128))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=16129, skoM=2, skoS=2, skoCOSS=128, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 258---------
+DEBUG:__main__:PRECOND_258: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 16383) | (delta < -skoSINS**2 - 16383))
+DEBUG:__main__:---------pre-condition 259---------
+DEBUG:__main__:PRECOND_259: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 16383) | (delta < -skoSINS**2 - 16383))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=16384, skoM=2, skoS=2, skoCOSS=129, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 260---------
+DEBUG:__main__:PRECOND_260: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 16640) | (delta < -skoSINS**2 - 16640))
+DEBUG:__main__:---------pre-condition 261---------
+DEBUG:__main__:PRECOND_261: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 16640) | (delta < -skoSINS**2 - 16640))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=16641, skoM=2, skoS=2, skoCOSS=130, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 262---------
+DEBUG:__main__:PRECOND_262: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 16899) | (delta < -skoSINS**2 - 16899))
+DEBUG:__main__:---------pre-condition 263---------
+DEBUG:__main__:PRECOND_263: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 16899) | (delta < -skoSINS**2 - 16899))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=16900, skoM=2, skoS=2, skoCOSS=131, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 264---------
+DEBUG:__main__:PRECOND_264: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 17160) | (delta < -skoSINS**2 - 17160))
+DEBUG:__main__:---------pre-condition 265---------
+DEBUG:__main__:PRECOND_265: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 17160) | (delta < -skoSINS**2 - 17160))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=17161, skoM=2, skoS=2, skoCOSS=132, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 266---------
+DEBUG:__main__:PRECOND_266: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 17423) | (delta < -skoSINS**2 - 17423))
+DEBUG:__main__:---------pre-condition 267---------
+DEBUG:__main__:PRECOND_267: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 17423) | (delta < -skoSINS**2 - 17423))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=17424, skoM=2, skoS=2, skoCOSS=133, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 268---------
+DEBUG:__main__:PRECOND_268: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 17688) | (delta < -skoSINS**2 - 17688))
+DEBUG:__main__:---------pre-condition 269---------
+DEBUG:__main__:PRECOND_269: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 17688) | (delta < -skoSINS**2 - 17688))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=17689, skoM=2, skoS=2, skoCOSS=134, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 270---------
+DEBUG:__main__:PRECOND_270: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 17955) | (delta < -skoSINS**2 - 17955))
+DEBUG:__main__:---------pre-condition 271---------
+DEBUG:__main__:PRECOND_271: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 17955) | (delta < -skoSINS**2 - 17955))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=17956, skoM=2, skoS=2, skoCOSS=135, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 272---------
+DEBUG:__main__:PRECOND_272: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 18224) | (delta < -skoSINS**2 - 18224))
+DEBUG:__main__:---------pre-condition 273---------
+DEBUG:__main__:PRECOND_273: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 18224) | (delta < -skoSINS**2 - 18224))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=18225, skoM=2, skoS=2, skoCOSS=136, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 274---------
+DEBUG:__main__:PRECOND_274: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 18495) | (delta < -skoSINS**2 - 18495))
+DEBUG:__main__:---------pre-condition 275---------
+DEBUG:__main__:PRECOND_275: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 18495) | (delta < -skoSINS**2 - 18495))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=18496, skoM=2, skoS=2, skoCOSS=137, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 276---------
+DEBUG:__main__:PRECOND_276: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 18768) | (delta < -skoSINS**2 - 18768))
+DEBUG:__main__:---------pre-condition 277---------
+DEBUG:__main__:PRECOND_277: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 18768) | (delta < -skoSINS**2 - 18768))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=18769, skoM=2, skoS=2, skoCOSS=138, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 278---------
+DEBUG:__main__:PRECOND_278: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 19043) | (delta < -skoSINS**2 - 19043))
+DEBUG:__main__:---------pre-condition 279---------
+DEBUG:__main__:PRECOND_279: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 19043) | (delta < -skoSINS**2 - 19043))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=19044, skoM=2, skoS=2, skoCOSS=139, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 280---------
+DEBUG:__main__:PRECOND_280: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 19320) | (delta < -skoSINS**2 - 19320))
+DEBUG:__main__:---------pre-condition 281---------
+DEBUG:__main__:PRECOND_281: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 19320) | (delta < -skoSINS**2 - 19320))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=19321, skoM=2, skoS=2, skoCOSS=140, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 282---------
+DEBUG:__main__:PRECOND_282: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 19599) | (delta < -skoSINS**2 - 19599))
+DEBUG:__main__:---------pre-condition 283---------
+DEBUG:__main__:PRECOND_283: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 19599) | (delta < -skoSINS**2 - 19599))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=19600, skoM=2, skoS=2, skoCOSS=141, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 284---------
+DEBUG:__main__:PRECOND_284: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 19880) | (delta < -skoSINS**2 - 19880))
+DEBUG:__main__:---------pre-condition 285---------
+DEBUG:__main__:PRECOND_285: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 19880) | (delta < -skoSINS**2 - 19880))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=19881, skoM=2, skoS=2, skoCOSS=142, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 286---------
+DEBUG:__main__:PRECOND_286: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 20163) | (delta < -skoSINS**2 - 20163))
+DEBUG:__main__:---------pre-condition 287---------
+DEBUG:__main__:PRECOND_287: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 20163) | (delta < -skoSINS**2 - 20163))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=20164, skoM=2, skoS=2, skoCOSS=143, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 288---------
+DEBUG:__main__:PRECOND_288: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 20448) | (delta < -skoSINS**2 - 20448))
+DEBUG:__main__:---------pre-condition 289---------
+DEBUG:__main__:PRECOND_289: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 20448) | (delta < -skoSINS**2 - 20448))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=20449, skoM=2, skoS=2, skoCOSS=144, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 290---------
+DEBUG:__main__:PRECOND_290: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 20735) | (delta < -skoSINS**2 - 20735))
+DEBUG:__main__:---------pre-condition 291---------
+DEBUG:__main__:PRECOND_291: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 20735) | (delta < -skoSINS**2 - 20735))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=20736, skoM=2, skoS=2, skoCOSS=145, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 292---------
+DEBUG:__main__:PRECOND_292: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 21024) | (delta < -skoSINS**2 - 21024))
+DEBUG:__main__:---------pre-condition 293---------
+DEBUG:__main__:PRECOND_293: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 21024) | (delta < -skoSINS**2 - 21024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=21025, skoM=2, skoS=2, skoCOSS=146, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 294---------
+DEBUG:__main__:PRECOND_294: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 21315) | (delta < -skoSINS**2 - 21315))
+DEBUG:__main__:---------pre-condition 295---------
+DEBUG:__main__:PRECOND_295: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 21315) | (delta < -skoSINS**2 - 21315))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=21316, skoM=2, skoS=2, skoCOSS=147, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 296---------
+DEBUG:__main__:PRECOND_296: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 21608) | (delta < -skoSINS**2 - 21608))
+DEBUG:__main__:---------pre-condition 297---------
+DEBUG:__main__:PRECOND_297: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 21608) | (delta < -skoSINS**2 - 21608))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=21609, skoM=2, skoS=2, skoCOSS=148, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 298---------
+DEBUG:__main__:PRECOND_298: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 21903) | (delta < -skoSINS**2 - 21903))
+DEBUG:__main__:---------pre-condition 299---------
+DEBUG:__main__:PRECOND_299: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 21903) | (delta < -skoSINS**2 - 21903))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=21904, skoM=2, skoS=2, skoCOSS=149, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 300---------
+DEBUG:__main__:PRECOND_300: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 22200) | (delta < -skoSINS**2 - 22200))
+DEBUG:__main__:---------pre-condition 301---------
+DEBUG:__main__:PRECOND_301: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 22200) | (delta < -skoSINS**2 - 22200))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=22201, skoM=2, skoS=2, skoCOSS=150, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 302---------
+DEBUG:__main__:PRECOND_302: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 22499) | (delta < -skoSINS**2 - 22499))
+DEBUG:__main__:---------pre-condition 303---------
+DEBUG:__main__:PRECOND_303: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 22499) | (delta < -skoSINS**2 - 22499))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=22500, skoM=2, skoS=2, skoCOSS=151, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 304---------
+DEBUG:__main__:PRECOND_304: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 22800) | (delta < -skoSINS**2 - 22800))
+DEBUG:__main__:---------pre-condition 305---------
+DEBUG:__main__:PRECOND_305: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 22800) | (delta < -skoSINS**2 - 22800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=22801, skoM=2, skoS=2, skoCOSS=152, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 306---------
+DEBUG:__main__:PRECOND_306: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 23103) | (delta < -skoSINS**2 - 23103))
+DEBUG:__main__:---------pre-condition 307---------
+DEBUG:__main__:PRECOND_307: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 23103) | (delta < -skoSINS**2 - 23103))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=23104, skoM=2, skoS=2, skoCOSS=153, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 308---------
+DEBUG:__main__:PRECOND_308: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 23408) | (delta < -skoSINS**2 - 23408))
+DEBUG:__main__:---------pre-condition 309---------
+DEBUG:__main__:PRECOND_309: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 23408) | (delta < -skoSINS**2 - 23408))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=23409, skoM=2, skoS=2, skoCOSS=154, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 310---------
+DEBUG:__main__:PRECOND_310: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 23715) | (delta < -skoSINS**2 - 23715))
+DEBUG:__main__:---------pre-condition 311---------
+DEBUG:__main__:PRECOND_311: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 23715) | (delta < -skoSINS**2 - 23715))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=23716, skoM=2, skoS=2, skoCOSS=155, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 312---------
+DEBUG:__main__:PRECOND_312: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 24024) | (delta < -skoSINS**2 - 24024))
+DEBUG:__main__:---------pre-condition 313---------
+DEBUG:__main__:PRECOND_313: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 24024) | (delta < -skoSINS**2 - 24024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=24025, skoM=2, skoS=2, skoCOSS=156, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 314---------
+DEBUG:__main__:PRECOND_314: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 24335) | (delta < -skoSINS**2 - 24335))
+DEBUG:__main__:---------pre-condition 315---------
+DEBUG:__main__:PRECOND_315: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 24335) | (delta < -skoSINS**2 - 24335))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=24336, skoM=2, skoS=2, skoCOSS=157, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 316---------
+DEBUG:__main__:PRECOND_316: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 24648) | (delta < -skoSINS**2 - 24648))
+DEBUG:__main__:---------pre-condition 317---------
+DEBUG:__main__:PRECOND_317: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 24648) | (delta < -skoSINS**2 - 24648))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=24649, skoM=2, skoS=2, skoCOSS=158, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 318---------
+DEBUG:__main__:PRECOND_318: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 24963) | (delta < -skoSINS**2 - 24963))
+DEBUG:__main__:---------pre-condition 319---------
+DEBUG:__main__:PRECOND_319: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 24963) | (delta < -skoSINS**2 - 24963))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=24964, skoM=2, skoS=2, skoCOSS=159, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 320---------
+DEBUG:__main__:PRECOND_320: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 25280) | (delta < -skoSINS**2 - 25280))
+DEBUG:__main__:---------pre-condition 321---------
+DEBUG:__main__:PRECOND_321: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 25280) | (delta < -skoSINS**2 - 25280))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=25281, skoM=2, skoS=2, skoCOSS=160, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 322---------
+DEBUG:__main__:PRECOND_322: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 25599) | (delta < -skoSINS**2 - 25599))
+DEBUG:__main__:---------pre-condition 323---------
+DEBUG:__main__:PRECOND_323: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 25599) | (delta < -skoSINS**2 - 25599))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=25600, skoM=2, skoS=2, skoCOSS=161, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 324---------
+DEBUG:__main__:PRECOND_324: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 25920) | (delta < -skoSINS**2 - 25920))
+DEBUG:__main__:---------pre-condition 325---------
+DEBUG:__main__:PRECOND_325: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 25920) | (delta < -skoSINS**2 - 25920))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=25921, skoM=2, skoS=2, skoCOSS=162, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 326---------
+DEBUG:__main__:PRECOND_326: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 26243) | (delta < -skoSINS**2 - 26243))
+DEBUG:__main__:---------pre-condition 327---------
+DEBUG:__main__:PRECOND_327: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 26243) | (delta < -skoSINS**2 - 26243))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=26244, skoM=2, skoS=2, skoCOSS=163, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 328---------
+DEBUG:__main__:PRECOND_328: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 26568) | (delta < -skoSINS**2 - 26568))
+DEBUG:__main__:---------pre-condition 329---------
+DEBUG:__main__:PRECOND_329: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 26568) | (delta < -skoSINS**2 - 26568))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=26569, skoM=2, skoS=2, skoCOSS=164, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 330---------
+DEBUG:__main__:PRECOND_330: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 26895) | (delta < -skoSINS**2 - 26895))
+DEBUG:__main__:---------pre-condition 331---------
+DEBUG:__main__:PRECOND_331: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 26895) | (delta < -skoSINS**2 - 26895))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=26896, skoM=2, skoS=2, skoCOSS=165, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 332---------
+DEBUG:__main__:PRECOND_332: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 27224) | (delta < -skoSINS**2 - 27224))
+DEBUG:__main__:---------pre-condition 333---------
+DEBUG:__main__:PRECOND_333: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 27224) | (delta < -skoSINS**2 - 27224))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=27225, skoM=2, skoS=2, skoCOSS=166, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 334---------
+DEBUG:__main__:PRECOND_334: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 27555) | (delta < -skoSINS**2 - 27555))
+DEBUG:__main__:---------pre-condition 335---------
+DEBUG:__main__:PRECOND_335: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 27555) | (delta < -skoSINS**2 - 27555))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=27556, skoM=2, skoS=2, skoCOSS=167, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 336---------
+DEBUG:__main__:PRECOND_336: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 27888) | (delta < -skoSINS**2 - 27888))
+DEBUG:__main__:---------pre-condition 337---------
+DEBUG:__main__:PRECOND_337: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 27888) | (delta < -skoSINS**2 - 27888))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=27889, skoM=2, skoS=2, skoCOSS=168, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 338---------
+DEBUG:__main__:PRECOND_338: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 28223) | (delta < -skoSINS**2 - 28223))
+DEBUG:__main__:---------pre-condition 339---------
+DEBUG:__main__:PRECOND_339: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 28223) | (delta < -skoSINS**2 - 28223))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=28224, skoM=2, skoS=2, skoCOSS=169, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 340---------
+DEBUG:__main__:PRECOND_340: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 28560) | (delta < -skoSINS**2 - 28560))
+DEBUG:__main__:---------pre-condition 341---------
+DEBUG:__main__:PRECOND_341: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 28560) | (delta < -skoSINS**2 - 28560))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=28561, skoM=2, skoS=2, skoCOSS=170, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 342---------
+DEBUG:__main__:PRECOND_342: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 28899) | (delta < -skoSINS**2 - 28899))
+DEBUG:__main__:---------pre-condition 343---------
+DEBUG:__main__:PRECOND_343: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 28899) | (delta < -skoSINS**2 - 28899))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=28900, skoM=2, skoS=2, skoCOSS=171, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 344---------
+DEBUG:__main__:PRECOND_344: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 29240) | (delta < -skoSINS**2 - 29240))
+DEBUG:__main__:---------pre-condition 345---------
+DEBUG:__main__:PRECOND_345: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 29240) | (delta < -skoSINS**2 - 29240))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=29241, skoM=2, skoS=2, skoCOSS=172, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 346---------
+DEBUG:__main__:PRECOND_346: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 29583) | (delta < -skoSINS**2 - 29583))
+DEBUG:__main__:---------pre-condition 347---------
+DEBUG:__main__:PRECOND_347: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 29583) | (delta < -skoSINS**2 - 29583))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=29584, skoM=2, skoS=2, skoCOSS=173, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 348---------
+DEBUG:__main__:PRECOND_348: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 29928) | (delta < -skoSINS**2 - 29928))
+DEBUG:__main__:---------pre-condition 349---------
+DEBUG:__main__:PRECOND_349: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 29928) | (delta < -skoSINS**2 - 29928))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=29929, skoM=2, skoS=2, skoCOSS=174, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 350---------
+DEBUG:__main__:PRECOND_350: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 30275) | (delta < -skoSINS**2 - 30275))
+DEBUG:__main__:---------pre-condition 351---------
+DEBUG:__main__:PRECOND_351: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 30275) | (delta < -skoSINS**2 - 30275))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=30276, skoM=2, skoS=2, skoCOSS=175, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 352---------
+DEBUG:__main__:PRECOND_352: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 30624) | (delta < -skoSINS**2 - 30624))
+DEBUG:__main__:---------pre-condition 353---------
+DEBUG:__main__:PRECOND_353: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 30624) | (delta < -skoSINS**2 - 30624))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=30625, skoM=2, skoS=2, skoCOSS=176, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 354---------
+DEBUG:__main__:PRECOND_354: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 30975) | (delta < -skoSINS**2 - 30975))
+DEBUG:__main__:---------pre-condition 355---------
+DEBUG:__main__:PRECOND_355: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 30975) | (delta < -skoSINS**2 - 30975))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=30976, skoM=2, skoS=2, skoCOSS=177, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 356---------
+DEBUG:__main__:PRECOND_356: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 31328) | (delta < -skoSINS**2 - 31328))
+DEBUG:__main__:---------pre-condition 357---------
+DEBUG:__main__:PRECOND_357: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 31328) | (delta < -skoSINS**2 - 31328))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=31329, skoM=2, skoS=2, skoCOSS=178, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 358---------
+DEBUG:__main__:PRECOND_358: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 31683) | (delta < -skoSINS**2 - 31683))
+DEBUG:__main__:---------pre-condition 359---------
+DEBUG:__main__:PRECOND_359: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 31683) | (delta < -skoSINS**2 - 31683))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=31684, skoM=2, skoS=2, skoCOSS=179, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 360---------
+DEBUG:__main__:PRECOND_360: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 32040) | (delta < -skoSINS**2 - 32040))
+DEBUG:__main__:---------pre-condition 361---------
+DEBUG:__main__:PRECOND_361: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 32040) | (delta < -skoSINS**2 - 32040))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=32041, skoM=2, skoS=2, skoCOSS=180, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 362---------
+DEBUG:__main__:PRECOND_362: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 32399) | (delta < -skoSINS**2 - 32399))
+DEBUG:__main__:---------pre-condition 363---------
+DEBUG:__main__:PRECOND_363: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 32399) | (delta < -skoSINS**2 - 32399))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=32400, skoM=2, skoS=2, skoCOSS=181, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 364---------
+DEBUG:__main__:PRECOND_364: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 32760) | (delta < -skoSINS**2 - 32760))
+DEBUG:__main__:---------pre-condition 365---------
+DEBUG:__main__:PRECOND_365: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 32760) | (delta < -skoSINS**2 - 32760))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=32761, skoM=2, skoS=2, skoCOSS=182, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 366---------
+DEBUG:__main__:PRECOND_366: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 33123) | (delta < -skoSINS**2 - 33123))
+DEBUG:__main__:---------pre-condition 367---------
+DEBUG:__main__:PRECOND_367: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 33123) | (delta < -skoSINS**2 - 33123))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=33124, skoM=2, skoS=2, skoCOSS=183, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 368---------
+DEBUG:__main__:PRECOND_368: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 33488) | (delta < -skoSINS**2 - 33488))
+DEBUG:__main__:---------pre-condition 369---------
+DEBUG:__main__:PRECOND_369: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 33488) | (delta < -skoSINS**2 - 33488))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=33489, skoM=2, skoS=2, skoCOSS=184, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 370---------
+DEBUG:__main__:PRECOND_370: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 33855) | (delta < -skoSINS**2 - 33855))
+DEBUG:__main__:---------pre-condition 371---------
+DEBUG:__main__:PRECOND_371: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 33855) | (delta < -skoSINS**2 - 33855))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=33856, skoM=2, skoS=2, skoCOSS=185, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 372---------
+DEBUG:__main__:PRECOND_372: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 34224) | (delta < -skoSINS**2 - 34224))
+DEBUG:__main__:---------pre-condition 373---------
+DEBUG:__main__:PRECOND_373: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 34224) | (delta < -skoSINS**2 - 34224))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=34225, skoM=2, skoS=2, skoCOSS=186, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 374---------
+DEBUG:__main__:PRECOND_374: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 34595) | (delta < -skoSINS**2 - 34595))
+DEBUG:__main__:---------pre-condition 375---------
+DEBUG:__main__:PRECOND_375: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 34595) | (delta < -skoSINS**2 - 34595))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=34596, skoM=2, skoS=2, skoCOSS=187, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 376---------
+DEBUG:__main__:PRECOND_376: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 34968) | (delta < -skoSINS**2 - 34968))
+DEBUG:__main__:---------pre-condition 377---------
+DEBUG:__main__:PRECOND_377: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 34968) | (delta < -skoSINS**2 - 34968))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=34969, skoM=2, skoS=2, skoCOSS=188, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 378---------
+DEBUG:__main__:PRECOND_378: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 35343) | (delta < -skoSINS**2 - 35343))
+DEBUG:__main__:---------pre-condition 379---------
+DEBUG:__main__:PRECOND_379: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 35343) | (delta < -skoSINS**2 - 35343))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=35344, skoM=2, skoS=2, skoCOSS=189, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 380---------
+DEBUG:__main__:PRECOND_380: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 35720) | (delta < -skoSINS**2 - 35720))
+DEBUG:__main__:---------pre-condition 381---------
+DEBUG:__main__:PRECOND_381: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 35720) | (delta < -skoSINS**2 - 35720))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=35721, skoM=2, skoS=2, skoCOSS=190, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 382---------
+DEBUG:__main__:PRECOND_382: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 36099) | (delta < -skoSINS**2 - 36099))
+DEBUG:__main__:---------pre-condition 383---------
+DEBUG:__main__:PRECOND_383: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 36099) | (delta < -skoSINS**2 - 36099))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=36100, skoM=2, skoS=2, skoCOSS=191, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 384---------
+DEBUG:__main__:PRECOND_384: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 36480) | (delta < -skoSINS**2 - 36480))
+DEBUG:__main__:---------pre-condition 385---------
+DEBUG:__main__:PRECOND_385: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 36480) | (delta < -skoSINS**2 - 36480))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=36481, skoM=2, skoS=2, skoCOSS=192, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 386---------
+DEBUG:__main__:PRECOND_386: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 36863) | (delta < -skoSINS**2 - 36863))
+DEBUG:__main__:---------pre-condition 387---------
+DEBUG:__main__:PRECOND_387: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 36863) | (delta < -skoSINS**2 - 36863))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=36864, skoM=2, skoS=2, skoCOSS=193, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 388---------
+DEBUG:__main__:PRECOND_388: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 37248) | (delta < -skoSINS**2 - 37248))
+DEBUG:__main__:---------pre-condition 389---------
+DEBUG:__main__:PRECOND_389: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 37248) | (delta < -skoSINS**2 - 37248))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=37249, skoM=2, skoS=2, skoCOSS=194, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 390---------
+DEBUG:__main__:PRECOND_390: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 37635) | (delta < -skoSINS**2 - 37635))
+DEBUG:__main__:---------pre-condition 391---------
+DEBUG:__main__:PRECOND_391: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 37635) | (delta < -skoSINS**2 - 37635))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=37636, skoM=2, skoS=2, skoCOSS=195, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 392---------
+DEBUG:__main__:PRECOND_392: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 38024) | (delta < -skoSINS**2 - 38024))
+DEBUG:__main__:---------pre-condition 393---------
+DEBUG:__main__:PRECOND_393: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 38024) | (delta < -skoSINS**2 - 38024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=38025, skoM=2, skoS=2, skoCOSS=196, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 394---------
+DEBUG:__main__:PRECOND_394: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 38415) | (delta < -skoSINS**2 - 38415))
+DEBUG:__main__:---------pre-condition 395---------
+DEBUG:__main__:PRECOND_395: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 38415) | (delta < -skoSINS**2 - 38415))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=38416, skoM=2, skoS=2, skoCOSS=197, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 396---------
+DEBUG:__main__:PRECOND_396: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 38808) | (delta < -skoSINS**2 - 38808))
+DEBUG:__main__:---------pre-condition 397---------
+DEBUG:__main__:PRECOND_397: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 38808) | (delta < -skoSINS**2 - 38808))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=38809, skoM=2, skoS=2, skoCOSS=198, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 398---------
+DEBUG:__main__:PRECOND_398: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 39203) | (delta < -skoSINS**2 - 39203))
+DEBUG:__main__:---------pre-condition 399---------
+DEBUG:__main__:PRECOND_399: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 39203) | (delta < -skoSINS**2 - 39203))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=39204, skoM=2, skoS=2, skoCOSS=199, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 400---------
+DEBUG:__main__:PRECOND_400: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 39600) | (delta < -skoSINS**2 - 39600))
+DEBUG:__main__:---------pre-condition 401---------
+DEBUG:__main__:PRECOND_401: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 39600) | (delta < -skoSINS**2 - 39600))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=39601, skoM=2, skoS=2, skoCOSS=200, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 402---------
+DEBUG:__main__:PRECOND_402: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 39999) | (delta < -skoSINS**2 - 39999))
+DEBUG:__main__:---------pre-condition 403---------
+DEBUG:__main__:PRECOND_403: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 39999) | (delta < -skoSINS**2 - 39999))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=40000, skoM=2, skoS=2, skoCOSS=201, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 404---------
+DEBUG:__main__:PRECOND_404: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 40400) | (delta < -skoSINS**2 - 40400))
+DEBUG:__main__:---------pre-condition 405---------
+DEBUG:__main__:PRECOND_405: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 40400) | (delta < -skoSINS**2 - 40400))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=40401, skoM=2, skoS=2, skoCOSS=202, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 406---------
+DEBUG:__main__:PRECOND_406: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 40803) | (delta < -skoSINS**2 - 40803))
+DEBUG:__main__:---------pre-condition 407---------
+DEBUG:__main__:PRECOND_407: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 40803) | (delta < -skoSINS**2 - 40803))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=40804, skoM=2, skoS=2, skoCOSS=203, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 408---------
+DEBUG:__main__:PRECOND_408: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 41208) | (delta < -skoSINS**2 - 41208))
+DEBUG:__main__:---------pre-condition 409---------
+DEBUG:__main__:PRECOND_409: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 41208) | (delta < -skoSINS**2 - 41208))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=41209, skoM=2, skoS=2, skoCOSS=204, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 410---------
+DEBUG:__main__:PRECOND_410: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 41615) | (delta < -skoSINS**2 - 41615))
+DEBUG:__main__:---------pre-condition 411---------
+DEBUG:__main__:PRECOND_411: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 41615) | (delta < -skoSINS**2 - 41615))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=41616, skoM=2, skoS=2, skoCOSS=205, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 412---------
+DEBUG:__main__:PRECOND_412: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 42024) | (delta < -skoSINS**2 - 42024))
+DEBUG:__main__:---------pre-condition 413---------
+DEBUG:__main__:PRECOND_413: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 42024) | (delta < -skoSINS**2 - 42024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=42025, skoM=2, skoS=2, skoCOSS=206, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 414---------
+DEBUG:__main__:PRECOND_414: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 42435) | (delta < -skoSINS**2 - 42435))
+DEBUG:__main__:---------pre-condition 415---------
+DEBUG:__main__:PRECOND_415: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 42435) | (delta < -skoSINS**2 - 42435))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=42436, skoM=2, skoS=2, skoCOSS=207, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 416---------
+DEBUG:__main__:PRECOND_416: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 42848) | (delta < -skoSINS**2 - 42848))
+DEBUG:__main__:---------pre-condition 417---------
+DEBUG:__main__:PRECOND_417: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 42848) | (delta < -skoSINS**2 - 42848))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=42849, skoM=2, skoS=2, skoCOSS=208, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 418---------
+DEBUG:__main__:PRECOND_418: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 43263) | (delta < -skoSINS**2 - 43263))
+DEBUG:__main__:---------pre-condition 419---------
+DEBUG:__main__:PRECOND_419: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 43263) | (delta < -skoSINS**2 - 43263))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=43264, skoM=2, skoS=2, skoCOSS=209, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 420---------
+DEBUG:__main__:PRECOND_420: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 43680) | (delta < -skoSINS**2 - 43680))
+DEBUG:__main__:---------pre-condition 421---------
+DEBUG:__main__:PRECOND_421: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 43680) | (delta < -skoSINS**2 - 43680))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=43681, skoM=2, skoS=2, skoCOSS=210, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 422---------
+DEBUG:__main__:PRECOND_422: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 44099) | (delta < -skoSINS**2 - 44099))
+DEBUG:__main__:---------pre-condition 423---------
+DEBUG:__main__:PRECOND_423: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 44099) | (delta < -skoSINS**2 - 44099))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=44100, skoM=2, skoS=2, skoCOSS=211, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 424---------
+DEBUG:__main__:PRECOND_424: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 44520) | (delta < -skoSINS**2 - 44520))
+DEBUG:__main__:---------pre-condition 425---------
+DEBUG:__main__:PRECOND_425: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 44520) | (delta < -skoSINS**2 - 44520))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=44521, skoM=2, skoS=2, skoCOSS=212, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 426---------
+DEBUG:__main__:PRECOND_426: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 44943) | (delta < -skoSINS**2 - 44943))
+DEBUG:__main__:---------pre-condition 427---------
+DEBUG:__main__:PRECOND_427: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 44943) | (delta < -skoSINS**2 - 44943))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=44944, skoM=2, skoS=2, skoCOSS=213, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 428---------
+DEBUG:__main__:PRECOND_428: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 45368) | (delta < -skoSINS**2 - 45368))
+DEBUG:__main__:---------pre-condition 429---------
+DEBUG:__main__:PRECOND_429: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 45368) | (delta < -skoSINS**2 - 45368))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=45369, skoM=2, skoS=2, skoCOSS=214, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 430---------
+DEBUG:__main__:PRECOND_430: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 45795) | (delta < -skoSINS**2 - 45795))
+DEBUG:__main__:---------pre-condition 431---------
+DEBUG:__main__:PRECOND_431: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 45795) | (delta < -skoSINS**2 - 45795))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=45796, skoM=2, skoS=2, skoCOSS=215, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 432---------
+DEBUG:__main__:PRECOND_432: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 46224) | (delta < -skoSINS**2 - 46224))
+DEBUG:__main__:---------pre-condition 433---------
+DEBUG:__main__:PRECOND_433: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 46224) | (delta < -skoSINS**2 - 46224))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=46225, skoM=2, skoS=2, skoCOSS=216, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 434---------
+DEBUG:__main__:PRECOND_434: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 46655) | (delta < -skoSINS**2 - 46655))
+DEBUG:__main__:---------pre-condition 435---------
+DEBUG:__main__:PRECOND_435: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 46655) | (delta < -skoSINS**2 - 46655))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=46656, skoM=2, skoS=2, skoCOSS=217, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 436---------
+DEBUG:__main__:PRECOND_436: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 47088) | (delta < -skoSINS**2 - 47088))
+DEBUG:__main__:---------pre-condition 437---------
+DEBUG:__main__:PRECOND_437: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 47088) | (delta < -skoSINS**2 - 47088))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=47089, skoM=2, skoS=2, skoCOSS=218, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 438---------
+DEBUG:__main__:PRECOND_438: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 47523) | (delta < -skoSINS**2 - 47523))
+DEBUG:__main__:---------pre-condition 439---------
+DEBUG:__main__:PRECOND_439: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 47523) | (delta < -skoSINS**2 - 47523))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=47524, skoM=2, skoS=2, skoCOSS=219, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 440---------
+DEBUG:__main__:PRECOND_440: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 47960) | (delta < -skoSINS**2 - 47960))
+DEBUG:__main__:---------pre-condition 441---------
+DEBUG:__main__:PRECOND_441: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 47960) | (delta < -skoSINS**2 - 47960))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=47961, skoM=2, skoS=2, skoCOSS=220, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 442---------
+DEBUG:__main__:PRECOND_442: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 48399) | (delta < -skoSINS**2 - 48399))
+DEBUG:__main__:---------pre-condition 443---------
+DEBUG:__main__:PRECOND_443: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 48399) | (delta < -skoSINS**2 - 48399))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=48400, skoM=2, skoS=2, skoCOSS=221, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 444---------
+DEBUG:__main__:PRECOND_444: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 48840) | (delta < -skoSINS**2 - 48840))
+DEBUG:__main__:---------pre-condition 445---------
+DEBUG:__main__:PRECOND_445: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 48840) | (delta < -skoSINS**2 - 48840))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=48841, skoM=2, skoS=2, skoCOSS=222, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 446---------
+DEBUG:__main__:PRECOND_446: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 49283) | (delta < -skoSINS**2 - 49283))
+DEBUG:__main__:---------pre-condition 447---------
+DEBUG:__main__:PRECOND_447: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 49283) | (delta < -skoSINS**2 - 49283))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=49284, skoM=2, skoS=2, skoCOSS=223, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 448---------
+DEBUG:__main__:PRECOND_448: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 49728) | (delta < -skoSINS**2 - 49728))
+DEBUG:__main__:---------pre-condition 449---------
+DEBUG:__main__:PRECOND_449: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 49728) | (delta < -skoSINS**2 - 49728))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=49729, skoM=2, skoS=2, skoCOSS=224, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 450---------
+DEBUG:__main__:PRECOND_450: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 50175) | (delta < -skoSINS**2 - 50175))
+DEBUG:__main__:---------pre-condition 451---------
+DEBUG:__main__:PRECOND_451: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 50175) | (delta < -skoSINS**2 - 50175))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=50176, skoM=2, skoS=2, skoCOSS=225, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 452---------
+DEBUG:__main__:PRECOND_452: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 50624) | (delta < -skoSINS**2 - 50624))
+DEBUG:__main__:---------pre-condition 453---------
+DEBUG:__main__:PRECOND_453: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 50624) | (delta < -skoSINS**2 - 50624))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=50625, skoM=2, skoS=2, skoCOSS=226, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 454---------
+DEBUG:__main__:PRECOND_454: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 51075) | (delta < -skoSINS**2 - 51075))
+DEBUG:__main__:---------pre-condition 455---------
+DEBUG:__main__:PRECOND_455: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 51075) | (delta < -skoSINS**2 - 51075))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=51076, skoM=2, skoS=2, skoCOSS=227, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 456---------
+DEBUG:__main__:PRECOND_456: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 51528) | (delta < -skoSINS**2 - 51528))
+DEBUG:__main__:---------pre-condition 457---------
+DEBUG:__main__:PRECOND_457: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 51528) | (delta < -skoSINS**2 - 51528))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=51529, skoM=2, skoS=2, skoCOSS=228, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 458---------
+DEBUG:__main__:PRECOND_458: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 51983) | (delta < -skoSINS**2 - 51983))
+DEBUG:__main__:---------pre-condition 459---------
+DEBUG:__main__:PRECOND_459: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 51983) | (delta < -skoSINS**2 - 51983))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=51984, skoM=2, skoS=2, skoCOSS=229, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 460---------
+DEBUG:__main__:PRECOND_460: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 52440) | (delta < -skoSINS**2 - 52440))
+DEBUG:__main__:---------pre-condition 461---------
+DEBUG:__main__:PRECOND_461: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 52440) | (delta < -skoSINS**2 - 52440))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=52441, skoM=2, skoS=2, skoCOSS=230, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 462---------
+DEBUG:__main__:PRECOND_462: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 52899) | (delta < -skoSINS**2 - 52899))
+DEBUG:__main__:---------pre-condition 463---------
+DEBUG:__main__:PRECOND_463: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 52899) | (delta < -skoSINS**2 - 52899))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=52900, skoM=2, skoS=2, skoCOSS=231, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 464---------
+DEBUG:__main__:PRECOND_464: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 53360) | (delta < -skoSINS**2 - 53360))
+DEBUG:__main__:---------pre-condition 465---------
+DEBUG:__main__:PRECOND_465: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 53360) | (delta < -skoSINS**2 - 53360))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=53361, skoM=2, skoS=2, skoCOSS=232, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 466---------
+DEBUG:__main__:PRECOND_466: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 53823) | (delta < -skoSINS**2 - 53823))
+DEBUG:__main__:---------pre-condition 467---------
+DEBUG:__main__:PRECOND_467: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 53823) | (delta < -skoSINS**2 - 53823))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=53824, skoM=2, skoS=2, skoCOSS=233, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 468---------
+DEBUG:__main__:PRECOND_468: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 54288) | (delta < -skoSINS**2 - 54288))
+DEBUG:__main__:---------pre-condition 469---------
+DEBUG:__main__:PRECOND_469: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 54288) | (delta < -skoSINS**2 - 54288))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=54289, skoM=2, skoS=2, skoCOSS=234, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 470---------
+DEBUG:__main__:PRECOND_470: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 54755) | (delta < -skoSINS**2 - 54755))
+DEBUG:__main__:---------pre-condition 471---------
+DEBUG:__main__:PRECOND_471: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 54755) | (delta < -skoSINS**2 - 54755))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=54756, skoM=2, skoS=2, skoCOSS=235, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 472---------
+DEBUG:__main__:PRECOND_472: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 55224) | (delta < -skoSINS**2 - 55224))
+DEBUG:__main__:---------pre-condition 473---------
+DEBUG:__main__:PRECOND_473: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 55224) | (delta < -skoSINS**2 - 55224))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=55225, skoM=2, skoS=2, skoCOSS=236, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 474---------
+DEBUG:__main__:PRECOND_474: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 55695) | (delta < -skoSINS**2 - 55695))
+DEBUG:__main__:---------pre-condition 475---------
+DEBUG:__main__:PRECOND_475: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 55695) | (delta < -skoSINS**2 - 55695))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=55696, skoM=2, skoS=2, skoCOSS=237, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 476---------
+DEBUG:__main__:PRECOND_476: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 56168) | (delta < -skoSINS**2 - 56168))
+DEBUG:__main__:---------pre-condition 477---------
+DEBUG:__main__:PRECOND_477: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 56168) | (delta < -skoSINS**2 - 56168))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=56169, skoM=2, skoS=2, skoCOSS=238, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 478---------
+DEBUG:__main__:PRECOND_478: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 56643) | (delta < -skoSINS**2 - 56643))
+DEBUG:__main__:---------pre-condition 479---------
+DEBUG:__main__:PRECOND_479: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 56643) | (delta < -skoSINS**2 - 56643))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=56644, skoM=2, skoS=2, skoCOSS=239, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 480---------
+DEBUG:__main__:PRECOND_480: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 57120) | (delta < -skoSINS**2 - 57120))
+DEBUG:__main__:---------pre-condition 481---------
+DEBUG:__main__:PRECOND_481: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 57120) | (delta < -skoSINS**2 - 57120))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=57121, skoM=2, skoS=2, skoCOSS=240, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 482---------
+DEBUG:__main__:PRECOND_482: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 57599) | (delta < -skoSINS**2 - 57599))
+DEBUG:__main__:---------pre-condition 483---------
+DEBUG:__main__:PRECOND_483: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 57599) | (delta < -skoSINS**2 - 57599))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=57600, skoM=2, skoS=2, skoCOSS=241, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 484---------
+DEBUG:__main__:PRECOND_484: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 58080) | (delta < -skoSINS**2 - 58080))
+DEBUG:__main__:---------pre-condition 485---------
+DEBUG:__main__:PRECOND_485: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 58080) | (delta < -skoSINS**2 - 58080))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=58081, skoM=2, skoS=2, skoCOSS=242, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 486---------
+DEBUG:__main__:PRECOND_486: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 58563) | (delta < -skoSINS**2 - 58563))
+DEBUG:__main__:---------pre-condition 487---------
+DEBUG:__main__:PRECOND_487: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 58563) | (delta < -skoSINS**2 - 58563))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=58564, skoM=2, skoS=2, skoCOSS=243, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 488---------
+DEBUG:__main__:PRECOND_488: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 59048) | (delta < -skoSINS**2 - 59048))
+DEBUG:__main__:---------pre-condition 489---------
+DEBUG:__main__:PRECOND_489: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 59048) | (delta < -skoSINS**2 - 59048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=59049, skoM=2, skoS=2, skoCOSS=244, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 490---------
+DEBUG:__main__:PRECOND_490: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 59535) | (delta < -skoSINS**2 - 59535))
+DEBUG:__main__:---------pre-condition 491---------
+DEBUG:__main__:PRECOND_491: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 59535) | (delta < -skoSINS**2 - 59535))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=59536, skoM=2, skoS=2, skoCOSS=245, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 492---------
+DEBUG:__main__:PRECOND_492: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 60024) | (delta < -skoSINS**2 - 60024))
+DEBUG:__main__:---------pre-condition 493---------
+DEBUG:__main__:PRECOND_493: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 60024) | (delta < -skoSINS**2 - 60024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=60025, skoM=2, skoS=2, skoCOSS=246, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 494---------
+DEBUG:__main__:PRECOND_494: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 60515) | (delta < -skoSINS**2 - 60515))
+DEBUG:__main__:---------pre-condition 495---------
+DEBUG:__main__:PRECOND_495: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 60515) | (delta < -skoSINS**2 - 60515))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=60516, skoM=2, skoS=2, skoCOSS=247, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 496---------
+DEBUG:__main__:PRECOND_496: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 61008) | (delta < -skoSINS**2 - 61008))
+DEBUG:__main__:---------pre-condition 497---------
+DEBUG:__main__:PRECOND_497: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 61008) | (delta < -skoSINS**2 - 61008))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=61009, skoM=2, skoS=2, skoCOSS=248, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 498---------
+DEBUG:__main__:PRECOND_498: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 61503) | (delta < -skoSINS**2 - 61503))
+DEBUG:__main__:---------pre-condition 499---------
+DEBUG:__main__:PRECOND_499: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 61503) | (delta < -skoSINS**2 - 61503))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=61504, skoM=2, skoS=2, skoCOSS=249, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 500---------
+DEBUG:__main__:PRECOND_500: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 62000) | (delta < -skoSINS**2 - 62000))
+DEBUG:__main__:---------pre-condition 501---------
+DEBUG:__main__:PRECOND_501: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 62000) | (delta < -skoSINS**2 - 62000))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=62001, skoM=2, skoS=2, skoCOSS=250, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 502---------
+DEBUG:__main__:PRECOND_502: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 62499) | (delta < -skoSINS**2 - 62499))
+DEBUG:__main__:---------pre-condition 503---------
+DEBUG:__main__:PRECOND_503: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 62499) | (delta < -skoSINS**2 - 62499))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=62500, skoM=2, skoS=2, skoCOSS=251, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 504---------
+DEBUG:__main__:PRECOND_504: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 63000) | (delta < -skoSINS**2 - 63000))
+DEBUG:__main__:---------pre-condition 505---------
+DEBUG:__main__:PRECOND_505: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 63000) | (delta < -skoSINS**2 - 63000))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=63001, skoM=2, skoS=2, skoCOSS=252, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 506---------
+DEBUG:__main__:PRECOND_506: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 63503) | (delta < -skoSINS**2 - 63503))
+DEBUG:__main__:---------pre-condition 507---------
+DEBUG:__main__:PRECOND_507: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 63503) | (delta < -skoSINS**2 - 63503))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=63504, skoM=2, skoS=2, skoCOSS=253, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 508---------
+DEBUG:__main__:PRECOND_508: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 64008) | (delta < -skoSINS**2 - 64008))
+DEBUG:__main__:---------pre-condition 509---------
+DEBUG:__main__:PRECOND_509: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 64008) | (delta < -skoSINS**2 - 64008))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=64009, skoM=2, skoS=2, skoCOSS=254, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 510---------
+DEBUG:__main__:PRECOND_510: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 64515) | (delta < -skoSINS**2 - 64515))
+DEBUG:__main__:---------pre-condition 511---------
+DEBUG:__main__:PRECOND_511: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 64515) | (delta < -skoSINS**2 - 64515))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=64516, skoM=2, skoS=2, skoCOSS=255, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 512---------
+DEBUG:__main__:PRECOND_512: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 65024) | (delta < -skoSINS**2 - 65024))
+DEBUG:__main__:---------pre-condition 513---------
+DEBUG:__main__:PRECOND_513: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 65024) | (delta < -skoSINS**2 - 65024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=65025, skoM=2, skoS=2, skoCOSS=256, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 514---------
+DEBUG:__main__:PRECOND_514: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 65535) | (delta < -skoSINS**2 - 65535))
+DEBUG:__main__:---------pre-condition 515---------
+DEBUG:__main__:PRECOND_515: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 65535) | (delta < -skoSINS**2 - 65535))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=65536, skoM=2, skoS=2, skoCOSS=257, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 516---------
+DEBUG:__main__:PRECOND_516: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 66048) | (delta < -skoSINS**2 - 66048))
+DEBUG:__main__:---------pre-condition 517---------
+DEBUG:__main__:PRECOND_517: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 66048) | (delta < -skoSINS**2 - 66048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=66049, skoM=2, skoS=2, skoCOSS=258, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 518---------
+DEBUG:__main__:PRECOND_518: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 66563) | (delta < -skoSINS**2 - 66563))
+DEBUG:__main__:---------pre-condition 519---------
+DEBUG:__main__:PRECOND_519: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 66563) | (delta < -skoSINS**2 - 66563))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=66564, skoM=2, skoS=2, skoCOSS=259, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 520---------
+DEBUG:__main__:PRECOND_520: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 67080) | (delta < -skoSINS**2 - 67080))
+DEBUG:__main__:---------pre-condition 521---------
+DEBUG:__main__:PRECOND_521: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 67080) | (delta < -skoSINS**2 - 67080))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=67081, skoM=2, skoS=2, skoCOSS=260, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 522---------
+DEBUG:__main__:PRECOND_522: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 67599) | (delta < -skoSINS**2 - 67599))
+DEBUG:__main__:---------pre-condition 523---------
+DEBUG:__main__:PRECOND_523: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 67599) | (delta < -skoSINS**2 - 67599))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=67600, skoM=2, skoS=2, skoCOSS=261, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 524---------
+DEBUG:__main__:PRECOND_524: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 68120) | (delta < -skoSINS**2 - 68120))
+DEBUG:__main__:---------pre-condition 525---------
+DEBUG:__main__:PRECOND_525: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 68120) | (delta < -skoSINS**2 - 68120))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=68121, skoM=2, skoS=2, skoCOSS=262, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 526---------
+DEBUG:__main__:PRECOND_526: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 68643) | (delta < -skoSINS**2 - 68643))
+DEBUG:__main__:---------pre-condition 527---------
+DEBUG:__main__:PRECOND_527: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 68643) | (delta < -skoSINS**2 - 68643))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=68644, skoM=2, skoS=2, skoCOSS=263, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 528---------
+DEBUG:__main__:PRECOND_528: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 69168) | (delta < -skoSINS**2 - 69168))
+DEBUG:__main__:---------pre-condition 529---------
+DEBUG:__main__:PRECOND_529: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 69168) | (delta < -skoSINS**2 - 69168))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=69169, skoM=2, skoS=2, skoCOSS=264, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 530---------
+DEBUG:__main__:PRECOND_530: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 69695) | (delta < -skoSINS**2 - 69695))
+DEBUG:__main__:---------pre-condition 531---------
+DEBUG:__main__:PRECOND_531: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 69695) | (delta < -skoSINS**2 - 69695))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=69696, skoM=2, skoS=2, skoCOSS=265, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 532---------
+DEBUG:__main__:PRECOND_532: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 70224) | (delta < -skoSINS**2 - 70224))
+DEBUG:__main__:---------pre-condition 533---------
+DEBUG:__main__:PRECOND_533: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 70224) | (delta < -skoSINS**2 - 70224))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=70225, skoM=2, skoS=2, skoCOSS=266, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 534---------
+DEBUG:__main__:PRECOND_534: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 70755) | (delta < -skoSINS**2 - 70755))
+DEBUG:__main__:---------pre-condition 535---------
+DEBUG:__main__:PRECOND_535: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 70755) | (delta < -skoSINS**2 - 70755))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=70756, skoM=2, skoS=2, skoCOSS=267, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 536---------
+DEBUG:__main__:PRECOND_536: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 71288) | (delta < -skoSINS**2 - 71288))
+DEBUG:__main__:---------pre-condition 537---------
+DEBUG:__main__:PRECOND_537: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 71288) | (delta < -skoSINS**2 - 71288))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=71289, skoM=2, skoS=2, skoCOSS=268, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 538---------
+DEBUG:__main__:PRECOND_538: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 71823) | (delta < -skoSINS**2 - 71823))
+DEBUG:__main__:---------pre-condition 539---------
+DEBUG:__main__:PRECOND_539: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 71823) | (delta < -skoSINS**2 - 71823))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=71824, skoM=2, skoS=2, skoCOSS=269, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 540---------
+DEBUG:__main__:PRECOND_540: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 72360) | (delta < -skoSINS**2 - 72360))
+DEBUG:__main__:---------pre-condition 541---------
+DEBUG:__main__:PRECOND_541: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 72360) | (delta < -skoSINS**2 - 72360))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=72361, skoM=2, skoS=2, skoCOSS=270, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 542---------
+DEBUG:__main__:PRECOND_542: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 72899) | (delta < -skoSINS**2 - 72899))
+DEBUG:__main__:---------pre-condition 543---------
+DEBUG:__main__:PRECOND_543: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 72899) | (delta < -skoSINS**2 - 72899))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=72900, skoM=2, skoS=2, skoCOSS=271, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 544---------
+DEBUG:__main__:PRECOND_544: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 73440) | (delta < -skoSINS**2 - 73440))
+DEBUG:__main__:---------pre-condition 545---------
+DEBUG:__main__:PRECOND_545: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 73440) | (delta < -skoSINS**2 - 73440))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=73441, skoM=2, skoS=2, skoCOSS=272, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 546---------
+DEBUG:__main__:PRECOND_546: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 73983) | (delta < -skoSINS**2 - 73983))
+DEBUG:__main__:---------pre-condition 547---------
+DEBUG:__main__:PRECOND_547: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 73983) | (delta < -skoSINS**2 - 73983))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=73984, skoM=2, skoS=2, skoCOSS=273, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 548---------
+DEBUG:__main__:PRECOND_548: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 74528) | (delta < -skoSINS**2 - 74528))
+DEBUG:__main__:---------pre-condition 549---------
+DEBUG:__main__:PRECOND_549: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 74528) | (delta < -skoSINS**2 - 74528))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=74529, skoM=2, skoS=2, skoCOSS=274, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 550---------
+DEBUG:__main__:PRECOND_550: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 75075) | (delta < -skoSINS**2 - 75075))
+DEBUG:__main__:---------pre-condition 551---------
+DEBUG:__main__:PRECOND_551: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 75075) | (delta < -skoSINS**2 - 75075))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=75076, skoM=2, skoS=2, skoCOSS=275, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 552---------
+DEBUG:__main__:PRECOND_552: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 75624) | (delta < -skoSINS**2 - 75624))
+DEBUG:__main__:---------pre-condition 553---------
+DEBUG:__main__:PRECOND_553: (delta >= 0) & (skoM >= 2) & ((delta < skoSINS**2 + 75624) | (delta < -skoSINS**2 - 75624))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=75625, skoM=2, skoS=2, skoCOSS=276, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 554---------
+DEBUG:__main__:PRECOND_554: (delta >= 0) & (skoM >= 2) & (skoS >= 2) & ((delta < skoSINS**2 + 76175) | (delta < -skoSINS**2 - 76175))

@@ -1,0 +1,35 @@
+DEBUG:__main__:Starting Log File: dm_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_4_input14.smt
+DEBUG:__main__:ip_vars: ['x']
+DEBUG:__main__:op_vars: ['y', 'z']
+DEBUG:__main__:post_condition_smt:And(And(And(0 >= 0 + 1*y*y + 1*z*z + 1*x*x + -16)))
+DEBUG:__main__:POST_CONDITION_SYMPY: 0 >= x**2 + y**2 + z**2 - 16, {'y': y, 'z': z, 'x': x}
+DEBUG:__main__:vars sympy:['y', 'x', 'z']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y, 'z': z}
+DEBUG:__main__:z3 post_condition:0 >= -16 + x**2 + y**2 + z**2
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1/8, y=1/2, z=-3
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:PRECOND_0: x**2 + z**2 - 63/4 <= 0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:PRECOND_1: x**2 <= 27/4
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=-3, y=1/4, z=21/8
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:PRECOND_2: x**2 + z**2 - 255/16 <= 0
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:PRECOND_3: x**2 <= 579/64
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=-4, y=0, z=0
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:PRECOND_4: x**2 + z**2 - 16 <= 0
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:PRECOND_5: x**2 <= 16
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:x**2 + z**2 - 63/4 <= 0 {'x': 1/8, 'y': 1/2, 'z': -3}
+DEBUG:__main__:x**2 <= 27/4 {'x': 1/8, 'y': 1/2, 'z': -3}
+DEBUG:__main__:x**2 + z**2 - 255/16 <= 0 {'x': -3, 'y': 1/4, 'z': 21/8}
+DEBUG:__main__:x**2 <= 579/64 {'x': -3, 'y': 1/4, 'z': 21/8}
+DEBUG:__main__:x**2 + z**2 - 16 <= 0 {'x': -4, 'y': 0, 'z': 0}
+DEBUG:__main__:x**2 <= 16 {'x': -4, 'y': 0, 'z': 0}

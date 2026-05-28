@@ -1,0 +1,144 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_1_geometric4.smt
+DEBUG:__main__:ip_vars: ['c']
+DEBUG:__main__:op_vars: ['y', 'x']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*y*y + -1*x*y + 1*c,
+            0 > 0 + 1*x*x + -1*y*y + -10)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > c - x*y + y**2) & (0 > x**2 - y**2 - 10), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['y', 'x', 'c']
+DEBUG:__main__:z3 vars:{'c': c, 'y': y, 'x': x}
+DEBUG:__main__:z3 post_condition:And(0 > c + y**2 + -1*x*y, 0 > -10 + x**2 + -1*y**2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, c=-19/16, y=1/2, x=1/8
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 + 1/2, x: 1/8}
+DEBUG:__main__:PRECOND_0: 256 c - 1 < 0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: 1/2, x: lambda_var_0 + 1/8}
+DEBUG:__main__:PRECOND_1: 2 c^2 + c - 5 < 0 \/ 4 c + 1 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, c=2, y=-3/2, x=-3
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 - 3/2, x: -3}
+DEBUG:__main__:PRECOND_2: 4 c - 9 < 0
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: -3/2, x: lambda_var_0 - 3}
+DEBUG:__main__:PRECOND_3: c - 3 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, c=4, y=31/8, x=5
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 + 31/8, x: 5}
+DEBUG:__main__:PRECOND_4: c^2 + 30 c - 150 < 0 \/ c + 15 < 0
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: 31/8, x: lambda_var_0 + 5}
+DEBUG:__main__:PRECOND_5: 32 c^2 + 961 c - 4805 < 0 \/ 64 c + 961 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, c=4, y=-31/8, x=-5
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 - 31/8, x: -5}
+DEBUG:__main__:PRECOND_6: c^2 + 30 c - 150 < 0 \/ c + 15 < 0
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: -31/8, x: lambda_var_0 - 5}
+DEBUG:__main__:PRECOND_7: 32 c^2 + 961 c - 4805 < 0 \/ 64 c + 961 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, c=4, y=31/8, x=5
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 + 31/8, x: 5}
+DEBUG:__main__:PRECOND_8: c^2 + 30 c - 150 < 0 \/ c + 15 < 0
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: 31/8, x: lambda_var_0 + 5}
+DEBUG:__main__:PRECOND_9: 32 c^2 + 961 c - 4805 < 0 \/ 64 c + 961 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, c=4, y=31/8, x=5
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 + 31/8, x: 5}
+DEBUG:__main__:PRECOND_10: c^2 + 30 c - 150 < 0 \/ c + 15 < 0
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: 31/8, x: lambda_var_0 + 5}
+DEBUG:__main__:PRECOND_11: 32 c^2 + 961 c - 4805 < 0 \/ 64 c + 961 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, c=4, y=31/8, x=5
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 + 31/8, x: 5}
+DEBUG:__main__:PRECOND_12: c^2 + 30 c - 150 < 0 \/ c + 15 < 0
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: 31/8, x: lambda_var_0 + 5}
+DEBUG:__main__:PRECOND_13: 32 c^2 + 961 c - 4805 < 0 \/ 64 c + 961 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, c=4, y=31/8, x=5
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 + 31/8, x: 5}
+DEBUG:__main__:PRECOND_14: c^2 + 30 c - 150 < 0 \/ c + 15 < 0
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: 31/8, x: lambda_var_0 + 5}
+DEBUG:__main__:PRECOND_15: 32 c^2 + 961 c - 4805 < 0 \/ 64 c + 961 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, c=4, y=31/8, x=5
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 + 31/8, x: 5}
+DEBUG:__main__:PRECOND_16: c^2 + 30 c - 150 < 0 \/ c + 15 < 0
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: 31/8, x: lambda_var_0 + 5}
+DEBUG:__main__:PRECOND_17: 32 c^2 + 961 c - 4805 < 0 \/ 64 c + 961 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, c=4, y=31/8, x=5
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 + 31/8, x: 5}
+DEBUG:__main__:PRECOND_18: c^2 + 30 c - 150 < 0 \/ c + 15 < 0
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: 31/8, x: lambda_var_0 + 5}
+DEBUG:__main__:PRECOND_19: 32 c^2 + 961 c - 4805 < 0 \/ 64 c + 961 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, c=4, y=31/8, x=5
+DEBUG:__main__:---------pre-condition 20---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 + 31/8, x: 5}
+DEBUG:__main__:PRECOND_20: c^2 + 30 c - 150 < 0 \/ c + 15 < 0
+DEBUG:__main__:---------pre-condition 21---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: 31/8, x: lambda_var_0 + 5}
+DEBUG:__main__:PRECOND_21: 32 c^2 + 961 c - 4805 < 0 \/ 64 c + 961 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, c=4, y=31/8, x=5
+DEBUG:__main__:---------pre-condition 22---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 + 31/8, x: 5}
+DEBUG:__main__:PRECOND_22: c^2 + 30 c - 150 < 0 \/ c + 15 < 0
+DEBUG:__main__:---------pre-condition 23---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: 31/8, x: lambda_var_0 + 5}

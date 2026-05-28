@@ -1,0 +1,3 @@
+(
+(define-fun a_o ((b_i Real) (delta_i Real)) Real (+ (/ 1 2) (* (/ (- 1) 2) delta_i)))
+)

@@ -1,0 +1,2691 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA_smaller/smt_files/chosen_smt_files_asin_8_asin-8-chunk-0024.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoX', 'skoS2', 'pi']
+DEBUG:__main__:op_vars: ['skoSP', 'skoSM']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(And(skoX - (1 + skoSM*skoSM*-1) <= delta,
+            1 + skoSM*skoSM*-1 - skoX <= delta),
+        And(And(-1 + skoSP*skoSP - skoX <= delta,
+                skoX - (-1 + skoSP*skoSP) <= delta),
+            And(And(skoS2*skoS2 - 2 <= delta,
+                    2 - skoS2*skoS2 <= delta),
+                And(Not(pi <= 15707963/5000000),
+                    And(Not(31415927/10000000 <= pi),
+                        And(0 <= skoSP,
+                            And(0 <= skoSM,
+                                And(0 <= skoS2,
+                                    And(Not(skoX <= 0),
+                                        Not(1 <= skoX)))))))))))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (0 <= skoS2) & (0 <= skoSM) & (0 <= skoSP) & (1 > skoX) & (31415927/10000000 > pi) & (pi > 15707963/5000000) & (skoX > 0) & (skoS2**2 - 2 <= delta) & (skoSM**2 + skoX - 1 <= delta) & (2 - skoS2**2 <= delta) & (-skoSP**2 + skoX + 1 <= delta) & (skoSP**2 - skoX - 1 <= delta) & (-skoSM**2 - skoX + 1 <= delta), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['skoSP', 'delta', 'pi', 'skoS2', 'skoX', 'skoSM']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoS2': skoS2, 'skoSM': skoSM, 'skoSP': skoSP, 'skoX': skoX, 'pi': pi}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    0 <= skoS2,
+    0 <= skoSM,
+    0 <= skoSP,
+    1 > skoX,
+    31415927/10000000 > pi,
+    15707963/5000000 < pi,
+    0 < skoX,
+    -2 + skoS2**2 <= delta,
+    -1 + skoX + skoSM**2 <= delta,
+    2 + -1*skoS2**2 <= delta,
+    1 + skoX + -1*skoSP**2 <= delta,
+    -1 + skoSP**2 + -1*skoX <= delta,
+    1 + -1*skoX + -1*skoSM**2 <= delta)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=2, skoS2=1, skoSM=1, skoSP=1, skoX=1/2, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 1, skoSM: 1}
+DEBUG:__main__:PRECOND_0: Or(And(skoX - delta <= 0, -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, -skoX - delta <= 1, skoX - delta <= -1), And(-skoX - delta < 1, skoX - delta <= 0, skoX + delta <= -1, -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, -delta <= 0), And(Eq(skoX + delta + 1, 0), skoX - delta <= 0, -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, -delta <= 0), And(-skoX + delta < 1, skoX - delta <= 0, Or(skoX - delta <= -1, -skoX + delta <= 1), -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, -delta <= 0), And(-skoX - delta < 1, skoX - delta <= 0, Or(skoX + delta <= -1, -skoX - delta <= 1), -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, -delta <= 0), And(-skoX + delta < 1, skoX - delta <= 0, skoX - delta <= -1, -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, -delta <= 0), And(Eq(-skoX + delta - 1, 0), skoX - delta <= 0, -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, -delta <= 0), And(skoX - delta <= 0, -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, -skoX - delta < 1, Or(skoX - delta < -1, Eq(-skoX + delta - 1, 0))), And(-skoX + delta < 1, skoX - delta <= 0, Eq(-skoX + delta - 1, 0), -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, Or(-delta < 0, And(Eq(delta, 0), -skoX + delta < 1))), And(-skoX - delta < 1, skoX - delta <= 0, Eq(skoX + delta + 1, 0), -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, Or(-delta < 0, And(Eq(delta, 0), Eq(skoX + delta + 1, 0)))), And(-skoX + delta < 1, skoX - delta <= 0, Or(-skoX + delta < 1, Eq(-skoX + delta - 1, 0)), -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, -delta < 0))
+DEBUG:__main__:PRECOND_SYMPY_0: ((skoX < 1) & (-delta <= 0) & (-skoS2 <= 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & Eq(delta + skoX + 1, 0) & (-delta + skoX <= 0) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoS2**2 <= -2)) | ((skoX < 1) & (-delta <= 0) & (-skoS2 <= 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & (-delta + skoX <= 0) & Eq(delta - skoX - 1, 0) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoS2**2 <= -2)) | ((skoX < 1) & (-skoS2 <= 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & (-delta + skoX <= -1) & (-delta + skoX <= 0) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoX <= 1) & (-delta - skoS2**2 <= -2)) | ((skoX < 1) & (-skoS2 <= 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & (-delta + skoX <= 0) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoX < 1) & (-delta - skoS2**2 <= -2) & ((-delta + skoX < -1) | Eq(delta - skoX - 1, 0))) | ((skoX < 1) & (-delta <= 0) & (-skoS2 <= 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & (-delta + skoX <= 0) & (delta - skoX < 1) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoS2**2 <= -2) & ((-delta + skoX <= -1) | (delta - skoX <= 1))) | ((skoX < 1) & (-skoS2 <= 0) & (-delta < 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & (-delta + skoX <= 0) & (delta - skoX < 1) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoS2**2 <= -2) & ((delta - skoX < 1) | Eq(delta - skoX - 1, 0))) | ((skoX < 1) & (-delta <= 0) & (-skoS2 <= 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & (-delta + skoX <= 0) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoX < 1) & (-delta - skoS2**2 <= -2) & ((delta + skoX <= -1) | (-delta - skoX <= 1))) | ((skoX < 1) & (-skoS2 <= 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & Eq(delta + skoX + 1, 0) & (-delta + skoX <= 0) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoX < 1) & (-delta - skoS2**2 <= -2) & ((-delta < 0) | (Eq(delta, 0) & Eq(delta + skoX + 1, 0)))) | ((skoX < 1) & (-skoS2 <= 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & (-delta + skoX <= 0) & (delta - skoX < 1) & Eq(delta - skoX - 1, 0) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoS2**2 <= -2) & ((-delta < 0) | (Eq(delta, 0) & (delta - skoX < 1))))
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 1, skoSM: lambda_var_0 + 1}
+DEBUG:__main__:PRECOND_1: Or(And(skoX - delta <= 0, -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, skoX - delta <= 1, -skoX - delta <= -1), And(skoX - delta < 1, skoX - delta <= 0, Or(-skoX + delta <= -1, skoX - delta <= 1), -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, -delta <= 0), And(skoX + delta < 1, skoX - delta <= 0, -skoX - delta <= -1, -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, -delta <= 0), And(Eq(skoX + delta - 1, 0), skoX - delta <= 0, -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, -delta <= 0), And(skoX - delta < 1, skoX - delta <= 0, -skoX + delta <= -1, -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, -delta <= 0), And(Eq(-skoX + delta + 1, 0), skoX - delta <= 0, -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, -delta <= 0), And(skoX + delta < 1, skoX - delta <= 0, Or(-skoX - delta <= -1, skoX + delta <= 1), -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, -delta <= 0), And(skoX - delta <= 0, -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, skoX - delta < 1, Or(-skoX - delta < -1, Eq(skoX + delta - 1, 0))), And(skoX - delta < 1, skoX - delta <= 0, Eq(-skoX + delta + 1, 0), -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, Or(-delta < 0, And(Eq(delta, 0), Eq(-skoX + delta + 1, 0)))), And(skoX + delta < 1, skoX - delta <= 0, Or(skoX + delta < 1, Eq(skoX + delta - 1, 0)), -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, -delta < 0), And(skoX + delta < 1, skoX - delta <= 0, Eq(skoX + delta - 1, 0), -skoS2 <= 0, -5000000 * pi < -15707963, -skoX < 0, 10000000 * pi < 31415927, skoX < 1, -skoX - delta <= 0, skoS2 ** 2 - delta <= 2, -skoS2 ** 2 - delta <= -2, Or(-delta < 0, And(Eq(delta, 0), skoX + delta < 1))))
+DEBUG:__main__:PRECOND_SYMPY_1: ((skoX < 1) & (-delta <= 0) & (-skoS2 <= 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & Eq(delta + skoX - 1, 0) & (-delta + skoX <= 0) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoS2**2 <= -2)) | ((skoX < 1) & (-delta <= 0) & (-skoS2 <= 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & (-delta + skoX <= 0) & Eq(delta - skoX + 1, 0) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoS2**2 <= -2)) | ((skoX < 1) & (-skoS2 <= 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & (-delta + skoX <= 0) & (-delta + skoX <= 1) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= -1) & (-delta - skoX <= 0) & (-delta - skoS2**2 <= -2)) | ((skoX < 1) & (-skoS2 <= 0) & (-delta < 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & (delta + skoX < 1) & (-delta + skoX <= 0) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoS2**2 <= -2) & ((delta + skoX < 1) | Eq(delta + skoX - 1, 0))) | ((skoX < 1) & (-skoS2 <= 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & (-delta + skoX <= 0) & (-delta + skoX < 1) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoS2**2 <= -2) & (Eq(delta + skoX - 1, 0) | (-delta - skoX < -1))) | ((skoX < 1) & (-delta <= 0) & (-skoS2 <= 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & (delta + skoX < 1) & (-delta + skoX <= 0) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoS2**2 <= -2) & ((delta + skoX <= 1) | (-delta - skoX <= -1))) | ((skoX < 1) & (-skoS2 <= 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & (delta + skoX < 1) & Eq(delta + skoX - 1, 0) & (-delta + skoX <= 0) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoS2**2 <= -2) & ((-delta < 0) | (Eq(delta, 0) & (delta + skoX < 1)))) | ((skoX < 1) & (-delta <= 0) & (-skoS2 <= 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & (-delta + skoX <= 0) & (-delta + skoX < 1) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoS2**2 <= -2) & ((-delta + skoX <= 1) | (delta - skoX <= -1))) | ((skoX < 1) & (-skoS2 <= 0) & (-5000000*pi < -15707963) & (10000000*pi < 31415927) & (-skoX < 0) & (-delta + skoX <= 0) & (-delta + skoX < 1) & Eq(delta - skoX + 1, 0) & (-delta + skoS2**2 <= 2) & (-delta - skoX <= 0) & (-delta - skoS2**2 <= -2) & ((-delta < 0) | (Eq(delta, 0) & Eq(delta - skoX + 1, 0))))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=62831853/20000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=25132741/8000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=251327409/80000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=502654817/160000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1005309633/320000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=402123853/128000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4021238529/1280000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=8042477057/2560000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=16084954113/5120000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1286796329/409600000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=64339816449/20480000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=128679632897/40960000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=257359265793/81920000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=102943706317/32768000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1029437063169/327680000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=2058874126337/655360000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=4117748252673/1310720000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1647099301069/524288000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=16470993010689/5242880000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=32941986021377/10485760000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=65883972042753/20971520000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=26353588817101/8388608000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=263535888171009/83886080000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=527071776342017/167772160000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1054143552684033/335544320000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=421657421073613/134217728000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=4216574210736129/1342177280000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=8433148421472257/2684354560000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=16866296842944513/5368709120000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1349303747435561/429496729600000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=67465187371778049/21474836480000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=134930374743556097/42949672960000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=269860749487112193/85899345920000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=107944299794844877/34359738368000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1079442997948448769/343597383680000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=2158885995896897537/687194767360000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=4317771991793795073/1374389534720000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=14148475262709909/4503599627370496
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=28296950525419817/9007199254740992
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=56593901050839633/18014398509481984
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=113187802101679265/36028797018963968
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1811004833626868239/576460752303423488
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3622009667253736477/1152921504606846976
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=14488038669014945907/4611686018427387904
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=28976077338029891813/9223372036854775808
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=57952154676059783625/18446744073709551616
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=115904309352119567249/36893488147419103232
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=231808618704239134497/73786976294838206464
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=52707179/16777216
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=105414357/33554432
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=210828713/67108864
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=421657425/134217728
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=843314849/268435456
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=6746518791/2147483648
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=1727108796717518029/549755813888000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=17271087967175180289/5497558138880000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=34542175934350360577/10995116277760000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=69084351868700721153/21990232555520000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=210828717/67108864
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=421657433/134217728
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=843314865/268435456
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1686629729/536870912
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3373259457/1073741824
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=6746518913/2147483648
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=13493037825/4294967296
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=26986075649/8589934592
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=53972151297/17179869184
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=107944302593/34359738368
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=215888605185/68719476736
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=431777210369/137438953472
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=863554420737/274877906944
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1727108841473/549755813888
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3454217682945/1099511627776
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=6908435365889/2199023255552
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1686629737/536870912
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3373259473/1073741824
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=6746518945/2147483648
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=13493037889/4294967296
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=26986075777/8589934592
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=53972151553/17179869184
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=107944303105/34359738368
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=215888606209/68719476736
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=431777212417/137438953472
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=27633740747480288461/8796093022208000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=276337407474802884609/87960930222080000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=0.6614378277?, skoSP=5/4, skoX=9/16, pi=552674814949605769217/175921860444160000000
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=863554424833/274877906944
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1727108849665/549755813888
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3454217699329/1099511627776
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=6908435398657/2199023255552
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=13816870797313/4398046511104
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=27633741594625/8796093022208
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=55267483189249/17592186044416
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=110534966378497/35184372088832
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=221069932756993/70368744177664
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=442139865513985/140737488355328
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=884279731027969/281474976710656
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1768559462055937/562949953421312
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3537118924111873/1125899906842624
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=7074237848223745/2251799813685248
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3373259475/1073741824
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=6746518949/2147483648
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=13493037897/4294967296
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=26986075793/8589934592
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=53972151585/17179869184
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=107944303169/34359738368
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=215888606337/68719476736
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=431777212673/137438953472
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=863554425345/274877906944
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1727108850689/549755813888
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3454217701377/1099511627776
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=6908435402753/2199023255552
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=13816870805505/4398046511104
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=27633741611009/8796093022208
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=55267483222017/17592186044416
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=6746518951/2147483648
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=13493037901/4294967296
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=26986075801/8589934592
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=53972151601/17179869184
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=107944303201/34359738368
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=215888606401/68719476736
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=431777212801/137438953472
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=863554425601/274877906944
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1727108851201/549755813888
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3454217702401/1099511627776
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=6908435404801/2199023255552
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=13816870809601/4398046511104
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=27633741619201/8796093022208
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=55267483238401/17592186044416
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=110534966476801/35184372088832
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=221069932953601/70368744177664
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=442139865907201/140737488355328
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=884279731814401/281474976710656
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1768559463628801/562949953421312
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3537118927257601/1125899906842624
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=7074237854515201/2251799813685248
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=14148475709030401/4503599627370496
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=28296951418060801/9007199254740992
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=56593902836121601/18014398509481984
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=113187805672243201/36028797018963968
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=226375611344486401/72057594037927936
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=452751222688972801/144115188075855872
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=905502445377945601/288230376151711744
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1811004890755891201/576460752303423488
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3622009781511782401/1152921504606846976
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=7244019563023564801/2305843009213693952
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=13493037903/4294967296
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=26986075805/8589934592
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=53972151609/17179869184
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=107944303217/34359738368
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=215888606433/68719476736
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=431777212865/137438953472
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=863554425729/274877906944
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1727108851457/549755813888
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3454217702913/1099511627776
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=6908435405825/2199023255552
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=13816870811649/4398046511104
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=27633741623297/8796093022208
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=55267483246593/17592186044416
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=110534966493185/35184372088832
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=221069932986369/70368744177664
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=26986075807/8589934592
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=53972151613/17179869184
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=107944303225/34359738368
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=215888606449/68719476736
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=431777212897/137438953472
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=863554425793/274877906944
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1727108851585/549755813888
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3454217703169/1099511627776
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=6908435406337/2199023255552
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=13816870812673/4398046511104
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=27633741625345/8796093022208
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=55267483250689/17592186044416
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=110534966501377/35184372088832
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=221069933002753/70368744177664
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=442139866005505/140737488355328
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=884279732011009/281474976710656
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1768559464022017/562949953421312
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3537118928044033/1125899906842624
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=7074237856088065/2251799813685248
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=14148475712176129/4503599627370496
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=28296951424352257/9007199254740992
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=56593902848704513/18014398509481984
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=113187805697409025/36028797018963968
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=226375611394818049/72057594037927936
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=452751222789636097/144115188075855872
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=905502445579272193/288230376151711744
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1811004891158544385/576460752303423488
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3622009782317088769/1152921504606846976
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=7244019564634177537/2305843009213693952
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=14488039129268355073/4611686018427387904
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=28976078258536710145/9223372036854775808
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=57952156517073420289/18446744073709551616
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=115904313034146840577/36893488147419103232
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=231808626068293681153/73786976294838206464
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=463617252136587362305/147573952589676412928
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=927234504273174724609/295147905179352825856
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1854469008546349449217/590295810358705651712
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3708938017092698898433/1180591620717411303424
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=7417876034185397796865/2361183241434822606848
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=14835752068370795593729/4722366482869645213696
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=29671504136741591187457/9444732965739290427392
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=59343008273483182374913/18889465931478580854784
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=118686016546966364749825/37778931862957161709568
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=237372033093932729499649/75557863725914323419136
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=474744066187865458999297/151115727451828646838272
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=949488132375730917998593/302231454903657293676544
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1898976264751461835997185/604462909807314587353088
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3797952529502923671994369/1208925819614629174706176
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=7595905059005847343988737/2417851639229258349412352
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=15191810118011694687977473/4835703278458516698824704
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=30383620236023389375954945/9671406556917033397649408
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=60767240472046778751909889/19342813113834066795298816
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=121534480944093557503819777/38685626227668133590597632
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=243068961888187115007639553/77371252455336267181195264
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=486137923776374230015279105/154742504910672534362390528
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=972275847552748460030558209/309485009821345068724781056
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1944551695105496920061116417/618970019642690137449562112
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3889103390210993840122232833/1237940039285380274899124224
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=7778206780421987680244465665/2475880078570760549798248448
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=15556413560843975360488931329/4951760157141521099596496896
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=31112827121687950720977862657/9903520314283042199192993792
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=62225654243375901441955725313/19807040628566084398385987584
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=124451308486751802883911450625/39614081257132168796771975168
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=248902616973503605767822901249/79228162514264337593543950336
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=497805233947007211535645802497/158456325028528675187087900672
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=995610467894014423071291604993/316912650057057350374175801344
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1991220935788028846142583209985/633825300114114700748351602688
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3982441871576057692285166419969/1267650600228229401496703205376
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=7964883743152115384570332839937/2535301200456458802993406410752
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=15929767486304230769140665679873/5070602400912917605986812821504
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=31859534972608461538281331359745/10141204801825835211973625643008
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=63719069945216923076562662719489/20282409603651670423947251286016
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=127438139890433846153125325438977/40564819207303340847894502572032
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=254876279780867692306250650877953/81129638414606681695789005144064
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=509752559561735384612501301755905/162259276829213363391578010288128
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1019505119123470769225002603511809/324518553658426726783156020576256
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2039010238246941538450005207023617/649037107316853453566312041152512
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4078020476493883076900010414047233/1298074214633706907132624082305024
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=8156040952987766153800020828094465/2596148429267413814265248164610048
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=16312081905975532307600041656188929/5192296858534827628530496329220096
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=32624163811951064615200083312377857/10384593717069655257060992658440192
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=65248327623902129230400166624755713/20769187434139310514121985316880384
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=130496655247804258460800333249511425/41538374868278621028243970633760768
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=260993310495608516921600666499022849/83076749736557242056487941267521536
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=521986620991217033843201332998045697/166153499473114484112975882535043072
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1043973241982434067686402665996091393/332306998946228968225951765070086144
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2087946483964868135372805331992182785/664613997892457936451903530140172288
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4175892967929736270745610663984365569/1329227995784915872903807060280344576
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=8351785935859472541491221327968731137/2658455991569831745807614120560689152
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=16703571871718945082982442655937462273/5316911983139663491615228241121378304
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=33407143743437890165964885311874924545/10633823966279326983230456482242756608
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=66814287486875780331929770623749849089/21267647932558653966460912964485513216
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=133628574973751560663859541247499698177/42535295865117307932921825928971026432
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=267257149947503121327719082494999396353/85070591730234615865843651857942052864
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=534514299895006242655438164989998792705/170141183460469231731687303715884105728
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1069028599790012485310876329979997585409/340282366920938463463374607431768211456
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2138057199580024970621752659959995170817/680564733841876926926749214863536422912
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4276114399160049941243505319919990341633/1361129467683753853853498429727072845824
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=8552228798320099882487010639839980683265/2722258935367507707706996859454145691648
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=17104457596640199764974021279679961366529/5444517870735015415413993718908291383296
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=34208915193280399529948042559359922733057/10889035741470030830827987437816582766592
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=68417830386560799059896085118719845466113/21778071482940061661655974875633165533184
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=136835660773121598119792170237439690932225/43556142965880123323311949751266331066368
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=273671321546243196239584340474879381864449/87112285931760246646623899502532662132736
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=547342643092486392479168680949758763728897/174224571863520493293247799005065324265472
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1094685286184972784958337361899517527457793/348449143727040986586495598010130648530944
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2189370572369945569916674723799035054915585/696898287454081973172991196020261297061888
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4378741144739891139833349447598070109831169/1393796574908163946345982392040522594123776
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=8757482289479782279666698895196140219662337/2787593149816327892691964784081045188247552
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=17514964578959564559333397790392280439324673/5575186299632655785383929568162090376495104
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=35029929157919129118666795580784560878649345/11150372599265311570767859136324180752990208
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=70059858315838258237333591161569121757298689/22300745198530623141535718272648361505980416
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=140119716631676516474667182323138243514597377/44601490397061246283071436545296723011960832
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=280239433263353032949334364646276487029194753/89202980794122492566142873090593446023921664
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=560478866526706065898668729292552974058389505/178405961588244985132285746181186892047843328
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1120957733053412131797337458585105948116779009/356811923176489970264571492362373784095686656
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2241915466106824263594674917170211896233558017/713623846352979940529142984724747568191373312
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4483830932213648527189349834340423792467116033/1427247692705959881058285969449495136382746624
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=8967661864427297054378699668680847584934232065/2854495385411919762116571938898990272765493248
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=17935323728854594108757399337361695169868464129/5708990770823839524233143877797980545530986496
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=35870647457709188217514798674723390339736928257/11417981541647679048466287755595961091061972992
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=71741294915418376435029597349446780679473856513/22835963083295358096932575511191922182123945984
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=143482589830836752870059194698893561358947713025/45671926166590716193865151022383844364247891968
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=286965179661673505740118389397787122717895426049/91343852333181432387730302044767688728495783936
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=573930359323347011480236778795574245435790852097/182687704666362864775460604089535377456991567872
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1147860718646694022960473557591148490871581704193/365375409332725729550921208179070754913983135744
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2295721437293388045920947115182296981743163408385/730750818665451459101842416358141509827966271488
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4591442874586776091841894230364593963486326816769/1461501637330902918203684832716283019655932542976
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=9182885749173552183683788460729187926972653633537/2923003274661805836407369665432566039311865085952
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=18365771498347104367367576921458375853945307267073/5846006549323611672814739330865132078623730171904
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=36731542996694208734735153842916751707890614534145/11692013098647223345629478661730264157247460343808
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=73463085993388417469470307685833503415781229068289/23384026197294446691258957323460528314494920687616
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=146926171986776834938940615371667006831562458136577/46768052394588893382517914646921056628989841375232
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=293852343973553669877881230743334013663124916273153/93536104789177786765035829293842113257979682750464
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=587704687947107339755762461486668027326249832546305/187072209578355573530071658587684226515959365500928
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1175409375894214679511524922973336054652499665092609/374144419156711147060143317175368453031918731001856
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2350818751788429359023049845946672109304999330185217/748288838313422294120286634350736906063837462003712
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4701637503576858718046099691893344218609998660370433/1496577676626844588240573268701473812127674924007424
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=9403275007153717436092199383786688437219997320740865/2993155353253689176481146537402947624255349848014848
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=18806550014307434872184398767573376874439994641481729/5986310706507378352962293074805895248510699696029696
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=37613100028614869744368797535146753748879989282963457/11972621413014756705924586149611790497021399392059392
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=75226200057229739488737595070293507497759978565926913/23945242826029513411849172299223580994042798784118784
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=150452400114459478977475190140587014995519957131853825/47890485652059026823698344598447161988085597568237568
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=300904800228918957954950380281174029991039914263707649/95780971304118053647396689196894323976171195136475136
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=601809600457837915909900760562348059982079828527415297/191561942608236107294793378393788647952342390272950272
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1203619200915675831819801521124696119964159657054830593/383123885216472214589586756787577295904684780545900544
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2407238401831351663639603042249392239928319314109661185/766247770432944429179173513575154591809369561091801088
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4814476803662703327279206084498784479856638628219322369/1532495540865888858358347027150309183618739122183602176
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=9628953607325406654558412168997568959713277256438644737/3064991081731777716716694054300618367237478244367204352
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=19257907214650813309116824337995137919426554512877289473/6129982163463555433433388108601236734474956488734408704
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=38515814429301626618233648675990275838853109025754578945/12259964326927110866866776217202473468949912977468817408
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=77031628858603253236467297351980551677706218051509157889/24519928653854221733733552434404946937899825954937634816
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=154063257717206506472934594703961103355412436103018315777/49039857307708443467467104868809893875799651909875269632
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=308126515434413012945869189407922206710824872206036631553/98079714615416886934934209737619787751599303819750539264
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=616253030868826025891738378815844413421649744412073263105/196159429230833773869868419475239575503198607639501078528
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1232506061737652051783476757631688826843299488824146526209/392318858461667547739736838950479151006397215279002157056
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2465012123475304103566953515263377653686598977648293052417/784637716923335095479473677900958302012794430558004314112
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4930024246950608207133907030526755307373197955296586104833/1569275433846670190958947355801916604025588861116008628224
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=9860048493901216414267814061053510614746395910593172209665/3138550867693340381917894711603833208051177722232017256448
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=19720096987802432828535628122107021229492791821186344419329/6277101735386680763835789423207666416102355444464034512896
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=39440193975604865657071256244214042458985583642372688838657/12554203470773361527671578846415332832204710888928069025792
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=78880387951209731314142512488428084917971167284745377677313/25108406941546723055343157692830665664409421777856138051584
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=157760775902419462628285024976856169835942334569490755354625/50216813883093446110686315385661331328818843555712276103168
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=315521551804838925256570049953712339671884669138981510709249/100433627766186892221372630771322662657637687111424552206336
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=631043103609677850513140099907424679343769338277963021418497/200867255532373784442745261542645325315275374222849104412672
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1262086207219355701026280199814849358687538676555926042836993/401734511064747568885490523085290650630550748445698208825344
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2524172414438711402052560399629698717375077353111852085673985/803469022129495137770981046170581301261101496891396417650688
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=5048344828877422804105120799259397434750154706223704171347969/1606938044258990275541962092341162602522202993782792835301376
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=10096689657754845608210241598518794869500309412447408342695937/3213876088517980551083924184682325205044405987565585670602752
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=20193379315509691216420483197037589739000618824894816685391873/6427752177035961102167848369364650410088811975131171341205504
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=40386758631019382432840966394075179478001237649789633370783745/12855504354071922204335696738729300820177623950262342682411008
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=80773517262038764865681932788150358956002475299579266741567489/25711008708143844408671393477458601640355247900524685364822016
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=161547034524077529731363865576300717912004950599158533483134977/51422017416287688817342786954917203280710495801049370729644032
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=323094069048155059462727731152601435824009901198317066966269953/102844034832575377634685573909834406561420991602098741459288064
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=646188138096310118925455462305202871648019802396634133932539905/205688069665150755269371147819668813122841983204197482918576128
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1292376276192620237850910924610405743296039604793268267865079809/411376139330301510538742295639337626245683966408394965837152256
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2584752552385240475701821849220811486592079209586536535730159617/822752278660603021077484591278675252491367932816789931674304512
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=5169505104770480951403643698441622973184158419173073071460319233/1645504557321206042154969182557350504982735865633579863348609024
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=10339010209540961902807287396883245946368316838346146142920638465/3291009114642412084309938365114701009965471731267159726697218048
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=20678020419081923805614574793766491892736633676692292285841276929/6582018229284824168619876730229402019930943462534319453394436096
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=41356040838163847611229149587532983785473267353384584571682553857/13164036458569648337239753460458804039861886925068638906788872192
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=82712081676327695222458299175065967570946534706769169143365107713/26328072917139296674479506920917608079723773850137277813577744384
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=165424163352655390444916598350131935141893069413538338286730215425/52656145834278593348959013841835216159447547700274555627155488768
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=330848326705310780889833196700263870283786138827076676573460430849/105312291668557186697918027683670432318895095400549111254310977536
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=661696653410621561779666393400527740567572277654153353146920861697/210624583337114373395836055367340864637790190801098222508621955072
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1323393306821243123559332786801055481135144555308306706293841723393/421249166674228746791672110734681729275580381602196445017243910144
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2646786613642486247118665573602110962270289110616613412587683446785/842498333348457493583344221469363458551160763204392890034487820288
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=5293573227284972494237331147204221924540578221233226825175366893569/1684996666696914987166688442938726917102321526408785780068975640576
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=10587146454569944988474662294408443849081156442466453650350733787137/3369993333393829974333376885877453834204643052817571560137951281152
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=21174292909139889976949324588816887698162312884932907300701467574273/6739986666787659948666753771754907668409286105635143120275902562304
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=42348585818279779953898649177633775396324625769865814601402935148545/13479973333575319897333507543509815336818572211270286240551805124608
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=84697171636559559907797298355267550792649251539731629202805870297089/26959946667150639794667015087019630673637144422540572481103610249216
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=169394343273119119815594596710535101585298503079463258405611740594177/53919893334301279589334030174039261347274288845081144962207220498432
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=338788686546238239631189193421070203170597006158926516811223481188353/107839786668602559178668060348078522694548577690162289924414440996864
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=677577373092476479262378386842140406341194012317853033622446962376705/215679573337205118357336120696157045389097155380324579848828881993728
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1355154746184952958524756773684280812682388024635706067244893924753409/431359146674410236714672241392314090778194310760649159697657763987456
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2710309492369905917049513547368561625364776049271412134489787849506817/862718293348820473429344482784628181556388621521298319395315527974912
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=5420618984739811834099027094737123250729552098542824268979575699013633/1725436586697640946858688965569256363112777243042596638790631055949824
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=10841237969479623668198054189474246501459104197085648537959151398027265/3450873173395281893717377931138512726225554486085193277581262111899648
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=21682475938959247336396108378948493002918208394171297075918302796054529/6901746346790563787434755862277025452451108972170386555162524223799296
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=43364951877918494672792216757896986005836416788342594151836605592109057/13803492693581127574869511724554050904902217944340773110325048447598592
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=86729903755836989345584433515793972011672833576685188303673211184218113/27606985387162255149739023449108101809804435888681546220650096895197184
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=173459807511673978691168867031587944023345667153370376607346422368436225/55213970774324510299478046898216203619608871777363092441300193790394368
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=346919615023347957382337734063175888046691334306740753214692844736872449/110427941548649020598956093796432407239217743554726184882600387580788736
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=693839230046695914764675468126351776093382668613481506429385689473744897/220855883097298041197912187592864814478435487109452369765200775161577472
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1387678460093391829529350936252703552186765337226963012858771378947489793/441711766194596082395824375185729628956870974218904739530401550323154944
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2775356920186783659058701872505407104373530674453926025717542757894979585/883423532389192164791648750371459257913741948437809479060803100646309888
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=5550713840373567318117403745010814208747061348907852051435085515789959169/1766847064778384329583297500742918515827483896875618958121606201292619776
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=11101427680747134636234807490021628417494122697815704102870171031579918337/3533694129556768659166595001485837031654967793751237916243212402585239552
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=22202855361494269272469614980043256834988245395631408205740342063159836673/7067388259113537318333190002971674063309935587502475832486424805170479104
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=44405710722988538544939229960086513669976490791262816411480684126319673345/14134776518227074636666380005943348126619871175004951664972849610340958208
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=88811421445977077089878459920173027339952981582525632822961368252639346689/28269553036454149273332760011886696253239742350009903329945699220681916416
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=177622842891954154179756919840346054679905963165051265645922736505278693377/56539106072908298546665520023773392506479484700019806659891398441363832832
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=355245685783908308359513839680692109359811926330102531291845473010557386753/113078212145816597093331040047546785012958969400039613319782796882727665664
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=710491371567816616719027679361384218719623852660205062583690946021114773505/226156424291633194186662080095093570025917938800079226639565593765455331328
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1420982743135633233438055358722768437439247705320410125167381892042229547009/452312848583266388373324160190187140051835877600158453279131187530910662656
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2841965486271266466876110717445536874878495410640820250334763784084459094017/904625697166532776746648320380374280103671755200316906558262375061821325312
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=5683930972542532933752221434891073749756990821281640500669527568168918188033/1809251394333065553493296640760748560207343510400633813116524750123642650624
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=11367861945085065867504442869782147499513981642563281001339055136337836376065/3618502788666131106986593281521497120414687020801267626233049500247285301248
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=22735723890170131735008885739564294999027963285126562002678110272675672752129/7237005577332262213973186563042994240829374041602535252466099000494570602496
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=45471447780340263470017771479128589998055926570253124005356220545351345504257/14474011154664524427946373126085988481658748083205070504932198000989141204992
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=90942895560680526940035542958257179996111853140506248010712441090702691008513/28948022309329048855892746252171976963317496166410141009864396001978282409984
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=181885791121361053880071085916514359992223706281012496021424882181405382017025/57896044618658097711785492504343953926634992332820282019728792003956564819968
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=363771582242722107760142171833028719984447412562024992042849764362810764034049/115792089237316195423570985008687907853269984665640564039457584007913129639936
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=727543164485444215520284343666057439968894825124049984085699528725621528068097/231584178474632390847141970017375815706539969331281128078915168015826259279872
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1455086328970888431040568687332114879937789650248099968171399057451243056136193/463168356949264781694283940034751631413079938662562256157830336031652518559744
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2910172657941776862081137374664229759875579300496199936342798114902486112272385/926336713898529563388567880069503262826159877325124512315660672063305037119488
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=5820345315883553724162274749328459519751158600992399872685596229804972224544769/1852673427797059126777135760139006525652319754650249024631321344126610074238976
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=11640690631767107448324549498656919039502317201984799745371192459609944449089537/3705346855594118253554271520278013051304639509300498049262642688253220148477952
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=23281381263534214896649098997313838079004634403969599490742384919219888898179073/7410693711188236507108543040556026102609279018600996098525285376506440296955904
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=46562762527068429793298197994627676158009268807939198981484769838439777796358145/14821387422376473014217086081112052205218558037201992197050570753012880593911808
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=93125525054136859586596395989255352316018537615878397962969539676879555592716289/29642774844752946028434172162224104410437116074403984394101141506025761187823616
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=186251050108273719173192791978510704632037075231756795925939079353759111185432577/59285549689505892056868344324448208820874232148807968788202283012051522375647232
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=372502100216547438346385583957021409264074150463513591851878158707518222370865153/118571099379011784113736688648896417641748464297615937576404566024103044751294464
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=745004200433094876692771167914042818528148300927027183703756317415036444741730305/237142198758023568227473377297792835283496928595231875152809132048206089502588928
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1490008400866189753385542335828085637056296601854054367407512634830072889483460609/474284397516047136454946754595585670566993857190463750305618264096412179005177856
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2980016801732379506771084671656171274112593203708108734815025269660145778966921217/948568795032094272909893509191171341133987714380927500611236528192824358010355712
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=5960033603464759013542169343312342548225186407416217469630050539320291557933842433/1897137590064188545819787018382342682267975428761855001222473056385648716020711424
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=11920067206929518027084338686624685096450372814832434939260101078640583115867684865/3794275180128377091639574036764685364535950857523710002444946112771297432041422848
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=23840134413859036054168677373249370192900745629664869878520202157281166231735369729/7588550360256754183279148073529370729071901715047420004889892225542594864082845696
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=47680268827718072108337354746498740385801491259329739757040404314562332463470739457/15177100720513508366558296147058741458143803430094840009779784451085189728165691392
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=95360537655436144216674709492997480771602982518659479514080808629124664926941478913/30354201441027016733116592294117482916287606860189680019559568902170379456331382784
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=53972151615/17179869184
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=107944303229/34359738368
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=215888606457/68719476736
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=431777212913/137438953472
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=863554425825/274877906944
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1727108851649/549755813888
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3454217703297/1099511627776
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=6908435406593/2199023255552
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=13816870813185/4398046511104
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=27633741626369/8796093022208
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=55267483252737/17592186044416
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=110534966505473/35184372088832
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=221069933010945/70368744177664
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=442139866021889/140737488355328
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=884279732043777/281474976710656
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1768559464087553/562949953421312
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3537118928175105/1125899906842624
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=7074237856350209/2251799813685248
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=14148475712700417/4503599627370496
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=28296951425400833/9007199254740992
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=56593902850801665/18014398509481984
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=113187805701603329/36028797018963968
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=226375611403206657/72057594037927936
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=452751222806413313/144115188075855872
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=905502445612826625/288230376151711744
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1811004891225653249/576460752303423488
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3622009782451306497/1152921504606846976
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=7244019564902612993/2305843009213693952
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=14488039129805225985/4611686018427387904
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=28976078259610451969/9223372036854775808
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=57952156519220903937/18446744073709551616
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=115904313038441807873/36893488147419103232
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=231808626076883615745/73786976294838206464
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=463617252153767231489/147573952589676412928
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=927234504307534462977/295147905179352825856
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1854469008615068925953/590295810358705651712
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3708938017230137851905/1180591620717411303424
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=7417876034460275703809/2361183241434822606848
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=14835752068920551407617/4722366482869645213696
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=29671504137841102815233/9444732965739290427392
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=59343008275682205630465/18889465931478580854784
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=118686016551364411260929/37778931862957161709568
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=237372033102728822521857/75557863725914323419136
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=474744066205457645043713/151115727451828646838272
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=949488132410915290087425/302231454903657293676544
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1898976264821830580174849/604462909807314587353088
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3797952529643661160349697/1208925819614629174706176
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=7595905059287322320699393/2417851639229258349412352
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=15191810118574644641398785/4835703278458516698824704
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=30383620237149289282797569/9671406556917033397649408
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=60767240474298578565595137/19342813113834066795298816
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=121534480948597157131190273/38685626227668133590597632
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=243068961897194314262380545/77371252455336267181195264
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=486137923794388628524761089/154742504910672534362390528
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=972275847588777257049522177/309485009821345068724781056
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1944551695177554514099044353/618970019642690137449562112
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3889103390355109028198088705/1237940039285380274899124224
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=7778206780710218056396177409/2475880078570760549798248448
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=15556413561420436112792354817/4951760157141521099596496896
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=31112827122840872225584709633/9903520314283042199192993792
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=62225654245681744451169419265/19807040628566084398385987584
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=124451308491363488902338838529/39614081257132168796771975168
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=248902616982726977804677677057/79228162514264337593543950336
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=497805233965453955609355354113/158456325028528675187087900672
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=995610467930907911218710708225/316912650057057350374175801344
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1991220935861815822437421416449/633825300114114700748351602688
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3982441871723631644874842832897/1267650600228229401496703205376
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=7964883743447263289749685665793/2535301200456458802993406410752
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=15929767486894526579499371331585/5070602400912917605986812821504
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=31859534973789053158998742663169/10141204801825835211973625643008
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=63719069947578106317997485326337/20282409603651670423947251286016
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=127438139895156212635994970652673/40564819207303340847894502572032
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=254876279790312425271989941305345/81129638414606681695789005144064
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=509752559580624850543979882610689/162259276829213363391578010288128
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1019505119161249701087959765221377/324518553658426726783156020576256
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2039010238322499402175919530442753/649037107316853453566312041152512
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4078020476644998804351839060885505/1298074214633706907132624082305024
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=8156040953289997608703678121771009/2596148429267413814265248164610048
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=16312081906579995217407356243542017/5192296858534827628530496329220096
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=32624163813159990434814712487084033/10384593717069655257060992658440192
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=65248327626319980869629424974168065/20769187434139310514121985316880384
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=130496655252639961739258849948336129/41538374868278621028243970633760768
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=260993310505279923478517699896672257/83076749736557242056487941267521536
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=521986621010559846957035399793344513/166153499473114484112975882535043072
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1043973242021119693914070799586689025/332306998946228968225951765070086144
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2087946484042239387828141599173378049/664613997892457936451903530140172288
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4175892968084478775656283198346756097/1329227995784915872903807060280344576
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=8351785936168957551312566396693512193/2658455991569831745807614120560689152
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=16703571872337915102625132793387024385/5316911983139663491615228241121378304
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=33407143744675830205250265586774048769/10633823966279326983230456482242756608
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=66814287489351660410500531173548097537/21267647932558653966460912964485513216
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=133628574978703320821001062347096195073/42535295865117307932921825928971026432
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=267257149957406641642002124694192390145/85070591730234615865843651857942052864
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=534514299914813283284004249388384780289/170141183460469231731687303715884105728
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1069028599829626566568008498776769560577/340282366920938463463374607431768211456
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2138057199659253133136016997553539121153/680564733841876926926749214863536422912
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4276114399318506266272033995107078242305/1361129467683753853853498429727072845824
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=8552228798637012532544067990214156484609/2722258935367507707706996859454145691648
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=17104457597274025065088135980428312969217/5444517870735015415413993718908291383296
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=34208915194548050130176271960856625938433/10889035741470030830827987437816582766592
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=68417830389096100260352543921713251876865/21778071482940061661655974875633165533184
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=136835660778192200520705087843426503753729/43556142965880123323311949751266331066368
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=273671321556384401041410175686853007507457/87112285931760246646623899502532662132736
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=547342643112768802082820351373706015014913/174224571863520493293247799005065324265472
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1094685286225537604165640702747412030029825/348449143727040986586495598010130648530944
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2189370572451075208331281405494824060059649/696898287454081973172991196020261297061888
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4378741144902150416662562810989648120119297/1393796574908163946345982392040522594123776
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=8757482289804300833325125621979296240238593/2787593149816327892691964784081045188247552
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=17514964579608601666650251243958592480477185/5575186299632655785383929568162090376495104
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=35029929159217203333300502487917184960954369/11150372599265311570767859136324180752990208
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=70059858318434406666601004975834369921908737/22300745198530623141535718272648361505980416
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=140119716636868813333202009951668739843817473/44601490397061246283071436545296723011960832
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=280239433273737626666404019903337479687634945/89202980794122492566142873090593446023921664
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=560478866547475253332808039806674959375269889/178405961588244985132285746181186892047843328
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1120957733094950506665616079613349918750539777/356811923176489970264571492362373784095686656
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2241915466189901013331232159226699837501079553/713623846352979940529142984724747568191373312
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4483830932379802026662464318453399675002159105/1427247692705959881058285969449495136382746624
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=8967661864759604053324928636906799350004318209/2854495385411919762116571938898990272765493248
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=17935323729519208106649857273813598700008636417/5708990770823839524233143877797980545530986496
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=35870647459038416213299714547627197400017272833/11417981541647679048466287755595961091061972992
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=71741294918076832426599429095254394800034545665/22835963083295358096932575511191922182123945984
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=143482589836153664853198858190508789600069091329/45671926166590716193865151022383844364247891968
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=286965179672307329706397716381017579200138182657/91343852333181432387730302044767688728495783936
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=573930359344614659412795432762035158400276365313/182687704666362864775460604089535377456991567872
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1147860718689229318825590865524070316800552730625/365375409332725729550921208179070754913983135744
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2295721437378458637651181731048140633601105461249/730750818665451459101842416358141509827966271488
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4591442874756917275302363462096281267202210922497/1461501637330902918203684832716283019655932542976
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=9182885749513834550604726924192562534404421844993/2923003274661805836407369665432566039311865085952
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=18365771499027669101209453848385125068808843689985/5846006549323611672814739330865132078623730171904
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=36731542998055338202418907696770250137617687379969/11692013098647223345629478661730264157247460343808
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=73463085996110676404837815393540500275235374759937/23384026197294446691258957323460528314494920687616
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=146926171992221352809675630787081000550470749519873/46768052394588893382517914646921056628989841375232
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=293852343984442705619351261574162001100941499039745/93536104789177786765035829293842113257979682750464
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=587704687968885411238702523148324002201882998079489/187072209578355573530071658587684226515959365500928
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1175409375937770822477405046296648004403765996158977/374144419156711147060143317175368453031918731001856
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2350818751875541644954810092593296008807531992317953/748288838313422294120286634350736906063837462003712
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4701637503751083289909620185186592017615063984635905/1496577676626844588240573268701473812127674924007424
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=9403275007502166579819240370373184035230127969271809/2993155353253689176481146537402947624255349848014848
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=18806550015004333159638480740746368070460255938543617/5986310706507378352962293074805895248510699696029696
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=37613100030008666319276961481492736140920511877087233/11972621413014756705924586149611790497021399392059392
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=75226200060017332638553922962985472281841023754174465/23945242826029513411849172299223580994042798784118784
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=150452400120034665277107845925970944563682047508348929/47890485652059026823698344598447161988085597568237568
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=300904800240069330554215691851941889127364095016697857/95780971304118053647396689196894323976171195136475136
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=601809600480138661108431383703883778254728190033395713/191561942608236107294793378393788647952342390272950272
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1203619200960277322216862767407767556509456380066791425/383123885216472214589586756787577295904684780545900544
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2407238401920554644433725534815535113018912760133582849/766247770432944429179173513575154591809369561091801088
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4814476803841109288867451069631070226037825520267165697/1532495540865888858358347027150309183618739122183602176
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=9628953607682218577734902139262140452075651040534331393/3064991081731777716716694054300618367237478244367204352
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=19257907215364437155469804278524280904151302081068662785/6129982163463555433433388108601236734474956488734408704
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=38515814430728874310939608557048561808302604162137325569/12259964326927110866866776217202473468949912977468817408
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=77031628861457748621879217114097123616605208324274651137/24519928653854221733733552434404946937899825954937634816
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=154063257722915497243758434228194247233210416648549302273/49039857307708443467467104868809893875799651909875269632
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=308126515445830994487516868456388494466420833297098604545/98079714615416886934934209737619787751599303819750539264
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=616253030891661988975033736912776988932841666594197209089/196159429230833773869868419475239575503198607639501078528
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1232506061783323977950067473825553977865683333188394418177/392318858461667547739736838950479151006397215279002157056
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2465012123566647955900134947651107955731366666376788836353/784637716923335095479473677900958302012794430558004314112
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=4930024247133295911800269895302215911462733332753577672705/1569275433846670190958947355801916604025588861116008628224
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=9860048494266591823600539790604431822925466665507155345409/3138550867693340381917894711603833208051177722232017256448
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=19720096988533183647201079581208863645850933331014310690817/6277101735386680763835789423207666416102355444464034512896
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=39440193977066367294402159162417727291701866662028621381633/12554203470773361527671578846415332832204710888928069025792
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=78880387954132734588804318324835454583403733324057242763265/25108406941546723055343157692830665664409421777856138051584
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=157760775908265469177608636649670909166807466648114485526529/50216813883093446110686315385661331328818843555712276103168
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=315521551816530938355217273299341818333614933296228971053057/100433627766186892221372630771322662657637687111424552206336
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=631043103633061876710434546598683636667229866592457942106113/200867255532373784442745261542645325315275374222849104412672
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1262086207266123753420869093197367273334459733184915884212225/401734511064747568885490523085290650630550748445698208825344
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2524172414532247506841738186394734546668919466369831768424449/803469022129495137770981046170581301261101496891396417650688
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=5048344829064495013683476372789469093337838932739663536848897/1606938044258990275541962092341162602522202993782792835301376
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=10096689658128990027366952745578938186675677865479327073697793/3213876088517980551083924184682325205044405987565585670602752
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=20193379316257980054733905491157876373351355730958654147395585/6427752177035961102167848369364650410088811975131171341205504
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=40386758632515960109467810982315752746702711461917308294791169/12855504354071922204335696738729300820177623950262342682411008
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=80773517265031920218935621964631505493405422923834616589582337/25711008708143844408671393477458601640355247900524685364822016
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=161547034530063840437871243929263010986810845847669233179164673/51422017416287688817342786954917203280710495801049370729644032
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=323094069060127680875742487858526021973621691695338466358329345/102844034832575377634685573909834406561420991602098741459288064
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=646188138120255361751484975717052043947243383390676932716658689/205688069665150755269371147819668813122841983204197482918576128
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1292376276240510723502969951434104087894486766781353865433317377/411376139330301510538742295639337626245683966408394965837152256
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2584752552481021447005939902868208175788973533562707730866634753/822752278660603021077484591278675252491367932816789931674304512
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=5169505104962042894011879805736416351577947067125415461733269505/1645504557321206042154969182557350504982735865633579863348609024
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=10339010209924085788023759611472832703155894134250830923466539009/3291009114642412084309938365114701009965471731267159726697218048
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=20678020419848171576047519222945665406311788268501661846933078017/6582018229284824168619876730229402019930943462534319453394436096
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=41356040839696343152095038445891330812623576537003323693866156033/13164036458569648337239753460458804039861886925068638906788872192
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=82712081679392686304190076891782661625247153074006647387732312065/26328072917139296674479506920917608079723773850137277813577744384
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=165424163358785372608380153783565323250494306148013294775464624129/52656145834278593348959013841835216159447547700274555627155488768
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=330848326717570745216760307567130646500988612296026589550929248257/105312291668557186697918027683670432318895095400549111254310977536
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=661696653435141490433520615134261293001977224592053179101858496513/210624583337114373395836055367340864637790190801098222508621955072
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1323393306870282980867041230268522586003954449184106358203716993025/421249166674228746791672110734681729275580381602196445017243910144
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2646786613740565961734082460537045172007908898368212716407433986049/842498333348457493583344221469363458551160763204392890034487820288
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=5293573227481131923468164921074090344015817796736425432814867972097/1684996666696914987166688442938726917102321526408785780068975640576
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=10587146454962263846936329842148180688031635593472850865629735944193/3369993333393829974333376885877453834204643052817571560137951281152
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=21174292909924527693872659684296361376063271186945701731259471888385/6739986666787659948666753771754907668409286105635143120275902562304
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=42348585819849055387745319368592722752126542373891403462518943776769/13479973333575319897333507543509815336818572211270286240551805124608
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=84697171639698110775490638737185445504253084747782806925037887553537/26959946667150639794667015087019630673637144422540572481103610249216
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=169394343279396221550981277474370891008506169495565613850075775107073/53919893334301279589334030174039261347274288845081144962207220498432
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=338788686558792443101962554948741782017012338991131227700151550214145/107839786668602559178668060348078522694548577690162289924414440996864
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=677577373117584886203925109897483564034024677982262455400303100428289/215679573337205118357336120696157045389097155380324579848828881993728
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1355154746235169772407850219794967128068049355964524910800606200856577/431359146674410236714672241392314090778194310760649159697657763987456
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2710309492470339544815700439589934256136098711929049821601212401713153/862718293348820473429344482784628181556388621521298319395315527974912
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=5420618984940679089631400879179868512272197423858099643202424803426305/1725436586697640946858688965569256363112777243042596638790631055949824
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=10841237969881358179262801758359737024544394847716199286404849606852609/3450873173395281893717377931138512726225554486085193277581262111899648
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=21682475939762716358525603516719474049088789695432398572809699213705217/6901746346790563787434755862277025452451108972170386555162524223799296
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=43364951879525432717051207033438948098177579390864797145619398427410433/13803492693581127574869511724554050904902217944340773110325048447598592
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=86729903759050865434102414066877896196355158781729594291238796854820865/27606985387162255149739023449108101809804435888681546220650096895197184
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=173459807518101730868204828133755792392710317563459188582477593709641729/55213970774324510299478046898216203619608871777363092441300193790394368
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=346919615036203461736409656267511584785420635126918377164955187419283457/110427941548649020598956093796432407239217743554726184882600387580788736
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=693839230072406923472819312535023169570841270253836754329910374838566913/220855883097298041197912187592864814478435487109452369765200775161577472
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1387678460144813846945638625070046339141682540507673508659820749677133825/441711766194596082395824375185729628956870974218904739530401550323154944
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2775356920289627693891277250140092678283365081015347017319641499354267649/883423532389192164791648750371459257913741948437809479060803100646309888
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=5550713840579255387782554500280185356566730162030694034639282998708535297/1766847064778384329583297500742918515827483896875618958121606201292619776
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=11101427681158510775565109000560370713133460324061388069278565997417070593/3533694129556768659166595001485837031654967793751237916243212402585239552
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=22202855362317021551130218001120741426266920648122776138557131994834141185/7067388259113537318333190002971674063309935587502475832486424805170479104
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=44405710724634043102260436002241482852533841296245552277114263989668282369/14134776518227074636666380005943348126619871175004951664972849610340958208
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=88811421449268086204520872004482965705067682592491104554228527979336564737/28269553036454149273332760011886696253239742350009903329945699220681916416
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=177622842898536172409041744008965931410135365184982209108457055958673129473/56539106072908298546665520023773392506479484700019806659891398441363832832
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=355245685797072344818083488017931862820270730369964418216914111917346258945/113078212145816597093331040047546785012958969400039613319782796882727665664
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=710491371594144689636166976035863725640541460739928836433828223834692517889/226156424291633194186662080095093570025917938800079226639565593765455331328
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1420982743188289379272333952071727451281082921479857672867656447669385035777/452312848583266388373324160190187140051835877600158453279131187530910662656
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2841965486376578758544667904143454902562165842959715345735312895338770071553/904625697166532776746648320380374280103671755200316906558262375061821325312
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=5683930972753157517089335808286909805124331685919430691470625790677540143105/1809251394333065553493296640760748560207343510400633813116524750123642650624
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=11367861945506315034178671616573819610248663371838861382941251581355080286209/3618502788666131106986593281521497120414687020801267626233049500247285301248
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=22735723891012630068357343233147639220497326743677722765882503162710160572417/7237005577332262213973186563042994240829374041602535252466099000494570602496
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=45471447782025260136714686466295278440994653487355445531765006325420321144833/14474011154664524427946373126085988481658748083205070504932198000989141204992
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=90942895564050520273429372932590556881989306974710891063530012650840642289665/28948022309329048855892746252171976963317496166410141009864396001978282409984
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=181885791128101040546858745865181113763978613949421782127060025301681284579329/57896044618658097711785492504343953926634992332820282019728792003956564819968
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=363771582256202081093717491730362227527957227898843564254120050603362569158657/115792089237316195423570985008687907853269984665640564039457584007913129639936
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=727543164512404162187434983460724455055914455797687128508240101206725138317313/231584178474632390847141970017375815706539969331281128078915168015826259279872
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1455086329024808324374869966921448910111828911595374257016480202413450276634625/463168356949264781694283940034751631413079938662562256157830336031652518559744
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2910172658049616648749739933842897820223657823190748514032960404826900553269249/926336713898529563388567880069503262826159877325124512315660672063305037119488
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=5820345316099233297499479867685795640447315646381497028065920809653801106538497/1852673427797059126777135760139006525652319754650249024631321344126610074238976
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=11640690632198466594998959735371591280894631292762994056131841619307602213076993/3705346855594118253554271520278013051304639509300498049262642688253220148477952
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=23281381264396933189997919470743182561789262585525988112263683238615204426153985/7410693711188236507108543040556026102609279018600996098525285376506440296955904
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=46562762528793866379995838941486365123578525171051976224527366477230408852307969/14821387422376473014217086081112052205218558037201992197050570753012880593911808
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=93125525057587732759991677882972730247157050342103952449054732954460817704615937/29642774844752946028434172162224104410437116074403984394101141506025761187823616
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=186251050115175465519983355765945460494314100684207904898109465908921635409231873/59285549689505892056868344324448208820874232148807968788202283012051522375647232
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=372502100230350931039966711531890920988628201368415809796218931817843270818463745/118571099379011784113736688648896417641748464297615937576404566024103044751294464
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=745004200460701862079933423063781841977256402736831619592437863635686541636927489/237142198758023568227473377297792835283496928595231875152809132048206089502588928
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1490008400921403724159866846127563683954512805473663239184875727271373083273854977/474284397516047136454946754595585670566993857190463750305618264096412179005177856
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=2980016801842807448319733692255127367909025610947326478369751454542746166547709953/948568795032094272909893509191171341133987714380927500611236528192824358010355712
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=5960033603685614896639467384510254735818051221894652956739502909085492333095419905/1897137590064188545819787018382342682267975428761855001222473056385648716020711424
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=11920067207371229793278934769020509471636102443789305913479005818170984666190839809/3794275180128377091639574036764685364535950857523710002444946112771297432041422848
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=23840134414742459586557869538041018943272204887578611826958011636341969332381679617/7588550360256754183279148073529370729071901715047420004889892225542594864082845696
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=47680268829484919173115739076082037886544409775157223653916023272683938664763359233/15177100720513508366558296147058741458143803430094840009779784451085189728165691392
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=95360537658969838346231478152164075773088819550314447307832046545367877329526718465/30354201441027016733116592294117482916287606860189680019559568902170379456331382784
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=190721075317939676692462956304328151546177639100628894615664093090735754659053436929/60708402882054033466233184588234965832575213720379360039119137804340758912662765568
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=381442150635879353384925912608656303092355278201257789231328186181471509318106873857/121416805764108066932466369176469931665150427440758720078238275608681517825325531136
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=762884301271758706769851825217312606184710556402515578462656372362943018636213747713/242833611528216133864932738352939863330300854881517440156476551217363035650651062272
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1525768602543517413539703650434625212369421112805031156925312744725886037272427495425/485667223056432267729865476705879726660601709763034880312953102434726071301302124544
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3051537205087034827079407300869250424738842225610062313850625489451772074544854990849/971334446112864535459730953411759453321203419526069760625906204869452142602604249088
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=6103074410174069654158814601738500849477684451220124627701250978903544149089709981697/1942668892225729070919461906823518906642406839052139521251812409738904285205208498176
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=12206148820348139308317629203477001698955368902440249255402501957807088298179419963393/3885337784451458141838923813647037813284813678104279042503624819477808570410416996352
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=24412297640696278616635258406954003397910737804880498510805003915614176596358839926785/7770675568902916283677847627294075626569627356208558085007249638955617140820833992704
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=48824595281392557233270516813908006795821475609760997021610007831228353192717679853569/15541351137805832567355695254588151253139254712417116170014499277911234281641667985408
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=97649190562785114466541033627816013591642951219521994043220015662456706385435359707137/31082702275611665134711390509176302506278509424834232340028998555822468563283335970816
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=195298381125570228933082067255632027183285902439043988086440031324913412770870719414273/62165404551223330269422781018352605012557018849668464680057997111644937126566671941632
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=390596762251140457866164134511264054366571804878087976172880062649826825541741438828545/124330809102446660538845562036705210025114037699336929360115994223289874253133343883264
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=781193524502280915732328269022528108733143609756175952345760125299653651083482877657089/248661618204893321077691124073410420050228075398673858720231988446579748506266687766528
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=1562387049004561831464656538045056217466287219512351904691520250599307302166965755314177/497323236409786642155382248146820840100456150797347717440463976893159497012533375533056
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=3124774098009123662929313076090112434932574439024703809383040501198614604333931510628353/994646472819573284310764496293641680200912301594695434880927953786318994025066751066112
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=0, skoS2=1.4142135623?, skoSM=1/2, skoSP=1.3228756555?, skoX=3/4, pi=6249548196018247325858626152180224869865148878049407618766081002397229208667863021256705/1989292945639146568621528992587283360401824603189390869761855907572637988050133502132224

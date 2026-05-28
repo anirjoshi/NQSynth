@@ -1,0 +1,43 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_asin_8_vars4_asin-8-vars4-chunk-0014.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoX', 'skoS2']
+DEBUG:__main__:op_vars: ['skoSP', 'skoSM']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(Not(And(-1 + skoSP*skoSP - skoX <= delta,
+                skoX - (-1 + skoSP*skoSP) <= delta)),
+        And(And(skoS2*skoS2 - 2 <= delta,
+                2 - skoS2*skoS2 <= delta),
+            And(Not(skoX <= 0),
+                And(Not(skoSP <= 0),
+                    And(Not(skoSM <= 0),
+                        And(Not(skoS2 <= 0), Not(1 <= skoX))))))))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (1 > skoX) & (skoS2 > 0) & (skoSM > 0) & (skoSP > 0) & (skoX > 0) & (skoS2**2 - 2 <= delta) & (2 - skoS2**2 <= delta) & ~((-skoSP**2 + skoX + 1 <= delta) & (skoSP**2 - skoX - 1 <= delta)), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['delta', 'skoS2', 'skoSP', 'skoSM', 'skoX']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoX': skoX, 'skoS2': skoS2, 'skoSM': skoSM, 'skoSP': skoSP}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    1 > skoX,
+    0 < skoS2,
+    0 < skoSM,
+    0 < skoSP,
+    0 < skoX,
+    -2 + skoS2**2 <= delta,
+    2 + -1*skoS2**2 <= delta,
+    Not(And(1 + skoX + -1*skoSP**2 <= delta,
+            -1 + skoSP**2 + -1*skoX <= delta)))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=3/2, skoX=7/8, skoS2=1, skoSM=1, skoSP=1/2
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 1/2, skoSM: 1}
+DEBUG:__main__:PRECOND_0: delta >= 0 /\ skoS2 > 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 1/2, skoSM: lambda_var_0 + 1}
+DEBUG:__main__:PRECOND_1: delta >= 0 /\ skoS2 > 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 4 skoX - 4 delta + 3 > 0
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX - 1 < 0) & (delta + skoS2**2 - 2 >= 0) & (-delta + skoS2**2 - 2 <= 0) {'delta': 3/2, 'skoX': 7/8, 'skoS2': 1, 'skoSM': 1, 'skoSP': 1/2} {skoSP: lambda_var_0 + 1/2, skoSM: 1}
+DEBUG:__main__:(delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX - 1 < 0) & (delta + skoS2**2 - 2 >= 0) & (-delta + skoS2**2 - 2 <= 0) & (-4*delta + 4*skoX + 3 > 0) {'delta': 3/2, 'skoX': 7/8, 'skoS2': 1, 'skoSM': 1, 'skoSP': 1/2} {skoSP: 1/2, skoSM: lambda_var_0 + 1}

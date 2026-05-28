@@ -1,0 +1,4 @@
+(
+(define-fun x_o ((c_i Real)) Real (let ((_let_1 (* c_i c_i))) (let ((_let_2 (* (- 1) _let_1))) (ite (and (not (>= c_i (/ (- 5) 2))) (not (>= (+ c_i (* (/ 1 5) _let_1)) (/ (- 3) 5))) (or (>= _let_2 0) (>= c_i (- 3)))) (ite (and (not (>= _let_2 (- 2))) (not (>= c_i (- 1)))) 1.0 (/ 39 16)) 0.0))))
+(define-fun y_o ((c_i Real)) Real (let ((_let_1 (* c_i c_i))) (let ((_let_2 (* (- 1) _let_1))) (ite (and (not (>= c_i (/ (- 5) 2))) (not (>= (+ c_i (* (/ 1 5) _let_1)) (/ (- 3) 5))) (or (>= _let_2 0) (>= c_i (- 3))) (not (>= _let_2 (- 2))) (not (>= c_i (- 1)))) (- 1.0) 0.0))))
+)

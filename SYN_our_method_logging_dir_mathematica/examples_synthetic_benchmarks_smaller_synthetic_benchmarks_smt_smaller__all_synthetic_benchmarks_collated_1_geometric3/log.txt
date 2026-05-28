@@ -1,0 +1,35 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt
+DEBUG:__main__:ip_vars: ['c']
+DEBUG:__main__:op_vars: ['x', 'y']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*x*x + 1*y*y + -1,
+            0 > 0 + 1*x*x + 1*y*y + -6*x + 1*c)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > x**2 + y**2 - 1) & (0 > c + x**2 - 6*x + y**2), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['c', 'x', 'y']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y, 'c': c}
+DEBUG:__main__:z3 post_condition:And(0 > -1 + x**2 + y**2, 0 > c + x**2 + y**2 + -6*x)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1/8, y=0, c=-17/64
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/8, y: 0}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000105sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.035406sec
+DEBUG:__main__:PRECOND_0: c < 5
+DEBUG:__main__:PRECOND_SYMPY_0: c < 5
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 1/8, y: lambda_var_0}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000042sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.001414sec
+DEBUG:__main__:PRECOND_1: c < 47 / 64
+DEBUG:__main__:PRECOND_SYMPY_1: c < 47/64
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:c < 5 {'x': 1/8, 'y': 0, 'c': -17/64} {x: lambda_var_0 + 1/8, y: 0}
+DEBUG:__main__:c < 47/64 {'x': 1/8, 'y': 0, 'c': -17/64} {x: 1/8, y: lambda_var_0}
+INFO:wolframclient.evaluation.kernel.kernelcontroller:Start termination on kernel <WolframKernelController[wolfram-kernel-1 ❌], "/Applications/Wolfram Engine.app/Contents/MacOS/WolframKernel">
+INFO:wolframclient.evaluation.kernel.kernelcontroller:Killing kernel process: 26368

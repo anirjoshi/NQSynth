@@ -1,0 +1,20 @@
+; benchmark generated from python API
+(set-info :status unknown)
+(declare-fun r3 () Real)
+(declare-fun b () Real)
+(declare-fun a () Real)
+(declare-fun y () Real)
+(declare-fun x () Real)
+(declare-fun r2 () Real)
+(declare-fun r1 () Real)
+(assert
+ (let ((?x36 (* (* 1.0 b) b)))
+ (let ((?x33 (* (* 1.0 a) a)))
+ (let ((?x19 (+ (+ 0.0 (* (* 1.0 x) x)) (* (* 1.0 y) y))))
+ (let ((?x73 (+ (+ ?x19 (* (* (- 2.0) x) b)) (* (* (- 2.0) y) a))))
+ (let (($x63 (>= 0.0 (+ (+ (+ ?x73 ?x33) ?x36) (* (* (- 1.0) r3) r3)))))
+ (let ((?x93 (+ (+ ?x19 (* (* (- 2.0) x) a)) (* (* (- 2.0) y) b))))
+ (let (($x87 (>= 0.0 (+ (+ (+ ?x93 ?x33) ?x36) (* (* (- 1.0) r2) r2)))))
+ (and (and (>= 0.0 (+ ?x19 (* (* (- 1.0) r1) r1))) $x87 $x63))))))))))
+(check-sat)
+

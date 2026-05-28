@@ -1,0 +1,131 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_4_input18.smt
+DEBUG:__main__:ip_vars: ['a', 'b', 'c']
+DEBUG:__main__:op_vars: ['x', 'y', 'z']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*x*x*x + 1*y*y*y + -1*a,
+            0 > 0 + 1*x*x*x + 1*z*z*z + -1*b,
+            0 > 0 + 1*y*y*y + 1*z*z*z + -1*c)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > -a + x**3 + y**3) & (0 > -b + x**3 + z**3) & (0 > -c + y**3 + z**3), {}
+DEBUG:__main__:DIRECTIONS: 3:[[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+DEBUG:__main__:vars sympy:['z', 'x', 'y', 'b', 'c', 'a']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y, 'a': a, 'z': z, 'b': b, 'c': c}
+DEBUG:__main__:z3 post_condition:And(0 > x**3 + y**3 + -1*a,
+    0 > x**3 + z**3 + -1*b,
+    0 > y**3 + z**3 + -1*c)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=0, y=0, a=1, z=0, b=1, c=1
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0, y: 0, z: 0}
+DEBUG:__main__:PRECOND_0: c > 0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1, 0]
+DEBUG:__main__:substitution: {x: 0, y: lambda_var_0, z: 0}
+DEBUG:__main__:PRECOND_1: b > 0
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [0, 0, 1]
+DEBUG:__main__:substitution: {x: 0, y: 0, z: lambda_var_0}
+DEBUG:__main__:PRECOND_2: a > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1, y=0, a=0, z=-1, b=0, c=0
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:direction: [1, 0, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1, y: 0, z: -1}
+DEBUG:__main__:PRECOND_3: c + 1 > 0
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:direction: [0, 1, 0]
+DEBUG:__main__:substitution: {x: -1, y: lambda_var_0, z: -1}
+DEBUG:__main__:PRECOND_4: b + 2 > 0
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:direction: [0, 0, 1]
+DEBUG:__main__:substitution: {x: -1, y: 0, z: lambda_var_0 - 1}
+DEBUG:__main__:PRECOND_5: a + 1 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-2, y=0, a=-7, z=-2, b=-15, c=-7
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:direction: [1, 0, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 2, y: 0, z: -2}
+DEBUG:__main__:PRECOND_6: c + 8 > 0
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:direction: [0, 1, 0]
+DEBUG:__main__:substitution: {x: -2, y: lambda_var_0, z: -2}
+DEBUG:__main__:PRECOND_7: b + 16 > 0
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:direction: [0, 0, 1]
+DEBUG:__main__:substitution: {x: -2, y: 0, z: lambda_var_0 - 2}
+DEBUG:__main__:PRECOND_8: a + 8 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-3, y=0, a=-26, z=-3, b=-53, c=-26
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:direction: [1, 0, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 3, y: 0, z: -3}
+DEBUG:__main__:PRECOND_9: c + 27 > 0
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:direction: [0, 1, 0]
+DEBUG:__main__:substitution: {x: -3, y: lambda_var_0, z: -3}
+DEBUG:__main__:PRECOND_10: b + 54 > 0
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:direction: [0, 0, 1]
+DEBUG:__main__:substitution: {x: -3, y: 0, z: lambda_var_0 - 3}
+DEBUG:__main__:PRECOND_11: a + 27 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-4, y=0, a=-63, z=-4, b=-55, c=-63
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:direction: [1, 0, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 4, y: 0, z: -4}
+DEBUG:__main__:PRECOND_12: c + 64 > 0
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:direction: [0, 1, 0]
+DEBUG:__main__:substitution: {x: -4, y: lambda_var_0, z: -4}
+DEBUG:__main__:PRECOND_13: b + 128 > 0
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:direction: [0, 0, 1]
+DEBUG:__main__:substitution: {x: -4, y: 0, z: lambda_var_0 - 4}
+DEBUG:__main__:PRECOND_14: a + 64 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-5, y=0, a=-124, z=-5, b=-129, c=-124
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:direction: [1, 0, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 5, y: 0, z: -5}
+DEBUG:__main__:PRECOND_15: c + 125 > 0
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:direction: [0, 1, 0]
+DEBUG:__main__:substitution: {x: -5, y: lambda_var_0, z: -5}
+DEBUG:__main__:PRECOND_16: b + 250 > 0
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:direction: [0, 0, 1]
+DEBUG:__main__:substitution: {x: -5, y: 0, z: lambda_var_0 - 5}
+DEBUG:__main__:PRECOND_17: a + 125 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-8, y=0, a=-511, z=-6, b=-251, c=-215
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:direction: [1, 0, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 8, y: 0, z: -6}
+DEBUG:__main__:PRECOND_18: c + 216 > 0
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:direction: [0, 1, 0]
+DEBUG:__main__:substitution: {x: -8, y: lambda_var_0, z: -6}
+DEBUG:__main__:PRECOND_19: b + 728 > 0
+DEBUG:__main__:---------pre-condition 20---------
+DEBUG:__main__:direction: [0, 0, 1]
+DEBUG:__main__:substitution: {x: -8, y: 0, z: lambda_var_0 - 6}
+DEBUG:__main__:PRECOND_20: a + 512 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-16, y=0, a=-4095, z=-7, b=-729, c=-342
+DEBUG:__main__:---------pre-condition 21---------
+DEBUG:__main__:direction: [1, 0, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 16, y: 0, z: -7}
+DEBUG:__main__:PRECOND_21: c + 343 > 0
+DEBUG:__main__:---------pre-condition 22---------
+DEBUG:__main__:direction: [0, 1, 0]
+DEBUG:__main__:substitution: {x: -16, y: lambda_var_0, z: -7}

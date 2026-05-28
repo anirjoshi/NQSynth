@@ -1,0 +1,350 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA_smaller/smt_files/chosen_smt_files_Arthan_1A_Arthan1A-chunk-0017.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoS', 'pi']
+DEBUG:__main__:op_vars: ['skoCOSS', 'skoSINS']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(skoSINS*
+        (-3 +
+         skoCOSS*-2 +
+         skoS*(-4 + skoS*(2 + skoS)) +
+         skoSINS*(1 + skoS)) <=
+        2 +
+        skoCOSS*(-2 + skoCOSS*-2) +
+        skoS*
+        (skoCOSS*(-10 + skoCOSS*-2) +
+         skoS*(-6 + skoCOSS*-6 + skoS*-2)),
+        And(Not(pi*(1/2) <= skoS),
+            And(Not(pi <= 15707963/5000000),
+                And(Not(31415927/10000000 <= pi),
+                    And(0 <= skoS,
+                        And(0 <= skoCOSS, skoSINS <= skoS)))))))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (0 <= skoCOSS) & (0 <= skoS) & (skoSINS <= skoS) & (31415927/10000000 > pi) & (pi > 15707963/5000000) & (pi/2 > skoS) & (skoSINS*(-2*skoCOSS + skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) - 3) <= skoCOSS*(-2*skoCOSS - 2) + skoS*(skoCOSS*(-2*skoCOSS - 10) + skoS*(-6*skoCOSS - 2*skoS - 6)) + 2), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['skoS', 'pi', 'delta', 'skoCOSS', 'skoSINS']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoCOSS': skoCOSS, 'skoS': skoS, 'skoSINS': skoSINS, 'pi': pi}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    0 <= skoCOSS,
+    0 <= skoS,
+    skoSINS <= skoS,
+    31415927/10000000 > pi,
+    15707963/5000000 < pi,
+    1/2*pi > skoS,
+    skoSINS*
+    (-3 +
+     -2*skoCOSS +
+     skoS*(-4 + skoS*(2 + skoS)) +
+     skoSINS*(1 + skoS)) <=
+    2 +
+    skoCOSS*(-2 + -2*skoCOSS) +
+    skoS*
+    (skoCOSS*(-10 + -2*skoCOSS) +
+     skoS*(-6 + -6*skoCOSS + -2*skoS)))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/8, skoS=1/16, skoSINS=0, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/8, skoSINS: 0}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000111sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.039397sec
+DEBUG:__main__:PRECOND_0: And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, 3 * skoS ** 2 + skoS ** 3 <= 1)
+DEBUG:__main__:PRECOND_SYMPY_0: (delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 3*skoS**2 <= 1)
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/8, skoSINS: lambda_var_0}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000050sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004985sec
+DEBUG:__main__:PRECOND_1: Or(And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, -skoS + 16 * skoS ** 2 + 4 * skoS ** 3 <= 55 / 8), And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, -2 * skoS + 4 * skoS ** 2 + skoS ** 3 >= 13 / 4, 222 * skoS - 233 * skoS ** 2 - 460 * skoS ** 3 - 96 * skoS ** 4 + 32 * skoS ** 5 + 8 * skoS ** 6 >= -279 / 2, pi < 31415927 / 10000000))
+DEBUG:__main__:PRECOND_SYMPY_1: ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (4*skoS**3 + 16*skoS**2 - skoS <= 55/8)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 13/4) & (8*skoS**6 + 32*skoS**5 - 96*skoS**4 - 460*skoS**3 - 233*skoS**2 + 222*skoS >= -279/2))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/1024, skoS=3/4, skoSINS=11/16, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/1024, skoSINS: 11/16}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000047sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004527sec
+DEBUG:__main__:PRECOND_2: And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 11 / 16, pi < 31415927 / 10000000, -583 * skoS + 1888 * skoS ** 2 + 688 * skoS ** 3 <= 919)
+DEBUG:__main__:PRECOND_SYMPY_2: (delta >= 0) & (skoS >= 11/16) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (688*skoS**3 + 1888*skoS**2 - 583*skoS <= 919)
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/1024, skoSINS: lambda_var_0 + 11/16}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004895sec
+DEBUG:__main__:PRECOND_3: Or(And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, -509 * skoS + 2048 * skoS ** 2 + 512 * skoS ** 3 <= 1047551 / 1024), And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, -2 * skoS + 4 * skoS ** 2 + skoS ** 3 >= 1537 / 512, 4190206 * skoS - 2630657 * skoS ** 2 - 7081472 * skoS ** 3 - 1572864 * skoS ** 4 + 524288 * skoS ** 5 + 131072 * skoS ** 6 >= -4457471 / 2, pi < 31415927 / 10000000))
+DEBUG:__main__:PRECOND_SYMPY_3: ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (512*skoS**3 + 2048*skoS**2 - 509*skoS <= 1047551/1024)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 1537/512) & (131072*skoS**6 + 524288*skoS**5 - 1572864*skoS**4 - 7081472*skoS**3 - 2630657*skoS**2 + 4190206*skoS >= -4457471/2))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/4096, skoS=779/1024, skoSINS=97/128, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/4096, skoSINS: 97/128}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000049sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004544sec
+DEBUG:__main__:PRECOND_4: And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 97 / 128, pi < 31415927 / 10000000, -40255 * skoS + 123136 * skoS ** 2 + 45184 * skoS ** 3 <= 60607)
+DEBUG:__main__:PRECOND_SYMPY_4: (delta >= 0) & (skoS >= 97/128) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (45184*skoS**3 + 123136*skoS**2 - 40255*skoS <= 60607)
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/4096, skoSINS: lambda_var_0 + 97/128}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004805sec
+DEBUG:__main__:PRECOND_5: Or(And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, -2045 * skoS + 8192 * skoS ** 2 + 2048 * skoS ** 3 <= 16773119 / 4096), And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, -2 * skoS + 4 * skoS ** 2 + skoS ** 3 >= 6145 / 2048, 67092478 * skoS - 41979905 * skoS ** 2 - 113260544 * skoS ** 3 - 25165824 * skoS ** 4 + 8388608 * skoS ** 5 + 2097152 * skoS ** 6 >= -71307263 / 2, pi < 31415927 / 10000000))
+DEBUG:__main__:PRECOND_SYMPY_5: ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (2048*skoS**3 + 8192*skoS**2 - 2045*skoS <= 16773119/4096)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 6145/2048) & (2097152*skoS**6 + 8388608*skoS**5 - 25165824*skoS**4 - 113260544*skoS**3 - 41979905*skoS**2 + 67092478*skoS >= -71307263/2))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/32768, skoS=3119/4096, skoSINS=1559/2048, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/32768, skoSINS: 1559/2048}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004598sec
+DEBUG:__main__:PRECOND_6: And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 1559 / 2048, pi < 31415927 / 10000000, -10340847 * skoS + 31551488 * skoS ** 2 + 11581440 * skoS ** 3 <= 15536623)
+DEBUG:__main__:PRECOND_SYMPY_6: (delta >= 0) & (skoS >= 1559/2048) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (11581440*skoS**3 + 31551488*skoS**2 - 10340847*skoS <= 15536623)
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/32768, skoSINS: lambda_var_0 + 1559/2048}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000035sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004612sec
+DEBUG:__main__:PRECOND_7: Or(And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, -16381 * skoS + 65536 * skoS ** 2 + 16384 * skoS ** 3 <= 1073709055 / 32768), And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, -2 * skoS + 4 * skoS ** 2 + skoS ** 3 >= 49153 / 16384, 4294836222 * skoS - 2684649473 * skoS ** 2 - 7247872000 * skoS ** 3 - 1610612736 * skoS ** 4 + 536870912 * skoS ** 5 + 134217728 * skoS ** 6 >= -4563435519 / 2, pi < 31415927 / 10000000))
+DEBUG:__main__:PRECOND_SYMPY_7: ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (16384*skoS**3 + 65536*skoS**2 - 16381*skoS <= 1073709055/32768)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 49153/16384) & (134217728*skoS**6 + 536870912*skoS**5 - 1610612736*skoS**4 - 7247872000*skoS**3 - 2684649473*skoS**2 + 4294836222*skoS >= -4563435519/2))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/131072, skoS=12477/16384, skoSINS=3119/4096, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/131072, skoSINS: 3119/4096}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000043sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004485sec
+DEBUG:__main__:PRECOND_8: And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 3119 / 4096, pi < 31415927 / 10000000, -41373535 * skoS + 126214144 * skoS ** 2 + 46329856 * skoS ** 3 <= 62152543)
+DEBUG:__main__:PRECOND_SYMPY_8: (delta >= 0) & (skoS >= 3119/4096) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (46329856*skoS**3 + 126214144*skoS**2 - 41373535*skoS <= 62152543)
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/131072, skoSINS: lambda_var_0 + 3119/4096}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000046sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005200sec
+DEBUG:__main__:PRECOND_9: Or(And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, -65533 * skoS + 262144 * skoS ** 2 + 65536 * skoS ** 3 <= 17179738111 / 131072), And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, -2 * skoS + 4 * skoS ** 2 + skoS ** 3 >= 196609 / 65536, 68718952446 * skoS - 42950852609 * skoS ** 2 - 115964575744 * skoS ** 3 - 25769803776 * skoS ** 4 + 8589934592 * skoS ** 5 + 2147483648 * skoS ** 6 >= -73014575103 / 2, pi < 31415927 / 10000000))
+DEBUG:__main__:PRECOND_SYMPY_9: ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (65536*skoS**3 + 262144*skoS**2 - 65533*skoS <= 17179738111/131072)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 196609/65536) & (2147483648*skoS**6 + 8589934592*skoS**5 - 25769803776*skoS**4 - 115964575744*skoS**3 - 42950852609*skoS**2 + 68718952446*skoS >= -73014575103/2))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/262144, skoS=49909/65536, skoSINS=12477/16384, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/262144, skoSINS: 12477/16384}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000048sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004696sec
+DEBUG:__main__:PRECOND_10: And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 12477 / 16384, pi < 31415927 / 10000000, -662017143 * skoS + 2019459072 * skoS ** 2 + 741294080 * skoS ** 3 <= 994464887)
+DEBUG:__main__:PRECOND_SYMPY_10: (delta >= 0) & (skoS >= 12477/16384) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (741294080*skoS**3 + 2019459072*skoS**2 - 662017143*skoS <= 994464887)
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/262144, skoSINS: lambda_var_0 + 12477/16384}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000044sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004992sec
+DEBUG:__main__:PRECOND_11: Or(And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, -131069 * skoS + 524288 * skoS ** 2 + 131072 * skoS ** 3 <= 68719214591 / 262144), And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, -2 * skoS + 4 * skoS ** 2 + skoS ** 3 >= 393217 / 131072, 274876858366 * skoS - 171801051137 * skoS ** 2 - 463857385472 * skoS ** 3 - 103079215104 * skoS ** 4 + 34359738368 * skoS ** 5 + 8589934592 * skoS ** 6 >= -292058038271 / 2, pi < 31415927 / 10000000))
+DEBUG:__main__:PRECOND_SYMPY_11: ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (131072*skoS**3 + 524288*skoS**2 - 131069*skoS <= 68719214591/262144)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 393217/131072) & (8589934592*skoS**6 + 34359738368*skoS**5 - 103079215104*skoS**4 - 463857385472*skoS**3 - 171801051137*skoS**2 + 274876858366*skoS >= -292058038271/2))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/524288, skoS=199637/262144, skoSINS=49909/65536, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/524288, skoSINS: 49909/65536}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000053sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004448sec
+DEBUG:__main__:PRECOND_12: And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 49909 / 65536, pi < 31415927 / 10000000, -10592436615 * skoS + 32311476224 * skoS ** 2 + 11860770816 * skoS ** 3 <= 15911534983)
+DEBUG:__main__:PRECOND_SYMPY_12: (delta >= 0) & (skoS >= 49909/65536) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (11860770816*skoS**3 + 32311476224*skoS**2 - 10592436615*skoS <= 15911534983)
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/524288, skoSINS: lambda_var_0 + 49909/65536}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000044sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004819sec
+DEBUG:__main__:PRECOND_13: Or(And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, -262141 * skoS + 1048576 * skoS ** 2 + 262144 * skoS ** 3 <= 274877382655 / 524288), And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, -2 * skoS + 4 * skoS ** 2 + skoS ** 3 >= 786433 / 262144, 1099509530622 * skoS - 687199485953 * skoS ** 2 - 1855427706880 * skoS ** 3 - 412316860416 * skoS ** 4 + 137438953472 * skoS ** 5 + 34359738368 * skoS ** 6 >= -1168231628799 / 2, pi < 31415927 / 10000000))
+DEBUG:__main__:PRECOND_SYMPY_13: ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (262144*skoS**3 + 1048576*skoS**2 - 262141*skoS <= 274877382655/524288)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 786433/262144) & (34359738368*skoS**6 + 137438953472*skoS**5 - 412316860416*skoS**4 - 1855427706880*skoS**3 - 687199485953*skoS**2 + 1099509530622*skoS >= -1168231628799/2))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/4194304, skoS=399275/524288, skoSINS=199637/262144, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/4194304, skoSINS: 199637/262144}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000047sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004506sec
+DEBUG:__main__:PRECOND_14: And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 199637 / 262144, pi < 31415927 / 10000000, -169479635143 * skoS + 516984143872 * skoS ** 2 + 189772595200 * skoS ** 3 <= 254584946887)
+DEBUG:__main__:PRECOND_SYMPY_14: (delta >= 0) & (skoS >= 199637/262144) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (189772595200*skoS**3 + 516984143872*skoS**2 - 169479635143*skoS <= 254584946887)
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/4194304, skoSINS: lambda_var_0 + 199637/262144}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004882sec
+DEBUG:__main__:PRECOND_15: Or(And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, -2097149 * skoS + 8388608 * skoS ** 2 + 2097152 * skoS ** 3 <= 17592181850111 / 4194304), And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, -2 * skoS + 4 * skoS ** 2 + skoS ** 3 >= 6291457 / 2097152, 70368727400446 * skoS - 43980502859777 * skoS ** 2 - 118747270479872 * skoS ** 3 - 26388279066624 * skoS ** 4 + 8796093022208 * skoS ** 5 + 2199023255552 * skoS ** 6 >= -74766794883071 / 2, pi < 31415927 / 10000000))
+DEBUG:__main__:PRECOND_SYMPY_15: ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (2097152*skoS**3 + 8388608*skoS**2 - 2097149*skoS <= 17592181850111/4194304)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 6291457/2097152) & (2199023255552*skoS**6 + 8796093022208*skoS**5 - 26388279066624*skoS**4 - 118747270479872*skoS**3 - 43980502859777*skoS**2 + 70368727400446*skoS >= -74766794883071/2))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/134217728, skoS=1597101/2097152, skoSINS=399275/524288, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/134217728, skoSINS: 399275/524288}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000057sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004542sec
+DEBUG:__main__:PRECOND_16: And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 399275 / 524288, pi < 31415927 / 10000000, -677919839175 * skoS + 2067937624064 * skoS ** 2 + 759090905088 * skoS ** 3 <= 1018340561863)
+DEBUG:__main__:PRECOND_SYMPY_16: (delta >= 0) & (skoS >= 399275/524288) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (759090905088*skoS**3 + 2067937624064*skoS**2 - 677919839175*skoS <= 1018340561863)
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/134217728, skoSINS: lambda_var_0 + 399275/524288}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000039sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004735sec
+DEBUG:__main__:PRECOND_17: Or(And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, -67108861 * skoS + 268435456 * skoS ** 2 + 67108864 * skoS ** 3 <= 18014398375264255 / 134217728), And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, -2 * skoS + 4 * skoS ** 2 + skoS ** 3 >= 201326593 / 67108864, 72057593501057022 * skoS - 45035997481664513 * skoS ** 2 - 121597190408765440 * skoS ** 3 - 27021597764222976 * skoS ** 4 + 9007199254740992 * skoS ** 5 + 2251799813685248 * skoS ** 6 >= -76561193799516159 / 2, pi < 31415927 / 10000000))
+DEBUG:__main__:PRECOND_SYMPY_17: ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (67108864*skoS**3 + 268435456*skoS**2 - 67108861*skoS <= 18014398375264255/134217728)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 201326593/67108864) & (2251799813685248*skoS**6 + 9007199254740992*skoS**5 - 27021597764222976*skoS**4 - 121597190408765440*skoS**3 - 45035997481664513*skoS**2 + 72057593501057022*skoS >= -76561193799516159/2))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/536870912, skoS=51107237/67108864, skoSINS=12776809/16777216, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/536870912, skoSINS: 12776809/16777216}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000050sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004552sec
+DEBUG:__main__:PRECOND_18: And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 12776809 / 16777216, pi < 31415927 / 10000000, -694190289312495 * skoS + 2117568429031424 * skoS ** 2 + 777309237805056 * skoS ** 3 <= 1042780958350063)
+DEBUG:__main__:PRECOND_SYMPY_18: (delta >= 0) & (skoS >= 12776809/16777216) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (777309237805056*skoS**3 + 2117568429031424*skoS**2 - 694190289312495*skoS <= 1042780958350063)
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/536870912, skoSINS: lambda_var_0 + 12776809/16777216}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000041sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004837sec
+DEBUG:__main__:PRECOND_19: Or(And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, -268435453 * skoS + 1073741824 * skoS ** 2 + 268435456 * skoS ** 3 <= 288230375614840831 / 536870912), And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, -2 * skoS + 4 * skoS ** 2 + skoS ** 3 >= 805306369 / 268435456, 1152921502459363326 * skoS - 720575945211117569 * skoS ** 2 - 1945555040903102464 * skoS ** 3 - 432345564227567616 * skoS ** 4 + 144115188075855872 * skoS ** 5 + 36028797018963968 * skoS ** 6 >= -1224979099181645823 / 2, pi < 31415927 / 10000000))
+DEBUG:__main__:PRECOND_SYMPY_19: ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (268435456*skoS**3 + 1073741824*skoS**2 - 268435453*skoS <= 288230375614840831/536870912)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 805306369/268435456) & (36028797018963968*skoS**6 + 144115188075855872*skoS**5 - 432345564227567616*skoS**4 - 1945555040903102464*skoS**3 - 720575945211117569*skoS**2 + 1152921502459363326*skoS >= -1224979099181645823/2))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/2147483648, skoS=204428949/268435456, skoSINS=51107237/67108864, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 20---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/2147483648, skoSINS: 51107237/67108864}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000046sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004567sec
+DEBUG:__main__:PRECOND_20: And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 51107237 / 67108864, pi < 31415927 / 10000000, -11107044795220903 * skoS + 33881094998720512 * skoS ** 2 + 12436947871989760 * skoS ** 3 <= 16684495432713127)
+DEBUG:__main__:PRECOND_SYMPY_20: (delta >= 0) & (skoS >= 51107237/67108864) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (12436947871989760*skoS**3 + 33881094998720512*skoS**2 - 11107044795220903*skoS <= 16684495432713127)
+DEBUG:__main__:---------pre-condition 21---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/2147483648, skoSINS: lambda_var_0 + 51107237/67108864}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000036sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004836sec
+DEBUG:__main__:PRECOND_21: Or(And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, -1073741821 * skoS + 4294967296 * skoS ** 2 + 1073741824 * skoS ** 3 <= 4611686016279904255 / 2147483648), And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, -2 * skoS + 4 * skoS ** 2 + skoS ** 3 >= 3221225473 / 1073741824, 18446744065119617022 * skoS - 11529215065395822593 * skoS ** 2 - 31128880631901061120 * skoS ** 3 - 6917529027641081856 * skoS ** 4 + 2305843009213693952 * skoS ** 5 + 576460752303423488 * skoS ** 6 >= -19599665580463882239 / 2, pi < 31415927 / 10000000))
+DEBUG:__main__:PRECOND_SYMPY_21: ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (1073741824*skoS**3 + 4294967296*skoS**2 - 1073741821*skoS <= 4611686016279904255/2147483648)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 3221225473/1073741824) & (576460752303423488*skoS**6 + 2305843009213693952*skoS**5 - 6917529027641081856*skoS**4 - 31128880631901061120*skoS**3 - 11529215065395822593*skoS**2 + 18446744065119617022*skoS >= -19599665580463882239/2))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/8796093022208, skoS=1635431595/2147483648, skoSINS=418670488319/549755813888, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 22---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/8796093022208, skoSINS: 418670488319/549755813888}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000043sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004614sec
+DEBUG:__main__:PRECOND_22: And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 418670488319 / 549755813888, pi < 31415927 / 10000000, -745381162437523052451327 * skoS + 2273721799535340246007808 * skoS ** 2 + 834629444864012829327360 * skoS ** 3 <= 1119677537188139397830143)
+DEBUG:__main__:PRECOND_SYMPY_22: (delta >= 0) & (skoS >= 418670488319/549755813888) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (834629444864012829327360*skoS**3 + 2273721799535340246007808*skoS**2 - 745381162437523052451327*skoS <= 1119677537188139397830143)
+DEBUG:__main__:---------pre-condition 23---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/8796093022208, skoSINS: lambda_var_0 + 418670488319/549755813888}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000033sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005028sec
+DEBUG:__main__:PRECOND_23: Or(And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, -4398046511101 * skoS + 17592186044416 * skoS ** 2 + 4398046511104 * skoS ** 3 <= 77371252455327471088173055 / 8796093022208), And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, -2 * skoS + 4 * skoS ** 2 + skoS ** 3 >= 13194139533313 / 4398046511104, 309485009821309884352692222 * skoS - 193428131138419832790188033 * skoS ** 2 - 522255954073550589798645760 * skoS ** 3 - 116056878683004400771792896 * skoS ** 4 + 38685626227668133590597632 * skoS ** 5 + 9671406556917033397649408 * skoS ** 6 >= -328827822935187931613102079 / 2, pi < 31415927 / 10000000))
+DEBUG:__main__:PRECOND_SYMPY_23: ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (4398046511104*skoS**3 + 17592186044416*skoS**2 - 4398046511101*skoS <= 77371252455327471088173055/8796093022208)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 13194139533313/4398046511104) & (9671406556917033397649408*skoS**6 + 38685626227668133590597632*skoS**5 - 116056878683004400771792896*skoS**4 - 522255954073550589798645760*skoS**3 - 193428131138419832790188033*skoS**2 + 309485009821309884352692222*skoS >= -328827822935187931613102079/2))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/35184372088832, skoS=6698727813123/8796093022208, skoSINS=1635431595/2147483648, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 24---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/35184372088832, skoSINS: 1635431595/2147483648}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000047sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004510sec
+DEBUG:__main__:PRECOND_24: And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 1635431595 / 2147483648, pi < 31415927 / 10000000, -11373613928815990215 * skoS + 34694241325934444544 * skoS ** 2 + 12735434644539834368 * skoS ** 3 <= 17084923357985707463)
+DEBUG:__main__:PRECOND_SYMPY_24: (delta >= 0) & (skoS >= 1635431595/2147483648) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (12735434644539834368*skoS**3 + 34694241325934444544*skoS**2 - 11373613928815990215*skoS <= 17084923357985707463)
+DEBUG:__main__:---------pre-condition 25---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/35184372088832, skoSINS: lambda_var_0 + 1635431595/2147483648}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000053sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005321sec
+DEBUG:__main__:PRECOND_25: Or(And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, -17592186044413 * skoS + 70368744177664 * skoS ** 2 + 17592186044416 * skoS ** 3 <= 1237940039285345090527035391 / 35184372088832), And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, -2 * skoS + 4 * skoS ** 2 + skoS ** 3 >= 52776558133249 / 17592186044416, 4951760157141380362108141566 * skoS - 3094850098213767346596610049 * skoS ** 2 - 8356095265176440000871399424 * skoS ** 3 - 1856910058928070412348686336 * skoS ** 4 + 618970019642690137449562112 * skoS ** 5 + 154742504910672534362390528 * skoS ** 6 >= -5261245166962901352693366783 / 2, pi < 31415927 / 10000000))
+DEBUG:__main__:PRECOND_SYMPY_25: ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (17592186044416*skoS**3 + 70368744177664*skoS**2 - 17592186044413*skoS <= 1237940039285345090527035391/35184372088832)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 52776558133249/17592186044416) & (154742504910672534362390528*skoS**6 + 618970019642690137449562112*skoS**5 - 1856910058928070412348686336*skoS**4 - 8356095265176440000871399424*skoS**3 - 3094850098213767346596610049*skoS**2 + 4951760157141380362108141566*skoS >= -5261245166962901352693366783/2))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/562949953421312, skoS=26794911252495/35184372088832, skoSINS=6698727813123/8796093022208, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 26---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/562949953421312, skoSINS: 6698727813123/8796093022208}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000046sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004563sec
+DEBUG:__main__:PRECOND_26: And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 6698727813123 / 8796093022208, pi < 31415927 / 10000000, -190817577584419852840329207 * skoS + 582072780681381354512842752 * skoS ** 2 + 213665137885354410075226112 * skoS ** 3 <= 286637449520410511489884151)
+DEBUG:__main__:PRECOND_SYMPY_26: (delta >= 0) & (skoS >= 6698727813123/8796093022208) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (213665137885354410075226112*skoS**3 + 582072780681381354512842752*skoS**2 - 190817577584419852840329207*skoS <= 286637449520410511489884151)
+DEBUG:__main__:---------pre-condition 27---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/562949953421312, skoSINS: lambda_var_0 + 6698727813123/8796093022208}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000039sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004912sec
+DEBUG:__main__:PRECOND_27: Or(And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, -281474976710653 * skoS + 1125899906842624 * skoS ** 2 + 281474976710656 * skoS ** 3 <= 316912650057056787424222380031 / 562949953421312), And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, -2 * skoS + 4 * skoS ** 2 + skoS ** 3 >= 844424930131969 / 281474976710656, 1267650600228227149696889520126 * skoS - 792281625142648442485020295169 * skoS ** 2 - 2139160387885139085350523633664 * skoS ** 3 - 475368975085586025561263702016 * skoS ** 4 + 158456325028528675187087900672 * skoS ** 5 + 39614081257132168796771975168 * skoS ** 6 >= -1346878762742494302040200577023 / 2, pi < 31415927 / 10000000))
+DEBUG:__main__:PRECOND_SYMPY_27: ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (281474976710656*skoS**3 + 1125899906842624*skoS**2 - 281474976710653*skoS <= 316912650057056787424222380031/562949953421312)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 844424930131969/281474976710656) & (39614081257132168796771975168*skoS**6 + 158456325028528675187087900672*skoS**5 - 475368975085586025561263702016*skoS**4 - 2139160387885139085350523633664*skoS**3 - 792281625142648442485020295169*skoS**2 + 1267650600228227149696889520126*skoS >= -1346878762742494302040200577023/2))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/4503599627370496, skoS=53589822504991/70368744177664, skoSINS=214359290019963/281474976710656, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 28---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/4503599627370496, skoSINS: 214359290019963/281474976710656}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000042sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004510sec
+DEBUG:__main__:PRECOND_28: And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 214359290019963 / 281474976710656, pi < 31415927 / 10000000, -195397199446464753204320781543 * skoS + 596042527417749706669893353472 * skoS ** 2 + 218793101194610515741402726400 * skoS ** 3 <= 293516748308911587837093856487)
+DEBUG:__main__:PRECOND_SYMPY_28: (delta >= 0) & (skoS >= 214359290019963/281474976710656) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (218793101194610515741402726400*skoS**3 + 596042527417749706669893353472*skoS**2 - 195397199446464753204320781543*skoS <= 293516748308911587837093856487)
+DEBUG:__main__:---------pre-condition 29---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/4503599627370496, skoSINS: lambda_var_0 + 214359290019963/281474976710656}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000041sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004950sec
+DEBUG:__main__:PRECOND_29: Or(And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, -2251799813685245 * skoS + 9007199254740992 * skoS ** 2 + 2251799813685248 * skoS ** 3 <= 20282409603651665920347623915519 / 4503599627370496), And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, -2 * skoS + 4 * skoS ** 2 + skoS ** 3 >= 6755399441055745 / 2251799813685248, 81129638414606663681390495662078 * skoS - 50706024009129216592264774549505 * skoS ** 2 - 136906264824648791124242641977344 * skoS ** 3 - 30423614405477505635920876929024 * skoS ** 4 + 10141204801825835211973625643008 * skoS ** 5 + 2535301200456458802993406410752 * skoS ** 6 >= -86200240815519603805375445336063 / 2, pi < 31415927 / 10000000))
+DEBUG:__main__:PRECOND_SYMPY_29: ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (2251799813685248*skoS**3 + 9007199254740992*skoS**2 - 2251799813685245*skoS <= 20282409603651665920347623915519/4503599627370496)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 6755399441055745/2251799813685248) & (2535301200456458802993406410752*skoS**6 + 10141204801825835211973625643008*skoS**5 - 30423614405477505635920876929024*skoS**4 - 136906264824648791124242641977344*skoS**3 - 50706024009129216592264774549505*skoS**2 + 81129638414606663681390495662078*skoS >= -86200240815519603805375445336063/2))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/72057594037927936, skoS=3429748640319427/4503599627370496, skoSINS=53589822504991/70368744177664, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 30---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/72057594037927936, skoSINS: 53589822504991/70368744177664}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000042sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004444sec
+DEBUG:__main__:PRECOND_30: And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 53589822504991 / 70368744177664, pi < 31415927 / 10000000, -12212324965404090649102974015 * skoS + 37252657963609391851240423424 * skoS ** 2 + 13674568824663174826023714816 * skoS ** 3 <= 18344796769307000221465246783)
+DEBUG:__main__:PRECOND_SYMPY_30: (delta >= 0) & (skoS >= 53589822504991/70368744177664) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (13674568824663174826023714816*skoS**3 + 37252657963609391851240423424*skoS**2 - 12212324965404090649102974015*skoS <= 18344796769307000221465246783)
+DEBUG:__main__:---------pre-condition 31---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/72057594037927936, skoSINS: lambda_var_0 + 53589822504991/70368744177664}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000048sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005310sec
+DEBUG:__main__:PRECOND_31: Or(And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, pi < 31415927 / 10000000, -36028797018963965 * skoS + 144115188075855872 * skoS ** 2 + 36028797018963968 * skoS ** 3 <= 5192296858534827556472902291292159 / 72057594037927936), And(pi > 15707963 / 5000000, pi - 2 * skoS > 0, delta >= 0, skoS >= 0, -2 * skoS + 4 * skoS ** 2 + skoS ** 3 >= 108086391056891905 / 36028797018963968, 20769187434139310225891609165168638 * skoS - 12980742146337069719844587164401665 * skoS ** 2 - 35048003795110086744782429354983424 * skoS ** 3 - 7788445287802241442795744493830144 * skoS ** 4 + 2596148429267413814265248164610048 * skoS ** 5 + 649037107316853453566312041152512 * skoS ** 6 >= -22067261648773017493312203437113343 / 2, pi < 31415927 / 10000000))
+DEBUG:__main__:PRECOND_SYMPY_31: ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (36028797018963968*skoS**3 + 144115188075855872*skoS**2 - 36028797018963965*skoS <= 5192296858534827556472902291292159/72057594037927936)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 108086391056891905/36028797018963968) & (649037107316853453566312041152512*skoS**6 + 2596148429267413814265248164610048*skoS**5 - 7788445287802241442795744493830144*skoS**4 - 35048003795110086744782429354983424*skoS**3 - 12980742146337069719844587164401665*skoS**2 + 20769187434139310225891609165168638*skoS >= -22067261648773017493312203437113343/2))
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 3*skoS**2 <= 1) {'delta': 0, 'skoCOSS': 1/8, 'skoS': 1/16, 'skoSINS': 0, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1/8, skoSINS: 0}
+DEBUG:__main__:((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (4*skoS**3 + 16*skoS**2 - skoS <= 55/8)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 13/4) & (8*skoS**6 + 32*skoS**5 - 96*skoS**4 - 460*skoS**3 - 233*skoS**2 + 222*skoS >= -279/2)) {'delta': 0, 'skoCOSS': 1/8, 'skoS': 1/16, 'skoSINS': 0, 'pi': 26353589/8388608} {skoCOSS: 1/8, skoSINS: lambda_var_0}
+DEBUG:__main__:(delta >= 0) & (skoS >= 11/16) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (688*skoS**3 + 1888*skoS**2 - 583*skoS <= 919) {'delta': 0, 'skoCOSS': 1/1024, 'skoS': 3/4, 'skoSINS': 11/16, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1/1024, skoSINS: 11/16}
+DEBUG:__main__:((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (512*skoS**3 + 2048*skoS**2 - 509*skoS <= 1047551/1024)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 1537/512) & (131072*skoS**6 + 524288*skoS**5 - 1572864*skoS**4 - 7081472*skoS**3 - 2630657*skoS**2 + 4190206*skoS >= -4457471/2)) {'delta': 0, 'skoCOSS': 1/1024, 'skoS': 3/4, 'skoSINS': 11/16, 'pi': 26353589/8388608} {skoCOSS: 1/1024, skoSINS: lambda_var_0 + 11/16}
+DEBUG:__main__:(delta >= 0) & (skoS >= 97/128) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (45184*skoS**3 + 123136*skoS**2 - 40255*skoS <= 60607) {'delta': 0, 'skoCOSS': 1/4096, 'skoS': 779/1024, 'skoSINS': 97/128, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1/4096, skoSINS: 97/128}
+DEBUG:__main__:((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (2048*skoS**3 + 8192*skoS**2 - 2045*skoS <= 16773119/4096)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 6145/2048) & (2097152*skoS**6 + 8388608*skoS**5 - 25165824*skoS**4 - 113260544*skoS**3 - 41979905*skoS**2 + 67092478*skoS >= -71307263/2)) {'delta': 0, 'skoCOSS': 1/4096, 'skoS': 779/1024, 'skoSINS': 97/128, 'pi': 26353589/8388608} {skoCOSS: 1/4096, skoSINS: lambda_var_0 + 97/128}
+DEBUG:__main__:(delta >= 0) & (skoS >= 1559/2048) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (11581440*skoS**3 + 31551488*skoS**2 - 10340847*skoS <= 15536623) {'delta': 0, 'skoCOSS': 1/32768, 'skoS': 3119/4096, 'skoSINS': 1559/2048, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1/32768, skoSINS: 1559/2048}
+DEBUG:__main__:((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (16384*skoS**3 + 65536*skoS**2 - 16381*skoS <= 1073709055/32768)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 49153/16384) & (134217728*skoS**6 + 536870912*skoS**5 - 1610612736*skoS**4 - 7247872000*skoS**3 - 2684649473*skoS**2 + 4294836222*skoS >= -4563435519/2)) {'delta': 0, 'skoCOSS': 1/32768, 'skoS': 3119/4096, 'skoSINS': 1559/2048, 'pi': 26353589/8388608} {skoCOSS: 1/32768, skoSINS: lambda_var_0 + 1559/2048}
+DEBUG:__main__:(delta >= 0) & (skoS >= 3119/4096) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (46329856*skoS**3 + 126214144*skoS**2 - 41373535*skoS <= 62152543) {'delta': 0, 'skoCOSS': 1/131072, 'skoS': 12477/16384, 'skoSINS': 3119/4096, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1/131072, skoSINS: 3119/4096}
+DEBUG:__main__:((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (65536*skoS**3 + 262144*skoS**2 - 65533*skoS <= 17179738111/131072)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 196609/65536) & (2147483648*skoS**6 + 8589934592*skoS**5 - 25769803776*skoS**4 - 115964575744*skoS**3 - 42950852609*skoS**2 + 68718952446*skoS >= -73014575103/2)) {'delta': 0, 'skoCOSS': 1/131072, 'skoS': 12477/16384, 'skoSINS': 3119/4096, 'pi': 26353589/8388608} {skoCOSS: 1/131072, skoSINS: lambda_var_0 + 3119/4096}
+DEBUG:__main__:(delta >= 0) & (skoS >= 12477/16384) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (741294080*skoS**3 + 2019459072*skoS**2 - 662017143*skoS <= 994464887) {'delta': 0, 'skoCOSS': 1/262144, 'skoS': 49909/65536, 'skoSINS': 12477/16384, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1/262144, skoSINS: 12477/16384}
+DEBUG:__main__:((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (131072*skoS**3 + 524288*skoS**2 - 131069*skoS <= 68719214591/262144)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 393217/131072) & (8589934592*skoS**6 + 34359738368*skoS**5 - 103079215104*skoS**4 - 463857385472*skoS**3 - 171801051137*skoS**2 + 274876858366*skoS >= -292058038271/2)) {'delta': 0, 'skoCOSS': 1/262144, 'skoS': 49909/65536, 'skoSINS': 12477/16384, 'pi': 26353589/8388608} {skoCOSS: 1/262144, skoSINS: lambda_var_0 + 12477/16384}
+DEBUG:__main__:(delta >= 0) & (skoS >= 49909/65536) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (11860770816*skoS**3 + 32311476224*skoS**2 - 10592436615*skoS <= 15911534983) {'delta': 0, 'skoCOSS': 1/524288, 'skoS': 199637/262144, 'skoSINS': 49909/65536, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1/524288, skoSINS: 49909/65536}
+DEBUG:__main__:((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (262144*skoS**3 + 1048576*skoS**2 - 262141*skoS <= 274877382655/524288)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 786433/262144) & (34359738368*skoS**6 + 137438953472*skoS**5 - 412316860416*skoS**4 - 1855427706880*skoS**3 - 687199485953*skoS**2 + 1099509530622*skoS >= -1168231628799/2)) {'delta': 0, 'skoCOSS': 1/524288, 'skoS': 199637/262144, 'skoSINS': 49909/65536, 'pi': 26353589/8388608} {skoCOSS: 1/524288, skoSINS: lambda_var_0 + 49909/65536}
+DEBUG:__main__:(delta >= 0) & (skoS >= 199637/262144) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (189772595200*skoS**3 + 516984143872*skoS**2 - 169479635143*skoS <= 254584946887) {'delta': 0, 'skoCOSS': 1/4194304, 'skoS': 399275/524288, 'skoSINS': 199637/262144, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1/4194304, skoSINS: 199637/262144}
+DEBUG:__main__:((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (2097152*skoS**3 + 8388608*skoS**2 - 2097149*skoS <= 17592181850111/4194304)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 6291457/2097152) & (2199023255552*skoS**6 + 8796093022208*skoS**5 - 26388279066624*skoS**4 - 118747270479872*skoS**3 - 43980502859777*skoS**2 + 70368727400446*skoS >= -74766794883071/2)) {'delta': 0, 'skoCOSS': 1/4194304, 'skoS': 399275/524288, 'skoSINS': 199637/262144, 'pi': 26353589/8388608} {skoCOSS: 1/4194304, skoSINS: lambda_var_0 + 199637/262144}
+DEBUG:__main__:(delta >= 0) & (skoS >= 399275/524288) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (759090905088*skoS**3 + 2067937624064*skoS**2 - 677919839175*skoS <= 1018340561863) {'delta': 0, 'skoCOSS': 1/134217728, 'skoS': 1597101/2097152, 'skoSINS': 399275/524288, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1/134217728, skoSINS: 399275/524288}
+DEBUG:__main__:((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (67108864*skoS**3 + 268435456*skoS**2 - 67108861*skoS <= 18014398375264255/134217728)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 201326593/67108864) & (2251799813685248*skoS**6 + 9007199254740992*skoS**5 - 27021597764222976*skoS**4 - 121597190408765440*skoS**3 - 45035997481664513*skoS**2 + 72057593501057022*skoS >= -76561193799516159/2)) {'delta': 0, 'skoCOSS': 1/134217728, 'skoS': 1597101/2097152, 'skoSINS': 399275/524288, 'pi': 26353589/8388608} {skoCOSS: 1/134217728, skoSINS: lambda_var_0 + 399275/524288}
+DEBUG:__main__:(delta >= 0) & (skoS >= 12776809/16777216) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (777309237805056*skoS**3 + 2117568429031424*skoS**2 - 694190289312495*skoS <= 1042780958350063) {'delta': 0, 'skoCOSS': 1/536870912, 'skoS': 51107237/67108864, 'skoSINS': 12776809/16777216, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1/536870912, skoSINS: 12776809/16777216}
+DEBUG:__main__:((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (268435456*skoS**3 + 1073741824*skoS**2 - 268435453*skoS <= 288230375614840831/536870912)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 805306369/268435456) & (36028797018963968*skoS**6 + 144115188075855872*skoS**5 - 432345564227567616*skoS**4 - 1945555040903102464*skoS**3 - 720575945211117569*skoS**2 + 1152921502459363326*skoS >= -1224979099181645823/2)) {'delta': 0, 'skoCOSS': 1/536870912, 'skoS': 51107237/67108864, 'skoSINS': 12776809/16777216, 'pi': 26353589/8388608} {skoCOSS: 1/536870912, skoSINS: lambda_var_0 + 12776809/16777216}
+DEBUG:__main__:(delta >= 0) & (skoS >= 51107237/67108864) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (12436947871989760*skoS**3 + 33881094998720512*skoS**2 - 11107044795220903*skoS <= 16684495432713127) {'delta': 0, 'skoCOSS': 1/2147483648, 'skoS': 204428949/268435456, 'skoSINS': 51107237/67108864, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1/2147483648, skoSINS: 51107237/67108864}
+DEBUG:__main__:((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (1073741824*skoS**3 + 4294967296*skoS**2 - 1073741821*skoS <= 4611686016279904255/2147483648)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 3221225473/1073741824) & (576460752303423488*skoS**6 + 2305843009213693952*skoS**5 - 6917529027641081856*skoS**4 - 31128880631901061120*skoS**3 - 11529215065395822593*skoS**2 + 18446744065119617022*skoS >= -19599665580463882239/2)) {'delta': 0, 'skoCOSS': 1/2147483648, 'skoS': 204428949/268435456, 'skoSINS': 51107237/67108864, 'pi': 26353589/8388608} {skoCOSS: 1/2147483648, skoSINS: lambda_var_0 + 51107237/67108864}
+DEBUG:__main__:(delta >= 0) & (skoS >= 418670488319/549755813888) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (834629444864012829327360*skoS**3 + 2273721799535340246007808*skoS**2 - 745381162437523052451327*skoS <= 1119677537188139397830143) {'delta': 0, 'skoCOSS': 1/8796093022208, 'skoS': 1635431595/2147483648, 'skoSINS': 418670488319/549755813888, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1/8796093022208, skoSINS: 418670488319/549755813888}
+DEBUG:__main__:((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (4398046511104*skoS**3 + 17592186044416*skoS**2 - 4398046511101*skoS <= 77371252455327471088173055/8796093022208)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 13194139533313/4398046511104) & (9671406556917033397649408*skoS**6 + 38685626227668133590597632*skoS**5 - 116056878683004400771792896*skoS**4 - 522255954073550589798645760*skoS**3 - 193428131138419832790188033*skoS**2 + 309485009821309884352692222*skoS >= -328827822935187931613102079/2)) {'delta': 0, 'skoCOSS': 1/8796093022208, 'skoS': 1635431595/2147483648, 'skoSINS': 418670488319/549755813888, 'pi': 26353589/8388608} {skoCOSS: 1/8796093022208, skoSINS: lambda_var_0 + 418670488319/549755813888}
+DEBUG:__main__:(delta >= 0) & (skoS >= 1635431595/2147483648) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (12735434644539834368*skoS**3 + 34694241325934444544*skoS**2 - 11373613928815990215*skoS <= 17084923357985707463) {'delta': 0, 'skoCOSS': 1/35184372088832, 'skoS': 6698727813123/8796093022208, 'skoSINS': 1635431595/2147483648, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1/35184372088832, skoSINS: 1635431595/2147483648}
+DEBUG:__main__:((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (17592186044416*skoS**3 + 70368744177664*skoS**2 - 17592186044413*skoS <= 1237940039285345090527035391/35184372088832)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 52776558133249/17592186044416) & (154742504910672534362390528*skoS**6 + 618970019642690137449562112*skoS**5 - 1856910058928070412348686336*skoS**4 - 8356095265176440000871399424*skoS**3 - 3094850098213767346596610049*skoS**2 + 4951760157141380362108141566*skoS >= -5261245166962901352693366783/2)) {'delta': 0, 'skoCOSS': 1/35184372088832, 'skoS': 6698727813123/8796093022208, 'skoSINS': 1635431595/2147483648, 'pi': 26353589/8388608} {skoCOSS: 1/35184372088832, skoSINS: lambda_var_0 + 1635431595/2147483648}
+DEBUG:__main__:(delta >= 0) & (skoS >= 6698727813123/8796093022208) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (213665137885354410075226112*skoS**3 + 582072780681381354512842752*skoS**2 - 190817577584419852840329207*skoS <= 286637449520410511489884151) {'delta': 0, 'skoCOSS': 1/562949953421312, 'skoS': 26794911252495/35184372088832, 'skoSINS': 6698727813123/8796093022208, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1/562949953421312, skoSINS: 6698727813123/8796093022208}
+DEBUG:__main__:((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (281474976710656*skoS**3 + 1125899906842624*skoS**2 - 281474976710653*skoS <= 316912650057056787424222380031/562949953421312)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 844424930131969/281474976710656) & (39614081257132168796771975168*skoS**6 + 158456325028528675187087900672*skoS**5 - 475368975085586025561263702016*skoS**4 - 2139160387885139085350523633664*skoS**3 - 792281625142648442485020295169*skoS**2 + 1267650600228227149696889520126*skoS >= -1346878762742494302040200577023/2)) {'delta': 0, 'skoCOSS': 1/562949953421312, 'skoS': 26794911252495/35184372088832, 'skoSINS': 6698727813123/8796093022208, 'pi': 26353589/8388608} {skoCOSS: 1/562949953421312, skoSINS: lambda_var_0 + 6698727813123/8796093022208}
+DEBUG:__main__:(delta >= 0) & (skoS >= 214359290019963/281474976710656) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (218793101194610515741402726400*skoS**3 + 596042527417749706669893353472*skoS**2 - 195397199446464753204320781543*skoS <= 293516748308911587837093856487) {'delta': 0, 'skoCOSS': 1/4503599627370496, 'skoS': 53589822504991/70368744177664, 'skoSINS': 214359290019963/281474976710656, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1/4503599627370496, skoSINS: 214359290019963/281474976710656}
+DEBUG:__main__:((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (2251799813685248*skoS**3 + 9007199254740992*skoS**2 - 2251799813685245*skoS <= 20282409603651665920347623915519/4503599627370496)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 6755399441055745/2251799813685248) & (2535301200456458802993406410752*skoS**6 + 10141204801825835211973625643008*skoS**5 - 30423614405477505635920876929024*skoS**4 - 136906264824648791124242641977344*skoS**3 - 50706024009129216592264774549505*skoS**2 + 81129638414606663681390495662078*skoS >= -86200240815519603805375445336063/2)) {'delta': 0, 'skoCOSS': 1/4503599627370496, 'skoS': 53589822504991/70368744177664, 'skoSINS': 214359290019963/281474976710656, 'pi': 26353589/8388608} {skoCOSS: 1/4503599627370496, skoSINS: lambda_var_0 + 214359290019963/281474976710656}
+DEBUG:__main__:(delta >= 0) & (skoS >= 53589822504991/70368744177664) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (13674568824663174826023714816*skoS**3 + 37252657963609391851240423424*skoS**2 - 12212324965404090649102974015*skoS <= 18344796769307000221465246783) {'delta': 0, 'skoCOSS': 1/72057594037927936, 'skoS': 3429748640319427/4503599627370496, 'skoSINS': 53589822504991/70368744177664, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1/72057594037927936, skoSINS: 53589822504991/70368744177664}
+DEBUG:__main__:((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (36028797018963968*skoS**3 + 144115188075855872*skoS**2 - 36028797018963965*skoS <= 5192296858534827556472902291292159/72057594037927936)) | ((delta >= 0) & (skoS >= 0) & (pi > 15707963/5000000) & (pi < 31415927/10000000) & (pi - 2*skoS > 0) & (skoS**3 + 4*skoS**2 - 2*skoS >= 108086391056891905/36028797018963968) & (649037107316853453566312041152512*skoS**6 + 2596148429267413814265248164610048*skoS**5 - 7788445287802241442795744493830144*skoS**4 - 35048003795110086744782429354983424*skoS**3 - 12980742146337069719844587164401665*skoS**2 + 20769187434139310225891609165168638*skoS >= -22067261648773017493312203437113343/2)) {'delta': 0, 'skoCOSS': 1/72057594037927936, 'skoS': 3429748640319427/4503599627370496, 'skoSINS': 53589822504991/70368744177664, 'pi': 26353589/8388608} {skoCOSS: 1/72057594037927936, skoSINS: lambda_var_0 + 53589822504991/70368744177664}
+INFO:wolframclient.evaluation.kernel.kernelcontroller:Start termination on kernel <WolframKernelController[wolfram-kernel-1 ❌], "/Applications/Wolfram Engine.app/Contents/MacOS/WolframKernel">
+INFO:wolframclient.evaluation.kernel.kernelcontroller:Killing kernel process: 43866

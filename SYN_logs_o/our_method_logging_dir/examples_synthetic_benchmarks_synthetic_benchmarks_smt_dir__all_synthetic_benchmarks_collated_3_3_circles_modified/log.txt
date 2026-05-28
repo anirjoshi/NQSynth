@@ -1,0 +1,33 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_3_3_circles_modified.smt
+DEBUG:__main__:ip_vars: ['a']
+DEBUG:__main__:op_vars: ['x', 'y', 'z']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*x*x + 1*y*y*a + -1*z*z + 1*a,
+            0 > 0 + 1*x*x + 1*y*y*y + -2*x*a + -2*y + -3*a)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > a*y**2 + a + x**2 - z**2) & (0 > -2*a*x - 3*a + x**2 + y**3 - 2*y), {}
+DEBUG:__main__:DIRECTIONS: 3:[[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+DEBUG:__main__:vars sympy:['a', 'x', 'y', 'z']
+DEBUG:__main__:z3 vars:{'a': a, 'x': x, 'z': z, 'y': y}
+DEBUG:__main__:z3 post_condition:And(0 > a + x**2 + -1*z**2 + a*y**2,
+    0 > x**2 + y**3 + -3*a + -2*y + -2*a*x)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, a=1/2, x=1/2, z=1, y=1/8
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/2, y: 1/8, z: 1}
+DEBUG:__main__:PRECOND_0: 65 a - 64 < 0 /\ 512 a^2 + 1536 a + 127 > 0 /\ [ 2 a + 3 > 0 \/ 212992 a^3 + 635712 a^2 - 316624 a + 29645 < 0 ]
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1, 0]
+DEBUG:__main__:substitution: {x: 1/2, y: lambda_var_0 + 1/8, z: 1}
+DEBUG:__main__:PRECOND_1: 4 a - 3 < 0
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [0, 0, 1]
+DEBUG:__main__:substitution: {x: 1/2, y: 1/8, z: lambda_var_0 + 1}
+DEBUG:__main__:PRECOND_2: 2048 a - 1 > 0
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(65*a - 64 < 0) & (512*a**2 + 1536*a + 127 > 0) & ((2*a + 3 > 0) | (212992*a**3 + 635712*a**2 - 316624*a + 29645 < 0)) {'a': 1/2, 'x': 1/2, 'z': 1, 'y': 1/8} {x: lambda_var_0 + 1/2, y: 1/8, z: 1}
+DEBUG:__main__:4*a - 3 < 0 {'a': 1/2, 'x': 1/2, 'z': 1, 'y': 1/8} {x: 1/2, y: lambda_var_0 + 1/8, z: 1}
+DEBUG:__main__:2048*a - 1 > 0 {'a': 1/2, 'x': 1/2, 'z': 1, 'y': 1/8} {x: 1/2, y: 1/8, z: lambda_var_0 + 1}

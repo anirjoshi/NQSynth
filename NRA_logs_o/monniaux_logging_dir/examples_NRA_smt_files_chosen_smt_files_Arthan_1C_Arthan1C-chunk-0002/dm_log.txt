@@ -1,0 +1,89 @@
+DEBUG:__main__:Starting Log File: dm_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_Arthan_1C_Arthan1C-chunk-0002.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoS', 'pi']
+DEBUG:__main__:op_vars: ['skoCOSS', 'skoSINS']
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(skoSINS*
+        (-3 +
+         skoCOSS*-2 +
+         skoS*(-4 + skoS*(2 + skoS)) +
+         skoSINS*(1 + skoS)) <=
+        2 +
+        skoCOSS*(-2 + skoCOSS*-2) +
+        skoS*
+        (skoCOSS*(-10 + skoCOSS*-2) +
+         skoS*(-6 + skoCOSS*-6 + skoS*-2)),
+        217/100 <= skoS))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (217/100 <= skoS) & (skoSINS*(-2*skoCOSS + skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) - 3) <= skoCOSS*(-2*skoCOSS - 2) + skoS*(skoCOSS*(-2*skoCOSS - 10) + skoS*(-6*skoCOSS - 2*skoS - 6)) + 2), {}
+DEBUG:__main__:vars sympy:['skoS', 'skoCOSS', 'delta', 'skoSINS']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoS': skoS, 'skoSINS': skoSINS, 'skoCOSS': skoCOSS}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    217/100 <= skoS,
+    skoSINS*
+    (-3 +
+     -2*skoCOSS +
+     skoS*(-4 + skoS*(2 + skoS)) +
+     skoSINS*(1 + skoS)) <=
+    2 +
+    skoCOSS*(-2 + -2*skoCOSS) +
+    skoS*
+    (skoCOSS*(-10 + -2*skoCOSS) +
+     skoS*(-6 + -6*skoCOSS + -2*skoS)))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoS=4, skoSINS=1/8, skoCOSS=-2
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:PRECOND_0: (delta >= 0) & (skoS >= 217/100) & (2*skoS*(skoS*(skoS - 3) - 6) + 2 <= -skoSINS*(skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) + 1))
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:PRECOND_1: (delta >= 0) & (skoS >= 217/100) & (-136*skoS**3 + 368*skoS**2 + 799*skoS >= 137)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoS=5, skoSINS=-1/4, skoCOSS=-14
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:PRECOND_2: (delta >= 0) & (skoS >= 217/100) & (2*skoS*(skoS*(skoS - 39) + 126) + 362 <= -skoSINS*(skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) + 25))
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:PRECOND_3: (delta >= 0) & (skoS >= 217/100) & (28*skoS**3 - 1256*skoS**2 + 4049*skoS <= -5693)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoS=9/2, skoSINS=-25, skoCOSS=-13
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:PRECOND_4: (delta >= 0) & (skoS >= 217/100) & (2*skoS*(skoS*(skoS - 36) + 104) + 310 <= -skoSINS*(skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) + 23))
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:PRECOND_5: (delta >= 0) & (skoS >= 217/100) & (23*skoS**3 + 122*skoS**2 - 933*skoS >= 360)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoS=17/4, skoSINS=-23, skoCOSS=-11
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:PRECOND_6: (delta >= 0) & (skoS >= 217/100) & (2*skoS*(skoS*(skoS - 30) + 66) + 218 <= -skoSINS*(skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) + 19))
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:PRECOND_7: (delta >= 0) & (skoS >= 217/100) & (21*skoS**3 + 106*skoS**2 - 753*skoS >= 310)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoS=33/8, skoSINS=-22, skoCOSS=-8
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:PRECOND_8: (delta >= 0) & (skoS >= 217/100) & (2*skoS*(skoS*(skoS - 21) + 24) + 110 <= -skoSINS*(skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) + 13))
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:PRECOND_9: (delta >= 0) & (skoS >= 217/100) & (10*skoS**3 + 43*skoS**2 - 310*skoS >= 154)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoS=131/32, skoSINS=-87/4, skoCOSS=-10
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:PRECOND_10: (delta >= 0) & (skoS >= 217/100) & (2*skoS*(skoS*(skoS - 27) + 50) + 178 <= -skoSINS*(skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) + 17))
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:PRECOND_11: (delta >= 0) & (skoS >= 217/100) & (316*skoS**3 + 1560*skoS**2 - 10561*skoS >= 4501)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoS=523/128, skoSINS=-87/4, skoCOSS=-9
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:PRECOND_12: (delta >= 0) & (skoS >= 217/100) & (2*skoS*(skoS*(skoS - 24) + 36) + 142 <= -skoSINS*(skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) + 15))
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:PRECOND_13: (delta >= 0) & (skoS >= 217/100) & (316*skoS**3 + 1464*skoS**2 - 10113*skoS >= 4621)
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(delta >= 0) & (skoS >= 217/100) & (2*skoS*(skoS*(skoS - 3) - 6) + 2 <= -skoSINS*(skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) + 1)) {'delta': 0, 'skoS': 4, 'skoSINS': 1/8, 'skoCOSS': -2}
+DEBUG:__main__:(delta >= 0) & (skoS >= 217/100) & (-136*skoS**3 + 368*skoS**2 + 799*skoS >= 137) {'delta': 0, 'skoS': 4, 'skoSINS': 1/8, 'skoCOSS': -2}
+DEBUG:__main__:(delta >= 0) & (skoS >= 217/100) & (2*skoS*(skoS*(skoS - 39) + 126) + 362 <= -skoSINS*(skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) + 25)) {'delta': 0, 'skoS': 5, 'skoSINS': -1/4, 'skoCOSS': -14}
+DEBUG:__main__:(delta >= 0) & (skoS >= 217/100) & (28*skoS**3 - 1256*skoS**2 + 4049*skoS <= -5693) {'delta': 0, 'skoS': 5, 'skoSINS': -1/4, 'skoCOSS': -14}
+DEBUG:__main__:(delta >= 0) & (skoS >= 217/100) & (2*skoS*(skoS*(skoS - 36) + 104) + 310 <= -skoSINS*(skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) + 23)) {'delta': 0, 'skoS': 9/2, 'skoSINS': -25, 'skoCOSS': -13}
+DEBUG:__main__:(delta >= 0) & (skoS >= 217/100) & (23*skoS**3 + 122*skoS**2 - 933*skoS >= 360) {'delta': 0, 'skoS': 9/2, 'skoSINS': -25, 'skoCOSS': -13}
+DEBUG:__main__:(delta >= 0) & (skoS >= 217/100) & (2*skoS*(skoS*(skoS - 30) + 66) + 218 <= -skoSINS*(skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) + 19)) {'delta': 0, 'skoS': 17/4, 'skoSINS': -23, 'skoCOSS': -11}
+DEBUG:__main__:(delta >= 0) & (skoS >= 217/100) & (21*skoS**3 + 106*skoS**2 - 753*skoS >= 310) {'delta': 0, 'skoS': 17/4, 'skoSINS': -23, 'skoCOSS': -11}
+DEBUG:__main__:(delta >= 0) & (skoS >= 217/100) & (2*skoS*(skoS*(skoS - 21) + 24) + 110 <= -skoSINS*(skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) + 13)) {'delta': 0, 'skoS': 33/8, 'skoSINS': -22, 'skoCOSS': -8}
+DEBUG:__main__:(delta >= 0) & (skoS >= 217/100) & (10*skoS**3 + 43*skoS**2 - 310*skoS >= 154) {'delta': 0, 'skoS': 33/8, 'skoSINS': -22, 'skoCOSS': -8}
+DEBUG:__main__:(delta >= 0) & (skoS >= 217/100) & (2*skoS*(skoS*(skoS - 27) + 50) + 178 <= -skoSINS*(skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) + 17)) {'delta': 0, 'skoS': 131/32, 'skoSINS': -87/4, 'skoCOSS': -10}
+DEBUG:__main__:(delta >= 0) & (skoS >= 217/100) & (316*skoS**3 + 1560*skoS**2 - 10561*skoS >= 4501) {'delta': 0, 'skoS': 131/32, 'skoSINS': -87/4, 'skoCOSS': -10}
+DEBUG:__main__:(delta >= 0) & (skoS >= 217/100) & (2*skoS*(skoS*(skoS - 24) + 36) + 142 <= -skoSINS*(skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) + 15)) {'delta': 0, 'skoS': 523/128, 'skoSINS': -87/4, 'skoCOSS': -9}
+DEBUG:__main__:(delta >= 0) & (skoS >= 217/100) & (316*skoS**3 + 1464*skoS**2 - 10113*skoS >= 4621) {'delta': 0, 'skoS': 523/128, 'skoSINS': -87/4, 'skoCOSS': -9}

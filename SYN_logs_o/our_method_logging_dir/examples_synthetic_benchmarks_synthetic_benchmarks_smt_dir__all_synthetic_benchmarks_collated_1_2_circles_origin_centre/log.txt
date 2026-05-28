@@ -1,0 +1,145 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_1_2_circles_origin_centre.smt
+DEBUG:__main__:ip_vars: ['r1', 'r2']
+DEBUG:__main__:op_vars: ['x', 'y']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*x*x + 1*y*y + -1*r1*r1,
+            0 > 0 + -1*x*x + -1*y*y + 1*r2*r2)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > -r1**2 + x**2 + y**2) & (0 > r2**2 - x**2 - y**2), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['r1', 'x', 'r2', 'y']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y, 'r1': r1, 'r2': r2}
+DEBUG:__main__:z3 post_condition:And(0 > x**2 + y**2 + -1*r1**2,
+    0 > r2**2 + -1*x**2 + -1*y**2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1/8, y=1/2, r1=-1, r2=0
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/8, y: 1/2}
+DEBUG:__main__:PRECOND_0: 2 r1 - 1 /= 0 /\ 2 r1 + 1 /= 0 /\ [ [ 2 r1 - 1 > 0 /\ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ 2 r1 + 1 < 0 /\ r2 - r1 > 0 /\ r2 + r1 < 0 ] ]
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 1/8, y: lambda_var_0 + 1/2}
+DEBUG:__main__:PRECOND_1: 8 r1 - 1 /= 0 /\ 8 r1 + 1 /= 0 /\ [ [ 8 r1 - 1 > 0 /\ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ 8 r1 + 1 < 0 /\ r2 - r1 > 0 /\ r2 + r1 < 0 ] ]
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/32, y=0, r1=-1/16, r2=0
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/32, y: 0}
+DEBUG:__main__:PRECOND_2: [ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ r2 - r1 > 0 /\ r2 + r1 < 0 ]
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/32, y: lambda_var_0}
+DEBUG:__main__:PRECOND_3: 32 r1 - 1 /= 0 /\ 32 r1 + 1 /= 0 /\ [ [ 32 r1 - 1 > 0 /\ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ 32 r1 + 1 < 0 /\ r2 - r1 > 0 /\ r2 + r1 < 0 ] ]
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/64, y=0, r1=1/32, r2=0
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/64, y: 0}
+DEBUG:__main__:PRECOND_4: [ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ r2 - r1 > 0 /\ r2 + r1 < 0 ]
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/64, y: lambda_var_0}
+DEBUG:__main__:PRECOND_5: 64 r1 - 1 /= 0 /\ 64 r1 + 1 /= 0 /\ [ [ 64 r1 - 1 > 0 /\ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ 64 r1 + 1 < 0 /\ r2 - r1 > 0 /\ r2 + r1 < 0 ] ]
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/256, y=0, r1=1/128, r2=0
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/256, y: 0}
+DEBUG:__main__:PRECOND_6: [ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ r2 - r1 > 0 /\ r2 + r1 < 0 ]
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/256, y: lambda_var_0}
+DEBUG:__main__:PRECOND_7: 256 r1 - 1 /= 0 /\ 256 r1 + 1 /= 0 /\ [ [ 256 r1 - 1 > 0 /\ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ 256 r1 + 1 < 0 /\ r2 - r1 > 0 /\ r2 + r1 < 0 ] ]
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/1024, y=0, r1=1/512, r2=0
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/1024, y: 0}
+DEBUG:__main__:PRECOND_8: [ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ r2 - r1 > 0 /\ r2 + r1 < 0 ]
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/1024, y: lambda_var_0}
+DEBUG:__main__:PRECOND_9: 1024 r1 - 1 /= 0 /\ 1024 r1 + 1 /= 0 /\ [ [ 1024 r1 - 1 > 0 /\ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ 1024 r1 + 1 < 0 /\ r2 - r1 > 0 /\ r2 + r1 < 0 ] ]
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/4096, y=0, r1=1/2048, r2=0
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/4096, y: 0}
+DEBUG:__main__:PRECOND_10: [ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ r2 - r1 > 0 /\ r2 + r1 < 0 ]
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/4096, y: lambda_var_0}
+DEBUG:__main__:PRECOND_11: 4096 r1 - 1 /= 0 /\ 4096 r1 + 1 /= 0 /\ [ [ 4096 r1 - 1 > 0 /\ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ 4096 r1 + 1 < 0 /\ r2 - r1 > 0 /\ r2 + r1 < 0 ] ]
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/16384, y=0, r1=1/8192, r2=0
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/16384, y: 0}
+DEBUG:__main__:PRECOND_12: [ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ r2 - r1 > 0 /\ r2 + r1 < 0 ]
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/16384, y: lambda_var_0}
+DEBUG:__main__:PRECOND_13: 16384 r1 - 1 /= 0 /\ 16384 r1 + 1 /= 0 /\ [ [ 16384 r1 - 1 > 0 /\ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ 16384 r1 + 1 < 0 /\ r2 - r1 > 0 /\ r2 + r1 < 0 ] ]
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/65536, y=0, r1=1/32768, r2=0
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/65536, y: 0}
+DEBUG:__main__:PRECOND_14: [ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ r2 - r1 > 0 /\ r2 + r1 < 0 ]
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/65536, y: lambda_var_0}
+DEBUG:__main__:PRECOND_15: 65536 r1 - 1 /= 0 /\ 65536 r1 + 1 /= 0 /\ [ [ 65536 r1 - 1 > 0 /\ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ 65536 r1 + 1 < 0 /\ r2 - r1 > 0 /\ r2 + r1 < 0 ] ]
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/262144, y=0, r1=1/131072, r2=0
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/262144, y: 0}
+DEBUG:__main__:PRECOND_16: [ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ r2 - r1 > 0 /\ r2 + r1 < 0 ]
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/262144, y: lambda_var_0}
+DEBUG:__main__:PRECOND_17: 262144 r1 - 1 /= 0 /\ 262144 r1 + 1 /= 0 /\ [ [ 262144 r1 - 1 > 0 /\ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ 262144 r1 + 1 < 0 /\ r2 - r1 > 0 /\ r2 + r1 < 0 ] ]
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/1048576, y=0, r1=1/524288, r2=0
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/1048576, y: 0}
+DEBUG:__main__:PRECOND_18: [ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ r2 - r1 > 0 /\ r2 + r1 < 0 ]
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/1048576, y: lambda_var_0}
+DEBUG:__main__:PRECOND_19: 1048576 r1 - 1 /= 0 /\ 1048576 r1 + 1 /= 0 /\ [ [ 1048576 r1 - 1 > 0 /\ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ 1048576 r1 + 1 < 0 /\ r2 - r1 > 0 /\ r2 + r1 < 0 ] ]
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/4194304, y=0, r1=1/2097152, r2=0
+DEBUG:__main__:---------pre-condition 20---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/4194304, y: 0}
+DEBUG:__main__:PRECOND_20: [ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ r2 - r1 > 0 /\ r2 + r1 < 0 ]
+DEBUG:__main__:---------pre-condition 21---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/4194304, y: lambda_var_0}
+DEBUG:__main__:PRECOND_21: 4194304 r1 - 1 /= 0 /\ 4194304 r1 + 1 /= 0 /\ [ [ 4194304 r1 - 1 > 0 /\ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ 4194304 r1 + 1 < 0 /\ r2 - r1 > 0 /\ r2 + r1 < 0 ] ]
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/16777216, y=0, r1=1/8388608, r2=0
+DEBUG:__main__:---------pre-condition 22---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/16777216, y: 0}
+DEBUG:__main__:PRECOND_22: [ r2 - r1 < 0 /\ r2 + r1 > 0 ] \/ [ r2 - r1 > 0 /\ r2 + r1 < 0 ]
+DEBUG:__main__:---------pre-condition 23---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/16777216, y: lambda_var_0}

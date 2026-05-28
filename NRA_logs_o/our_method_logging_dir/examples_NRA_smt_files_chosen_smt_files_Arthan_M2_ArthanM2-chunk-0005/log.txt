@@ -1,0 +1,35 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_Arthan_M2_ArthanM2-chunk-0005.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoSINS', 'skoM']
+DEBUG:__main__:op_vars: ['skoCOSS', 'skoS']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(And(skoSINS*skoSINS - (1 + skoCOSS*skoCOSS*-1) <=
+            delta,
+            1 + skoCOSS*skoCOSS*-1 - skoSINS*skoSINS <=
+            delta),
+        And(2 <= skoS, 2 <= skoM)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (2 <= skoM) & (2 <= skoS) & (skoCOSS**2 + skoSINS**2 - 1 <= delta) & (-skoCOSS**2 - skoSINS**2 + 1 <= delta), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['skoSINS', 'skoS', 'skoCOSS', 'delta', 'skoM']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoM': skoM, 'skoS': skoS, 'skoCOSS': skoCOSS, 'skoSINS': skoSINS}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    2 <= skoM,
+    2 <= skoS,
+    -1 + skoCOSS**2 + skoSINS**2 <= delta,
+    1 + -1*skoCOSS**2 + -1*skoSINS**2 <= delta)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=2, skoM=2, skoS=2, skoCOSS=1/8, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/8, skoS: 2}
+DEBUG:__main__:PRECOND_0: delta >= 0 /\ skoM - 2 >= 0 /\ skoSINS^2 - delta - 1 <= 0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/8, skoS: lambda_var_0 + 2}
+DEBUG:__main__:PRECOND_1: delta >= 0 /\ skoM - 2 >= 0 /\ 64 skoSINS^2 - 64 delta - 63 <= 0 /\ 64 skoSINS^2 + 64 delta - 63 >= 0
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(delta >= 0) & (skoM - 2 >= 0) & (-delta + skoSINS**2 - 1 <= 0) {'delta': 2, 'skoM': 2, 'skoS': 2, 'skoCOSS': 1/8, 'skoSINS': 1/2} {skoCOSS: lambda_var_0 + 1/8, skoS: 2}
+DEBUG:__main__:(delta >= 0) & (skoM - 2 >= 0) & (64*delta + 64*skoSINS**2 - 63 >= 0) & (-64*delta + 64*skoSINS**2 - 63 <= 0) {'delta': 2, 'skoM': 2, 'skoS': 2, 'skoCOSS': 1/8, 'skoSINS': 1/2} {skoCOSS: 1/8, skoS: lambda_var_0 + 2}

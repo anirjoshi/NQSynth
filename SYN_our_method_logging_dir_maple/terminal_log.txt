@@ -1,0 +1,1894 @@
+(RPS) ani@CGJ9MTYH6Y:~/Desktop/RRI/IJCAR26_repo/Rational-Program-Synthesis/tool_ijcar2026$ python script_execute_all_benchmarks_maple.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/ --ip_op_benchmark_dir examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller/
+['examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt', 'examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt', 'examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt', 'examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt', 'examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt']
+
+_____examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt__________________________________________
+
+command: rm -rf sage_files ip_op_vars.txt log.txt timer_log.txt program.py
+output: , 
+
+examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.txt
+command: cp examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.txt ip_op_vars.txt
+output: , 
+
+command: timeout -s 15 -v 120s python NQS_maple/main_tool.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt --ip_op_vars ip_op_vars.txt
+output: POST_CONDITION: (0 > x**2 + y**2 - 5) & (0 > -x**2 - y**2 + 4999/1000)
+Input_Vars: ['y']
+Output_Vars: ['x']
+working...
+
+direction: [1]
+substitution: {x: lambda_var_0 + 1/8}
+(lambda_var_0**2 + lambda_var_0/4 + y**2 - 39867/8000 > 0) & (lambda_var_0**2 + lambda_var_0/4 + y**2 - 319/64 < 0)
+maple_cmd: QuantifierElimination:-QuantifierEliminate(exists(lambda_var_0, And(lambda_var_0^2 + lambda_var_0/4 + y^2 - 39867/8000 > 0, lambda_var_0^2 + lambda_var_0/4 + y^2 - 319/64 < 0)));
+
+WEAKEST_PRE_COND_SYNTHESIZED
+(y**2 < 5) | Eq(1000*y**2 - 4999, 0) | ((1000*y**2 < 4999) & Eq(1000*y**2 - 4999, 0)) | ((1000*y**2 < 4999) & ((1000*y**2 < 4999) | Eq(1000*y**2 - 4999, 0))) , {'x': 1/8, 'y': 1143/512} , {x: lambda_var_0 + 1/8}
+, rm: log.txt: No such file or directory
+
+
+command: tail -1 timer_log.txt
+output: WEAKEST_PRE_COND_SYNTHESIZED
+, 
+
+command: mkdir -p our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_2_circles_fixed_radii/
+output: , 
+
+command: mv log.txt our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_2_circles_fixed_radii/
+output: , 
+
+TIME_Z3_START:298481.832032541
+TIME_Z3_FINISH:298481.83965125
+RATIONAL_POINT
+TIME_SUBS_SIMPLIFY_START:298481.84027975
+TIME_SUBS_SIMPLIFY_STOP:298481.933090625
+TIME_MAPLE_START:298481.933562166
+TIME_MAPLE_FINISH:298482.099508708
+TIME_PROG_SYN_START:298482.103720666
+TIME_PROG_SYN_FINISH:298482.104795291
+TIME_Z3_START:298482.104834458
+TIME_Z3_FINISH:298482.114328166
+TIME_PROG_SYN_START:298482.114366041
+TIME_PROG_SYN_STOP:298482.11536475
+WEAKEST_PRE_COND_SYNTHESIZED
+428
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 4769441/500000*lambda_var_0**2 + 4800691/2000000*lambda_var_0 - 23046633827481/1000000000000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= -1703/776
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+y (107, 250)
+x (8989, 4096)
+SAT
+, 
+
+0 0 1
+0 0 1
+206
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 4910189/500000*lambda_var_0**2 + 4941439/2000000*lambda_var_0 - 24417819140721/1000000000000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= -659/296
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+y (103, 500)
+x (18239, 8192)
+SAT
+, 
+
+0 0 2
+0 0 2
+823
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 133603/15625*lambda_var_0**2 + 2153273/1000000*lambda_var_0 - 4636584550029/250000000000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= -815/392
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+y (823, 1000)
+x (2129, 1024)
+SAT
+, 
+
+0 0 3
+0 0 3
+34
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 4951469/500000*lambda_var_0**2 + 4982719/2000000*lambda_var_0 - 24827488382961/1000000000000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= -1091/488
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+y (17, 500)
+x (9157, 4096)
+SAT
+, 
+
+0 0 4
+0 0 4
+327
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 151428/15625*lambda_var_0**2 + 2438473/1000000*lambda_var_0 - 5946150509229/250000000000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= -407/184
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+y (327, 1000)
+x (2265, 1024)
+SAT
+, 
+
+0 0 5
+0 0 5
+952
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 4046321/500000*lambda_var_0**2 + 4077571/2000000*lambda_var_0 - 16626585010041/1000000000000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= -437/216
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+y (119, 125)
+x (8287, 4096)
+SAT
+, 
+
+0 0 6
+0 0 6
+44
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 4950689/500000*lambda_var_0**2 + 4981939/2000000*lambda_var_0 - 24819715949721/1000000000000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= -769/344
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+y (11, 250)
+x (9157, 4096)
+SAT
+, 
+
+0 0 7
+0 0 7
+603
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 573627/62500*lambda_var_0**2 + 2310133/1000000*lambda_var_0 - 5336714415189/250000000000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= -2291/1064
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+y (603, 1000)
+x (8819, 4096)
+SAT
+, 
+
+0 0 8
+0 0 8
+421
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 596923/62500*lambda_var_0**2 + 2403317/1000000*lambda_var_0 - 5775932539989/250000000000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= -1423/648
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+y (421, 1000)
+x (8995, 4096)
+SAT
+, 
+
+0 0 9
+0 0 9
+456
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 4744689/500000*lambda_var_0**2 + 4775939/2000000*lambda_var_0 - 22809593081721/1000000000000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= -753/344
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of y:
+enter denominator of y:
+y (57, 125)
+x (4483, 2048)
+SAT
+, 
+
+0 0 10
+0 0 10
+command: mv timer_log.txt our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_2_circles_fixed_radii/
+output: , 
+
+command: mv program.py our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_2_circles_fixed_radii/
+output: , 
+
+command: cp ip_op_vars.txt our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_2_circles_fixed_radii/
+output: , 
+
+STATUS: WEAKEST_PRE_CONDITION
+TIME: 1.2048399448394775
+command: rm pre_condition.smt2
+output: , rm: pre_condition.smt2: No such file or directory
+
+
+
+
+
+_____examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt__________________________________________
+
+command: rm -rf sage_files ip_op_vars.txt log.txt timer_log.txt program.py
+output: , 
+
+examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_1_geometric3.txt
+command: cp examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_1_geometric3.txt ip_op_vars.txt
+output: , 
+
+command: timeout -s 15 -v 120s python NQS_maple/main_tool.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt --ip_op_vars ip_op_vars.txt
+output: POST_CONDITION: (0 > x**2 + y**2 - 1) & (0 > c + x**2 - 6*x + y**2)
+Input_Vars: ['c']
+Output_Vars: ['x', 'y']
+working...
+
+direction: [1, 0]
+substitution: {x: lambda_var_0 + 1/8, y: 0}
+(4*lambda_var_0**2 + lambda_var_0 < 63/16) & (c + lambda_var_0**2 - 23*lambda_var_0/4 - 47/64 < 0)
+maple_cmd: QuantifierElimination:-QuantifierEliminate(exists(lambda_var_0, And(4*lambda_var_0^2 + lambda_var_0 < 63/16, c + lambda_var_0^2 - 23*lambda_var_0/4 - 47/64 < 0)));
+
+direction: [0, 1]
+substitution: {x: 1/8, y: lambda_var_0}
+(lambda_var_0**2 < 63/64) & (c + lambda_var_0**2 - 47/64 < 0)
+maple_cmd: QuantifierElimination:-QuantifierEliminate(exists(lambda_var_0, And(lambda_var_0^2 < 63/64, c + lambda_var_0^2 - 47/64 < 0)));
+
+WEAKEST_PRE_COND_SYNTHESIZED
+(c < -7) | Eq(c + 7, 0) | ((c < 9) & ((-c < -17) | (c**2 + 2*c < 35) | ((-c < -17) & (-c**2 - 2*c < -35)) | ((c <= 17) & (c < 0) & Eq(c**2 + 2*c - 35, 0)))) , {'x': 1/8, 'y': 0, 'c': -17/64} , {x: lambda_var_0 + 1/8, y: 0}
+(4*c < -1) | Eq(4*c + 1, 0) | ((64*c < 47) & ((-4*c < 1) | ((64*c < 47) & Eq(4*c + 1, 0)))) , {'x': 1/8, 'y': 0, 'c': -17/64} , {x: 1/8, y: lambda_var_0}
+, rm: log.txt: No such file or directory
+
+
+command: tail -1 timer_log.txt
+output: WEAKEST_PRE_COND_SYNTHESIZED
+, 
+
+command: mkdir -p our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_geometric3/
+output: , 
+
+command: mv log.txt our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_geometric3/
+output: , 
+
+TIME_Z3_START:298486.828490666
+TIME_Z3_FINISH:298486.831980125
+RATIONAL_POINT
+TIME_SUBS_SIMPLIFY_START:298486.832577625
+TIME_SUBS_SIMPLIFY_STOP:298486.929876916
+TIME_MAPLE_START:298486.930470833
+TIME_MAPLE_FINISH:298486.967331041
+TIME_PROG_SYN_START:298486.973307166
+TIME_PROG_SYN_FINISH:298486.974682791
+TIME_SUBS_SIMPLIFY_START:298486.974841
+TIME_SUBS_SIMPLIFY_STOP:298486.998126208
+TIME_MAPLE_START:298486.998405291
+TIME_MAPLE_FINISH:298487.014398458
+TIME_PROG_SYN_START:298487.017448083
+TIME_PROG_SYN_FINISH:298487.019635208
+TIME_Z3_START:298487.019741
+TIME_Z3_FINISH:298487.025956625
+TIME_PROG_SYN_START:298487.026038708
+TIME_PROG_SYN_STOP:298487.02765075
+WEAKEST_PRE_COND_SYNTHESIZED
+661
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+
+Poly(lambda_var_0**4 - 11/2*lambda_var_0**3 - 9981/4000*lambda_var_0**2 + 90269/16000*lambda_var_0 + 36981/512000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 9/16
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+c (661, 1000)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 1
+0 0 1
+456
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+
+Poly(lambda_var_0**4 - 11/2*lambda_var_0**3 - 10801/4000*lambda_var_0**2 + 89449/16000*lambda_var_0 + 140301/512000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 9/16
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+c (57, 125)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 2
+0 0 2
+969
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+
+Poly(lambda_var_0**4 - 11/2*lambda_var_0**3 - 8749/4000*lambda_var_0**2 + 91501/16000*lambda_var_0 - 118251/512000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 179/304
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+c (969, 1000)
+x (1, 2)
+y (0, 1)
+SAT
+, 
+
+0 0 3
+0 0 3
+44
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+
+Poly(lambda_var_0**4 - 11/2*lambda_var_0**3 - 12449/4000*lambda_var_0**2 + 87801/16000*lambda_var_0 + 347949/512000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 73/144
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+c (11, 250)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 4
+0 0 4
+235
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+
+Poly(lambda_var_0**4 - 11/2*lambda_var_0**3 - 2337/800*lambda_var_0**2 + 17713/3200*lambda_var_0 + 50337/102400, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 25/48
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+c (47, 200)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 5
+0 0 5
+941
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+
+Poly(lambda_var_0**4 - 11/2*lambda_var_0**3 - 8861/4000*lambda_var_0**2 + 91389/16000*lambda_var_0 - 104139/512000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 197/336
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+c (941, 1000)
+x (1, 2)
+y (0, 1)
+SAT
+, 
+
+0 0 6
+0 0 6
+536
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+
+Poly(lambda_var_0**4 - 11/2*lambda_var_0**3 - 10481/4000*lambda_var_0**2 + 89769/16000*lambda_var_0 + 99981/512000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 9/16
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+c (67, 125)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 7
+0 0 7
+314
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+
+Poly(lambda_var_0**4 - 11/2*lambda_var_0**3 - 11369/4000*lambda_var_0**2 + 88881/16000*lambda_var_0 + 211869/512000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 59/112
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+c (157, 500)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 8
+0 0 8
+436
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+
+Poly(lambda_var_0**4 - 11/2*lambda_var_0**3 - 10881/4000*lambda_var_0**2 + 89369/16000*lambda_var_0 + 150381/512000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 9/16
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+c (109, 250)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 9
+0 0 9
+652
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+
+Poly(lambda_var_0**4 - 11/2*lambda_var_0**3 - 10017/4000*lambda_var_0**2 + 90233/16000*lambda_var_0 + 41517/512000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 9/16
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+c (163, 250)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 10
+0 0 10
+command: mv timer_log.txt our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_geometric3/
+output: , 
+
+command: mv program.py our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_geometric3/
+output: , 
+
+command: cp ip_op_vars.txt our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_geometric3/
+output: , 
+
+STATUS: WEAKEST_PRE_CONDITION
+TIME: 0.6381099224090576
+command: rm pre_condition.smt2
+output: , rm: pre_condition.smt2: No such file or directory
+
+
+
+
+
+_____examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt__________________________________________
+
+command: rm -rf sage_files ip_op_vars.txt log.txt timer_log.txt program.py
+output: , 
+
+examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_4_input11_2.txt
+command: cp examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_4_input11_2.txt ip_op_vars.txt
+output: , 
+
+command: timeout -s 15 -v 120s python NQS_maple/main_tool.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt --ip_op_vars ip_op_vars.txt
+output: POST_CONDITION: (0 > -d + x**2 - y) & (0 > -c - x**2 + y**2)
+Input_Vars: ['c', 'd']
+Output_Vars: ['x', 'y']
+working...
+
+direction: [1, 0]
+substitution: {x: lambda_var_0, y: 0}
+(c + lambda_var_0**2 > 0) & (d - lambda_var_0**2 > 0)
+maple_cmd: QuantifierElimination:-QuantifierEliminate(exists(lambda_var_0, And(c + lambda_var_0^2 > 0, d - lambda_var_0^2 > 0)));
+
+direction: [0, 1]
+substitution: {x: 0, y: lambda_var_0}
+(d > -lambda_var_0) & (c - lambda_var_0**2 > 0)
+maple_cmd: QuantifierElimination:-QuantifierEliminate(exists(lambda_var_0, And(d > -lambda_var_0, c - lambda_var_0^2 > 0)));
+
+direction: [1, 0]
+substitution: {x: lambda_var_0 - 9/8, y: 1/2}
+(c + (8*lambda_var_0 - 9)**2/64 - 1/4 > 0) & (d - (8*lambda_var_0 - 9)**2/64 + 1/2 > 0)
+maple_cmd: QuantifierElimination:-QuantifierEliminate(exists(lambda_var_0, And(c + (8*lambda_var_0 - 9)^2/64 - 1/4 > 0, d - (8*lambda_var_0 - 9)^2/64 + 1/2 > 0)));
+
+direction: [0, 1]
+substitution: {x: -9/8, y: lambda_var_0 + 1/2}
+(d + lambda_var_0 > 49/64) & (c - lambda_var_0**2 - lambda_var_0 + 65/64 > 0)
+maple_cmd: QuantifierElimination:-QuantifierEliminate(exists(lambda_var_0, And(d + lambda_var_0 > 49/64, c - lambda_var_0^2 - lambda_var_0 + 65/64 > 0)));
+
+WEAKEST_PRE_COND_SYNTHESIZED
+(Eq(c, 0) & (-c - d < 0)) | ((c < 0) & (Eq(c, 0) | (c < 0)) & (-c - d < 0)) | ((-d < 0) & ((Eq(d, 0) & Eq(c + d, 0)) | (-c - d < 0))) | (Eq(c, 0) & (c < 0) & (((c < 0) & Eq(c + d, 0)) | (-c - d < 0))) , {'x': 0, 'd': 1, 'y': 0, 'c': 1} , {x: lambda_var_0, y: 0}
+(-c + d**2 < 0) | ((-d < 0) & Eq(c - d**2, 0)) | ((-c < 0) & (((-d <= 0) & Eq(c - d**2, 0)) | ((-d < 0) & (c - d**2 < 0)))) , {'x': 0, 'd': 1, 'y': 0, 'c': 1} , {x: 0, y: lambda_var_0}
+(Eq(4*c - 1, 0) & (-4*c - 4*d < 1)) | ((4*c < 1) & (-4*c - 4*d < 1) & ((4*c < 1) | Eq(4*c - 1, 0))) | ((-2*d < 1) & ((-4*c - 4*d < 1) | (Eq(2*d + 1, 0) & Eq(4*c + 4*d + 1, 0)))) | ((4*c < 1) & Eq(4*c - 1, 0) & ((-4*c - 4*d < 1) | ((4*c < 1) & Eq(4*c + 4*d + 1, 0)))) , {'x': -9/8, 'd': 1, 'y': 1/2, 'c': -129/128} , {x: lambda_var_0 - 9/8, y: 1/2}
+(-4096*c + 4096*d**2 - 10368*d < -1377) | ((-64*d < -81) & Eq(4096*c - 4096*d**2 + 10368*d - 1377, 0)) | ((-64*c < 81) & (((-64*d < -81) & (4096*c - 4096*d**2 + 10368*d < 1377)) | ((-64*d <= -81) & Eq(4096*c - 4096*d**2 + 10368*d - 1377, 0)))) , {'x': -9/8, 'd': 1, 'y': 1/2, 'c': -129/128} , {x: -9/8, y: lambda_var_0 + 1/2}
+, rm: log.txt: No such file or directory
+
+
+command: tail -1 timer_log.txt
+output: WEAKEST_PRE_COND_SYNTHESIZED
+, 
+
+command: mkdir -p our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input11_2/
+output: , 
+
+command: mv log.txt our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input11_2/
+output: , 
+
+TIME_Z3_START:298491.732244791
+TIME_Z3_FINISH:298491.736016541
+RATIONAL_POINT
+TIME_SUBS_SIMPLIFY_START:298491.7365155
+TIME_SUBS_SIMPLIFY_STOP:298491.845280833
+TIME_MAPLE_START:298491.845713041
+TIME_MAPLE_FINISH:298491.916519708
+TIME_PROG_SYN_START:298491.921210291
+TIME_PROG_SYN_FINISH:298491.922788666
+TIME_SUBS_SIMPLIFY_START:298491.922991833
+TIME_SUBS_SIMPLIFY_STOP:298491.9732295
+TIME_MAPLE_START:298491.973607791
+TIME_MAPLE_FINISH:298491.986912375
+TIME_PROG_SYN_START:298491.990594625
+TIME_PROG_SYN_FINISH:298491.992907
+TIME_Z3_START:298491.992961708
+TIME_Z3_FINISH:298491.994264083
+RATIONAL_POINT
+TIME_SUBS_SIMPLIFY_START:298491.995402125
+TIME_SUBS_SIMPLIFY_STOP:298492.053292875
+TIME_MAPLE_START:298492.054153666
+TIME_MAPLE_FINISH:298492.075740541
+TIME_PROG_SYN_START:298492.083775083
+TIME_PROG_SYN_FINISH:298492.086886916
+TIME_SUBS_SIMPLIFY_START:298492.087131666
+TIME_SUBS_SIMPLIFY_STOP:298492.118137833
+TIME_MAPLE_START:298492.118516291
+TIME_MAPLE_FINISH:298492.13207625
+TIME_PROG_SYN_START:298492.138716541
+TIME_PROG_SYN_FINISH:298492.142758791
+TIME_Z3_START:298492.142818041
+TIME_Z3_FINISH:298492.155494333
+TIME_PROG_SYN_START:298492.155576958
+TIME_PROG_SYN_STOP:298492.159510583
+WEAKEST_PRE_COND_SYNTHESIZED
+844
+1000
+842
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+
+Poly(-lambda_var_0**4 - 1/500*lambda_var_0**2 + 88831/125000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 0
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+c (211, 250)
+d (421, 500)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 1
+0 0 1
+238
+1000
+496
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+
+Poly(-lambda_var_0**4 + 129/500*lambda_var_0**2 + 3689/31250, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 0
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+c (119, 500)
+d (62, 125)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 2
+0 0 2
+533
+1000
+149
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+
+Poly(-lambda_var_0**4 - 48/125*lambda_var_0**2 + 79417/1000000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 0
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+c (533, 1000)
+d (149, 1000)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 3
+0 0 3
+912
+1000
+112
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+
+Poly(-lambda_var_0**4 - 4/5*lambda_var_0**2 + 1596/15625, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 0
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+c (114, 125)
+d (14, 125)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 4
+0 0 4
+441
+1000
+947
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+
+Poly(-lambda_var_0**4 + 253/500*lambda_var_0**2 + 417627/1000000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 0
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+c (441, 1000)
+d (947, 1000)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 5
+0 0 5
+970
+1000
+245
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+
+Poly(-lambda_var_0**4 - 29/40*lambda_var_0**2 + 4753/20000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 0
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+c (97, 100)
+d (49, 200)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 6
+0 0 6
+143
+1000
+864
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+
+Poly(-lambda_var_0**4 + 721/1000*lambda_var_0**2 + 3861/31250, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 0
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+c (143, 1000)
+d (108, 125)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 7
+0 0 7
+455
+1000
+660
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+
+Poly(-lambda_var_0**4 + 41/200*lambda_var_0**2 + 3003/10000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 0
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+c (91, 200)
+d (33, 50)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 8
+0 0 8
+777
+1000
+772
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+
+Poly(-lambda_var_0**4 - 1/200*lambda_var_0**2 + 149961/250000, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 0
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+c (777, 1000)
+d (193, 250)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 9
+0 0 9
+434
+1000
+544
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+
+Poly(-lambda_var_0**4 + 11/100*lambda_var_0**2 + 3689/15625, lambda_var_0, domain='QQ')
+
+pre_condition_0 SAT
+x= 0
+y= 0
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of c:
+enter denominator of c:
+enter numerator of d:
+enter denominator of d:
+c (217, 500)
+d (68, 125)
+x (1, 8)
+y (0, 1)
+SAT
+, 
+
+0 0 10
+0 0 10
+command: mv timer_log.txt our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input11_2/
+output: , 
+
+command: mv program.py our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input11_2/
+output: , 
+
+command: cp ip_op_vars.txt our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input11_2/
+output: , 
+
+STATUS: WEAKEST_PRE_CONDITION
+TIME: 0.8743970394134521
+command: rm pre_condition.smt2
+output: , rm: pre_condition.smt2: No such file or directory
+
+
+
+
+
+_____examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt__________________________________________
+
+command: rm -rf sage_files ip_op_vars.txt log.txt timer_log.txt program.py
+output: , 
+
+examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_4_input2.txt
+command: cp examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_4_input2.txt ip_op_vars.txt
+output: , 
+
+command: timeout -s 15 -v 120s python NQS_maple/main_tool.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt --ip_op_vars ip_op_vars.txt
+output: POST_CONDITION: (0 >= -x + y**2) & (0 >= x - y**2)
+Input_Vars: ['x']
+Output_Vars: ['y']
+working...
+
+direction: [1]
+substitution: {y: lambda_var_0 + 1/8}
+Eq(x - (8*lambda_var_0 + 1)**2/64, 0)
+maple_cmd: QuantifierElimination:-QuantifierEliminate(exists(lambda_var_0, x - (8*lambda_var_0 + 1)^2/64 = 0));
+
+WEAKEST_PRE_COND_SYNTHESIZED
+(-x <= 0) | (-x < 0) , {'y': 1/8, 'x': 1/64} , {y: lambda_var_0 + 1/8}
+, rm: log.txt: No such file or directory
+
+
+command: tail -1 timer_log.txt
+output: WEAKEST_PRE_COND_SYNTHESIZED
+, 
+
+command: mkdir -p our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input2/
+output: , 
+
+command: mv log.txt our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input2/
+output: , 
+
+TIME_Z3_START:298496.896947083
+TIME_Z3_FINISH:298496.901143875
+RATIONAL_POINT
+TIME_SUBS_SIMPLIFY_START:298496.9016995
+TIME_SUBS_SIMPLIFY_STOP:298497.001779666
+TIME_MAPLE_START:298497.002357291
+TIME_MAPLE_FINISH:298497.02470425
+TIME_PROG_SYN_START:298497.026264833
+TIME_PROG_SYN_FINISH:298497.027755375
+TIME_Z3_START:298497.027794625
+TIME_Z3_FINISH:298497.028226458
+TIME_PROG_SYN_START:298497.028260125
+TIME_PROG_SYN_STOP:298497.029135791
+WEAKEST_PRE_COND_SYNTHESIZED
+331
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 2273/4000*lambda_var_0**2 + 2523/16000*lambda_var_0 - 6365529/64000000, lambda_var_0, domain='QQ')
+
+Weakest pre-condition UNSAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+x (331, 1000)
+IRRATIONAL
+SAT
+, 
+
+0 1 0
+0 0 1
+242
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 1561/4000*lambda_var_0**2 + 1811/16000*lambda_var_0 - 3279721/64000000, lambda_var_0, domain='QQ')
+
+Weakest pre-condition UNSAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+x (121, 500)
+IRRATIONAL
+SAT
+, 
+
+0 2 0
+0 0 2
+448
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 3209/4000*lambda_var_0**2 + 3459/16000*lambda_var_0 - 11964681/64000000, lambda_var_0, domain='QQ')
+
+Weakest pre-condition UNSAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+x (56, 125)
+IRRATIONAL
+SAT
+, 
+
+0 3 0
+0 0 3
+390
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 549/800*lambda_var_0**2 + 599/3200*lambda_var_0 - 358801/2560000, lambda_var_0, domain='QQ')
+
+Weakest pre-condition UNSAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+x (39, 100)
+IRRATIONAL
+SAT
+, 
+
+0 4 0
+0 0 4
+673
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 5009/4000*lambda_var_0**2 + 5259/16000*lambda_var_0 - 27657081/64000000, lambda_var_0, domain='QQ')
+
+Weakest pre-condition UNSAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+x (673, 1000)
+IRRATIONAL
+SAT
+, 
+
+0 5 0
+0 0 5
+736
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 5513/4000*lambda_var_0**2 + 5763/16000*lambda_var_0 - 33212169/64000000, lambda_var_0, domain='QQ')
+
+Weakest pre-condition UNSAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+x (92, 125)
+IRRATIONAL
+SAT
+, 
+
+0 6 0
+0 0 6
+520
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 757/800*lambda_var_0**2 + 807/3200*lambda_var_0 - 651249/2560000, lambda_var_0, domain='QQ')
+
+Weakest pre-condition UNSAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+x (13, 25)
+IRRATIONAL
+SAT
+, 
+
+0 7 0
+0 0 7
+62
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 121/4000*lambda_var_0**2 + 371/16000*lambda_var_0 - 137641/64000000, lambda_var_0, domain='QQ')
+
+Weakest pre-condition UNSAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+x (31, 500)
+IRRATIONAL
+SAT
+, 
+
+0 8 0
+0 0 8
+674
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 5017/4000*lambda_var_0**2 + 5267/16000*lambda_var_0 - 27741289/64000000, lambda_var_0, domain='QQ')
+
+Weakest pre-condition UNSAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+x (337, 500)
+IRRATIONAL
+SAT
+, 
+
+0 9 0
+0 0 9
+135
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+
+Poly(-lambda_var_0**4 - 1/2*lambda_var_0**3 + 141/800*lambda_var_0**2 + 191/3200*lambda_var_0 - 36481/2560000, lambda_var_0, domain='QQ')
+
+Weakest pre-condition UNSAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of x:
+enter denominator of x:
+x (27, 200)
+IRRATIONAL
+SAT
+, 
+
+0 10 0
+0 0 10
+command: mv timer_log.txt our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input2/
+output: , 
+
+command: mv program.py our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input2/
+output: , 
+
+command: cp ip_op_vars.txt our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input2/
+output: , 
+
+STATUS: WEAKEST_PRE_CONDITION
+TIME: 0.5958218574523926
+command: rm pre_condition.smt2
+output: , rm: pre_condition.smt2: No such file or directory
+
+
+
+
+
+_____examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt__________________________________________
+
+command: rm -rf sage_files ip_op_vars.txt log.txt timer_log.txt program.py
+output: , 
+
+examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_4_kissing_set_relax.txt
+command: cp examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_4_kissing_set_relax.txt ip_op_vars.txt
+output: , 
+
+command: timeout -s 15 -v 120s python NQS_maple/main_tool.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt --ip_op_vars ip_op_vars.txt
+output: , rm: log.txt: No such file or directory
+timeout: sending signal TERM to command ‘python’
+
+
+command: tail -1 timer_log.txt
+output: TIME_Z3_START: 298560.765825125
+, 
+
+command: mkdir -p our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_kissing_set_relax/
+output: , 
+
+command: mv log.txt our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_kissing_set_relax/
+output: , 
+
+TIME_Z3_START:298503.215241291
+TIME_Z3_FINISH:298503.219815875
+RATIONAL_POINT
+TIME_SUBS_SIMPLIFY_START:298503.221043833
+TIME_SUBS_SIMPLIFY_STOP:298507.616768583
+TIME_MAPLE_START:298507.61922825
+TIME_MAPLE_FINISH:298507.991026875
+TIME_PROG_SYN_START:298508.268961666
+TIME_PROG_SYN_FINISH:298508.340973875
+TIME_SUBS_SIMPLIFY_START:298508.341444333
+TIME_SUBS_SIMPLIFY_STOP:298512.695146333
+TIME_MAPLE_START:298512.6973805
+TIME_MAPLE_FINISH:298512.928515458
+TIME_PROG_SYN_START:298513.158974958
+TIME_PROG_SYN_FINISH:298513.281567333
+TIME_SUBS_SIMPLIFY_START:298513.282006666
+TIME_SUBS_SIMPLIFY_STOP:298518.790599833
+TIME_MAPLE_START:298518.792936208
+TIME_MAPLE_FINISH:298519.225781166
+TIME_PROG_SYN_START:298519.603931625
+TIME_PROG_SYN_FINISH:298519.811270958
+TIME_SUBS_SIMPLIFY_START:298519.811715375
+TIME_SUBS_SIMPLIFY_STOP:298525.211424041
+TIME_MAPLE_START:298525.213552416
+TIME_MAPLE_FINISH:298525.529339833
+TIME_PROG_SYN_START:298525.83370275
+TIME_PROG_SYN_FINISH:298526.100469166
+TIME_SUBS_SIMPLIFY_START:298526.100886541
+TIME_SUBS_SIMPLIFY_STOP:298530.461601125
+TIME_MAPLE_START:298530.464061
+TIME_MAPLE_FINISH:298530.75298675
+TIME_PROG_SYN_START:298531.032885541
+TIME_PROG_SYN_FINISH:298531.35733525
+TIME_SUBS_SIMPLIFY_START:298531.357775458
+TIME_SUBS_SIMPLIFY_STOP:298535.69549475
+TIME_MAPLE_START:298535.697740208
+TIME_MAPLE_FINISH:298536.015326166
+TIME_PROG_SYN_START:298536.289516375
+TIME_PROG_SYN_FINISH:298536.679069166
+TIME_SUBS_SIMPLIFY_START:298536.679508083
+TIME_SUBS_SIMPLIFY_STOP:298542.129229916
+TIME_MAPLE_START:298542.131410708
+TIME_MAPLE_FINISH:298542.43842475
+TIME_PROG_SYN_START:298542.702324291
+TIME_PROG_SYN_FINISH:298543.160785875
+TIME_SUBS_SIMPLIFY_START:298543.16128
+TIME_SUBS_SIMPLIFY_STOP:298548.496431041
+TIME_MAPLE_START:298548.49852725
+TIME_MAPLE_FINISH:298548.819582833
+TIME_PROG_SYN_START:298549.088686125
+TIME_PROG_SYN_FINISH:298549.608026708
+TIME_SUBS_SIMPLIFY_START:298549.608456791
+TIME_SUBS_SIMPLIFY_STOP:298553.897181791
+TIME_MAPLE_START:298553.899541458
+TIME_MAPLE_FINISH:298554.30133
+TIME_PROG_SYN_START:298554.646622541
+TIME_PROG_SYN_FINISH:298555.261741458
+TIME_SUBS_SIMPLIFY_START:298555.262373541
+TIME_SUBS_SIMPLIFY_STOP:298559.514176958
+TIME_MAPLE_START:298559.5164895
+TIME_MAPLE_FINISH:298559.8258305
+TIME_PROG_SYN_START:298560.105829875
+TIME_PROG_SYN_FINISH:298560.765740875
+TIME_Z3_START:298560.765825125
+538
+1000
+701
+1000
+98
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+UNKNOWN
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+d (269, 500)
+x_5_0 (701, 1000)
+x_5_1 (49, 500)
+x_0_0 (1, 64)
+x_0_1 (0, 1)
+x_1_0 (-3, 4)
+x_1_1 (0, 1)
+x_2_0 (-1, 1)
+x_2_1 (11, 16)
+x_3_0 (-17, 16)
+x_3_1 (-5, 8)
+x_4_0 (1, 128)
+x_4_1 (1, 1)
+SAT
+, 
+
+1 0 0
+0 0 1
+829
+1000
+438
+1000
+50
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+
+Poly(-lambda_var_0**12 - 5937/500*lambda_var_0**11 - 65832969/1000000*lambda_var_0**10 - 453279047/2000000*lambda_var_0**9 - 269791994639/500000000*lambda_var_0**8 - 931878819881/1000000000*lambda_var_0**7 - 594910595401779/500000000000*lambda_var_0**6 - 561824999442463/500000000000*lambda_var_0**5 - 192663809867895667/250000000000000*lambda_var_0**4 - 367261542737154541/1000000000000000*lambda_var_0**3 - 111775245804877380033/1000000000000000000*lambda_var_0**2 - 36695971458761998509/2000000000000000000*lambda_var_0 - 483278255891398445247/500000000000000000000, lambda_var_0, domain='QQ')
+
+pre_condition_4 SAT
+x_0_0= 1/8
+x_0_1= 1/2
+x_1_0= -1/2
+x_1_1= -1/2
+x_2_0= 109/264
+x_2_1= -1
+x_3_0= 1/2
+x_3_1= -1/2
+x_4_0= -1/2
+x_4_1= -1
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+d (829, 1000)
+x_5_0 (219, 500)
+x_5_1 (1, 20)
+x_0_0 (1, 8)
+x_0_1 (1, 1)
+x_1_0 (-1, 8)
+x_1_1 (-1, 1)
+x_2_0 (-1, 2)
+x_2_1 (0, 1)
+x_3_0 (1, 2)
+x_3_1 (1, 2)
+x_4_0 (-1, 2)
+x_4_1 (-5, 4)
+SAT
+, 
+
+1 0 1
+0 0 2
+152
+1000
+833
+1000
+139
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+UNKNOWN
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+, timeout: sending signal TERM to command ‘python’
+
+
+2 0 1
+1 0 2
+774
+1000
+343
+1000
+897
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+UNKNOWN
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+d (387, 500)
+x_5_0 (343, 1000)
+x_5_1 (897, 1000)
+x_0_0 (1, 8)
+x_0_1 (169, 128)
+x_1_0 (-1, 8)
+x_1_1 (-1, 1)
+x_2_0 (-1, 2)
+x_2_1 (0, 1)
+x_3_0 (-1, 4)
+x_3_1 (1, 1)
+x_4_0 (-1, 1)
+x_4_1 (0, 1)
+SAT
+, 
+
+3 0 1
+1 0 3
+423
+1000
+739
+1000
+619
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+UNKNOWN
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+d (423, 1000)
+x_5_0 (739, 1000)
+x_5_1 (619, 1000)
+x_0_0 (19, 16)
+x_0_1 (0, 1)
+x_1_0 (-1, 4)
+x_1_1 (0, 1)
+x_2_0 (-1, 1)
+x_2_1 (1, 2)
+x_3_0 (-1, 2)
+x_3_1 (-1, 1)
+x_4_0 (0, 1)
+x_4_1 (1, 1)
+SAT
+, 
+
+4 0 1
+1 0 4
+642
+1000
+24
+1000
+962
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+UNKNOWN
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+d (321, 500)
+x_5_0 (3, 125)
+x_5_1 (481, 500)
+x_0_0 (1, 8)
+x_0_1 (-1, 1)
+x_1_0 (1, 2)
+x_1_1 (0, 1)
+x_2_0 (-1, 2)
+x_2_1 (-1, 1)
+x_3_0 (-1, 2)
+x_3_1 (0, 1)
+x_4_0 (1, 1)
+x_4_1 (-1, 2)
+SAT
+, 
+
+5 0 1
+1 0 5
+851
+1000
+718
+1000
+46
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+
+Poly(-lambda_var_0**12 - 5657/500*lambda_var_0**11 - 11931253/200000*lambda_var_0**10 - 390884419/2000000*lambda_var_0**9 - 22200885621/50000000*lambda_var_0**8 - 735428046423/1000000000*lambda_var_0**7 - 90889453448253/100000000000*lambda_var_0**6 - 422006706451701/500000000000*lambda_var_0**5 - 29067005703368161/50000000000000*lambda_var_0**4 - 283920957577412303/1000000000000000*lambda_var_0**3 - 17939547226915320641/200000000000000000*lambda_var_0**2 - 30558501764798748857/2000000000000000000*lambda_var_0 - 9484714645955008317/12500000000000000000, lambda_var_0, domain='QQ')
+
+pre_condition_4 SAT
+x_0_0= 1/8
+x_0_1= 1/2
+x_1_0= -1/2
+x_1_1= -1/2
+x_2_0= -65/72
+x_2_1= -1
+x_3_0= 1/2
+x_3_1= -1/2
+x_4_0= -1/2
+x_4_1= -1
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+d (851, 1000)
+x_5_0 (359, 500)
+x_5_1 (23, 500)
+x_0_0 (1, 8)
+x_0_1 (-1, 1)
+x_1_0 (1, 2)
+x_1_1 (-5, 4)
+x_2_0 (-1, 2)
+x_2_1 (-1, 1)
+x_3_0 (1, 1)
+x_3_1 (-1, 2)
+x_4_0 (1, 4)
+x_4_1 (0, 1)
+SAT
+, 
+
+5 0 2
+1 0 6
+981
+1000
+162
+1000
+141
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+
+Poly(-lambda_var_0**12 - 6213/500*lambda_var_0**11 - 291843/4000*lambda_var_0**10 - 1072769497/4000000*lambda_var_0**9 - 43867260189/64000000*lambda_var_0**8 - 10204066854201/8000000000*lambda_var_0**7 - 28134488874689/16000000000*lambda_var_0**6 - 14331847458619569/8000000000000*lambda_var_0**5 - 42228867016111977/32000000000000*lambda_var_0**4 - 5359837401971392471/8000000000000000*lambda_var_0**3 - 682198874760472467/3200000000000000*lambda_var_0**2 - 267994116699271877517/8000000000000000000*lambda_var_0 - 19258623503997553377/64000000000000000000, lambda_var_0, domain='QQ')
+
+pre_condition_4 SAT
+x_0_0= 1/8
+x_0_1= 1/2
+x_1_0= -1/2
+x_1_1= -1/2
+x_2_0= -97/120
+x_2_1= -1
+x_3_0= 1/2
+x_3_1= -1/2
+x_4_0= -1/2
+x_4_1= -1
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+d (981, 1000)
+x_5_0 (81, 500)
+x_5_1 (141, 1000)
+x_0_0 (1, 8)
+x_0_1 (1, 1)
+x_1_0 (-1, 8)
+x_1_1 (-1, 1)
+x_2_0 (-1, 2)
+x_2_1 (-1, 1)
+x_3_0 (-1, 4)
+x_3_1 (0, 1)
+x_4_0 (-1, 1)
+x_4_1 (0, 1)
+SAT
+, 
+
+5 0 3
+1 0 7
+919
+1000
+985
+1000
+79
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+
+Poly(-lambda_var_0**12 - 539/50*lambda_var_0**11 - 54178591/1000000*lambda_var_0**10 - 678972253/4000000*lambda_var_0**9 - 1484988882673/4000000000*lambda_var_0**8 - 2396134486173/4000000000*lambda_var_0**7 - 368273075991801/500000000000*lambda_var_0**6 - 2810047343397913/4000000000000*lambda_var_0**5 - 1029320337750371899/2000000000000000*lambda_var_0**4 - 1094769527863728043/4000000000000000*lambda_var_0**3 - 94610159011466984667/1000000000000000000*lambda_var_0**2 - 34339796723270901249/2000000000000000000*lambda_var_0 - 2264760875748075562089/4000000000000000000000, lambda_var_0, domain='QQ')
+
+pre_condition_4 SAT
+x_0_0= 1/8
+x_0_1= 1/2
+x_1_0= -1/2
+x_1_1= -1/2
+x_2_0= -83/95
+x_2_1= -1
+x_3_0= 1/2
+x_3_1= -1/2
+x_4_0= -1/2
+x_4_1= -1
+SAT
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+d (919, 1000)
+x_5_0 (197, 200)
+x_5_1 (79, 1000)
+x_0_0 (1, 8)
+x_0_1 (-1, 1)
+x_1_0 (1, 2)
+x_1_1 (-1, 1)
+x_2_0 (-1, 2)
+x_2_1 (-1, 1)
+x_3_0 (-1, 2)
+x_3_1 (0, 1)
+x_4_0 (1, 2)
+x_4_1 (0, 1)
+SAT
+, 
+
+5 0 4
+1 0 8
+426
+1000
+684
+1000
+887
+1000
+command: timeout -s 15 -v 120 python program.py < values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+UNKNOWN
+, 
+
+command: timeout -s 15 -v 120 python z3_program.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt ip_op_vars.txt< values_file.txt
+output: enter numerator of d:
+enter denominator of d:
+enter numerator of x_5_0:
+enter denominator of x_5_0:
+enter numerator of x_5_1:
+enter denominator of x_5_1:
+d (213, 500)
+x_5_0 (171, 250)
+x_5_1 (887, 1000)
+x_0_0 (1, 8)
+x_0_1 (-1, 1)
+x_1_0 (1, 2)
+x_1_1 (0, 1)
+x_2_0 (-1, 2)
+x_2_1 (1, 1)
+x_3_0 (-1, 2)
+x_3_1 (0, 1)
+x_4_0 (1, 1)
+x_4_1 (-5, 8)
+SAT
+, 
+
+6 0 4
+1 0 9
+command: mv timer_log.txt our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_kissing_set_relax/
+output: , 
+
+command: mv program.py our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_kissing_set_relax/
+output: , 
+
+command: cp ip_op_vars.txt our_method_logging_dir_maple/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_kissing_set_relax/
+output: , 
+
+STATUS: TIMEOUT
+TIME: 120.01027297973633
+command: rm pre_condition.smt2
+output: , rm: pre_condition.smt2: No such file or directory
+
+
+
+
+
+
+
+(RPS) ani@CGJ9MTYH6Y:~/Desktop/RRI/IJCAR26_repo/Rational-Program-Synthesis/tool_ijcar2026$ 

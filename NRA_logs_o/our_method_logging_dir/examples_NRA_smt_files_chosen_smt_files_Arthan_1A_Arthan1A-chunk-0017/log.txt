@@ -1,0 +1,163 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_Arthan_1A_Arthan1A-chunk-0017.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoS', 'pi']
+DEBUG:__main__:op_vars: ['skoCOSS', 'skoSINS']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(skoSINS*
+        (-3 +
+         skoCOSS*-2 +
+         skoS*(-4 + skoS*(2 + skoS)) +
+         skoSINS*(1 + skoS)) <=
+        2 +
+        skoCOSS*(-2 + skoCOSS*-2) +
+        skoS*
+        (skoCOSS*(-10 + skoCOSS*-2) +
+         skoS*(-6 + skoCOSS*-6 + skoS*-2)),
+        And(Not(pi*(1/2) <= skoS),
+            And(Not(pi <= 15707963/5000000),
+                And(Not(31415927/10000000 <= pi),
+                    And(0 <= skoS,
+                        And(0 <= skoCOSS, skoSINS <= skoS)))))))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (0 <= skoCOSS) & (0 <= skoS) & (skoSINS <= skoS) & (31415927/10000000 > pi) & (pi > 15707963/5000000) & (pi/2 > skoS) & (skoSINS*(-2*skoCOSS + skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) - 3) <= skoCOSS*(-2*skoCOSS - 2) + skoS*(skoCOSS*(-2*skoCOSS - 10) + skoS*(-6*skoCOSS - 2*skoS - 6)) + 2), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['delta', 'pi', 'skoCOSS', 'skoSINS', 'skoS']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoCOSS': skoCOSS, 'skoS': skoS, 'skoSINS': skoSINS, 'pi': pi}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    0 <= skoCOSS,
+    0 <= skoS,
+    skoSINS <= skoS,
+    31415927/10000000 > pi,
+    15707963/5000000 < pi,
+    1/2*pi > skoS,
+    skoSINS*
+    (-3 +
+     -2*skoCOSS +
+     skoS*(-4 + skoS*(2 + skoS)) +
+     skoSINS*(1 + skoS)) <=
+    2 +
+    skoCOSS*(-2 + -2*skoCOSS) +
+    skoS*
+    (skoCOSS*(-10 + -2*skoCOSS) +
+     skoS*(-6 + -6*skoCOSS + -2*skoS)))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/8, skoS=1/16, skoSINS=0, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/8, skoSINS: 0}
+DEBUG:__main__:PRECOND_0: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS >= 0 /\ skoS^3 + 3 skoS^2 - 1 <= 0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/8, skoSINS: lambda_var_0}
+DEBUG:__main__:PRECOND_1: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS >= 0 /\ 32 skoS^3 + 128 skoS^2 - 8 skoS - 55 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/1024, skoS=3/4, skoSINS=11/16, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/1024, skoSINS: 11/16}
+DEBUG:__main__:PRECOND_2: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ 16 skoS - 11 >= 0 /\ 688 skoS^3 + 1888 skoS^2 - 583 skoS - 919 <= 0
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/1024, skoSINS: lambda_var_0 + 11/16}
+DEBUG:__main__:PRECOND_3: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS >= 0 /\ 524288 skoS^3 + 2097152 skoS^2 - 521216 skoS - 1047551 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/4096, skoS=779/1024, skoSINS=97/128, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/4096, skoSINS: 97/128}
+DEBUG:__main__:PRECOND_4: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ 128 skoS - 97 >= 0 /\ 45184 skoS^3 + 123136 skoS^2 - 40255 skoS - 60607 <= 0
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/4096, skoSINS: lambda_var_0 + 97/128}
+DEBUG:__main__:PRECOND_5: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS >= 0 /\ 8388608 skoS^3 + 33554432 skoS^2 - 8376320 skoS - 16773119 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/32768, skoS=3119/4096, skoSINS=1559/2048, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/32768, skoSINS: 1559/2048}
+DEBUG:__main__:PRECOND_6: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ 2048 skoS - 1559 >= 0 /\ 11581440 skoS^3 + 31551488 skoS^2 - 10340847 skoS - 15536623 <= 0
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/32768, skoSINS: lambda_var_0 + 1559/2048}
+DEBUG:__main__:PRECOND_7: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS >= 0 /\ 536870912 skoS^3 + 2147483648 skoS^2 - 536772608 skoS - 1073709055 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/131072, skoS=12477/16384, skoSINS=3119/4096, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/131072, skoSINS: 3119/4096}
+DEBUG:__main__:PRECOND_8: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ 4096 skoS - 3119 >= 0 /\ 46329856 skoS^3 + 126214144 skoS^2 - 41373535 skoS - 62152543 <= 0
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/131072, skoSINS: lambda_var_0 + 3119/4096}
+DEBUG:__main__:PRECOND_9: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS >= 0 /\ 8589934592 skoS^3 + 34359738368 skoS^2 - 8589541376 skoS - 17179738111 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/262144, skoS=49909/65536, skoSINS=12477/16384, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/262144, skoSINS: 12477/16384}
+DEBUG:__main__:PRECOND_10: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ 16384 skoS - 12477 >= 0 /\ 741294080 skoS^3 + 2019459072 skoS^2 - 662017143 skoS - 994464887 <= 0
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/262144, skoSINS: lambda_var_0 + 12477/16384}
+DEBUG:__main__:PRECOND_11: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS >= 0 /\ 34359738368 skoS^3 + 137438953472 skoS^2 - 34358951936 skoS - 68719214591 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/524288, skoS=199637/262144, skoSINS=49909/65536, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/524288, skoSINS: 49909/65536}
+DEBUG:__main__:PRECOND_12: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ 65536 skoS - 49909 >= 0 /\ 11860770816 skoS^3 + 32311476224 skoS^2 - 10592436615 skoS - 15911534983 <= 0
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/524288, skoSINS: lambda_var_0 + 49909/65536}
+DEBUG:__main__:PRECOND_13: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS >= 0 /\ 137438953472 skoS^3 + 549755813888 skoS^2 - 137437380608 skoS - 274877382655 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/4194304, skoS=399275/524288, skoSINS=199637/262144, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/4194304, skoSINS: 199637/262144}
+DEBUG:__main__:PRECOND_14: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ 262144 skoS - 199637 >= 0 /\ 189772595200 skoS^3 + 516984143872 skoS^2 - 169479635143 skoS - 254584946887 <= 0
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/4194304, skoSINS: lambda_var_0 + 199637/262144}
+DEBUG:__main__:PRECOND_15: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS >= 0 /\ 8796093022208 skoS^3 + 35184372088832 skoS^2 - 8796080439296 skoS - 17592181850111 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/134217728, skoS=1597101/2097152, skoSINS=399275/524288, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/134217728, skoSINS: 399275/524288}
+DEBUG:__main__:PRECOND_16: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ 524288 skoS - 399275 >= 0 /\ 759090905088 skoS^3 + 2067937624064 skoS^2 - 677919839175 skoS - 1018340561863 <= 0
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/134217728, skoSINS: lambda_var_0 + 399275/524288}
+DEBUG:__main__:PRECOND_17: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS >= 0 /\ 9007199254740992 skoS^3 + 36028797018963968 skoS^2 - 9007198852087808 skoS - 18014398375264255 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/536870912, skoS=51107237/67108864, skoSINS=12776809/16777216, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/536870912, skoSINS: 12776809/16777216}
+DEBUG:__main__:PRECOND_18: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ 16777216 skoS - 12776809 >= 0 /\ 777309237805056 skoS^3 + 2117568429031424 skoS^2 - 694190289312495 skoS - 1042780958350063 <= 0
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/536870912, skoSINS: lambda_var_0 + 12776809/16777216}
+DEBUG:__main__:PRECOND_19: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS >= 0 /\ 144115188075855872 skoS^3 + 576460752303423488 skoS^2 - 144115186465243136 skoS - 288230375614840831 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1/2147483648, skoS=204428949/268435456, skoSINS=51107237/67108864, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 20---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/2147483648, skoSINS: 51107237/67108864}
+DEBUG:__main__:PRECOND_20: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ 67108864 skoS - 51107237 >= 0 /\ 12436947871989760 skoS^3 + 33881094998720512 skoS^2 - 11107044795220903 skoS - 16684495432713127 <= 0
+DEBUG:__main__:---------pre-condition 21---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/2147483648, skoSINS: lambda_var_0 + 51107237/67108864}

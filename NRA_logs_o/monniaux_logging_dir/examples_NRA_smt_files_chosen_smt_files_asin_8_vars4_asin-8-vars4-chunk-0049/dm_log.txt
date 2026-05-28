@@ -1,0 +1,58 @@
+DEBUG:__main__:Starting Log File: dm_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_asin_8_vars4_asin-8-vars4-chunk-0049.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoX', 'skoS2']
+DEBUG:__main__:op_vars: ['skoSP', 'skoSM']
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(Not(skoX*
+            (4 +
+             skoSM +
+             skoSP +
+             skoX*
+             (1/5 +
+              skoSM*(-61/40 + skoS2*(-63/20)) +
+              skoSP*(13/8 + skoS2*(63/20)))) <=
+            1/5 +
+            skoSM*(-61/40 + skoS2*(-63/20)) +
+            skoSP*(13/8 + skoS2*(63/20))),
+        And(Not(skoX <= 0),
+            And(Not(skoSP <= 0),
+                And(Not(skoSM <= 0),
+                    And(Not(skoS2 <= 0), Not(1 <= skoX)))))))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (1 > skoX) & (skoS2 > 0) & (skoSM > 0) & (skoSP > 0) & (skoX > 0) & (skoX*(skoSM + skoSP + skoX*(skoSM*(-63*skoS2/20 - 61/40) + skoSP*(63*skoS2/20 + 13/8) + 1/5) + 4) > skoSM*(-63*skoS2/20 - 61/40) + skoSP*(63*skoS2/20 + 13/8) + 1/5), {}
+DEBUG:__main__:vars sympy:['skoSP', 'skoSM', 'skoS2', 'skoX', 'delta']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoX': skoX, 'skoS2': skoS2, 'skoSM': skoSM, 'skoSP': skoSP}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    1 > skoX,
+    0 < skoS2,
+    0 < skoSM,
+    0 < skoSP,
+    0 < skoX,
+    skoX*
+    (4 +
+     skoSM +
+     skoSP +
+     skoX*
+     (1/5 +
+      skoSM*(-61/40 + -63/20*skoS2) +
+      skoSP*(13/8 + 63/20*skoS2))) >
+    1/5 +
+    skoSM*(-61/40 + -63/20*skoS2) +
+    skoSP*(13/8 + 63/20*skoS2))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/2, skoS2=1, skoSM=1, skoSP=1
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:PRECOND_0: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (63*skoS2/20 - skoSM*(126*skoS2 + 61)/40 + 73/40 < skoX*(40*skoSM + skoX*(126*skoS2 - skoSM*(126*skoS2 + 61) + 73) + 200)/40)
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:PRECOND_1: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (skoX**2 + 20*skoX > 1)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/32, skoS2=1, skoSM=1, skoSP=1/2
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:PRECOND_2: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (63*skoS2/40 - skoSM*(126*skoS2 + 61)/40 + 81/80 < skoX*(80*skoSM + skoX*(126*skoS2 - 2*skoSM*(126*skoS2 + 61) + 81) + 360)/80)
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:PRECOND_3: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (63*skoS2/40 + 41/80 > skoX*(skoX*(126*skoS2 + 41) - 440)/80)
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (63*skoS2/20 - skoSM*(126*skoS2 + 61)/40 + 73/40 < skoX*(40*skoSM + skoX*(126*skoS2 - skoSM*(126*skoS2 + 61) + 73) + 200)/40) {'delta': 0, 'skoX': 1/2, 'skoS2': 1, 'skoSM': 1, 'skoSP': 1}
+DEBUG:__main__:(delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (skoX**2 + 20*skoX > 1) {'delta': 0, 'skoX': 1/2, 'skoS2': 1, 'skoSM': 1, 'skoSP': 1}
+DEBUG:__main__:(delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (63*skoS2/40 - skoSM*(126*skoS2 + 61)/40 + 81/80 < skoX*(80*skoSM + skoX*(126*skoS2 - 2*skoSM*(126*skoS2 + 61) + 81) + 360)/80) {'delta': 0, 'skoX': 1/32, 'skoS2': 1, 'skoSM': 1, 'skoSP': 1/2}
+DEBUG:__main__:(delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (63*skoS2/40 + 41/80 > skoX*(skoX*(126*skoS2 + 41) - 440)/80) {'delta': 0, 'skoX': 1/32, 'skoS2': 1, 'skoSM': 1, 'skoSP': 1/2}

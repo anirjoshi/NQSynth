@@ -1,0 +1,10 @@
+DEBUG:__main__:Starting Log File: gus_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_3_intersecting_hyperbolas.smt
+DEBUG:__main__:ip_vars: ['z']
+DEBUG:__main__:op_vars: ['y', 'x']
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*y*y + -1*x*y + 1*z,
+            0 > 0 + 1*x*x + -1*y*y + -10*z)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > -x*y + y**2 + z) & (0 > x**2 - y**2 - 10*z), {}
+DEBUG:__main__:vars sympy:['y', 'z', 'x']
+DEBUG:__main__:WEAKEST_PRECOND: z > 0

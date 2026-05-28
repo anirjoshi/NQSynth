@@ -1,0 +1,149 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_asin_8_asin-8-chunk-0050.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoX', 'skoS2', 'pi']
+DEBUG:__main__:op_vars: ['skoSP', 'skoSM']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(Not(skoX*skoX <= 0),
+        And(And(skoX - (1 + skoSM*skoSM*-1) <= delta,
+                1 + skoSM*skoSM*-1 - skoX <= delta),
+            And(And(-1 + skoSP*skoSP - skoX <= delta,
+                    skoX - (-1 + skoSP*skoSP) <= delta),
+                And(And(skoS2*skoS2 - 2 <= delta,
+                        2 - skoS2*skoS2 <= delta),
+                    And(Not(pi <= 15707963/5000000),
+                        And(Not(31415927/10000000 <= pi),
+                            And(0 <= skoSP,
+                                And(0 <= skoSM,
+                                    And(0 <= skoS2,
+                                        And(Not(skoX <= 0),
+                                        Not(1 <= skoX))))))))))))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (0 <= skoS2) & (0 <= skoSM) & (0 <= skoSP) & (1 > skoX) & (31415927/10000000 > pi) & (pi > 15707963/5000000) & (skoX > 0) & (skoX**2 > 0) & (skoS2**2 - 2 <= delta) & (skoSM**2 + skoX - 1 <= delta) & (2 - skoS2**2 <= delta) & (-skoSP**2 + skoX + 1 <= delta) & (skoSP**2 - skoX - 1 <= delta) & (-skoSM**2 - skoX + 1 <= delta), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['skoX', 'pi', 'skoS2', 'delta', 'skoSM', 'skoSP']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoS2': skoS2, 'skoSM': skoSM, 'skoSP': skoSP, 'skoX': skoX, 'pi': pi}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    0 <= skoS2,
+    0 <= skoSM,
+    0 <= skoSP,
+    1 > skoX,
+    31415927/10000000 > pi,
+    15707963/5000000 < pi,
+    0 < skoX,
+    0 < skoX**2,
+    -2 + skoS2**2 <= delta,
+    -1 + skoX + skoSM**2 <= delta,
+    2 + -1*skoS2**2 <= delta,
+    1 + skoX + -1*skoSP**2 <= delta,
+    -1 + skoSP**2 + -1*skoX <= delta,
+    1 + -1*skoX + -1*skoSM**2 <= delta)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=2, skoS2=1, skoSM=1, skoSP=1, skoX=1/2, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 1, skoSM: 1}
+DEBUG:__main__:PRECOND_0: 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX - delta <= 0 /\ skoX > 0 /\ skoX - 1 < 0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 1, skoSM: lambda_var_0 + 1}
+DEBUG:__main__:PRECOND_1: 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX - delta <= 0 /\ skoX > 0 /\ skoX - 1 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=3/8, skoS2=3/2, skoSM=1/2, skoSP=5/4, skoX=1/2, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 5/4, skoSM: 1/2}
+DEBUG:__main__:PRECOND_2: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 4 skoX + 4 delta - 3 >= 0 /\ 4 skoX - 4 delta - 3 <= 0
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 5/4, skoSM: lambda_var_0 + 1/2}
+DEBUG:__main__:PRECOND_3: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 16 skoX + 16 delta - 9 >= 0 /\ 16 skoX - 16 delta - 9 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=15/128, skoS2=11/8, skoSM=1/4, skoSP=11/8, skoX=7/8, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 11/8, skoSM: 1/4}
+DEBUG:__main__:PRECOND_4: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 16 skoX + 16 delta - 15 >= 0 /\ 16 skoX - 16 delta - 15 <= 0
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 11/8, skoSM: lambda_var_0 + 1/4}
+DEBUG:__main__:PRECOND_5: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 64 skoX + 64 delta - 57 >= 0 /\ 64 skoX - 64 delta - 57 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=3/128, skoS2=45/32, skoSM=1/8, skoSP=45/32, skoX=31/32, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 45/32, skoSM: 1/8}
+DEBUG:__main__:PRECOND_6: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 64 skoX + 64 delta - 63 >= 0 /\ 64 skoX - 64 delta - 63 <= 0
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 45/32, skoSM: lambda_var_0 + 1/8}
+DEBUG:__main__:PRECOND_7: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 1024 skoX + 1024 delta - 1001 >= 0 /\ 1024 skoX - 1024 delta - 1001 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/128, skoS2=181/128, skoSM=5/16, skoSP=177/128, skoX=29/32, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 177/128, skoSM: 5/16}
+DEBUG:__main__:PRECOND_8: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 256 skoX + 256 delta - 231 >= 0 /\ 256 skoX - 256 delta - 231 <= 0
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 177/128, skoSM: lambda_var_0 + 5/16}
+DEBUG:__main__:PRECOND_9: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 16384 skoX + 16384 delta - 14945 >= 0 /\ 16384 skoX - 16384 delta - 14945 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/128, skoS2=181/128, skoSM=11/32, skoSP=175/128, skoX=7/8, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 175/128, skoSM: 11/32}
+DEBUG:__main__:PRECOND_10: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 1024 skoX + 1024 delta - 903 >= 0 /\ 1024 skoX - 1024 delta - 903 <= 0
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 175/128, skoSM: lambda_var_0 + 11/32}
+DEBUG:__main__:PRECOND_11: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 16384 skoX + 16384 delta - 14241 >= 0 /\ 16384 skoX - 16384 delta - 14241 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2048, skoS2=181/128, skoSM=175/512, skoSP=1405/1024, skoX=113/128, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 1405/1024, skoSM: 175/512}
+DEBUG:__main__:PRECOND_12: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 262144 skoX + 262144 delta - 231519 >= 0 /\ 262144 skoX - 262144 delta - 231519 <= 0
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 1405/1024, skoSM: lambda_var_0 + 175/512}
+DEBUG:__main__:PRECOND_13: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 1048576 skoX + 1048576 delta - 925449 >= 0 /\ 1048576 skoX - 1048576 delta - 925449 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=7/2048, skoS2=181/128, skoSM=41/128, skoSP=353/256, skoX=115/128, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 353/256, skoSM: 41/128}
+DEBUG:__main__:PRECOND_14: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 16384 skoX + 16384 delta - 14703 >= 0 /\ 16384 skoX - 16384 delta - 14703 <= 0
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 353/256, skoSM: lambda_var_0 + 41/128}
+DEBUG:__main__:PRECOND_15: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 65536 skoX + 65536 delta - 59073 >= 0 /\ 65536 skoX - 65536 delta - 59073 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/512, skoS2=181/128, skoSM=39/128, skoSP=707/512, skoX=29/32, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 707/512, skoSM: 39/128}
+DEBUG:__main__:PRECOND_16: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 16384 skoX + 16384 delta - 14863 >= 0 /\ 16384 skoX - 16384 delta - 14863 <= 0
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 707/512, skoSM: lambda_var_0 + 39/128}
+DEBUG:__main__:PRECOND_17: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 262144 skoX + 262144 delta - 237705 >= 0 /\ 262144 skoX - 262144 delta - 237705 <= 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/128, skoS2=181/128, skoSM=9/32, skoSP=355/256, skoX=59/64, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 355/256, skoSM: 9/32}
+DEBUG:__main__:PRECOND_18: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS2 >= 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 1024 skoX + 1024 delta - 943 >= 0 /\ 1024 skoX - 1024 delta - 943 <= 0
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 355/256, skoSM: lambda_var_0 + 9/32}

@@ -1,0 +1,1043 @@
+DEBUG:__main__:Starting Log File: dm_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_zankl_gen-17.smt2
+DEBUG:__main__:ip_vars: ['b', 'delta']
+DEBUG:__main__:op_vars: ['a']
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(a*a - 2 <= delta, 2 - a*a <= delta),
+    And(b*b*b - 3 <= delta, 3 - b*b*b <= delta),
+    And(a - b <= delta, b - a <= delta))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (-a + b <= delta) & (a - b <= delta) & (a**2 - 2 <= delta) & (b**3 - 3 <= delta) & (2 - a**2 <= delta) & (3 - b**3 <= delta), {'delta': delta, 'a': a, 'b': b}
+DEBUG:__main__:vars sympy:['b', 'delta', 'a']
+DEBUG:__main__:z3 vars:{'delta': delta, 'b': b, 'a': a}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    b + -1*a <= delta,
+    a + -1*b <= delta,
+    -2 + a**2 <= delta,
+    -3 + b**3 <= delta,
+    2 + -1*a**2 <= delta,
+    3 + -1*b**3 <= delta)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=4, b=1/8, a=1/2
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:PRECOND_0: (delta >= 7/4) & (b + delta >= 1/2) & (delta >= b**3 - 3) & (b - delta <= 1/2) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1, b=3/2, a=1
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:PRECOND_1: (delta >= 1) & (b + delta >= 1) & (delta >= b**3 - 3) & (b - delta <= 1) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=7/16, b=3/2, a=3/2
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:PRECOND_2: (delta >= 1/4) & (b + delta >= 3/2) & (delta >= b**3 - 3) & (b - delta <= 3/2) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1/8, b=23/16, a=11/8
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:PRECOND_3: (delta >= 7/64) & (b + delta >= 11/8) & (delta >= b**3 - 3) & (b - delta <= 11/8) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=3/32, b=23/16, a=23/16
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:PRECOND_4: (delta >= 17/256) & (b + delta >= 23/16) & (delta >= b**3 - 3) & (b - delta <= 23/16) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1/16, b=23/16, a=45/32
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:PRECOND_5: (delta >= 23/1024) & (b + delta >= 45/32) & (delta >= b**3 - 3) & (b - delta <= 45/32) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=45/2048, b=369/256, a=91/64
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:PRECOND_6: (delta >= 89/4096) & (b + delta >= 91/64) & (delta >= b**3 - 3) & (b - delta <= 91/64) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=177/8192, b=369/256, a=727/512
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:PRECOND_7: (delta >= 4241/262144) & (b + delta >= 727/512) & (delta >= b**3 - 3) & (b - delta <= 727/512) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=95/4096, b=185/128, a=2913/2048
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:PRECOND_8: (delta >= 96961/4194304) & (b + delta >= 2913/2048) & (delta >= b**3 - 3) & (b - delta <= 2913/2048) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=757/32768, b=185/128, a=11651/8192
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:PRECOND_9: (delta >= 1528073/67108864) & (b + delta >= 11651/8192) & (delta >= b**3 - 3) & (b - delta <= 11651/8192) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=735/32768, b=1479/1024, a=5825/4096
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:PRECOND_10: (delta >= 376193/16777216) & (b + delta >= 5825/4096) & (delta >= b**3 - 3) & (b - delta <= 5825/4096) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=367/16384, b=1479/1024, a=11649/8192
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:PRECOND_11: (delta >= 1481473/67108864) & (b + delta >= 11649/8192) & (delta >= b**3 - 3) & (b - delta <= 11649/8192) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=719/32768, b=2957/2048, a=23297/16384
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:PRECOND_12: (delta >= 5879297/268435456) & (b + delta >= 23297/16384) & (delta >= b**3 - 3) & (b - delta <= 23297/16384) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1431/65536, b=11827/8192, a=46593/32768
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:PRECOND_13: (delta >= 23424001/1073741824) & (b + delta >= 46593/32768) & (delta >= b**3 - 3) & (b - delta <= 46593/32768) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=2855/131072, b=23653/16384, a=93185/65536
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:PRECOND_14: (delta >= 93509633/4294967296) & (b + delta >= 93185/65536) & (delta >= b**3 - 3) & (b - delta <= 93185/65536) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=5703/262144, b=47305/32768, a=186369/131072
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:PRECOND_15: (delta >= 373665793/17179869184) & (b + delta >= 186369/131072) & (delta >= b**3 - 3) & (b - delta <= 186369/131072) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=11399/524288, b=94609/65536, a=372737/262144
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:PRECOND_16: (delta >= 1493917697/68719476736) & (b + delta >= 372737/262144) & (delta >= b**3 - 3) & (b - delta <= 372737/262144) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=22791/1048576, b=189217/131072, a=745473/524288
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:PRECOND_17: (delta >= 5974179841/274877906944) & (b + delta >= 745473/524288) & (delta >= b**3 - 3) & (b - delta <= 745473/524288) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=45575/2097152, b=378433/262144, a=1490945/1048576
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:PRECOND_18: (delta >= 23893737473/1099511627776) & (b + delta >= 1490945/1048576) & (delta >= b**3 - 3) & (b - delta <= 1490945/1048576) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=91143/4194304, b=756865/524288, a=2981889/2097152
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:PRECOND_19: (delta >= 95568986113/4398046511104) & (b + delta >= 2981889/2097152) & (delta >= b**3 - 3) & (b - delta <= 2981889/2097152) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=182279/8388608, b=1513729/1048576, a=5963777/4194304
+DEBUG:__main__:---------pre-condition 20---------
+DEBUG:__main__:PRECOND_20: (delta >= 382264016897/17592186044416) & (b + delta >= 5963777/4194304) & (delta >= b**3 - 3) & (b - delta <= 5963777/4194304) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=364551/16777216, b=3027457/2097152, a=11927553/8388608
+DEBUG:__main__:---------pre-condition 21---------
+DEBUG:__main__:PRECOND_21: (delta >= 1529032212481/70368744177664) & (b + delta >= 11927553/8388608) & (delta >= b**3 - 3) & (b - delta <= 11927553/8388608) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=729095/33554432, b=6054913/4194304, a=23855105/16777216
+DEBUG:__main__:---------pre-condition 22---------
+DEBUG:__main__:PRECOND_22: (delta >= 6116081139713/281474976710656) & (b + delta >= 23855105/16777216) & (delta >= b**3 - 3) & (b - delta <= 23855105/16777216) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1458183/67108864, b=12109825/8388608, a=47710209/33554432
+DEBUG:__main__:---------pre-condition 23---------
+DEBUG:__main__:PRECOND_23: (delta >= 24464229138433/1125899906842624) & (b + delta >= 47710209/33554432) & (delta >= b**3 - 3) & (b - delta <= 47710209/33554432) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=2916359/134217728, b=24219649/16777216, a=95420417/67108864
+DEBUG:__main__:---------pre-condition 24---------
+DEBUG:__main__:PRECOND_24: (delta >= 97856725712897/4503599627370496) & (b + delta >= 95420417/67108864) & (delta >= b**3 - 3) & (b - delta <= 95420417/67108864) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=5832711/268435456, b=48439297/33554432, a=190840833/134217728
+DEBUG:__main__:---------pre-condition 25---------
+DEBUG:__main__:PRECOND_25: (delta >= 391426521169921/18014398509481984) & (b + delta >= 190840833/134217728) & (delta >= b**3 - 3) & (b - delta <= 190840833/134217728) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=11665415/536870912, b=96878593/67108864, a=381681665/268435456
+DEBUG:__main__:---------pre-condition 26---------
+DEBUG:__main__:PRECOND_26: (delta >= 1565705321316353/72057594037927936) & (b + delta >= 381681665/268435456) & (delta >= b**3 - 3) & (b - delta <= 381681665/268435456) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=23330823/1073741824, b=193757185/134217728, a=763363329/536870912
+DEBUG:__main__:---------pre-condition 27---------
+DEBUG:__main__:PRECOND_27: (delta >= 6262819758538753/288230376151711744) & (b + delta >= 763363329/536870912) & (delta >= b**3 - 3) & (b - delta <= 763363329/536870912) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=46661639/2147483648, b=387514369/268435456, a=1526726657/1073741824
+DEBUG:__main__:---------pre-condition 28---------
+DEBUG:__main__:PRECOND_28: (delta >= 25051275980701697/1152921504606846976) & (b + delta >= 1526726657/1073741824) & (delta >= b**3 - 3) & (b - delta <= 1526726657/1073741824) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=93323271/4294967296, b=775028737/536870912, a=3053453313/2147483648
+DEBUG:__main__:---------pre-condition 29---------
+DEBUG:__main__:PRECOND_29: (delta >= 100205097815900161/4611686018427387904) & (b + delta >= 3053453313/2147483648) & (delta >= b**3 - 3) & (b - delta <= 3053453313/2147483648) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=186646535/8589934592, b=1550057473/1073741824, a=6106906625/4294967296
+DEBUG:__main__:---------pre-condition 30---------
+DEBUG:__main__:PRECOND_30: (delta >= 400820379049787393/18446744073709551616) & (b + delta >= 6106906625/4294967296) & (delta >= b**3 - 3) & (b - delta <= 6106906625/4294967296) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=373293063/17179869184, b=3100114945/2147483648, a=12213813249/8589934592
+DEBUG:__main__:---------pre-condition 31---------
+DEBUG:__main__:PRECOND_31: (delta >= 1603281491771523073/73786976294838206464) & (b + delta >= 12213813249/8589934592) & (delta >= b**3 - 3) & (b - delta <= 12213813249/8589934592) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=746586119/34359738368, b=6200229889/4294967296, a=24427626497/17179869184
+DEBUG:__main__:---------pre-condition 32---------
+DEBUG:__main__:PRECOND_32: (delta >= 6413125918230839297/295147905179352825856) & (b + delta >= 24427626497/17179869184) & (delta >= b**3 - 3) & (b - delta <= 24427626497/17179869184) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1493172231/68719476736, b=12400459777/8589934592, a=48855252993/34359738368
+DEBUG:__main__:---------pre-condition 33---------
+DEBUG:__main__:PRECOND_33: (delta >= 25652503575212851201/1180591620717411303424) & (b + delta >= 48855252993/34359738368) & (delta >= b**3 - 3) & (b - delta <= 48855252993/34359738368) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=2986344455/137438953472, b=24800919553/17179869184, a=97710505985/68719476736
+DEBUG:__main__:---------pre-condition 34---------
+DEBUG:__main__:PRECOND_34: (delta >= 102610014105430392833/4722366482869645213696) & (b + delta >= 97710505985/68719476736) & (delta >= b**3 - 3) & (b - delta <= 97710505985/68719476736) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=5972688903/274877906944, b=49601839105/34359738368, a=195421011969/137438953472
+DEBUG:__main__:---------pre-condition 35---------
+DEBUG:__main__:PRECOND_35: (delta >= 410440056030879547393/18889465931478580854784) & (b + delta >= 195421011969/137438953472) & (delta >= b**3 - 3) & (b - delta <= 195421011969/137438953472) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=11945377799/549755813888, b=99203678209/68719476736, a=390842023937/274877906944
+DEBUG:__main__:---------pre-condition 36---------
+DEBUG:__main__:PRECOND_36: (delta >= 1641760223341834141697/75557863725914323419136) & (b + delta >= 390842023937/274877906944) & (delta >= b**3 - 3) & (b - delta <= 390842023937/274877906944) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=23890755591/1099511627776, b=198407356417/137438953472, a=781684047873/549755813888
+DEBUG:__main__:---------pre-condition 37---------
+DEBUG:__main__:PRECOND_37: (delta >= 6567040891803968471041/302231454903657293676544) & (b + delta >= 781684047873/549755813888) & (delta >= b**3 - 3) & (b - delta <= 781684047873/549755813888) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=47781511175/2199023255552, b=396814712833/274877906944, a=1563368095745/1099511627776
+DEBUG:__main__:---------pre-condition 38---------
+DEBUG:__main__:PRECOND_38: (delta >= 26268163564089137692673/1208925819614629174706176) & (b + delta >= 1563368095745/1099511627776) & (delta >= b**3 - 3) & (b - delta <= 1563368095745/1099511627776) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=95563022343/4398046511104, b=793629425665/549755813888, a=3126736191489/2199023255552
+DEBUG:__main__:---------pre-condition 39---------
+DEBUG:__main__:PRECOND_39: (delta >= 105072654250103078387713/4835703278458516698824704) & (b + delta >= 3126736191489/2199023255552) & (delta >= b**3 - 3) & (b - delta <= 3126736191489/2199023255552) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=191126044679/8796093022208, b=1587258851329/1099511627776, a=6253472382977/4398046511104
+DEBUG:__main__:---------pre-condition 40---------
+DEBUG:__main__:PRECOND_40: (delta >= 420290616987905368784897/19342813113834066795298816) & (b + delta >= 6253472382977/4398046511104) & (delta >= b**3 - 3) & (b - delta <= 6253472382977/4398046511104) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=382252089351/17592186044416, b=3174517702657/2199023255552, a=12506944765953/8796093022208
+DEBUG:__main__:---------pre-condition 41---------
+DEBUG:__main__:PRECOND_41: (delta >= 1681162467926607585607681/77371252455336267181195264) & (b + delta >= 12506944765953/8796093022208) & (delta >= b**3 - 3) & (b - delta <= 12506944765953/8796093022208) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=764504178695/35184372088832, b=6349035405313/4398046511104, a=25013889531905/17592186044416
+DEBUG:__main__:---------pre-condition 42---------
+DEBUG:__main__:PRECOND_42: (delta >= 6724649871656402563366913/309485009821345068724781056) & (b + delta >= 25013889531905/17592186044416) & (delta >= b**3 - 3) & (b - delta <= 25013889531905/17592186044416) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1529008357383/70368744177664, b=12698070810625/8796093022208, a=50027779063809/35184372088832
+DEBUG:__main__:---------pre-condition 43---------
+DEBUG:__main__:PRECOND_43: (delta >= 26898599486525554695340033/1237940039285380274899124224) & (b + delta >= 50027779063809/35184372088832) & (delta >= b**3 - 3) & (b - delta <= 50027779063809/35184372088832) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=3058016714759/140737488355328, b=25396141621249/17592186044416, a=100055558127617/70368744177664
+DEBUG:__main__:---------pre-condition 44---------
+DEBUG:__main__:PRECOND_44: (delta >= 107594397945902107665104897/4951760157141521099596496896) & (b + delta >= 100055558127617/70368744177664) & (delta >= b**3 - 3) & (b - delta <= 100055558127617/70368744177664) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=6116033429511/281474976710656, b=50792283242497/35184372088832, a=200111116255233/140737488355328
+DEBUG:__main__:---------pre-condition 45---------
+DEBUG:__main__:PRECOND_45: (delta >= 430377591783208208427909121/19807040628566084398385987584) & (b + delta >= 200111116255233/140737488355328) & (delta >= b**3 - 3) & (b - delta <= 200111116255233/140737488355328) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12232066859015/562949953421312, b=101584566484993/70368744177664, a=400222232510465/281474976710656
+DEBUG:__main__:---------pre-condition 46---------
+DEBUG:__main__:PRECOND_46: (delta >= 1721510367132032389246615553/79228162514264337593543950336) & (b + delta >= 400222232510465/281474976710656) & (delta >= b**3 - 3) & (b - delta <= 400222232510465/281474976710656) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=24464133718023/1125899906842624, b=203169132969985/140737488355328, a=800444465020929/562949953421312
+DEBUG:__main__:---------pre-condition 47---------
+DEBUG:__main__:PRECOND_47: (delta >= 6886041468526528668056420353/316912650057057350374175801344) & (b + delta >= 800444465020929/562949953421312) & (delta >= b**3 - 3) & (b - delta <= 800444465020929/562949953421312) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=48928267436039/2251799813685248, b=406338265939969/281474976710656, a=1600888930041857/1125899906842624
+DEBUG:__main__:---------pre-condition 48---------
+DEBUG:__main__:PRECOND_48: (delta >= 27544165874102912894365597697/1267650600228229401496703205376) & (b + delta >= 1600888930041857/1125899906842624) & (delta >= b**3 - 3) & (b - delta <= 1600888930041857/1125899906842624) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=97856534872071/4503599627370496, b=812676531879937/562949953421312, a=3201777860083713/2251799813685248
+DEBUG:__main__:---------pre-condition 49---------
+DEBUG:__main__:PRECOND_49: (delta >= 110176663496405248021742223361/5070602400912917605986812821504) & (b + delta >= 3201777860083713/2251799813685248) & (delta >= b**3 - 3) & (b - delta <= 3201777860083713/2251799813685248) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=195713069744135/9007199254740992, b=1625353063759873/1125899906842624, a=6403555720167425/4503599627370496
+DEBUG:__main__:---------pre-condition 50---------
+DEBUG:__main__:PRECOND_50: (delta >= 440706653985608184975528558593/20282409603651670423947251286016) & (b + delta >= 6403555720167425/4503599627370496) & (delta >= b**3 - 3) & (b - delta <= 6403555720167425/4503599627370496) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139488263/18014398509481984, b=3250706127519745/2251799813685248, a=12807111440334849/9007199254740992
+DEBUG:__main__:---------pre-condition 51---------
+DEBUG:__main__:PRECOND_51: (delta >= 1762826615942407125679233564673/81129638414606681695789005144064) & (b + delta >= 12807111440334849/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440334849/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139488263/18014398509481984, b=3250706127519745/2251799813685248, a=12807111440334849/9007199254740992
+DEBUG:__main__:---------pre-condition 52---------
+DEBUG:__main__:PRECOND_52: (delta >= 1762826615942407125679233564673/81129638414606681695789005144064) & (b + delta >= 12807111440334849/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440334849/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139488263/18014398509481984, b=3250706127519745/2251799813685248, a=12807111440334849/9007199254740992
+DEBUG:__main__:---------pre-condition 53---------
+DEBUG:__main__:PRECOND_53: (delta >= 1762826615942407125679233564673/81129638414606681695789005144064) & (b + delta >= 12807111440334849/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440334849/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=382252089535/17592186044416, b=99203678209/68719476736, a=12506944765985/8796093022208
+DEBUG:__main__:---------pre-condition 54---------
+DEBUG:__main__:PRECOND_54: (delta >= 1681162468727052050629697/77371252455336267181195264) & (b + delta >= 12506944765985/8796093022208) & (delta >= b**3 - 3) & (b - delta <= 12506944765985/8796093022208) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278976703/36028797018963968, b=203169132969985/140737488355328, a=25614222880669729/18014398509481984
+DEBUG:__main__:---------pre-condition 55---------
+DEBUG:__main__:PRECOND_55: (delta >= 7051306463771216584535535780929/324518553658426726783156020576256) & (b + delta >= 25614222880669729/18014398509481984) & (delta >= b**3 - 3) & (b - delta <= 25614222880669729/18014398509481984) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1529008358111/70368744177664, b=3174517702687/2199023255552, a=50027779063937/35184372088832
+DEBUG:__main__:---------pre-condition 56---------
+DEBUG:__main__:PRECOND_56: (delta >= 26898599499332666135691521/1237940039285380274899124224) & (b + delta >= 50027779063937/35184372088832) & (delta >= b**3 - 3) & (b - delta <= 50027779063937/35184372088832) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278976519/36028797018963968, b=6501412255039489/4503599627370496, a=25614222880669697/18014398509481984
+DEBUG:__main__:---------pre-condition 57---------
+DEBUG:__main__:PRECOND_57: (delta >= 7051306463769577274271172919297/324518553658426726783156020576256) & (b + delta >= 25614222880669697/18014398509481984) & (delta >= b**3 - 3) & (b - delta <= 25614222880669697/18014398509481984) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=3058016716215/140737488355328, b=25396141621495/17592186044416, a=100055558127873/70368744177664
+DEBUG:__main__:---------pre-condition 58---------
+DEBUG:__main__:PRECOND_58: (delta >= 107594397997130553426510337/4951760157141521099596496896) & (b + delta >= 100055558127873/70368744177664) & (delta >= b**3 - 3) & (b - delta <= 100055558127873/70368744177664) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=6262818231813593/288230376151711744, b=13002824510079039/9007199254740992, a=51228445761339457/36028797018963968
+DEBUG:__main__:---------pre-condition 59---------
+DEBUG:__main__:PRECOND_59: (delta >= 28205225855084763881250620444801/1298074214633706907132624082305024) & (b + delta >= 51228445761339457/36028797018963968) & (delta >= b**3 - 3) & (b - delta <= 51228445761339457/36028797018963968) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=6116033432423/281474976710656, b=50792283242989/35184372088832, a=200111116255745/140737488355328
+DEBUG:__main__:---------pre-condition 60---------
+DEBUG:__main__:PRECOND_60: (delta >= 430377591988121991473529857/19807040628566084398385987584) & (b + delta >= 200111116255745/140737488355328) & (delta >= b**3 - 3) & (b - delta <= 200111116255745/140737488355328) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12232066864839/562949953421312, b=101584566485977/70368744177664, a=400222232511489/281474976710656
+DEBUG:__main__:---------pre-condition 61---------
+DEBUG:__main__:PRECOND_61: (delta >= 1721510367951687521429096449/79228162514264337593543950336) & (b + delta >= 400222232511489/281474976710656) & (delta >= b**3 - 3) & (b - delta <= 400222232511489/281474976710656) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1529008357567/70368744177664, b=396814712833/274877906944, a=50027779063841/35184372088832
+DEBUG:__main__:---------pre-condition 62---------
+DEBUG:__main__:PRECOND_62: (delta >= 26898599489727332555424833/1237940039285380274899124224) & (b + delta >= 50027779063841/35184372088832) & (delta >= b**3 - 3) & (b - delta <= 50027779063841/35184372088832) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=6116033430239/281474976710656, b=12698070810655/8796093022208, a=200111116255361/140737488355328
+DEBUG:__main__:---------pre-condition 63---------
+DEBUG:__main__:PRECOND_63: (delta >= 430377591834436654189265153/19807040628566084398385987584) & (b + delta >= 200111116255361/140737488355328) & (delta >= b**3 - 3) & (b - delta <= 200111116255361/140737488355328) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12232066860471/562949953421312, b=101584566485239/70368744177664, a=400222232510721/281474976710656
+DEBUG:__main__:---------pre-condition 64---------
+DEBUG:__main__:PRECOND_64: (delta >= 1721510367336946172292039169/79228162514264337593543950336) & (b + delta >= 400222232510721/281474976710656) & (delta >= b**3 - 3) & (b - delta <= 400222232510721/281474976710656) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139488447/18014398509481984, b=101584566484993/70368744177664, a=12807111440334881/9007199254740992
+DEBUG:__main__:---------pre-condition 65---------
+DEBUG:__main__:PRECOND_65: (delta >= 1762826615943226780811414996033/81129638414606681695789005144064) & (b + delta >= 12807111440334881/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440334881/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=24464133720935/1125899906842624, b=203169132970477/140737488355328, a=800444465021441/562949953421312
+DEBUG:__main__:---------pre-condition 66---------
+DEBUG:__main__:PRECOND_66: (delta >= 6886041469346183800238113793/316912650057057350374175801344) & (b + delta >= 800444465021441/562949953421312) & (delta >= b**3 - 3) & (b - delta <= 800444465021441/562949953421312) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=48928267441863/2251799813685248, b=406338265940953/281474976710656, a=1600888930042881/1125899906842624
+DEBUG:__main__:---------pre-condition 67---------
+DEBUG:__main__:PRECOND_67: (delta >= 27544165877381533423092369409/1267650600228229401496703205376) & (b + delta >= 1600888930042881/1125899906842624) & (delta >= b**3 - 3) & (b - delta <= 1600888930042881/1125899906842624) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=97856534883719/4503599627370496, b=812676531881905/562949953421312, a=3201777860085761/2251799813685248
+DEBUG:__main__:---------pre-condition 68---------
+DEBUG:__main__:PRECOND_68: (delta >= 110176663509519730136649306113/5070602400912917605986812821504) & (b + delta >= 3201777860085761/2251799813685248) & (delta >= b**3 - 3) & (b - delta <= 3201777860085761/2251799813685248) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=195713069767431/9007199254740992, b=1625353063763809/1125899906842624, a=6403555720171521/4503599627370496
+DEBUG:__main__:---------pre-condition 69---------
+DEBUG:__main__:PRECOND_69: (delta >= 440706654038066113435156881409/20282409603651670423947251286016) & (b + delta >= 6403555720171521/4503599627370496) & (delta >= b**3 - 3) & (b - delta <= 6403555720171521/4503599627370496) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139534855/18014398509481984, b=3250706127527617/2251799813685248, a=12807111440343041/9007199254740992
+DEBUG:__main__:---------pre-condition 70---------
+DEBUG:__main__:PRECOND_70: (delta >= 1762826616152238839517746839553/81129638414606681695789005144064) & (b + delta >= 12807111440343041/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343041/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139534855/18014398509481984, b=3250706127527617/2251799813685248, a=12807111440343041/9007199254740992
+DEBUG:__main__:---------pre-condition 71---------
+DEBUG:__main__:PRECOND_71: (delta >= 1762826616152238839517746839553/81129638414606681695789005144064) & (b + delta >= 12807111440343041/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343041/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139534855/18014398509481984, b=3250706127527617/2251799813685248, a=12807111440343041/9007199254740992
+DEBUG:__main__:---------pre-condition 72---------
+DEBUG:__main__:PRECOND_72: (delta >= 1762826616152238839517746839553/81129638414606681695789005144064) & (b + delta >= 12807111440343041/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343041/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139534855/18014398509481984, b=3250706127527617/2251799813685248, a=12807111440343041/9007199254740992
+DEBUG:__main__:---------pre-condition 73---------
+DEBUG:__main__:PRECOND_73: (delta >= 1762826616152238839517746839553/81129638414606681695789005144064) & (b + delta >= 12807111440343041/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343041/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704558139773/72057594037927936, b=203169132970477/140737488355328, a=25614222880686113/18014398509481984
+DEBUG:__main__:---------pre-condition 74---------
+DEBUG:__main__:PRECOND_74: (delta >= 7051306464610543439889589896257/324518553658426726783156020576256) & (b + delta >= 25614222880686113/18014398509481984) & (delta >= b**3 - 3) & (b - delta <= 25614222880686113/18014398509481984) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704558139773/72057594037927936, b=203169132970477/140737488355328, a=25614222880686113/18014398509481984
+DEBUG:__main__:---------pre-condition 75---------
+DEBUG:__main__:PRECOND_75: (delta >= 7051306464610543439889589896257/324518553658426726783156020576256) & (b + delta >= 25614222880686113/18014398509481984) & (delta >= b**3 - 3) & (b - delta <= 25614222880686113/18014398509481984) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704558139773/72057594037927936, b=203169132970477/140737488355328, a=25614222880686113/18014398509481984
+DEBUG:__main__:---------pre-condition 76---------
+DEBUG:__main__:PRECOND_76: (delta >= 7051306464610543439889589896257/324518553658426726783156020576256) & (b + delta >= 25614222880686113/18014398509481984) & (delta >= b**3 - 3) & (b - delta <= 25614222880686113/18014398509481984) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=97856534918847/4503599627370496, b=25396141621495/17592186044416, a=3201777860091937/2251799813685248
+DEBUG:__main__:---------pre-condition 77---------
+DEBUG:__main__:PRECOND_77: (delta >= 110176663549068090264466768961/5070602400912917605986812821504) & (b + delta >= 3201777860091937/2251799813685248) & (delta >= b**3 - 3) & (b - delta <= 3201777860091937/2251799813685248) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704558139441/72057594037927936, b=1625353063763809/1125899906842624, a=6403555720171521/4503599627370496
+DEBUG:__main__:---------pre-condition 78---------
+DEBUG:__main__:PRECOND_78: (delta >= 440706654038066113435156881409/20282409603651670423947251286016) & (b + delta >= 6403555720171521/4503599627370496) & (delta >= b**3 - 3) & (b - delta <= 6403555720171521/4503599627370496) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139675359/18014398509481984, b=812676531887839/562949953421312, a=12807111440367745/9007199254740992
+DEBUG:__main__:---------pre-condition 79---------
+DEBUG:__main__:PRECOND_79: (delta >= 1762826616785012601562826096897/81129638414606681695789005144064) & (b + delta >= 12807111440367745/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440367745/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278982657/36028797018963968, b=6349035405313/4398046511104, a=25013889531905/17592186044416
+DEBUG:__main__:---------pre-condition 80---------
+DEBUG:__main__:PRECOND_80: (delta >= 6724649871656402563366913/309485009821345068724781056) & (b + delta >= 25013889531905/17592186044416) & (delta >= b**3 - 3) & (b - delta <= 25013889531905/17592186044416) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139675359/18014398509481984, b=812676531887839/562949953421312, a=12807111440367745/9007199254740992
+DEBUG:__main__:---------pre-condition 81---------
+DEBUG:__main__:PRECOND_81: (delta >= 1762826616785012601562826096897/81129638414606681695789005144064) & (b + delta >= 12807111440367745/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440367745/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139675359/18014398509481984, b=812676531887839/562949953421312, a=12807111440367745/9007199254740992
+DEBUG:__main__:---------pre-condition 82---------
+DEBUG:__main__:PRECOND_82: (delta >= 1762826616785012601562826096897/81129638414606681695789005144064) & (b + delta >= 12807111440367745/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440367745/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279350769/36028797018963968, b=25396141621495/17592186044416, a=3201777860091937/2251799813685248
+DEBUG:__main__:---------pre-condition 83---------
+DEBUG:__main__:PRECOND_83: (delta >= 110176663549068090264466768961/5070602400912917605986812821504) & (b + delta >= 3201777860091937/2251799813685248) & (delta >= b**3 - 3) & (b - delta <= 3201777860091937/2251799813685248) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278982657/36028797018963968, b=6349035405313/4398046511104, a=25013889531905/17592186044416
+DEBUG:__main__:---------pre-condition 84---------
+DEBUG:__main__:PRECOND_84: (delta >= 6724649871656402563366913/309485009821345068724781056) & (b + delta >= 25013889531905/17592186044416) & (delta >= b**3 - 3) & (b - delta <= 25013889531905/17592186044416) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279350769/36028797018963968, b=25396141621495/17592186044416, a=3201777860091937/2251799813685248
+DEBUG:__main__:---------pre-condition 85---------
+DEBUG:__main__:PRECOND_85: (delta >= 110176663549068090264466768961/5070602400912917605986812821504) & (b + delta >= 3201777860091937/2251799813685248) & (delta >= b**3 - 3) & (b - delta <= 3201777860091937/2251799813685248) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=50102545854508585/2305843009213693952, b=104022596080632307/72057594037927936, a=409827566090715655/288230376151711744
+DEBUG:__main__:---------pre-condition 86---------
+DEBUG:__main__:PRECOND_86: (delta >= 1805134454725424068744907527035953/83076749736557242056487941267521536) & (b + delta >= 409827566090715655/288230376151711744) & (delta >= b**3 - 3) & (b - delta <= 409827566090715655/288230376151711744) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279350769/36028797018963968, b=25396141621495/17592186044416, a=3201777860091937/2251799813685248
+DEBUG:__main__:---------pre-condition 87---------
+DEBUG:__main__:PRECOND_87: (delta >= 110176663549068090264466768961/5070602400912917605986812821504) & (b + delta >= 3201777860091937/2251799813685248) & (delta >= b**3 - 3) & (b - delta <= 3201777860091937/2251799813685248) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279350711/36028797018963968, b=6501412255102711/4503599627370496, a=25614222880735489/18014398509481984
+DEBUG:__main__:---------pre-condition 88---------
+DEBUG:__main__:PRECOND_88: (delta >= 7051306467139999177805542916609/324518553658426726783156020576256) & (b + delta >= 25614222880735489/18014398509481984) & (delta >= b**3 - 3) & (b - delta <= 25614222880735489/18014398509481984) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139534855/18014398509481984, b=3250706127527617/2251799813685248, a=12807111440343041/9007199254740992
+DEBUG:__main__:---------pre-condition 89---------
+DEBUG:__main__:PRECOND_89: (delta >= 1762826616152238839517746839553/81129638414606681695789005144064) & (b + delta >= 12807111440343041/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343041/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279350711/36028797018963968, b=6501412255102711/4503599627370496, a=25614222880735489/18014398509481984
+DEBUG:__main__:---------pre-condition 90---------
+DEBUG:__main__:PRECOND_90: (delta >= 7051306467139999177805542916609/324518553658426726783156020576256) & (b + delta >= 25614222880735489/18014398509481984) & (delta >= b**3 - 3) & (b - delta <= 25614222880735489/18014398509481984) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=23331007/1073741824, b=6054913/4194304, a=763363361/536870912
+DEBUG:__main__:---------pre-condition 91---------
+DEBUG:__main__:PRECOND_91: (delta >= 6262868613792833/288230376151711744) & (b + delta >= 763363361/536870912) & (delta >= b**3 - 3) & (b - delta <= 763363361/536870912) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=93323999/4294967296, b=193757215/134217728, a=3053453441/2147483648
+DEBUG:__main__:---------pre-condition 92---------
+DEBUG:__main__:PRECOND_92: (delta >= 100205879499964673/4611686018427387904) & (b + delta >= 3053453441/2147483648) & (delta >= b**3 - 3) & (b - delta <= 3053453441/2147483648) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1529008358135/70368744177664, b=99203678209/68719476736, a=50027779063941/35184372088832
+DEBUG:__main__:---------pre-condition 93---------
+DEBUG:__main__:PRECOND_93: (delta >= 26898599499732888368203033/1237940039285380274899124224) & (b + delta >= 50027779063941/35184372088832) & (delta >= b**3 - 3) & (b - delta <= 50027779063941/35184372088832) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12232066865023/562949953421312, b=12698070810751/8796093022208, a=400222232511521/281474976710656
+DEBUG:__main__:---------pre-condition 94---------
+DEBUG:__main__:PRECOND_94: (delta >= 1721510367977301744309832769/79228162514264337593543950336) & (b + delta >= 400222232511521/281474976710656) & (delta >= b**3 - 3) & (b - delta <= 400222232511521/281474976710656) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=48928267460063/2251799813685248, b=101584566486007/70368744177664, a=1600888930046081/1125899906842624
+DEBUG:__main__:---------pre-condition 95---------
+DEBUG:__main__:PRECOND_95: (delta >= 27544165887627222575377047809/1267650600228229401496703205376) & (b + delta >= 1600888930046081/1125899906842624) & (delta >= b**3 - 3) & (b - delta <= 1600888930046081/1125899906842624) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12232066859199/562949953421312, b=3174517702657/2199023255552, a=400222232510497/281474976710656
+DEBUG:__main__:---------pre-condition 96---------
+DEBUG:__main__:PRECOND_96: (delta >= 1721510367157646612127286337/79228162514264337593543950336) & (b + delta >= 400222232510497/281474976710656) & (delta >= b**3 - 3) & (b - delta <= 400222232510497/281474976710656) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=48928267436767/2251799813685248, b=101584566485023/70368744177664, a=1600888930041985/1125899906842624
+DEBUG:__main__:---------pre-condition 97---------
+DEBUG:__main__:PRECOND_97: (delta >= 27544165874512740460456329473/1267650600228229401496703205376) & (b + delta >= 1600888930041985/1125899906842624) & (delta >= b**3 - 3) & (b - delta <= 1600888930041985/1125899906842624) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=97856534873527/4503599627370496, b=812676531880183/562949953421312, a=3201777860083969/2251799813685248
+DEBUG:__main__:---------pre-condition 98---------
+DEBUG:__main__:PRECOND_98: (delta >= 110176663498044558286105149953/5070602400912917605986812821504) & (b + delta >= 3201777860083969/2251799813685248) & (delta >= b**3 - 3) & (b - delta <= 3201777860083969/2251799813685248) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=195713069747047/9007199254740992, b=1625353063760365/1125899906842624, a=6403555720167937/4503599627370496
+DEBUG:__main__:---------pre-condition 99---------
+DEBUG:__main__:PRECOND_99: (delta >= 440706653992165426032980263937/20282409603651670423947251286016) & (b + delta >= 6403555720167937/4503599627370496) & (delta >= b**3 - 3) & (b - delta <= 6403555720167937/4503599627370496) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704557953073/72057594037927936, b=1625353063759873/1125899906842624, a=6403555720167425/4503599627370496
+DEBUG:__main__:---------pre-condition 100---------
+DEBUG:__main__:PRECOND_100: (delta >= 440706653985608184975528558593/20282409603651670423947251286016) & (b + delta >= 6403555720167425/4503599627370496) & (delta >= b**3 - 3) & (b - delta <= 6403555720167425/4503599627370496) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139494087/18014398509481984, b=3250706127520729/2251799813685248, a=12807111440335873/9007199254740992
+DEBUG:__main__:---------pre-condition 101---------
+DEBUG:__main__:PRECOND_101: (delta >= 1762826615968636089909040384001/81129638414606681695789005144064) & (b + delta >= 12807111440335873/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440335873/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139494087/18014398509481984, b=3250706127520729/2251799813685248, a=12807111440335873/9007199254740992
+DEBUG:__main__:---------pre-condition 102---------
+DEBUG:__main__:PRECOND_102: (delta >= 1762826615968636089909040384001/81129638414606681695789005144064) & (b + delta >= 12807111440335873/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440335873/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=50102545854508585/2305843009213693952, b=104022596080632307/72057594037927936, a=409827566090715655/288230376151711744
+DEBUG:__main__:---------pre-condition 103---------
+DEBUG:__main__:PRECOND_103: (delta >= 1805134454725424068744907527035953/83076749736557242056487941267521536) & (b + delta >= 409827566090715655/288230376151711744) & (delta >= b**3 - 3) & (b - delta <= 409827566090715655/288230376151711744) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139488263/18014398509481984, b=3250706127519745/2251799813685248, a=12807111440334849/9007199254740992
+DEBUG:__main__:---------pre-condition 104---------
+DEBUG:__main__:PRECOND_104: (delta >= 1762826615942407125679233564673/81129638414606681695789005144064) & (b + delta >= 12807111440334849/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440334849/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704557976393/72057594037927936, b=3250706127520731/2251799813685248, a=12807111440335875/9007199254740992
+DEBUG:__main__:---------pre-condition 105---------
+DEBUG:__main__:PRECOND_105: (delta >= 1762826615968687318354801727497/81129638414606681695789005144064) & (b + delta >= 12807111440335875/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440335875/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12525636463811281/576460752303423488, b=13002824510082927/9007199254740992, a=51228445761343503/36028797018963968
+DEBUG:__main__:---------pre-condition 106---------
+DEBUG:__main__:PRECOND_106: (delta >= 28205225855499304464351395700961/1298074214633706907132624082305024) & (b + delta >= 51228445761343503/36028797018963968) & (delta >= b**3 - 3) & (b - delta <= 51228445761343503/36028797018963968) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12525636463812081/576460752303423488, b=101584566485023/70368744177664, a=51228445761343521/36028797018963968
+DEBUG:__main__:---------pre-condition 107---------
+DEBUG:__main__:PRECOND_107: (delta >= 28205225855501148688398804067393/1298074214633706907132624082305024) & (b + delta >= 51228445761343521/36028797018963968) & (delta >= b**3 - 3) & (b - delta <= 51228445761343521/36028797018963968) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12525636463812081/576460752303423488, b=101584566485023/70368744177664, a=51228445761343521/36028797018963968
+DEBUG:__main__:---------pre-condition 108---------
+DEBUG:__main__:PRECOND_108: (delta >= 28205225855501148688398804067393/1298074214633706907132624082305024) & (b + delta >= 51228445761343521/36028797018963968) & (delta >= b**3 - 3) & (b - delta <= 51228445761343521/36028797018963968) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12525636463812081/576460752303423488, b=101584566485023/70368744177664, a=51228445761343521/36028797018963968
+DEBUG:__main__:---------pre-condition 109---------
+DEBUG:__main__:PRECOND_109: (delta >= 28205225855501148688398804067393/1298074214633706907132624082305024) & (b + delta >= 51228445761343521/36028797018963968) & (delta >= b**3 - 3) & (b - delta <= 51228445761343521/36028797018963968) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=195713069767443/9007199254740992, b=1625353063763811/1125899906842624, a=6403555720171523/4503599627370496
+DEBUG:__main__:---------pre-condition 110---------
+DEBUG:__main__:PRECOND_110: (delta >= 440706654038091727658037567497/20282409603651670423947251286016) & (b + delta >= 6403555720171523/4503599627370496) & (delta >= b**3 - 3) & (b - delta <= 6403555720171523/4503599627370496) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 111---------
+DEBUG:__main__:PRECOND_111: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 112---------
+DEBUG:__main__:PRECOND_112: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 113---------
+DEBUG:__main__:PRECOND_113: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139534855/18014398509481984, b=3250706127527617/2251799813685248, a=12807111440343041/9007199254740992
+DEBUG:__main__:---------pre-condition 114---------
+DEBUG:__main__:PRECOND_114: (delta >= 1762826616152238839517746839553/81129638414606681695789005144064) & (b + delta >= 12807111440343041/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343041/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139534891/18014398509481984, b=3250706127527623/2251799813685248, a=12807111440343047/9007199254740992
+DEBUG:__main__:---------pre-condition 115---------
+DEBUG:__main__:PRECOND_115: (delta >= 1762826616152392524855030956081/81129638414606681695789005144064) & (b + delta >= 12807111440343047/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343047/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=24464133729671/1125899906842624, b=203169132971953/140737488355328, a=800444465022977/562949953421312
+DEBUG:__main__:---------pre-condition 116---------
+DEBUG:__main__:PRECOND_116: (delta >= 6886041471805149196786339841/316912650057057350374175801344) & (b + delta >= 800444465022977/562949953421312) & (delta >= b**3 - 3) & (b - delta <= 800444465022977/562949953421312) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=48928267459335/2251799813685248, b=406338265943905/281474976710656, a=1600888930045953/1125899906842624
+DEBUG:__main__:---------pre-condition 117---------
+DEBUG:__main__:PRECOND_117: (delta >= 27544165887217395009285267457/1267650600228229401496703205376) & (b + delta >= 1600888930045953/1125899906842624) & (delta >= b**3 - 3) & (b - delta <= 1600888930045953/1125899906842624) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139534855/18014398509481984, b=3250706127527617/2251799813685248, a=12807111440343041/9007199254740992
+DEBUG:__main__:---------pre-condition 118---------
+DEBUG:__main__:PRECOND_118: (delta >= 1762826616152238839517746839553/81129638414606681695789005144064) & (b + delta >= 12807111440343041/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343041/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704557959169/72057594037927936, b=12698070810625/8796093022208, a=50027779063809/35184372088832
+DEBUG:__main__:---------pre-condition 119---------
+DEBUG:__main__:PRECOND_119: (delta >= 26898599486525554695340033/1237940039285380274899124224) & (b + delta >= 50027779063809/35184372088832) & (delta >= b**3 - 3) & (b - delta <= 50027779063809/35184372088832) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278982657/36028797018963968, b=6349035405313/4398046511104, a=25013889531905/17592186044416
+DEBUG:__main__:---------pre-condition 120---------
+DEBUG:__main__:PRECOND_120: (delta >= 6724649871656402563366913/309485009821345068724781056) & (b + delta >= 25013889531905/17592186044416) & (delta >= b**3 - 3) & (b - delta <= 25013889531905/17592186044416) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=43/2048, b=369/256, a=1455/1024
+DEBUG:__main__:---------pre-condition 121---------
+DEBUG:__main__:PRECOND_121: (delta >= 19873/1048576) & (b + delta >= 1455/1024) & (delta >= b**3 - 3) & (b - delta <= 1455/1024) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=3131409115912193/144115188075855872, b=25396141621249/17592186044416, a=100055558127617/70368744177664
+DEBUG:__main__:---------pre-condition 122---------
+DEBUG:__main__:PRECOND_122: (delta >= 107594397945902107665104897/4951760157141521099596496896) & (b + delta >= 100055558127617/70368744177664) & (delta >= b**3 - 3) & (b - delta <= 100055558127617/70368744177664) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=6116033429695/281474976710656, b=1587258851329/1099511627776, a=200111116255265/140737488355328
+DEBUG:__main__:---------pre-condition 123---------
+DEBUG:__main__:PRECOND_123: (delta >= 430377591796015319868245057/19807040628566084398385987584) & (b + delta >= 200111116255265/140737488355328) & (delta >= b**3 - 3) & (b - delta <= 200111116255265/140737488355328) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=100205091710488667/4611686018427387904, b=13002824510082923/9007199254740992, a=102456891522686999/72057594037927936
+DEBUG:__main__:---------pre-condition 124---------
+DEBUG:__main__:PRECOND_124: (delta >= 112820903421995783460924265185809/5192296858534827628530496329220096) & (b + delta >= 102456891522686999/72057594037927936) & (delta >= b**3 - 3) & (b - delta <= 102456891522686999/72057594037927936) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279025665/36028797018963968, b=793629425665/549755813888, a=3126736191489/2199023255552
+DEBUG:__main__:---------pre-condition 125---------
+DEBUG:__main__:PRECOND_125: (delta >= 105072654250103078387713/4835703278458516698824704) & (b + delta >= 3126736191489/2199023255552) & (delta >= b**3 - 3) & (b - delta <= 3126736191489/2199023255552) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139488263/18014398509481984, b=3250706127519745/2251799813685248, a=12807111440334849/9007199254740992
+DEBUG:__main__:---------pre-condition 126---------
+DEBUG:__main__:PRECOND_126: (delta >= 1762826615942407125679233564673/81129638414606681695789005144064) & (b + delta >= 12807111440334849/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440334849/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139488263/18014398509481984, b=3250706127519745/2251799813685248, a=12807111440334849/9007199254740992
+DEBUG:__main__:---------pre-condition 127---------
+DEBUG:__main__:PRECOND_127: (delta >= 1762826615942407125679233564673/81129638414606681695789005144064) & (b + delta >= 12807111440334849/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440334849/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278976561/36028797018963968, b=812676531879937/562949953421312, a=3201777860083713/2251799813685248
+DEBUG:__main__:---------pre-condition 128---------
+DEBUG:__main__:PRECOND_128: (delta >= 110176663496405248021742223361/5070602400912917605986812821504) & (b + delta >= 3201777860083713/2251799813685248) & (delta >= b**3 - 3) & (b - delta <= 3201777860083713/2251799813685248) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139534855/18014398509481984, b=3250706127527617/2251799813685248, a=12807111440343041/9007199254740992
+DEBUG:__main__:---------pre-condition 129---------
+DEBUG:__main__:PRECOND_129: (delta >= 1762826616152238839517746839553/81129638414606681695789005144064) & (b + delta >= 12807111440343041/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343041/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=24464133718751/1125899906842624, b=50792283242527/35184372088832, a=800444465021057/562949953421312
+DEBUG:__main__:---------pre-condition 130---------
+DEBUG:__main__:PRECOND_130: (delta >= 6886041468731442451101794561/316912650057057350374175801344) & (b + delta >= 800444465021057/562949953421312) & (delta >= b**3 - 3) & (b - delta <= 800444465021057/562949953421312) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=48928267437495/2251799813685248, b=406338265940215/281474976710656, a=1600888930042113/1125899906842624
+DEBUG:__main__:---------pre-condition 131---------
+DEBUG:__main__:PRECOND_131: (delta >= 27544165874922568026547094017/1267650600228229401496703205376) & (b + delta >= 1600888930042113/1125899906842624) & (delta >= b**3 - 3) & (b - delta <= 1600888930042113/1125899906842624) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139534855/18014398509481984, b=3250706127527617/2251799813685248, a=12807111440343041/9007199254740992
+DEBUG:__main__:---------pre-condition 132---------
+DEBUG:__main__:PRECOND_132: (delta >= 1762826616152238839517746839553/81129638414606681695789005144064) & (b + delta >= 12807111440343041/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343041/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=97856534874983/4503599627370496, b=812676531880429/562949953421312, a=3201777860084225/2251799813685248
+DEBUG:__main__:---------pre-condition 133---------
+DEBUG:__main__:PRECOND_133: (delta >= 110176663499683868550468207617/5070602400912917605986812821504) & (b + delta >= 3201777860084225/2251799813685248) & (delta >= b**3 - 3) & (b - delta <= 3201777860084225/2251799813685248) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 134---------
+DEBUG:__main__:PRECOND_134: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 135---------
+DEBUG:__main__:PRECOND_135: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 136---------
+DEBUG:__main__:PRECOND_136: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 137---------
+DEBUG:__main__:PRECOND_137: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 138---------
+DEBUG:__main__:PRECOND_138: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 139---------
+DEBUG:__main__:PRECOND_139: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 140---------
+DEBUG:__main__:PRECOND_140: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 141---------
+DEBUG:__main__:PRECOND_141: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 142---------
+DEBUG:__main__:PRECOND_142: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 143---------
+DEBUG:__main__:PRECOND_143: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 144---------
+DEBUG:__main__:PRECOND_144: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 145---------
+DEBUG:__main__:PRECOND_145: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 146---------
+DEBUG:__main__:PRECOND_146: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 147---------
+DEBUG:__main__:PRECOND_147: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 148---------
+DEBUG:__main__:PRECOND_148: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 149---------
+DEBUG:__main__:PRECOND_149: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 150---------
+DEBUG:__main__:PRECOND_150: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 151---------
+DEBUG:__main__:PRECOND_151: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 152---------
+DEBUG:__main__:PRECOND_152: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 153---------
+DEBUG:__main__:PRECOND_153: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 154---------
+DEBUG:__main__:PRECOND_154: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 155---------
+DEBUG:__main__:PRECOND_155: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 156---------
+DEBUG:__main__:PRECOND_156: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 157---------
+DEBUG:__main__:PRECOND_157: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 158---------
+DEBUG:__main__:PRECOND_158: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 159---------
+DEBUG:__main__:PRECOND_159: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 160---------
+DEBUG:__main__:PRECOND_160: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 161---------
+DEBUG:__main__:PRECOND_161: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 162---------
+DEBUG:__main__:PRECOND_162: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 163---------
+DEBUG:__main__:PRECOND_163: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 164---------
+DEBUG:__main__:PRECOND_164: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 165---------
+DEBUG:__main__:PRECOND_165: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 166---------
+DEBUG:__main__:PRECOND_166: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 167---------
+DEBUG:__main__:PRECOND_167: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 168---------
+DEBUG:__main__:PRECOND_168: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 169---------
+DEBUG:__main__:PRECOND_169: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 170---------
+DEBUG:__main__:PRECOND_170: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 171---------
+DEBUG:__main__:PRECOND_171: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 172---------
+DEBUG:__main__:PRECOND_172: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 173---------
+DEBUG:__main__:PRECOND_173: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 174---------
+DEBUG:__main__:PRECOND_174: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 175---------
+DEBUG:__main__:PRECOND_175: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 176---------
+DEBUG:__main__:PRECOND_176: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 177---------
+DEBUG:__main__:PRECOND_177: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 178---------
+DEBUG:__main__:PRECOND_178: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 179---------
+DEBUG:__main__:PRECOND_179: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 180---------
+DEBUG:__main__:PRECOND_180: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 181---------
+DEBUG:__main__:PRECOND_181: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852279069757/36028797018963968, b=3250706127527621/2251799813685248, a=12807111440343045/9007199254740992
+DEBUG:__main__:---------pre-condition 182---------
+DEBUG:__main__:PRECOND_182: (delta >= 1762826616152341296409269583897/81129638414606681695789005144064) & (b + delta >= 12807111440343045/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440343045/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278988673/36028797018963968, b=3174517702657/2199023255552, a=400222232510497/281474976710656
+DEBUG:__main__:---------pre-condition 183---------
+DEBUG:__main__:PRECOND_183: (delta >= 1721510367157646612127286337/79228162514264337593543950336) & (b + delta >= 400222232510497/281474976710656) & (delta >= b**3 - 3) & (b - delta <= 400222232510497/281474976710656) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12525636463812081/576460752303423488, b=101584566485023/70368744177664, a=51228445761343521/36028797018963968
+DEBUG:__main__:---------pre-condition 184---------
+DEBUG:__main__:PRECOND_184: (delta >= 28205225855501148688398804067393/1298074214633706907132624082305024) & (b + delta >= 51228445761343521/36028797018963968) & (delta >= b**3 - 3) & (b - delta <= 51228445761343521/36028797018963968) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278988673/36028797018963968, b=3174517702657/2199023255552, a=400222232510497/281474976710656
+DEBUG:__main__:---------pre-condition 185---------
+DEBUG:__main__:PRECOND_185: (delta >= 1721510367157646612127286337/79228162514264337593543950336) & (b + delta >= 400222232510497/281474976710656) & (delta >= b**3 - 3) & (b - delta <= 400222232510497/281474976710656) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139488447/18014398509481984, b=101584566484993/70368744177664, a=12807111440334881/9007199254740992
+DEBUG:__main__:---------pre-condition 186---------
+DEBUG:__main__:PRECOND_186: (delta >= 1762826615943226780811414996033/81129638414606681695789005144064) & (b + delta >= 12807111440334881/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440334881/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139494087/18014398509481984, b=3250706127520729/2251799813685248, a=12807111440335873/9007199254740992
+DEBUG:__main__:---------pre-condition 187---------
+DEBUG:__main__:PRECOND_187: (delta >= 1762826615968636089909040384001/81129638414606681695789005144064) & (b + delta >= 12807111440335873/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440335873/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=97856534874995/4503599627370496, b=812676531880431/562949953421312, a=3201777860084227/2251799813685248
+DEBUG:__main__:---------pre-condition 188---------
+DEBUG:__main__:PRECOND_188: (delta >= 110176663499696675661908544521/5070602400912917605986812821504) & (b + delta >= 3201777860084227/2251799813685248) & (delta >= b**3 - 3) & (b - delta <= 3201777860084227/2251799813685248) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=100205091710488667/4611686018427387904, b=13002824510082923/9007199254740992, a=102456891522686999/72057594037927936
+DEBUG:__main__:---------pre-condition 189---------
+DEBUG:__main__:PRECOND_189: (delta >= 112820903421995783460924265185809/5192296858534827628530496329220096) & (b + delta >= 102456891522686999/72057594037927936) & (delta >= b**3 - 3) & (b - delta <= 102456891522686999/72057594037927936) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=100205091710488667/4611686018427387904, b=13002824510082923/9007199254740992, a=102456891522686999/72057594037927936
+DEBUG:__main__:---------pre-condition 190---------
+DEBUG:__main__:PRECOND_190: (delta >= 112820903421995783460924265185809/5192296858534827628530496329220096) & (b + delta >= 102456891522686999/72057594037927936) & (delta >= b**3 - 3) & (b - delta <= 102456891522686999/72057594037927936) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=100205091710488667/4611686018427387904, b=13002824510082923/9007199254740992, a=102456891522686999/72057594037927936
+DEBUG:__main__:---------pre-condition 191---------
+DEBUG:__main__:PRECOND_191: (delta >= 112820903421995783460924265185809/5192296858534827628530496329220096) & (b + delta >= 102456891522686999/72057594037927936) & (delta >= b**3 - 3) & (b - delta <= 102456891522686999/72057594037927936) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278976703/36028797018963968, b=203169132969985/140737488355328, a=25614222880669729/18014398509481984
+DEBUG:__main__:---------pre-condition 192---------
+DEBUG:__main__:PRECOND_192: (delta >= 7051306463771216584535535780929/324518553658426726783156020576256) & (b + delta >= 25614222880669729/18014398509481984) & (delta >= b**3 - 3) & (b - delta <= 25614222880669729/18014398509481984) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139494087/18014398509481984, b=3250706127520729/2251799813685248, a=12807111440335873/9007199254740992
+DEBUG:__main__:---------pre-condition 193---------
+DEBUG:__main__:PRECOND_193: (delta >= 1762826615968636089909040384001/81129638414606681695789005144064) & (b + delta >= 12807111440335873/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440335873/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=25051272927622483/1152921504606846976, b=104022596080663411/72057594037927936, a=819655132181496047/576460752303423488
+DEBUG:__main__:---------pre-condition 194---------
+DEBUG:__main__:PRECOND_194: (delta >= 7220537819007820303563692936453921/332306998946228968225951765070086144) & (b + delta >= 819655132181496047/576460752303423488) & (delta >= b**3 - 3) & (b - delta <= 819655132181496047/576460752303423488) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=100205091710488667/4611686018427387904, b=13002824510082923/9007199254740992, a=102456891522686999/72057594037927936
+DEBUG:__main__:---------pre-condition 195---------
+DEBUG:__main__:PRECOND_195: (delta >= 112820903421995783460924265185809/5192296858534827628530496329220096) & (b + delta >= 102456891522686999/72057594037927936) & (delta >= b**3 - 3) & (b - delta <= 102456891522686999/72057594037927936) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139494087/18014398509481984, b=3250706127520729/2251799813685248, a=12807111440335873/9007199254740992
+DEBUG:__main__:---------pre-condition 196---------
+DEBUG:__main__:PRECOND_196: (delta >= 1762826615968636089909040384001/81129638414606681695789005144064) & (b + delta >= 12807111440335873/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440335873/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=195713069749959/9007199254740992, b=1625353063760857/1125899906842624, a=6403555720168449/4503599627370496
+DEBUG:__main__:---------pre-condition 197---------
+DEBUG:__main__:PRECOND_197: (delta >= 440706653998722667090432493569/20282409603651670423947251286016) & (b + delta >= 6403555720168449/4503599627370496) & (delta >= b**3 - 3) & (b - delta <= 6403555720168449/4503599627370496) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704557953215/72057594037927936, b=406338265939969/281474976710656, a=51228445761339425/36028797018963968
+DEBUG:__main__:---------pre-condition 198---------
+DEBUG:__main__:PRECOND_198: (delta >= 28205225855081485260721894720577/1298074214633706907132624082305024) & (b + delta >= 51228445761339425/36028797018963968) & (delta >= b**3 - 3) & (b - delta <= 51228445761339425/36028797018963968) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704557959169/72057594037927936, b=12698070810625/8796093022208, a=50027779063809/35184372088832
+DEBUG:__main__:---------pre-condition 199---------
+DEBUG:__main__:PRECOND_199: (delta >= 26898599486525554695340033/1237940039285380274899124224) & (b + delta >= 50027779063809/35184372088832) & (delta >= b**3 - 3) & (b - delta <= 50027779063809/35184372088832) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704557999713/72057594037927936, b=812676531880429/562949953421312, a=3201777860084225/2251799813685248
+DEBUG:__main__:---------pre-condition 200---------
+DEBUG:__main__:PRECOND_200: (delta >= 110176663499683868550468207617/5070602400912917605986812821504) & (b + delta >= 3201777860084225/2251799813685248) & (delta >= b**3 - 3) & (b - delta <= 3201777860084225/2251799813685248) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=24464133718775/1125899906842624, b=1587258851329/1099511627776, a=800444465021061/562949953421312
+DEBUG:__main__:---------pre-condition 201---------
+DEBUG:__main__:PRECOND_201: (delta >= 6886041468737846006821963033/316912650057057350374175801344) & (b + delta >= 800444465021061/562949953421312) & (delta >= b**3 - 3) & (b - delta <= 800444465021061/562949953421312) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139499911/18014398509481984, b=3250706127521713/2251799813685248, a=12807111440336897/9007199254740992
+DEBUG:__main__:---------pre-condition 202---------
+DEBUG:__main__:PRECOND_202: (delta >= 1762826615994865054138849300481/81129638414606681695789005144064) & (b + delta >= 12807111440336897/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440336897/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139499911/18014398509481984, b=3250706127521713/2251799813685248, a=12807111440336897/9007199254740992
+DEBUG:__main__:---------pre-condition 203---------
+DEBUG:__main__:PRECOND_203: (delta >= 1762826615994865054138849300481/81129638414606681695789005144064) & (b + delta >= 12807111440336897/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440336897/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=200410183418034293/9223372036854775808, b=832180768645058453/576460752303423488, a=3278620528725725239/2305843009213693952
+DEBUG:__main__:---------pre-condition 204---------
+DEBUG:__main__:PRECOND_204: (delta >= 115528605102427133842433024278850513/5316911983139663491615228241121378304) & (b + delta >= 3278620528725725239/2305843009213693952) & (delta >= b**3 - 3) & (b - delta <= 3278620528725725239/2305843009213693952) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12525636463812081/576460752303423488, b=101584566485023/70368744177664, a=51228445761343521/36028797018963968
+DEBUG:__main__:---------pre-condition 205---------
+DEBUG:__main__:PRECOND_205: (delta >= 28205225855501148688398804067393/1298074214633706907132624082305024) & (b + delta >= 51228445761343521/36028797018963968) & (delta >= b**3 - 3) & (b - delta <= 51228445761343521/36028797018963968) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704557959169/72057594037927936, b=12698070810625/8796093022208, a=50027779063809/35184372088832
+DEBUG:__main__:---------pre-condition 206---------
+DEBUG:__main__:PRECOND_206: (delta >= 26898599486525554695340033/1237940039285380274899124224) & (b + delta >= 50027779063809/35184372088832) & (delta >= b**3 - 3) & (b - delta <= 50027779063809/35184372088832) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12525636463812081/576460752303423488, b=101584566485023/70368744177664, a=51228445761343521/36028797018963968
+DEBUG:__main__:---------pre-condition 207---------
+DEBUG:__main__:PRECOND_207: (delta >= 28205225855501148688398804067393/1298074214633706907132624082305024) & (b + delta >= 51228445761343521/36028797018963968) & (delta >= b**3 - 3) & (b - delta <= 51228445761343521/36028797018963968) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704557959169/72057594037927936, b=12698070810625/8796093022208, a=50027779063809/35184372088832
+DEBUG:__main__:---------pre-condition 208---------
+DEBUG:__main__:PRECOND_208: (delta >= 26898599486525554695340033/1237940039285380274899124224) & (b + delta >= 50027779063809/35184372088832) & (delta >= b**3 - 3) & (b - delta <= 50027779063809/35184372088832) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139488263/18014398509481984, b=3250706127519745/2251799813685248, a=12807111440334849/9007199254740992
+DEBUG:__main__:---------pre-condition 209---------
+DEBUG:__main__:PRECOND_209: (delta >= 1762826615942407125679233564673/81129638414606681695789005144064) & (b + delta >= 12807111440334849/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440334849/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139488263/18014398509481984, b=3250706127519745/2251799813685248, a=12807111440334849/9007199254740992
+DEBUG:__main__:---------pre-condition 210---------
+DEBUG:__main__:PRECOND_210: (delta >= 1762826615942407125679233564673/81129638414606681695789005144064) & (b + delta >= 12807111440334849/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440334849/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=50102545854508585/2305843009213693952, b=104022596080632307/72057594037927936, a=409827566090715655/288230376151711744
+DEBUG:__main__:---------pre-condition 211---------
+DEBUG:__main__:PRECOND_211: (delta >= 1805134454725424068744907527035953/83076749736557242056487941267521536) & (b + delta >= 409827566090715655/288230376151711744) & (delta >= b**3 - 3) & (b - delta <= 409827566090715655/288230376151711744) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139488263/18014398509481984, b=3250706127519745/2251799813685248, a=12807111440334849/9007199254740992
+DEBUG:__main__:---------pre-condition 212---------
+DEBUG:__main__:PRECOND_212: (delta >= 1762826615942407125679233564673/81129638414606681695789005144064) & (b + delta >= 12807111440334849/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440334849/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704557953073/72057594037927936, b=1625353063759873/1125899906842624, a=6403555720167425/4503599627370496
+DEBUG:__main__:---------pre-condition 213---------
+DEBUG:__main__:PRECOND_213: (delta >= 440706653985608184975528558593/20282409603651670423947251286016) & (b + delta >= 6403555720167425/4503599627370496) & (delta >= b**3 - 3) & (b - delta <= 6403555720167425/4503599627370496) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139488263/18014398509481984, b=3250706127519745/2251799813685248, a=12807111440334849/9007199254740992
+DEBUG:__main__:---------pre-condition 214---------
+DEBUG:__main__:PRECOND_214: (delta >= 1762826615942407125679233564673/81129638414606681695789005144064) & (b + delta >= 12807111440334849/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440334849/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139494087/18014398509481984, b=3250706127520729/2251799813685248, a=12807111440335873/9007199254740992
+DEBUG:__main__:---------pre-condition 215---------
+DEBUG:__main__:PRECOND_215: (delta >= 1762826615968636089909040384001/81129638414606681695789005144064) & (b + delta >= 12807111440335873/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440335873/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278988209/36028797018963968, b=812676531880183/562949953421312, a=3201777860083969/2251799813685248
+DEBUG:__main__:---------pre-condition 216---------
+DEBUG:__main__:PRECOND_216: (delta >= 110176663498044558286105149953/5070602400912917605986812821504) & (b + delta >= 3201777860083969/2251799813685248) & (delta >= b**3 - 3) & (b - delta <= 3201777860083969/2251799813685248) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=200410183420979805/9223372036854775808, b=208045192161326821/144115188075855872, a=3278620528725984185/2305843009213693952
+DEBUG:__main__:---------pre-condition 217---------
+DEBUG:__main__:PRECOND_217: (delta >= 115528605104125105185295914627357617/5316911983139663491615228241121378304) & (b + delta >= 3278620528725984185/2305843009213693952) & (delta >= b**3 - 3) & (b - delta <= 3278620528725984185/2305843009213693952) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12525636463625689/576460752303423488, b=26005649020158015/18014398509481984, a=102456891522678849/72057594037927936
+DEBUG:__main__:---------pre-condition 218---------
+DEBUG:__main__:PRECOND_218: (delta >= 112820903420325736129104533524609/5192296858534827628530496329220096) & (b + delta >= 102456891522678849/72057594037927936) & (delta >= b**3 - 3) & (b - delta <= 102456891522678849/72057594037927936) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704557953215/72057594037927936, b=406338265939969/281474976710656, a=51228445761339425/36028797018963968
+DEBUG:__main__:---------pre-condition 219---------
+DEBUG:__main__:PRECOND_219: (delta >= 28205225855081485260721894720577/1298074214633706907132624082305024) & (b + delta >= 51228445761339425/36028797018963968) & (delta >= b**3 - 3) & (b - delta <= 51228445761339425/36028797018963968) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704557953215/72057594037927936, b=406338265939969/281474976710656, a=51228445761339425/36028797018963968
+DEBUG:__main__:---------pre-condition 220---------
+DEBUG:__main__:PRECOND_220: (delta >= 28205225855081485260721894720577/1298074214633706907132624082305024) & (b + delta >= 51228445761339425/36028797018963968) & (delta >= b**3 - 3) & (b - delta <= 51228445761339425/36028797018963968) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=3131409115912193/144115188075855872, b=25396141621249/17592186044416, a=100055558127617/70368744177664
+DEBUG:__main__:---------pre-condition 221---------
+DEBUG:__main__:PRECOND_221: (delta >= 107594397945902107665104897/4951760157141521099596496896) & (b + delta >= 100055558127617/70368744177664) & (delta >= b**3 - 3) & (b - delta <= 100055558127617/70368744177664) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278976703/36028797018963968, b=203169132969985/140737488355328, a=25614222880669729/18014398509481984
+DEBUG:__main__:---------pre-condition 222---------
+DEBUG:__main__:PRECOND_222: (delta >= 7051306463771216584535535780929/324518553658426726783156020576256) & (b + delta >= 25614222880669729/18014398509481984) & (delta >= b**3 - 3) & (b - delta <= 25614222880669729/18014398509481984) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=200410183418034293/9223372036854775808, b=832180768645058453/576460752303423488, a=3278620528725725239/2305843009213693952
+DEBUG:__main__:---------pre-condition 223---------
+DEBUG:__main__:PRECOND_223: (delta >= 115528605102427133842433024278850513/5316911983139663491615228241121378304) & (b + delta >= 3278620528725725239/2305843009213693952) & (delta >= b**3 - 3) & (b - delta <= 3278620528725725239/2305843009213693952) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=200410183418034293/9223372036854775808, b=832180768645058453/576460752303423488, a=3278620528725725239/2305843009213693952
+DEBUG:__main__:---------pre-condition 224---------
+DEBUG:__main__:PRECOND_224: (delta >= 115528605102427133842433024278850513/5316911983139663491615228241121378304) & (b + delta >= 3278620528725725239/2305843009213693952) & (delta >= b**3 - 3) & (b - delta <= 3278620528725725239/2305843009213693952) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=195713069750191/9007199254740992, b=1587258851329/1099511627776, a=3201777860084245/2251799813685248
+DEBUG:__main__:---------pre-condition 225---------
+DEBUG:__main__:PRECOND_225: (delta >= 110176663499811939664871577017/5070602400912917605986812821504) & (b + delta >= 3201777860084245/2251799813685248) & (delta >= b**3 - 3) & (b - delta <= 3201777860084245/2251799813685248) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139500381/18014398509481984, b=1587258851329/1099511627776, a=6403555720168489/4503599627370496
+DEBUG:__main__:---------pre-condition 226---------
+DEBUG:__main__:PRECOND_226: (delta >= 440706653999234951548045971089/20282409603651670423947251286016) & (b + delta >= 6403555720168489/4503599627370496) & (delta >= b**3 - 3) & (b - delta <= 6403555720168489/4503599627370496) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=382252089363/17592186044416, b=3174517702659/2199023255552, a=12506944765955/8796093022208
+DEBUG:__main__:---------pre-condition 227---------
+DEBUG:__main__:PRECOND_227: (delta >= 1681162467976635364671497/77371252455336267181195264) & (b + delta >= 12506944765955/8796093022208) & (delta >= b**3 - 3) & (b - delta <= 12506944765955/8796093022208) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139494087/18014398509481984, b=3250706127520729/2251799813685248, a=12807111440335873/9007199254740992
+DEBUG:__main__:---------pre-condition 228---------
+DEBUG:__main__:PRECOND_228: (delta >= 1762826615968636089909040384001/81129638414606681695789005144064) & (b + delta >= 12807111440335873/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440335873/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278982657/36028797018963968, b=6349035405313/4398046511104, a=25013889531905/17592186044416
+DEBUG:__main__:---------pre-condition 229---------
+DEBUG:__main__:PRECOND_229: (delta >= 6724649871656402563366913/309485009821345068724781056) & (b + delta >= 25013889531905/17592186044416) & (delta >= b**3 - 3) & (b - delta <= 25013889531905/17592186044416) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278982657/36028797018963968, b=6349035405313/4398046511104, a=25013889531905/17592186044416
+DEBUG:__main__:---------pre-condition 230---------
+DEBUG:__main__:PRECOND_230: (delta >= 6724649871656402563366913/309485009821345068724781056) & (b + delta >= 25013889531905/17592186044416) & (delta >= b**3 - 3) & (b - delta <= 25013889531905/17592186044416) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278976703/36028797018963968, b=203169132969985/140737488355328, a=25614222880669729/18014398509481984
+DEBUG:__main__:---------pre-condition 231---------
+DEBUG:__main__:PRECOND_231: (delta >= 7051306463771216584535535780929/324518553658426726783156020576256) & (b + delta >= 25614222880669729/18014398509481984) & (delta >= b**3 - 3) & (b - delta <= 25614222880669729/18014398509481984) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278976561/36028797018963968, b=812676531879937/562949953421312, a=3201777860083713/2251799813685248
+DEBUG:__main__:---------pre-condition 232---------
+DEBUG:__main__:PRECOND_232: (delta >= 110176663496405248021742223361/5070602400912917605986812821504) & (b + delta >= 3201777860083713/2251799813685248) & (delta >= b**3 - 3) & (b - delta <= 3201777860083713/2251799813685248) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278976561/36028797018963968, b=812676531879937/562949953421312, a=3201777860083713/2251799813685248
+DEBUG:__main__:---------pre-condition 233---------
+DEBUG:__main__:PRECOND_233: (delta >= 110176663496405248021742223361/5070602400912917605986812821504) & (b + delta >= 3201777860083713/2251799813685248) & (delta >= b**3 - 3) & (b - delta <= 3201777860083713/2251799813685248) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=155/8192, b=737/512, a=5819/4096
+DEBUG:__main__:---------pre-condition 234---------
+DEBUG:__main__:PRECOND_234: (delta >= 306329/16777216) & (b + delta >= 5819/4096) & (delta >= b**3 - 3) & (b - delta <= 5819/4096) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12525636463811281/576460752303423488, b=13002824510082927/9007199254740992, a=51228445761343503/36028797018963968
+DEBUG:__main__:---------pre-condition 235---------
+DEBUG:__main__:PRECOND_235: (delta >= 28205225855499304464351395700961/1298074214633706907132624082305024) & (b + delta >= 51228445761343503/36028797018963968) & (delta >= b**3 - 3) & (b - delta <= 51228445761343503/36028797018963968) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12525636463625689/576460752303423488, b=26005649020158015/18014398509481984, a=102456891522678849/72057594037927936
+DEBUG:__main__:---------pre-condition 236---------
+DEBUG:__main__:PRECOND_236: (delta >= 112820903420325736129104533524609/5192296858534827628530496329220096) & (b + delta >= 102456891522678849/72057594037927936) & (delta >= b**3 - 3) & (b - delta <= 102456891522678849/72057594037927936) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=50102545854508585/2305843009213693952, b=104022596080632307/72057594037927936, a=409827566090715655/288230376151711744
+DEBUG:__main__:---------pre-condition 237---------
+DEBUG:__main__:PRECOND_237: (delta >= 1805134454725424068744907527035953/83076749736557242056487941267521536) & (b + delta >= 409827566090715655/288230376151711744) & (delta >= b**3 - 3) & (b - delta <= 409827566090715655/288230376151711744) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=12525636463811281/576460752303423488, b=13002824510082927/9007199254740992, a=51228445761343503/36028797018963968
+DEBUG:__main__:---------pre-condition 238---------
+DEBUG:__main__:PRECOND_238: (delta >= 28205225855499304464351395700961/1298074214633706907132624082305024) & (b + delta >= 51228445761343503/36028797018963968) & (delta >= b**3 - 3) & (b - delta <= 51228445761343503/36028797018963968) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=50102545854508585/2305843009213693952, b=104022596080632307/72057594037927936, a=409827566090715655/288230376151711744
+DEBUG:__main__:---------pre-condition 239---------
+DEBUG:__main__:PRECOND_239: (delta >= 1805134454725424068744907527035953/83076749736557242056487941267521536) & (b + delta >= 409827566090715655/288230376151711744) & (delta >= b**3 - 3) & (b - delta <= 409827566090715655/288230376151711744) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139488447/18014398509481984, b=101584566484993/70368744177664, a=12807111440334881/9007199254740992
+DEBUG:__main__:---------pre-condition 240---------
+DEBUG:__main__:PRECOND_240: (delta >= 1762826615943226780811414996033/81129638414606681695789005144064) & (b + delta >= 12807111440334881/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440334881/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=100205091710488667/4611686018427387904, b=13002824510082923/9007199254740992, a=102456891522686999/72057594037927936
+DEBUG:__main__:---------pre-condition 241---------
+DEBUG:__main__:PRECOND_241: (delta >= 112820903421995783460924265185809/5192296858534827628530496329220096) & (b + delta >= 102456891522686999/72057594037927936) & (delta >= b**3 - 3) & (b - delta <= 102456891522686999/72057594037927936) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=3131409115912193/144115188075855872, b=25396141621249/17592186044416, a=100055558127617/70368744177664
+DEBUG:__main__:---------pre-condition 242---------
+DEBUG:__main__:PRECOND_242: (delta >= 107594397945902107665104897/4951760157141521099596496896) & (b + delta >= 100055558127617/70368744177664) & (delta >= b**3 - 3) & (b - delta <= 100055558127617/70368744177664) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=50102545854508585/2305843009213693952, b=104022596080632307/72057594037927936, a=409827566090715655/288230376151711744
+DEBUG:__main__:---------pre-condition 243---------
+DEBUG:__main__:PRECOND_243: (delta >= 1805134454725424068744907527035953/83076749736557242056487941267521536) & (b + delta >= 409827566090715655/288230376151711744) & (delta >= b**3 - 3) & (b - delta <= 409827566090715655/288230376151711744) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=3131409115907545/144115188075855872, b=6501412255039551/4503599627370496, a=25614222880669761/18014398509481984
+DEBUG:__main__:---------pre-condition 244---------
+DEBUG:__main__:PRECOND_244: (delta >= 7051306463772855894799898644609/324518553658426726783156020576256) & (b + delta >= 25614222880669761/18014398509481984) & (delta >= b**3 - 3) & (b - delta <= 25614222880669761/18014398509481984) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=25051272927260201/1152921504606846976, b=52011298040316403/36028797018963968, a=204913783045358087/144115188075855872
+DEBUG:__main__:---------pre-condition 245---------
+DEBUG:__main__:PRECOND_245: (delta >= 451283613681462367439627422538801/20769187434139310514121985316880384) & (b + delta >= 204913783045358087/144115188075855872) & (delta >= b**3 - 3) & (b - delta <= 204913783045358087/144115188075855872) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278988673/36028797018963968, b=3174517702657/2199023255552, a=400222232510497/281474976710656
+DEBUG:__main__:---------pre-condition 246---------
+DEBUG:__main__:PRECOND_246: (delta >= 1721510367157646612127286337/79228162514264337593543950336) & (b + delta >= 400222232510497/281474976710656) & (delta >= b**3 - 3) & (b - delta <= 400222232510497/281474976710656) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704558139549/72057594037927936, b=6501412255055245/4503599627370496, a=25614222880686093/18014398509481984
+DEBUG:__main__:---------pre-condition 247---------
+DEBUG:__main__:PRECOND_247: (delta >= 7051306464609518870974362452137/324518553658426726783156020576256) & (b + delta >= 25614222880686093/18014398509481984) & (delta >= b**3 - 3) & (b - delta <= 25614222880686093/18014398509481984) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278976703/36028797018963968, b=203169132969985/140737488355328, a=25614222880669729/18014398509481984
+DEBUG:__main__:---------pre-condition 248---------
+DEBUG:__main__:PRECOND_248: (delta >= 7051306463771216584535535780929/324518553658426726783156020576256) & (b + delta >= 25614222880669729/18014398509481984) & (delta >= b**3 - 3) & (b - delta <= 25614222880669729/18014398509481984) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=782852278976561/36028797018963968, b=812676531879937/562949953421312, a=3201777860083713/2251799813685248
+DEBUG:__main__:---------pre-condition 249---------
+DEBUG:__main__:PRECOND_249: (delta >= 110176663496405248021742223361/5070602400912917605986812821504) & (b + delta >= 3201777860083713/2251799813685248) & (delta >= b**3 - 3) & (b - delta <= 3201777860083713/2251799813685248) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704557953031/72057594037927936, b=13002824510078977/9007199254740992, a=51228445761339393/36028797018963968
+DEBUG:__main__:---------pre-condition 250---------
+DEBUG:__main__:PRECOND_250: (delta >= 28205225855078206640193168998401/1298074214633706907132624082305024) & (b + delta >= 51228445761339393/36028797018963968) & (delta >= b**3 - 3) & (b - delta <= 51228445761339393/36028797018963968) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139500367/18014398509481984, b=1625353063760895/1125899906842624, a=12807111440336977/9007199254740992
+DEBUG:__main__:---------pre-condition 251---------
+DEBUG:__main__:PRECOND_251: (delta >= 1762826615996914191969303210401/81129638414606681695789005144064) & (b + delta >= 12807111440336977/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440336977/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139499911/18014398509481984, b=3250706127521713/2251799813685248, a=12807111440336897/9007199254740992
+DEBUG:__main__:---------pre-condition 252---------
+DEBUG:__main__:PRECOND_252: (delta >= 1762826615994865054138849300481/81129638414606681695789005144064) & (b + delta >= 12807111440336897/9007199254740992) & (delta >= b**3 - 3) & (b - delta <= 12807111440336897/9007199254740992) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704557953215/72057594037927936, b=406338265939969/281474976710656, a=51228445761339425/36028797018963968
+DEBUG:__main__:---------pre-condition 253---------
+DEBUG:__main__:PRECOND_253: (delta >= 28205225855081485260721894720577/1298074214633706907132624082305024) & (b + delta >= 51228445761339425/36028797018963968) & (delta >= b**3 - 3) & (b - delta <= 51228445761339425/36028797018963968) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=391426139488641/18014398509481984, b=50792283242497/35184372088832, a=200111116255233/140737488355328
+DEBUG:__main__:---------pre-condition 254---------
+DEBUG:__main__:PRECOND_254: (delta >= 430377591783208208427909121/19807040628566084398385987584) & (b + delta >= 200111116255233/140737488355328) & (delta >= b**3 - 3) & (b - delta <= 200111116255233/140737488355328) & (delta >= 3 - b**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1565704557953031/72057594037927936, b=13002824510078977/9007199254740992, a=51228445761339393/36028797018963968
+DEBUG:__main__:---------pre-condition 255---------
+DEBUG:__main__:PRECOND_255: (delta >= 28205225855078206640193168998401/1298074214633706907132624082305024) & (b + delta >= 51228445761339393/36028797018963968) & (delta >= b**3 - 3) & (b - delta <= 51228445761339393/36028797018963968) & (delta >= 3 - b**3)

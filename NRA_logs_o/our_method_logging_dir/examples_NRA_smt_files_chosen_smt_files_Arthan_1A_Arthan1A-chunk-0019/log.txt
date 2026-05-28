@@ -1,0 +1,57 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_Arthan_1A_Arthan1A-chunk-0019.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoS', 'pi']
+DEBUG:__main__:op_vars: ['skoCOSS', 'skoSINS']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(Not(skoSINS*
+            (-3 +
+             skoCOSS*-2 +
+             skoS*(-4 + skoS*(2 + skoS)) +
+             skoSINS*(1 + skoS)) <=
+            2 +
+            skoCOSS*(-2 + skoCOSS*-2) +
+            skoS*
+            (skoCOSS*(-10 + skoCOSS*-2) +
+             skoS*(-6 + skoCOSS*-6 + skoS*-2))),
+        And(Not(pi*(1/2) <= skoS),
+            And(Not(pi <= 15707963/5000000),
+                And(Not(31415927/10000000 <= pi),
+                    And(0 <= skoS,
+                        And(0 <= skoCOSS, skoSINS <= skoS)))))))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (0 <= skoCOSS) & (0 <= skoS) & (skoSINS <= skoS) & (31415927/10000000 > pi) & (pi > 15707963/5000000) & (pi/2 > skoS) & (skoSINS*(-2*skoCOSS + skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) - 3) > skoCOSS*(-2*skoCOSS - 2) + skoS*(skoCOSS*(-2*skoCOSS - 10) + skoS*(-6*skoCOSS - 2*skoS - 6)) + 2), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['pi', 'skoCOSS', 'skoS', 'skoSINS', 'delta']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoCOSS': skoCOSS, 'skoS': skoS, 'skoSINS': skoSINS, 'pi': pi}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    0 <= skoCOSS,
+    0 <= skoS,
+    skoSINS <= skoS,
+    31415927/10000000 > pi,
+    15707963/5000000 < pi,
+    1/2*pi > skoS,
+    skoSINS*
+    (-3 +
+     -2*skoCOSS +
+     skoS*(-4 + skoS*(2 + skoS)) +
+     skoSINS*(1 + skoS)) >
+    2 +
+    skoCOSS*(-2 + -2*skoCOSS) +
+    skoS*
+    (skoCOSS*(-10 + -2*skoCOSS) +
+     skoS*(-6 + -6*skoCOSS + -2*skoS)))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoCOSS=1, skoS=1, skoSINS=0, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1, skoSINS: 0}
+DEBUG:__main__:PRECOND_0: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS >= 0 /\ 2 skoS - pi < 0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1, skoSINS: lambda_var_0}
+DEBUG:__main__:PRECOND_1: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS >= 0 /\ 2 skoS - pi < 0
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(delta >= 0) & (skoS >= 0) & (5000000*pi - 15707963 > 0) & (10000000*pi - 31415927 < 0) & (-pi + 2*skoS < 0) {'delta': 0, 'skoCOSS': 1, 'skoS': 1, 'skoSINS': 0, 'pi': 26353589/8388608} {skoCOSS: lambda_var_0 + 1, skoSINS: 0}
+DEBUG:__main__:(delta >= 0) & (skoS >= 0) & (5000000*pi - 15707963 > 0) & (10000000*pi - 31415927 < 0) & (-pi + 2*skoS < 0) {'delta': 0, 'skoCOSS': 1, 'skoS': 1, 'skoSINS': 0, 'pi': 26353589/8388608} {skoCOSS: 1, skoSINS: lambda_var_0}

@@ -1,0 +1,20 @@
+DEBUG:__main__:Starting Log File: dm_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_4_input10.smt
+DEBUG:__main__:ip_vars: ['r']
+DEBUG:__main__:op_vars: ['y', 'x']
+DEBUG:__main__:post_condition_smt:And(And(And(0 >= 0 + 1*y*y + 1*x*x + -1*r,
+            0 >= 0 + 1*y*y + 1*x*x + -1*r)))
+DEBUG:__main__:POST_CONDITION_SYMPY: 0 >= -r + x**2 + y**2, {}
+DEBUG:__main__:vars sympy:['x', 'y', 'r']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y, 'r': r}
+DEBUG:__main__:z3 post_condition:0 >= x**2 + y**2 + -1*r
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=0, y=0, r=0
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:PRECOND_0: r - x**2 >= 0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:PRECOND_1: r >= 0
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:r - x**2 >= 0 {'x': 0, 'y': 0, 'r': 0}
+DEBUG:__main__:r >= 0 {'x': 0, 'y': 0, 'r': 0}

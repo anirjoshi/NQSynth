@@ -1,0 +1,35 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_asin_8_asin-8-chunk-0047.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoX', 'skoS2', 'pi']
+DEBUG:__main__:op_vars: ['skoSP', 'skoSM']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(Not(skoX*(-4 + skoSM*-1 + skoSP*-1) <= 0),
+        And(Not(pi <= 15707963/5000000),
+            And(Not(31415927/10000000 <= pi),
+                And(Not(skoX <= 0), Not(1 <= skoX))))))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (1 > skoX) & (31415927/10000000 > pi) & (pi > 15707963/5000000) & (skoX > 0) & (skoX*(-skoSM - skoSP - 4) > 0), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['skoSM', 'pi', 'delta', 'skoSP', 'skoX']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoX': skoX, 'pi': pi, 'skoSM': skoSM, 'skoSP': skoSP}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    1 > skoX,
+    31415927/10000000 > pi,
+    15707963/5000000 < pi,
+    0 < skoX,
+    0 < skoX*(-4 + -1*skoSM + -1*skoSP))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=0, skoX=1/2, pi=26353589/8388608, skoSM=-5, skoSP=0
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0, skoSM: -5}
+DEBUG:__main__:PRECOND_0: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoX > 0 /\ skoX - 1 < 0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 0, skoSM: lambda_var_0 - 5}
+DEBUG:__main__:PRECOND_1: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoX > 0 /\ skoX - 1 < 0
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(delta >= 0) & (skoX > 0) & (skoX - 1 < 0) & (5000000*pi - 15707963 > 0) & (10000000*pi - 31415927 < 0) {'delta': 0, 'skoX': 1/2, 'pi': 26353589/8388608, 'skoSM': -5, 'skoSP': 0} {skoSP: lambda_var_0, skoSM: -5}
+DEBUG:__main__:(delta >= 0) & (skoX > 0) & (skoX - 1 < 0) & (5000000*pi - 15707963 > 0) & (10000000*pi - 31415927 < 0) {'delta': 0, 'skoX': 1/2, 'pi': 26353589/8388608, 'skoSM': -5, 'skoSP': 0} {skoSP: 0, skoSM: lambda_var_0 - 5}

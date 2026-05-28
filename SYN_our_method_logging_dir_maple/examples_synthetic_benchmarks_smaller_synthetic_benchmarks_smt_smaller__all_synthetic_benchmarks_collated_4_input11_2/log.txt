@@ -1,0 +1,44 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt
+DEBUG:__main__:ip_vars: ['c', 'd']
+DEBUG:__main__:op_vars: ['x', 'y']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + -1*x*x + 1*y*y + -1*c,
+            0 > 0 + -1*y + 1*x*x + -1*d)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > -d + x**2 - y) & (0 > -c - x**2 + y**2), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['d', 'y', 'x', 'c']
+DEBUG:__main__:z3 vars:{'x': x, 'd': d, 'y': y, 'c': c}
+DEBUG:__main__:z3 post_condition:And(0 > x**2 + -1*d + -1*y, 0 > y**2 + -1*c + -1*x**2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=0, d=1, y=0, c=1
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0, y: 0}
+DEBUG:__main__:PRECOND_0: Or(And(c < 0, Eq(c, 0), Or(-d - c < 0, And(Eq(d + c, 0), c < 0))), And(c < 0, Or(c < 0, Eq(c, 0)), -d - c < 0), And(-d < 0, Or(-d - c < 0, And(Eq(d + c, 0), Eq(d, 0)))), And(Eq(c, 0), -d - c < 0))
+DEBUG:__main__:PRECOND_SYMPY_0: (Eq(c, 0) & (-c - d < 0)) | ((c < 0) & (Eq(c, 0) | (c < 0)) & (-c - d < 0)) | ((-d < 0) & ((Eq(d, 0) & Eq(c + d, 0)) | (-c - d < 0))) | (Eq(c, 0) & (c < 0) & (((c < 0) & Eq(c + d, 0)) | (-c - d < 0)))
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 0, y: lambda_var_0}
+DEBUG:__main__:PRECOND_1: Or(d ** 2 - c < 0, And(Eq(-d ** 2 + c, 0), -d < 0), And(-c < 0, Or(And(-d < 0, -d ** 2 + c < 0), And(-d <= 0, Eq(-d ** 2 + c, 0)))))
+DEBUG:__main__:PRECOND_SYMPY_1: (-c + d**2 < 0) | ((-d < 0) & Eq(c - d**2, 0)) | ((-c < 0) & (((-d <= 0) & Eq(c - d**2, 0)) | ((-d < 0) & (c - d**2 < 0))))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-9/8, d=1, y=1/2, c=-129/128
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 9/8, y: 1/2}
+DEBUG:__main__:PRECOND_2: Or(And(4 * c < 1, Eq(-1 + 4 * c, 0), Or(-4 * d - 4 * c < 1, And(Eq(4 * d + 1 + 4 * c, 0), 4 * c < 1))), And(4 * c < 1, Or(4 * c < 1, Eq(-1 + 4 * c, 0)), -4 * d - 4 * c < 1), And(Eq(-1 + 4 * c, 0), -4 * d - 4 * c < 1), And(-2 * d < 1, Or(-4 * d - 4 * c < 1, And(Eq(4 * d + 1 + 4 * c, 0), Eq(1 + 2 * d, 0)))))
+DEBUG:__main__:PRECOND_SYMPY_2: (Eq(4*c - 1, 0) & (-4*c - 4*d < 1)) | ((4*c < 1) & (-4*c - 4*d < 1) & ((4*c < 1) | Eq(4*c - 1, 0))) | ((-2*d < 1) & ((-4*c - 4*d < 1) | (Eq(2*d + 1, 0) & Eq(4*c + 4*d + 1, 0)))) | ((4*c < 1) & Eq(4*c - 1, 0) & ((-4*c - 4*d < 1) | ((4*c < 1) & Eq(4*c + 4*d + 1, 0))))
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -9/8, y: lambda_var_0 + 1/2}
+DEBUG:__main__:PRECOND_3: Or(4096 * d ** 2 - 4096 * c - 10368 * d < -1377, And(Eq(-4096 * d ** 2 + 4096 * c + 10368 * d - 1377, 0), -64 * d < -81), And(-64 * c < 81, Or(And(-64 * d < -81, -4096 * d ** 2 + 4096 * c + 10368 * d < 1377), And(-64 * d <= -81, Eq(-4096 * d ** 2 + 4096 * c + 10368 * d - 1377, 0)))))
+DEBUG:__main__:PRECOND_SYMPY_3: (-4096*c + 4096*d**2 - 10368*d < -1377) | ((-64*d < -81) & Eq(4096*c - 4096*d**2 + 10368*d - 1377, 0)) | ((-64*c < 81) & (((-64*d < -81) & (4096*c - 4096*d**2 + 10368*d < 1377)) | ((-64*d <= -81) & Eq(4096*c - 4096*d**2 + 10368*d - 1377, 0))))
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(Eq(c, 0) & (-c - d < 0)) | ((c < 0) & (Eq(c, 0) | (c < 0)) & (-c - d < 0)) | ((-d < 0) & ((Eq(d, 0) & Eq(c + d, 0)) | (-c - d < 0))) | (Eq(c, 0) & (c < 0) & (((c < 0) & Eq(c + d, 0)) | (-c - d < 0))) {'x': 0, 'd': 1, 'y': 0, 'c': 1} {x: lambda_var_0, y: 0}
+DEBUG:__main__:(-c + d**2 < 0) | ((-d < 0) & Eq(c - d**2, 0)) | ((-c < 0) & (((-d <= 0) & Eq(c - d**2, 0)) | ((-d < 0) & (c - d**2 < 0)))) {'x': 0, 'd': 1, 'y': 0, 'c': 1} {x: 0, y: lambda_var_0}
+DEBUG:__main__:(Eq(4*c - 1, 0) & (-4*c - 4*d < 1)) | ((4*c < 1) & (-4*c - 4*d < 1) & ((4*c < 1) | Eq(4*c - 1, 0))) | ((-2*d < 1) & ((-4*c - 4*d < 1) | (Eq(2*d + 1, 0) & Eq(4*c + 4*d + 1, 0)))) | ((4*c < 1) & Eq(4*c - 1, 0) & ((-4*c - 4*d < 1) | ((4*c < 1) & Eq(4*c + 4*d + 1, 0)))) {'x': -9/8, 'd': 1, 'y': 1/2, 'c': -129/128} {x: lambda_var_0 - 9/8, y: 1/2}
+DEBUG:__main__:(-4096*c + 4096*d**2 - 10368*d < -1377) | ((-64*d < -81) & Eq(4096*c - 4096*d**2 + 10368*d - 1377, 0)) | ((-64*c < 81) & (((-64*d < -81) & (4096*c - 4096*d**2 + 10368*d < 1377)) | ((-64*d <= -81) & Eq(4096*c - 4096*d**2 + 10368*d - 1377, 0)))) {'x': -9/8, 'd': 1, 'y': 1/2, 'c': -129/128} {x: -9/8, y: lambda_var_0 + 1/2}

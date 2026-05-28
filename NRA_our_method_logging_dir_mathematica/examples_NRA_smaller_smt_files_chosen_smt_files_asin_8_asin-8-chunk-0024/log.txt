@@ -1,0 +1,986 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA_smaller/smt_files/chosen_smt_files_asin_8_asin-8-chunk-0024.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoX', 'skoS2', 'pi']
+DEBUG:__main__:op_vars: ['skoSP', 'skoSM']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(And(skoX - (1 + skoSM*skoSM*-1) <= delta,
+            1 + skoSM*skoSM*-1 - skoX <= delta),
+        And(And(-1 + skoSP*skoSP - skoX <= delta,
+                skoX - (-1 + skoSP*skoSP) <= delta),
+            And(And(skoS2*skoS2 - 2 <= delta,
+                    2 - skoS2*skoS2 <= delta),
+                And(Not(pi <= 15707963/5000000),
+                    And(Not(31415927/10000000 <= pi),
+                        And(0 <= skoSP,
+                            And(0 <= skoSM,
+                                And(0 <= skoS2,
+                                    And(Not(skoX <= 0),
+                                        Not(1 <= skoX)))))))))))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (0 <= skoS2) & (0 <= skoSM) & (0 <= skoSP) & (1 > skoX) & (31415927/10000000 > pi) & (pi > 15707963/5000000) & (skoX > 0) & (skoS2**2 - 2 <= delta) & (skoSM**2 + skoX - 1 <= delta) & (2 - skoS2**2 <= delta) & (-skoSP**2 + skoX + 1 <= delta) & (skoSP**2 - skoX - 1 <= delta) & (-skoSM**2 - skoX + 1 <= delta), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['pi', 'skoS2', 'skoSM', 'skoSP', 'skoX', 'delta']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoS2': skoS2, 'skoSM': skoSM, 'skoSP': skoSP, 'skoX': skoX, 'pi': pi}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    0 <= skoS2,
+    0 <= skoSM,
+    0 <= skoSP,
+    1 > skoX,
+    31415927/10000000 > pi,
+    15707963/5000000 < pi,
+    0 < skoX,
+    -2 + skoS2**2 <= delta,
+    -1 + skoX + skoSM**2 <= delta,
+    2 + -1*skoS2**2 <= delta,
+    1 + skoX + -1*skoSP**2 <= delta,
+    -1 + skoSP**2 + -1*skoX <= delta,
+    1 + -1*skoX + -1*skoSM**2 <= delta)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=2, skoS2=1, skoSM=1, skoSP=1, skoX=1/2, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 1, skoSM: 1}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000107sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.057591sec
+DEBUG:__main__:PRECOND_0: And(delta > 0, pi > 15707963 / 5000000, skoX > 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= 0, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_0: (skoS2 >= 0) & (delta > 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoS2**2 >= 2) & (delta - skoX >= 0) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 1, skoSM: lambda_var_0 + 1}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000047sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004789sec
+DEBUG:__main__:PRECOND_1: And(delta > 0, pi > 15707963 / 5000000, skoX > 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= 0, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_1: (skoS2 >= 0) & (delta > 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoS2**2 >= 2) & (delta - skoX >= 0) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2, skoS2=3/2, skoSM=1/2, skoSP=3/2, skoX=7/8, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3/2, skoSM: 1/2}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000043sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004956sec
+DEBUG:__main__:PRECOND_2: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -3 / 4, delta + skoX >= 3 / 4, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_2: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 3/4) & (delta + skoS2**2 >= 2) & (delta - skoX >= -3/4) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3/2, skoSM: lambda_var_0 + 1/2}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000044sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004858sec
+DEBUG:__main__:PRECOND_3: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta + skoX >= 5 / 4, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_3: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 5/4) & (delta + skoS2**2 >= 2) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/8, skoS2=11/8, skoSM=1/4, skoSP=11/8, skoX=15/16, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 11/8, skoSM: 1/4}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000047sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004911sec
+DEBUG:__main__:PRECOND_4: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -15 / 16, delta + skoX >= 15 / 16, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_4: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 15/16) & (delta + skoS2**2 >= 2) & (delta - skoX >= -15/16) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 11/8, skoSM: lambda_var_0 + 1/4}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000050sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004879sec
+DEBUG:__main__:PRECOND_5: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -57 / 64, delta + skoX >= 57 / 64, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_5: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 57/64) & (delta + skoS2**2 >= 2) & (delta - skoX >= -57/64) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=47/2048, skoS2=45/32, skoSM=5/16, skoSP=89/64, skoX=117/128, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 89/64, skoSM: 5/16}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000043sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005035sec
+DEBUG:__main__:PRECOND_6: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -231 / 256, delta + skoX >= 231 / 256, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_6: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 231/256) & (delta + skoS2**2 >= 2) & (delta - skoX >= -231/256) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 89/64, skoSM: lambda_var_0 + 5/16}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000053sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004906sec
+DEBUG:__main__:PRECOND_7: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -3825 / 4096, delta + skoX >= 3825 / 4096, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_7: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 3825/4096) & (delta + skoS2**2 >= 2) & (delta - skoX >= -3825/4096) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/1024, skoS2=181/128, skoSM=65/256, skoSP=1425/1024, skoX=1917/2048, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 1425/1024, skoSM: 65/256}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000041sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005048sec
+DEBUG:__main__:PRECOND_8: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -61311 / 65536, delta + skoX >= 61311 / 65536, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_8: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 61311/65536) & (delta + skoS2**2 >= 2) & (delta - skoX >= -61311/65536) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 1425/1024, skoSM: lambda_var_0 + 65/256}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000047sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005061sec
+DEBUG:__main__:PRECOND_9: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -982049 / 1048576, delta + skoX >= 982049 / 1048576, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_9: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 982049/1048576) & (delta + skoS2**2 >= 2) & (delta - skoX >= -982049/1048576) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=15/32768, skoS2=181/128, skoSM=257/1024, skoSP=1425/1024, skoX=270075515031781375/288230376151711744, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 1425/1024, skoSM: 257/1024}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000049sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005024sec
+DEBUG:__main__:PRECOND_10: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -982527 / 1048576, delta + skoX >= 982527 / 1048576, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_10: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 982527/1048576) & (delta + skoS2**2 >= 2) & (delta - skoX >= -982527/1048576) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 1425/1024, skoSM: lambda_var_0 + 257/1024}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000059sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004978sec
+DEBUG:__main__:PRECOND_11: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -982049 / 1048576, delta + skoX >= 982049 / 1048576, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_11: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 982049/1048576) & (delta + skoS2**2 >= 2) & (delta - skoX >= -982049/1048576) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/4096, skoS2=11585/8192, skoSM=513/2048, skoSP=5701/4096, skoX=1965567/2097152, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 5701/4096, skoSM: 513/2048}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000051sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005182sec
+DEBUG:__main__:PRECOND_12: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -3931135 / 4194304, delta + skoX >= 3931135 / 4194304, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_12: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 3931135/4194304) & (delta + skoS2**2 >= 2) & (delta - skoX >= -3931135/4194304) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 5701/4096, skoSM: lambda_var_0 + 513/2048}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000051sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004954sec
+DEBUG:__main__:PRECOND_13: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -15724185 / 16777216, delta + skoX >= 15724185 / 16777216, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_13: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 15724185/16777216) & (delta + skoS2**2 >= 2) & (delta - skoX >= -15724185/16777216) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/8192, skoS2=11585/8192, skoSM=1025/4096, skoSP=22805/16384, skoX=7863295/8388608, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 22805/16384, skoSM: 1025/4096}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004928sec
+DEBUG:__main__:PRECOND_14: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -15726591 / 16777216, delta + skoX >= 15726591 / 16777216, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_14: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 15726591/16777216) & (delta + skoS2**2 >= 2) & (delta - skoX >= -15726591/16777216) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 22805/16384, skoSM: lambda_var_0 + 1025/4096}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000046sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005039sec
+DEBUG:__main__:PRECOND_15: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -251632569 / 268435456, delta + skoX >= 251632569 / 268435456, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_15: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 251632569/268435456) & (delta + skoS2**2 >= 2) & (delta - skoX >= -251632569/268435456) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/32768, skoS2=46341/32768, skoSM=2049/8192, skoSP=45611/32768, skoX=122875/131072, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 45611/32768, skoSM: 2049/8192}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000051sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005279sec
+DEBUG:__main__:PRECOND_16: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -62910463 / 67108864, delta + skoX >= 62910463 / 67108864, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_16: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 62910463/67108864) & (delta + skoS2**2 >= 2) & (delta - skoX >= -62910463/67108864) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 45611/32768, skoSM: lambda_var_0 + 2049/8192}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000044sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005079sec
+DEBUG:__main__:PRECOND_17: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -1006621497 / 1073741824, delta + skoX >= 1006621497 / 1073741824, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_17: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 1006621497/1073741824) & (delta + skoS2**2 >= 2) & (delta - skoX >= -1006621497/1073741824) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=5/1048576, skoS2=46341/32768, skoSM=16385/65536, skoSP=364889/262144, skoX=31457119/33554432, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 364889/262144, skoSM: 16385/65536}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000053sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005108sec
+DEBUG:__main__:PRECOND_18: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4026499071 / 4294967296, delta + skoX >= 4026499071 / 4294967296, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_18: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4026499071/4294967296) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4026499071/4294967296) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 364889/262144, skoSM: lambda_var_0 + 16385/65536}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000050sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005068sec
+DEBUG:__main__:PRECOND_19: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -64424505585 / 68719476736, delta + skoX >= 64424505585 / 68719476736, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_19: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 64424505585/68719476736) & (delta + skoS2**2 >= 2) & (delta - skoX >= -64424505585/68719476736) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=3/134217728, skoS2=47453133/33554432, skoSM=4194305/16777216, skoSP=93411585/67108864, skoX=31457279/33554432, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 20---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 93411585/67108864, skoSM: 4194305/16777216}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000046sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005129sec
+DEBUG:__main__:PRECOND_20: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -263882782277631 / 281474976710656, delta + skoX >= 263882782277631 / 281474976710656, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_20: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 263882782277631/281474976710656) & (delta + skoS2**2 >= 2) & (delta - skoX >= -263882782277631/281474976710656) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 21---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 93411585/67108864, skoSM: lambda_var_0 + 4194305/16777216}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000048sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005090sec
+DEBUG:__main__:PRECOND_21: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4222124584841729 / 4503599627370496, delta + skoX >= 4222124584841729 / 4503599627370496, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_21: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4222124584841729/4503599627370496) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4222124584841729/4503599627370496) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=3/536870912, skoS2=189812531/134217728, skoSM=16777217/67108864, skoSP=93411585/67108864, skoX=33776996880060423/36028797018963968, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 22---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 93411585/67108864, skoSM: 16777217/67108864}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000042sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005034sec
+DEBUG:__main__:PRECOND_22: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4222124617105407 / 4503599627370496, delta + skoX >= 4222124617105407 / 4503599627370496, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_22: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4222124617105407/4503599627370496) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4222124617105407/4503599627370496) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 23---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 93411585/67108864, skoSM: lambda_var_0 + 16777217/67108864}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000053sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005037sec
+DEBUG:__main__:PRECOND_23: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4222124584841729 / 4503599627370496, delta + skoX >= 4222124584841729 / 4503599627370496, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_23: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4222124584841729/4503599627370496) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4222124584841729/4503599627370496) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/268435456, skoS2=759250125/536870912, skoSM=33554433/134217728, skoSP=373646341/268435456, skoX=8444249267765247/9007199254740992, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 24---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 373646341/268435456, skoSM: 33554433/134217728}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000055sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005394sec
+DEBUG:__main__:PRECOND_24: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -16888498535530495 / 18014398509481984, delta + skoX >= 16888498535530495 / 18014398509481984, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_24: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 16888498535530495/18014398509481984) & (delta + skoS2**2 >= 2) & (delta - skoX >= -16888498535530495/18014398509481984) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 25---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 373646341/268435456, skoSM: lambda_var_0 + 33554433/134217728}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000053sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005097sec
+DEBUG:__main__:PRECOND_25: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -67553994104760345 / 72057594037927936, delta + skoX >= 67553994104760345 / 72057594037927936, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_25: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 67553994104760345/72057594037927936) & (delta + skoS2**2 >= 2) & (delta - skoX >= -67553994104760345/72057594037927936) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/536870912, skoS2=759250125/536870912, skoSM=67108865/268435456, skoSP=1494585365/1073741824, skoX=1080863908421435391/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 26---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 1494585365/1073741824, skoSM: 67108865/268435456}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000046sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005026sec
+DEBUG:__main__:PRECOND_26: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -67553994276339711 / 72057594037927936, delta + skoX >= 67553994276339711 / 72057594037927936, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_26: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 67553994276339711/72057594037927936) & (delta + skoS2**2 >= 2) & (delta - skoX >= -67553994276339711/72057594037927936) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 27---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 1494585365/1073741824, skoSM: lambda_var_0 + 67108865/268435456}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000041sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004930sec
+DEBUG:__main__:PRECOND_27: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -1080863908665336249 / 1152921504606846976, delta + skoX >= 1080863908665336249 / 1152921504606846976, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_27: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 1080863908665336249/1152921504606846976) & (delta + skoS2**2 >= 2) & (delta - skoX >= -1080863908665336249/1152921504606846976) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2147483648, skoS2=759250125/536870912, skoSM=134217729/536870912, skoSP=1494585365/1073741824, skoX=33776997162568973/36028797018963968, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 28---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 1494585365/1073741824, skoSM: 134217729/536870912}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005056sec
+DEBUG:__main__:PRECOND_28: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -270215977373794303 / 288230376151711744, delta + skoX >= 270215977373794303 / 288230376151711744, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_28: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 270215977373794303/288230376151711744) & (delta + skoS2**2 >= 2) & (delta - skoX >= -270215977373794303/288230376151711744) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 29---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 1494585365/1073741824, skoSM: lambda_var_0 + 134217729/536870912}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000044sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005046sec
+DEBUG:__main__:PRECOND_29: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -1080863908665336249 / 1152921504606846976, delta + skoX >= 1080863908665336249 / 1152921504606846976, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_29: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 1080863908665336249/1152921504606846976) & (delta + skoS2**2 >= 2) & (delta - skoX >= -1080863908665336249/1152921504606846976) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2147483648, skoS2=759250125/536870912, skoSM=134217729/536870912, skoSP=2989170731/2147483648, skoX=67553994377003007/72057594037927936, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 30---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 2989170731/2147483648, skoSM: 134217729/536870912}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000047sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005154sec
+DEBUG:__main__:PRECOND_30: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -270215977373794303 / 288230376151711744, delta + skoX >= 270215977373794303 / 288230376151711744, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_30: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 270215977373794303/288230376151711744) & (delta + skoS2**2 >= 2) & (delta - skoX >= -270215977373794303/288230376151711744) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 31---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 2989170731/2147483648, skoSM: lambda_var_0 + 134217729/536870912}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000046sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005019sec
+DEBUG:__main__:PRECOND_31: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4323455640639686457 / 4611686018427387904, delta + skoX >= 4323455640639686457 / 4611686018427387904, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_31: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4323455640639686457/4611686018427387904) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4323455640639686457/4611686018427387904) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/8589934592, skoS2=759250125/536870912, skoSM=536870913/2147483648, skoSP=11956682925/8589934592, skoX=32212254715/34359738368, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 32---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 11956682925/8589934592, skoSM: 536870913/2147483648}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000047sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005254sec
+DEBUG:__main__:PRECOND_32: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4323455641201934335 / 4611686018427387904, delta + skoX >= 4323455641201934335 / 4611686018427387904, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_32: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4323455641201934335/4611686018427387904) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4323455641201934335/4611686018427387904) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 33---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 11956682925/8589934592, skoSM: lambda_var_0 + 536870913/2147483648}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000051sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005215sec
+DEBUG:__main__:PRECOND_33: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -69175290274148349161 / 73786976294838206464, delta + skoX >= 69175290274148349161 / 73786976294838206464, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_33: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 69175290274148349161/73786976294838206464) & (delta + skoS2**2 >= 2) & (delta - skoX >= -69175290274148349161/73786976294838206464) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/68719476736, skoS2=97184015999/68719476736, skoSM=4294967297/17179869184, skoSP=191306926801/137438953472, skoX=1030792151023/1099511627776, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 34---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 191306926801/137438953472, skoSM: 4294967297/17179869184}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000050sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005368sec
+DEBUG:__main__:PRECOND_34: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -276701161097053339647 / 295147905179352825856, delta + skoX >= 276701161097053339647 / 295147905179352825856, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_34: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 276701161097053339647/295147905179352825856) & (delta + skoS2**2 >= 2) & (delta - skoX >= -276701161097053339647/295147905179352825856) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 35---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 191306926801/137438953472, skoSM: lambda_var_0 + 4294967297/17179869184}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000040sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005324sec
+DEBUG:__main__:PRECOND_35: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -17708874310564591238817 / 18889465931478580854784, delta + skoX >= 17708874310564591238817 / 18889465931478580854784, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_35: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 17708874310564591238817/18889465931478580854784) & (delta + skoS2**2 >= 2) & (delta - skoX >= -17708874310564591238817/18889465931478580854784) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/274877906944, skoS2=388736063997/274877906944, skoSM=17179869185/68719476736, skoSP=191306926801/137438953472, skoX=1055531162657339/1125899906842624, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 36---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 191306926801/137438953472, skoSM: 17179869185/68719476736}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000050sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005326sec
+DEBUG:__main__:PRECOND_36: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4427218577655932649471 / 4722366482869645213696, delta + skoX >= 4427218577655932649471 / 4722366482869645213696, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_36: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4427218577655932649471/4722366482869645213696) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4427218577655932649471/4722366482869645213696) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 37---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 191306926801/137438953472, skoSM: lambda_var_0 + 17179869185/68719476736}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005266sec
+DEBUG:__main__:PRECOND_37: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -17708874310564591238817 / 18889465931478580854784, delta + skoX >= 17708874310564591238817 / 18889465931478580854784, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_37: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 17708874310564591238817/18889465931478580854784) & (delta + skoS2**2 >= 2) & (delta - skoX >= -17708874310564591238817/18889465931478580854784) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/274877906944, skoS2=388736063997/274877906944, skoSM=17179869185/68719476736, skoSP=382613853603/274877906944, skoX=33776997205147647/36028797018963968, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 38---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 382613853603/274877906944, skoSM: 17179869185/68719476736}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000049sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005395sec
+DEBUG:__main__:PRECOND_38: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4427218577655932649471 / 4722366482869645213696, delta + skoX >= 4427218577655932649471 / 4722366482869645213696, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_38: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4427218577655932649471/4722366482869645213696) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4427218577655932649471/4722366482869645213696) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 39---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 382613853603/274877906944, skoSM: lambda_var_0 + 17179869185/68719476736}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000048sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005462sec
+DEBUG:__main__:PRECOND_39: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -70835497243023592662473 / 75557863725914323419136, delta + skoX >= 70835497243023592662473 / 75557863725914323419136, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_39: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 70835497243023592662473/75557863725914323419136) & (delta + skoS2**2 >= 2) & (delta - skoX >= -70835497243023592662473/75557863725914323419136) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/8796093022208, skoS2=6219777023951/4398046511104, skoSM=549755813889/2199023255552, skoSP=382613853603/274877906944, skoX=33776997205272761/36028797018963968, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 40---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 382613853603/274877906944, skoSM: 549755813889/2199023255552}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000047sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005318sec
+DEBUG:__main__:PRECOND_40: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4533471823553759893520383 / 4835703278458516698824704, delta + skoX >= 4533471823553759893520383 / 4835703278458516698824704, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_40: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4533471823553759893520383/4835703278458516698824704) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4533471823553759893520383/4835703278458516698824704) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 41---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 382613853603/274877906944, skoSM: lambda_var_0 + 549755813889/2199023255552}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005318sec
+DEBUG:__main__:PRECOND_41: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -70835497243023592662473 / 75557863725914323419136, delta + skoX >= 70835497243023592662473 / 75557863725914323419136, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_41: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 70835497243023592662473/75557863725914323419136) & (delta + skoS2**2 >= 2) & (delta - skoX >= -70835497243023592662473/75557863725914323419136) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/8796093022208, skoS2=6219777023951/4398046511104, skoSM=549755813889/2199023255552, skoSP=24487286630593/17592186044416, skoX=67553994410549247/72057594037927936, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 42---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 24487286630593/17592186044416, skoSM: 549755813889/2199023255552}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000048sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005404sec
+DEBUG:__main__:PRECOND_42: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4533471823553759893520383 / 4835703278458516698824704, delta + skoX >= 4533471823553759893520383 / 4835703278458516698824704, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_42: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4533471823553759893520383/4835703278458516698824704) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4533471823553759893520383/4835703278458516698824704) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 43---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 24487286630593/17592186044416, skoSM: lambda_var_0 + 549755813889/2199023255552}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005400sec
+DEBUG:__main__:PRECOND_43: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -290142196707473610118750593 / 309485009821345068724781056, delta + skoX >= 290142196707473610118750593 / 309485009821345068724781056, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_43: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 290142196707473610118750593/309485009821345068724781056) & (delta + skoS2**2 >= 2) & (delta - skoX >= -290142196707473610118750593/309485009821345068724781056) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/17592186044416, skoS2=6219777023951/4398046511104, skoSM=1099511627777/4398046511104, skoSP=48974573261187/35184372088832, skoX=131941395333111/140737488355328, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 44---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 48974573261187/35184372088832, skoSM: 1099511627777/4398046511104}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000047sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005267sec
+DEBUG:__main__:PRECOND_44: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -18133887294217238597337087 / 19342813113834066795298816, delta + skoX >= 18133887294217238597337087 / 19342813113834066795298816, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_44: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 18133887294217238597337087/19342813113834066795298816) & (delta + skoS2**2 >= 2) & (delta - skoX >= -18133887294217238597337087/19342813113834066795298816) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 45---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 48974573261187/35184372088832, skoSM: lambda_var_0 + 1099511627777/4398046511104}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000046sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005316sec
+DEBUG:__main__:PRECOND_45: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -1160568786829992389621524745 / 1237940039285380274899124224, delta + skoX >= 1160568786829992389621524745 / 1237940039285380274899124224, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_45: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 1160568786829992389621524745/1237940039285380274899124224) & (delta + skoS2**2 >= 2) & (delta - skoX >= -1160568786829992389621524745/1237940039285380274899124224) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/70368744177664, skoS2=99516432383215/70368744177664, skoSM=4398046511105/17592186044416, skoSP=48974573261187/35184372088832, skoX=270215977642221837/288230376151711744, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 46---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 48974573261187/35184372088832, skoSM: 4398046511105/17592186044416}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000050sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005351sec
+DEBUG:__main__:PRECOND_46: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -290142196707502205836460031 / 309485009821345068724781056, delta + skoX >= 290142196707502205836460031 / 309485009821345068724781056, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_46: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 290142196707502205836460031/309485009821345068724781056) & (delta + skoS2**2 >= 2) & (delta - skoX >= -290142196707502205836460031/309485009821345068724781056) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 47---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 48974573261187/35184372088832, skoSM: lambda_var_0 + 4398046511105/17592186044416}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000048sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005360sec
+DEBUG:__main__:PRECOND_47: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -1160568786829992389621524745 / 1237940039285380274899124224, delta + skoX >= 1160568786829992389621524745 / 1237940039285380274899124224, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_47: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 1160568786829992389621524745/1237940039285380274899124224) & (delta + skoS2**2 >= 2) & (delta - skoX >= -1160568786829992389621524745/1237940039285380274899124224) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=3/281474976710656, skoS2=99516432383215/70368744177664, skoSM=8796093022209/35184372088832, skoSP=97949146522375/70368744177664, skoX=527765581332473/562949953421312, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 48---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 97949146522375/70368744177664, skoSM: 8796093022209/35184372088832}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000044sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005281sec
+DEBUG:__main__:PRECOND_48: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -1160568786830026415531884543 / 1237940039285380274899124224, delta + skoX >= 1160568786830026415531884543 / 1237940039285380274899124224, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_48: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 1160568786830026415531884543/1237940039285380274899124224) & (delta + skoS2**2 >= 2) & (delta - skoX >= -1160568786830026415531884543/1237940039285380274899124224) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 49---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 97949146522375/70368744177664, skoSM: lambda_var_0 + 8796093022209/35184372088832}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000048sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005300sec
+DEBUG:__main__:PRECOND_49: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4642275147320165456779143729 / 4951760157141521099596496896, delta + skoX >= 4642275147320165456779143729 / 4951760157141521099596496896, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_49: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4642275147320165456779143729/4951760157141521099596496896) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4642275147320165456779143729/4951760157141521099596496896) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/1125899906842624, skoS2=1592262918131443/1125899906842624, skoSM=70368744177665/281474976710656, skoSP=3134372688716001/2251799813685248, skoX=4222124650659835/4503599627370496, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 50---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 70368744177665/281474976710656}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005328sec
+DEBUG:__main__:PRECOND_50: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -74276402357122675756459098111 / 79228162514264337593543950336, delta + skoX >= 74276402357122675756459098111 / 79228162514264337593543950336, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_50: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 74276402357122675756459098111/79228162514264337593543950336) & (delta + skoS2**2 >= 2) & (delta - skoX >= -74276402357122675756459098111/79228162514264337593543950336) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 51---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 70368744177665/281474976710656}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000043sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005275sec
+DEBUG:__main__:PRECOND_51: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_51: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 52---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005266sec
+DEBUG:__main__:PRECOND_52: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_52: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 53---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000048sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005308sec
+DEBUG:__main__:PRECOND_53: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_53: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 54---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000051sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005374sec
+DEBUG:__main__:PRECOND_54: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_54: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 55---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000044sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005330sec
+DEBUG:__main__:PRECOND_55: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_55: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 56---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000042sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005382sec
+DEBUG:__main__:PRECOND_56: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_56: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 57---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000054sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005383sec
+DEBUG:__main__:PRECOND_57: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_57: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 58---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000057sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005540sec
+DEBUG:__main__:PRECOND_58: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_58: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 59---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000048sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005305sec
+DEBUG:__main__:PRECOND_59: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_59: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 60---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000044sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005449sec
+DEBUG:__main__:PRECOND_60: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_60: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 61---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000049sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005290sec
+DEBUG:__main__:PRECOND_61: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_61: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 62---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000055sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005578sec
+DEBUG:__main__:PRECOND_62: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_62: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 63---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000046sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005338sec
+DEBUG:__main__:PRECOND_63: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_63: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 64---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000046sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005373sec
+DEBUG:__main__:PRECOND_64: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_64: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 65---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000042sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005355sec
+DEBUG:__main__:PRECOND_65: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_65: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 66---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000044sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005630sec
+DEBUG:__main__:PRECOND_66: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_66: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 67---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000049sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005293sec
+DEBUG:__main__:PRECOND_67: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_67: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 68---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000064sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005300sec
+DEBUG:__main__:PRECOND_68: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_68: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 69---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000043sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005336sec
+DEBUG:__main__:PRECOND_69: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_69: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 70---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000049sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005349sec
+DEBUG:__main__:PRECOND_70: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_70: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 71---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000046sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005385sec
+DEBUG:__main__:PRECOND_71: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_71: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 72---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005316sec
+DEBUG:__main__:PRECOND_72: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_72: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 73---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005485sec
+DEBUG:__main__:PRECOND_73: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_73: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 74---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000043sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005290sec
+DEBUG:__main__:PRECOND_74: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_74: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 75---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000044sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005336sec
+DEBUG:__main__:PRECOND_75: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_75: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 76---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000049sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005353sec
+DEBUG:__main__:PRECOND_76: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_76: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 77---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000048sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005274sec
+DEBUG:__main__:PRECOND_77: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_77: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 78---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000044sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005258sec
+DEBUG:__main__:PRECOND_78: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_78: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 79---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000048sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005400sec
+DEBUG:__main__:PRECOND_79: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_79: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 80---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000051sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005373sec
+DEBUG:__main__:PRECOND_80: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_80: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 81---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000048sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005404sec
+DEBUG:__main__:PRECOND_81: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_81: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 82---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000042sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005431sec
+DEBUG:__main__:PRECOND_82: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_82: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 83---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000046sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005312sec
+DEBUG:__main__:PRECOND_83: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_83: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 84---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000050sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005428sec
+DEBUG:__main__:PRECOND_84: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_84: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 85---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005233sec
+DEBUG:__main__:PRECOND_85: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_85: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 86---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005186sec
+DEBUG:__main__:PRECOND_86: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_86: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 87---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000050sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005308sec
+DEBUG:__main__:PRECOND_87: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_87: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 88---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000042sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005578sec
+DEBUG:__main__:PRECOND_88: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_88: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 89---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005294sec
+DEBUG:__main__:PRECOND_89: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_89: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 90---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000044sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005379sec
+DEBUG:__main__:PRECOND_90: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_90: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 91---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000047sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005422sec
+DEBUG:__main__:PRECOND_91: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_91: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 92---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000042sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.004605sec
+DEBUG:__main__:PRECOND_92: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_92: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 93---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000049sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005260sec
+DEBUG:__main__:PRECOND_93: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_93: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 94---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000054sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005315sec
+DEBUG:__main__:PRECOND_94: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_94: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 95---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000047sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005349sec
+DEBUG:__main__:PRECOND_95: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_95: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 96---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000046sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005370sec
+DEBUG:__main__:PRECOND_96: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_96: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 97---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000048sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005324sec
+DEBUG:__main__:PRECOND_97: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_97: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 98---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000050sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005297sec
+DEBUG:__main__:PRECOND_98: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_98: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 99---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000051sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005403sec
+DEBUG:__main__:PRECOND_99: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_99: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 100---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000048sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005361sec
+DEBUG:__main__:PRECOND_100: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_100: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 101---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005330sec
+DEBUG:__main__:PRECOND_101: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_101: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 102---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005315sec
+DEBUG:__main__:PRECOND_102: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_102: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 103---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000046sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005555sec
+DEBUG:__main__:PRECOND_103: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_103: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 104---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000052sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005426sec
+DEBUG:__main__:PRECOND_104: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_104: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 105---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000048sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005333sec
+DEBUG:__main__:PRECOND_105: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_105: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 106---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000044sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005263sec
+DEBUG:__main__:PRECOND_106: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_106: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 107---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000045sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005309sec
+DEBUG:__main__:PRECOND_107: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_107: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 108---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000048sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005307sec
+DEBUG:__main__:PRECOND_108: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_108: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 109---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000049sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005272sec
+DEBUG:__main__:PRECOND_109: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -4753689750855855696487220610497 / 5070602400912917605986812821504, delta + skoX >= 4753689750855855696487220610497 / 5070602400912917605986812821504, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_109: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 4753689750855855696487220610497/5070602400912917605986812821504) & (delta + skoS2**2 >= 2) & (delta - skoX >= -4753689750855855696487220610497/5070602400912917605986812821504) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2251799813685248, skoS2=1592262918131443/1125899906842624, skoSM=140737488355329/562949953421312, skoSP=3134372688716001/2251799813685248, skoX=1080863910568918515/1152921504606846976, pi=62831853/20000000
+DEBUG:__main__:---------pre-condition 110---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoSP: lambda_var_0 + 3134372688716001/2251799813685248, skoSM: 140737488355329/562949953421312}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000047sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.005420sec
+DEBUG:__main__:PRECOND_110: And(pi > 15707963 / 5000000, skoX > 0, delta >= 0, skoS2 >= 0, delta - skoS2 ** 2 >= -2, delta + skoS2 ** 2 >= 2, delta - skoX >= -297105609428490984500813103103 / 316912650057057350374175801344, delta + skoX >= 297105609428490984500813103103 / 316912650057057350374175801344, pi < 31415927 / 10000000, skoX < 1)
+DEBUG:__main__:PRECOND_SYMPY_110: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta + skoX >= 297105609428490984500813103103/316912650057057350374175801344) & (delta + skoS2**2 >= 2) & (delta - skoX >= -297105609428490984500813103103/316912650057057350374175801344) & (delta - skoS2**2 >= -2)
+DEBUG:__main__:---------pre-condition 111---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoSP: 3134372688716001/2251799813685248, skoSM: lambda_var_0 + 140737488355329/562949953421312}

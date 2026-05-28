@@ -1,0 +1,26 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_3_2_power_4circles_origin_centre.smt
+DEBUG:__main__:ip_vars: ['r1', 'r2']
+DEBUG:__main__:op_vars: ['x', 'y']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > ... + ... + ... + ..., ...)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > -r1 + x**12 + y**12) & (0 > r2 - x**12 - y**12), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['r2', 'x', 'y', 'r1']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y, 'r1': r1, 'r2': r2}
+DEBUG:__main__:z3 post_condition:And(0 > x**12 + y**12 + -1*r1, 0 > r2 + -1*x**12 + -1*y**12)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=0, y=0, r1=1, r2=-1
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0, y: 0}
+DEBUG:__main__:PRECOND_0: r1 > 0 /\ r2 - r1 < 0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 0, y: lambda_var_0}
+DEBUG:__main__:PRECOND_1: r1 > 0 /\ r2 - r1 < 0
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(r1 > 0) & (-r1 + r2 < 0) {'x': 0, 'y': 0, 'r1': 1, 'r2': -1} {x: lambda_var_0, y: 0}
+DEBUG:__main__:(r1 > 0) & (-r1 + r2 < 0) {'x': 0, 'y': 0, 'r1': 1, 'r2': -1} {x: 0, y: lambda_var_0}

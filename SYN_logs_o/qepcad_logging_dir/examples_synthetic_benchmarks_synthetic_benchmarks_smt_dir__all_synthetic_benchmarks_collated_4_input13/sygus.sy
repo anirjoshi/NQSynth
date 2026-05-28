@@ -1,0 +1,6 @@
+(set-logic NRA)
+(synth-fun y_o ( ( x_i Real ) ) Real )
+(declare-var x Real)
+( constraint (=> (and (<= 0.0 (+ 4.0 x)) (>= 0.0 (+ (- 4.0) x))) (and (>= 0.0 (+ 0.0 (* 1.0 (y_o x) (y_o x) ) (* 1.0 x x) (- 16.0))))))
+( check-synth )
+(exit)

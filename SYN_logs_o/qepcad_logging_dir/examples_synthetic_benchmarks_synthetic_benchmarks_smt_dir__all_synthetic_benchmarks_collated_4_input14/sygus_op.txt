@@ -1,0 +1,4 @@
+(
+(define-fun y_o ((x_i Real)) Real (let ((_let_1 (* (- 1) (* x_i x_i)))) (ite (and (>= x_i (- 4)) (>= (* (- 1) x_i) (- 4)) (not (>= _let_1 (- 16)))) (ite (>= _let_1 (- 14)) 1.0 (- 1.0)) 0.0)))
+(define-fun z_o ((x_i Real)) Real (let ((_let_1 (* (- 1) (* x_i x_i)))) (ite (and (>= x_i (- 4)) (>= (* (- 1) x_i) (- 4)) (not (>= _let_1 (- 16)))) (ite (>= _let_1 (- 14)) (- 1.0) 2.0) 0.0)))
+)

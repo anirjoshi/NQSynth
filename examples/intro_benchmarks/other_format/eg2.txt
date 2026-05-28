@@ -1,0 +1,11 @@
+Output Variables: x
+Input Variables: y
+
+Terms: 2,0 : 0,2 : 0,0 
+Coeffs: 1,1 :    1,1 : -1,1
+<=
+
+Terms: 2,0 : 0,2 : 0,0 
+Coeffs: -1,1 :    -1,1 : 1,1
+<=
+

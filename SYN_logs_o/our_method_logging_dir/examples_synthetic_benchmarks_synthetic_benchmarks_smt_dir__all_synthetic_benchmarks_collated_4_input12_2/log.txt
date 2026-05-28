@@ -1,0 +1,41 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_4_input12_2.smt
+DEBUG:__main__:ip_vars: ['r', 'c']
+DEBUG:__main__:op_vars: ['x', 'l']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*x*x + 1*l*l + -1*r*r,
+            0 > 0 + 1*x*x + 1*l*l + -2*x*c + -2*c + 1*r)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > l**2 - r**2 + x**2) & (0 > -2*c*x - 2*c + l**2 + r + x**2), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['l', 'x', 'c', 'r']
+DEBUG:__main__:z3 vars:{'l': l, 'x': x, 'r': r, 'c': c}
+DEBUG:__main__:z3 post_condition:And(0 > l**2 + x**2 + -1*r**2,
+    0 > r + l**2 + x**2 + -2*c + -2*c*x)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, l=1/8, x=1/2, r=-1, c=1
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/2, l: 1/8}
+DEBUG:__main__:PRECOND_0: 64 r - 64 c^2 - 128 c + 1 < 0 /\ 8 r - 1 /= 0 /\ 8 r + 1 /= 0 /\ [ 16 r^4 + 32 r^3 - 64 c^2 r^2 - 64 c r^2 + 16 r^2 - 64 c r + 65 c^2 < 0 \/ [ 128 c - 9 > 0 /\ 8 r - 1 > 0 /\ 2 r^3 + 3 r^2 - 4 c^2 r - 4 c r + r - 2 c < 0 ] \/ [ 128 c + 7 > 0 /\ 8 r + 1 < 0 ] \/ [ 266240 c^6 + 1064960 c^5 + 922496 c^4 + 246528 c^3 + 8945 c^2 - 1264 c - 63 >= 0 /\ 6 r^2 + 6 r - 4 c^2 - 4 c + 1 > 0 /\ 2 r + 1 < 0 ] \/ [ 128 c^2 + 128 c - 11 < 0 /\ 6 r^2 + 6 r - 4 c^2 - 4 c + 1 <= 0 ] \/ [ 4096 c^4 + 16384 c^3 + 12160 c^2 - 256 c - 63 > 0 /\ 2 r^3 + 3 r^2 - 4 c^2 r - 4 c r + r - 2 c > 0 /\ 6 r^2 + 6 r - 4 c^2 - 4 c + 1 > 0 ] \/ [ 8 r + 1 < 0 /\ 2 r^3 + 3 r^2 - 4 c^2 r - 4 c r + r - 2 c < 0 ] ]
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 1/2, l: lambda_var_0 + 1/8}
+DEBUG:__main__:PRECOND_1: 4 r - 12 c + 1 < 0 /\ 2 r - 1 /= 0 /\ 2 r + 1 /= 0 /\ [ 2 r - 1 > 0 \/ 2 r + 1 < 0 ]
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, l=0, x=1/32, r=1/16, c=1/4
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/32, l: 0}
+DEBUG:__main__:PRECOND_2: r - c^2 - 2 c < 0 /\ r /= 0 /\ [ r^2 + 2 c r + r - 2 c < 0 \/ c + 1 > 0 \/ r + 1 < 0 \/ [ c + 3 < 0 /\ 2 r + 2 c + 1 > 0 ] ]
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 1/32, l: lambda_var_0}
+DEBUG:__main__:PRECOND_3: 1024 r - 2112 c + 1 < 0 /\ 32 r - 1 /= 0 /\ 32 r + 1 /= 0 /\ [ 32 r - 1 > 0 \/ 32 r + 1 < 0 ]
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:Ne(8*r - 1, 0) & Ne(8*r + 1, 0) & (-64*c**2 - 128*c + 64*r + 1 < 0) & (((128*c + 7 > 0) & (8*r + 1 < 0)) | ((128*c**2 + 128*c - 11 < 0) & (-4*c**2 - 4*c + 6*r**2 + 6*r + 1 <= 0)) | ((8*r + 1 < 0) & (-4*c**2*r - 4*c*r - 2*c + 2*r**3 + 3*r**2 + r < 0)) | (-64*c**2*r**2 + 65*c**2 - 64*c*r**2 - 64*c*r + 16*r**4 + 32*r**3 + 16*r**2 < 0) | ((128*c - 9 > 0) & (8*r - 1 > 0) & (-4*c**2*r - 4*c*r - 2*c + 2*r**3 + 3*r**2 + r < 0)) | ((2*r + 1 < 0) & (-4*c**2 - 4*c + 6*r**2 + 6*r + 1 > 0) & (266240*c**6 + 1064960*c**5 + 922496*c**4 + 246528*c**3 + 8945*c**2 - 1264*c - 63 >= 0)) | ((-4*c**2 - 4*c + 6*r**2 + 6*r + 1 > 0) & (4096*c**4 + 16384*c**3 + 12160*c**2 - 256*c - 63 > 0) & (-4*c**2*r - 4*c*r - 2*c + 2*r**3 + 3*r**2 + r > 0))) {'l': 1/8, 'x': 1/2, 'r': -1, 'c': 1} {x: lambda_var_0 + 1/2, l: 1/8}
+DEBUG:__main__:Ne(2*r - 1, 0) & Ne(2*r + 1, 0) & (-12*c + 4*r + 1 < 0) & ((2*r - 1 > 0) | (2*r + 1 < 0)) {'l': 1/8, 'x': 1/2, 'r': -1, 'c': 1} {x: 1/2, l: lambda_var_0 + 1/8}
+DEBUG:__main__:Ne(r, 0) & (-c**2 - 2*c + r < 0) & ((c + 1 > 0) | (r + 1 < 0) | (2*c*r - 2*c + r**2 + r < 0) | ((c + 3 < 0) & (2*c + 2*r + 1 > 0))) {'l': 0, 'x': 1/32, 'r': 1/16, 'c': 1/4} {x: lambda_var_0 + 1/32, l: 0}
+DEBUG:__main__:Ne(32*r - 1, 0) & Ne(32*r + 1, 0) & (-2112*c + 1024*r + 1 < 0) & ((32*r - 1 > 0) | (32*r + 1 < 0)) {'l': 0, 'x': 1/32, 'r': 1/16, 'c': 1/4} {x: 1/32, l: lambda_var_0}

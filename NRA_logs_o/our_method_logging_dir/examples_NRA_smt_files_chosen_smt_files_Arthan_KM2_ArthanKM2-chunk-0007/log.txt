@@ -1,0 +1,34 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_Arthan_KM2_ArthanKM2-chunk-0007.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoS']
+DEBUG:__main__:op_vars: ['skoCOSS', 'skoSINS']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(Not(And(skoSINS*skoSINS - (1 + skoCOSS*skoCOSS*-1) <=
+                delta,
+                1 + skoCOSS*skoCOSS*-1 - skoSINS*skoSINS <=
+                delta)),
+        9/20 <= skoS))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (9/20 <= skoS) & ~((skoCOSS**2 + skoSINS**2 - 1 <= delta) & (-skoCOSS**2 - skoSINS**2 + 1 <= delta)), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['skoSINS', 'skoCOSS', 'skoS', 'delta']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoS': skoS, 'skoCOSS': skoCOSS, 'skoSINS': skoSINS}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    9/20 <= skoS,
+    Not(And(-1 + skoCOSS**2 + skoSINS**2 <= delta,
+            1 + -1*skoCOSS**2 + -1*skoSINS**2 <= delta)))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=1/2, skoS=9/20, skoCOSS=1/8, skoSINS=1/2
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {skoCOSS: lambda_var_0 + 1/8, skoSINS: 1/2}
+DEBUG:__main__:PRECOND_0: delta >= 0 /\ 20 skoS - 9 >= 0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {skoCOSS: 1/8, skoSINS: lambda_var_0 + 1/2}
+DEBUG:__main__:PRECOND_1: delta >= 0 /\ 20 skoS - 9 >= 0
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(delta >= 0) & (20*skoS - 9 >= 0) {'delta': 1/2, 'skoS': 9/20, 'skoCOSS': 1/8, 'skoSINS': 1/2} {skoCOSS: lambda_var_0 + 1/8, skoSINS: 1/2}
+DEBUG:__main__:(delta >= 0) & (20*skoS - 9 >= 0) {'delta': 1/2, 'skoS': 9/20, 'skoCOSS': 1/8, 'skoSINS': 1/2} {skoCOSS: 1/8, skoSINS: lambda_var_0 + 1/2}

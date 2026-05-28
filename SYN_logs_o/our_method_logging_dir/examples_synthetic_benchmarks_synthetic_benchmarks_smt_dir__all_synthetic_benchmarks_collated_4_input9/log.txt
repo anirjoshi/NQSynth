@@ -1,0 +1,40 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_4_input9.smt
+DEBUG:__main__:ip_vars: ['r1', 'r2']
+DEBUG:__main__:op_vars: ['y', 'x']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*y*y*r1 + 4*x*x + -1*r1,
+            0 > 0 + 1*y*y + 1*x*x + -1*r2)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > -r2 + x**2 + y**2) & (0 > r1*y**2 - r1 + 4*x**2), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['r2', 'r1', 'x', 'y']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y, 'r2': r2, 'r1': r1}
+DEBUG:__main__:z3 post_condition:And(0 > x**2 + y**2 + -1*r2, 0 > -1*r1 + 4*x**2 + r1*y**2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1/8, y=1/2, r2=81/64, r1=2
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 + 1/2, x: 1/8}
+DEBUG:__main__:PRECOND_0: 16 r1 - 1 /= 0 /\ 64 r2 - 1 > 0 /\ [ 16 r1 - 1 > 0 \/ 64 r1 r2 - 65 r1 + 4 < 0 ]
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: 1/2, x: lambda_var_0 + 1/8}
+DEBUG:__main__:PRECOND_1: r1 > 0 /\ 4 r2 - 1 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=0, y=-2, r2=5, r1=-1/64
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 - 2, x: 0}
+DEBUG:__main__:PRECOND_2: r1 /= 0 /\ r2 > 0 /\ [ r1 > 0 \/ r2 - 1 > 0 ]
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: -2, x: lambda_var_0}
+DEBUG:__main__:PRECOND_3: r1 < 0 /\ r2 - 4 > 0
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(64*r2 - 1 > 0) & Ne(16*r1 - 1, 0) & ((16*r1 - 1 > 0) | (64*r1*r2 - 65*r1 + 4 < 0)) {'x': 1/8, 'y': 1/2, 'r2': 81/64, 'r1': 2} {y: lambda_var_0 + 1/2, x: 1/8}
+DEBUG:__main__:(r1 > 0) & (4*r2 - 1 > 0) {'x': 1/8, 'y': 1/2, 'r2': 81/64, 'r1': 2} {y: 1/2, x: lambda_var_0 + 1/8}
+DEBUG:__main__:(r2 > 0) & Ne(r1, 0) & ((r1 > 0) | (r2 - 1 > 0)) {'x': 0, 'y': -2, 'r2': 5, 'r1': -1/64} {y: lambda_var_0 - 2, x: 0}
+DEBUG:__main__:(r1 < 0) & (r2 - 4 > 0) {'x': 0, 'y': -2, 'r2': 5, 'r1': -1/64} {y: -2, x: lambda_var_0}

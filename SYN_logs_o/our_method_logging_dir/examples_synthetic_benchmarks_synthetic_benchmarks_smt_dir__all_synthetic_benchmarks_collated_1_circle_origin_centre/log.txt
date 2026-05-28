@@ -1,0 +1,39 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_1_circle_origin_centre.smt
+DEBUG:__main__:ip_vars: ['r']
+DEBUG:__main__:op_vars: ['x', 'y']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*x*x + 1*y*y + -1*r*r)))
+DEBUG:__main__:POST_CONDITION_SYMPY: 0 > -r**2 + x**2 + y**2, {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['r', 'y', 'x']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y, 'r': r}
+DEBUG:__main__:z3 post_condition:0 > x**2 + y**2 + -1*r**2
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1/8, y=1/2, r=-1
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/8, y: 1/2}
+DEBUG:__main__:PRECOND_0: 2 r + 1 /= 0 /\ 2 r - 1 /= 0 /\ [ 2 r - 1 > 0 \/ 2 r + 1 < 0 ]
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 1/8, y: lambda_var_0 + 1/2}
+DEBUG:__main__:PRECOND_1: 8 r + 1 /= 0 /\ 8 r - 1 /= 0 /\ [ 8 r - 1 > 0 \/ 8 r + 1 < 0 ]
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=0, y=1/32, r=-1/16
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0, y: 1/32}
+DEBUG:__main__:PRECOND_2: 32 r + 1 /= 0 /\ 32 r - 1 /= 0 /\ [ 32 r - 1 > 0 \/ 32 r + 1 < 0 ]
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 0, y: lambda_var_0 + 1/32}
+DEBUG:__main__:PRECOND_3: r /= 0
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:Ne(2*r - 1, 0) & Ne(2*r + 1, 0) & ((2*r - 1 > 0) | (2*r + 1 < 0)) {'x': 1/8, 'y': 1/2, 'r': -1} {x: lambda_var_0 + 1/8, y: 1/2}
+DEBUG:__main__:Ne(8*r - 1, 0) & Ne(8*r + 1, 0) & ((8*r - 1 > 0) | (8*r + 1 < 0)) {'x': 1/8, 'y': 1/2, 'r': -1} {x: 1/8, y: lambda_var_0 + 1/2}
+DEBUG:__main__:Ne(32*r - 1, 0) & Ne(32*r + 1, 0) & ((32*r - 1 > 0) | (32*r + 1 < 0)) {'x': 0, 'y': 1/32, 'r': -1/16} {x: lambda_var_0, y: 1/32}
+DEBUG:__main__:Ne(r, 0) {'x': 0, 'y': 1/32, 'r': -1/16} {x: 0, y: lambda_var_0 + 1/32}

@@ -1,0 +1,152 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_1_2_circles_higher_powers_fixed_centers2.smt
+DEBUG:__main__:ip_vars: ['r2']
+DEBUG:__main__:op_vars: ['x', 'y']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*x*x*x*x + -4*y*y*y + 6*x*x + -4*y + 2,
+            0 > 0 + 1*x*x + 1*y*y + -1*r2)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > -r2 + x**2 + y**2) & (0 > x**4 + 6*x**2 - 4*y**3 - 4*y + 2), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['y', 'x', 'r2']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y, 'r2': r2}
+DEBUG:__main__:z3 post_condition:And(0 > x**2 + y**2 + -1*r2,
+    0 > 2 + x**4 + -4*y + -4*y**3 + 6*x**2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1/8, y=1, r2=129/64
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/8, y: 1}
+DEBUG:__main__:PRECOND_0: r2 - 1 > 0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 1/8, y: lambda_var_0 + 1}
+DEBUG:__main__:PRECOND_1: 268435456 r2^3 + 524288000 r2^2 + 251854848 r2 - 77629185 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/16, y=219/512, r2=3/16
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/16, y: 219/512}
+DEBUG:__main__:PRECOND_2: 262144 r2 - 47961 > 0
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/16, y: lambda_var_0 + 219/512}
+DEBUG:__main__:PRECOND_3: 68719476736 r2^3 + 136633647104 r2^2 + 67648880640 r2 - 17851489281 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/32, y=3481/8192, r2=93/512
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/32, y: 3481/8192}
+DEBUG:__main__:PRECOND_4: 67108864 r2 - 12117361 > 0
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/32, y: lambda_var_0 + 3481/8192}
+DEBUG:__main__:PRECOND_5: 17592186044416 r2^3 + 35132832481280 r2^2 + 17523516899328 r2 - 4441004601345 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/64, y=6949/16384, r2=369/2048
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/64, y: 6949/16384}
+DEBUG:__main__:PRECOND_6: 268435456 r2 - 48288601 > 0
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/64, y: lambda_var_0 + 6949/16384}
+DEBUG:__main__:PRECOND_7: 4503599627370496 r2^3 + 9003900719857664 r2^2 + 4499202386165760 r2 - 1128648820244481 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/128, y=3473/8192, r2=1473/8192
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/128, y: 3473/8192}
+DEBUG:__main__:PRECOND_8: 67108864 r2 - 12061729 > 0
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/128, y: lambda_var_0 + 3473/8192}
+DEBUG:__main__:PRECOND_9: 1152921504606846976 r2^3 + 2305631902981160960 r2^2 + 1152640042515038208 r2 - 288406300160098305 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/256, y=27779/65536, r2=23/128
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/256, y: 27779/65536}
+DEBUG:__main__:PRECOND_10: 4294967296 r2 - 771672841 > 0
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/256, y: lambda_var_0 + 27779/65536}
+DEBUG:__main__:PRECOND_11: 295147905179352825856 r2^3 + 590282299559823540224 r2^2 + 295129890987001774080 r2 - 73798235328268206081 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/512, y=13889/32768, r2=23549/131072
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/512, y: 13889/32768}
+DEBUG:__main__:PRECOND_12: 1073741824 r2 - 192904321 > 0
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/512, y: lambda_var_0 + 13889/32768}
+DEBUG:__main__:PRECOND_13: 75557863725914323419136 r2^3 + 151114862760700191703040 r2^2 + 75556710807708251455488 r2 - 18890186507968723288065 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/1024, y=111111/262144, r2=94191/524288
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/1024, y: 111111/262144}
+DEBUG:__main__:PRECOND_14: 68719476736 r2 - 12345654321 > 0
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/1024, y: lambda_var_0 + 111111/262144}
+DEBUG:__main__:PRECOND_15: 19342813113834066795298816 r2^3 + 38685570887435912461942784 r2^2 + 19342739326910548515225600 r2 - 4835749395327497095086081 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/2048, y=1777773/4194304, r2=376759/2097152
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/2048, y: 1777773/4194304}
+DEBUG:__main__:PRECOND_16: 17592186044416 r2 - 3160476839529 > 0
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/2048, y: lambda_var_0 + 1777773/4194304}
+DEBUG:__main__:PRECOND_17: 4951760157141521099596496896 r2^3 + 9903516772508180046959083520 r2^2 + 4951755434775882654881415168 r2 - 1237942990764572806033178625 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/4096, y=444443/1048576, r2=188379/1048576
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/4096, y: 444443/1048576}
+DEBUG:__main__:PRECOND_18: 1099511627776 r2 - 197529580249 > 0
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/4096, y: lambda_var_0 + 444443/1048576}
+DEBUG:__main__:PRECOND_19: 1267650600228229401496703205376 r2^3 + 2535300973782867625250436153344 r2^2 + 1267650297996788008638291640320 r2 - 316912838951718916960267796481 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/8192, y=7111087/16777216, r2=1507031/8388608
+DEBUG:__main__:---------pre-condition 20---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/8192, y: 7111087/16777216}
+DEBUG:__main__:PRECOND_20: 281474976710656 r2 - 50567558321569 > 0
+DEBUG:__main__:---------pre-condition 21---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/8192, y: lambda_var_0 + 7111087/16777216}
+DEBUG:__main__:PRECOND_21: 324518553658426726783156020576256 r2^3 + 649037092809743618190761944678400 r2^2 + 324518534315613829121871339061248 r2 - 81129650503864913870879650217985 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/16384, y=910219111/2147483648, r2=12056245/67108864
+DEBUG:__main__:---------pre-condition 22---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/16384, y: 910219111/2147483648}
+DEBUG:__main__:PRECOND_22: 4611686018427387904 r2 - 828498830029630321 > 0
+DEBUG:__main__:---------pre-condition 23---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -1/16384, y: lambda_var_0 + 910219111/2147483648}
+DEBUG:__main__:PRECOND_23: 83076749736557242056487941267521536 r2^3 + 166153498544659454648940676360699904 r2^2 + 83076748498617206229872180188938240 r2 - 20769188207851835643945416948449281 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-1/32768, y=455109553/1073741824, r2=192899915/1073741824
+DEBUG:__main__:---------pre-condition 24---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 1/32768, y: 455109553/1073741824}

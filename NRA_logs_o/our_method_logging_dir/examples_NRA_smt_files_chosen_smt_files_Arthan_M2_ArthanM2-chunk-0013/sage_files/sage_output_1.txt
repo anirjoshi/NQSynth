@@ -1,0 +1,1 @@
+delta - 2 >= 0 /\ skoM - delta <= 0 /\ skoM - 2 >= 0 /\ 64 skoSINS^2 - 64 delta - 63 <= 0

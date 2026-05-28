@@ -1,0 +1,1 @@
+delta - b^2 + 3 >= 0 /\ delta + b^2 - 3 >= 0 /\ [ delta^2 + 2 b delta - delta + b^2 - 2 <= 0 \/ delta^2 - 2 b delta - delta + b^2 - 2 <= 0 \/ delta - 2 > 0 ]

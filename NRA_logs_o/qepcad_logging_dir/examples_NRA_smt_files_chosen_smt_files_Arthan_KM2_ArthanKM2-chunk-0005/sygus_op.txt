@@ -1,0 +1,4 @@
+(
+(define-fun skoCOSS_o ((delta_i Real) (skoS_i Real)) Real 0.0)
+(define-fun skoSINS_o ((delta_i Real) (skoS_i Real)) Real (ite (and (>= delta_i 0) (>= skoS_i (/ 9 20)) (or (not (>= delta_i (- 1))) (not (>= delta_i 1)))) 1.0 0.0))
+)

@@ -1,0 +1,4 @@
+(
+(define-fun skoSP_o ((delta_i Real) (skoX_i Real) (skoS2_i Real)) Real (ite (and (>= delta_i 0) (not (>= (* (- 1) skoS2_i) 0)) (not (>= (* (- 1) skoX_i) 0)) (not (>= skoX_i 1))) (/ 4 69) 1.0))
+(define-fun skoSM_o ((delta_i Real) (skoX_i Real) (skoS2_i Real)) Real (ite (and (>= delta_i 0) (not (>= (* (- 1) skoS2_i) 0)) (not (>= (* (- 1) skoX_i) 0)) (not (>= skoX_i 1))) (/ 1072 4209) 1.0))
+)

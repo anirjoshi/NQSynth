@@ -1,0 +1,140 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_1_2_complex_shapes2.smt
+DEBUG:__main__:ip_vars: ['a', 'r']
+DEBUG:__main__:op_vars: ['x', 'y']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + -6*x + 1 + 1*y*y*y*a,
+            0 > 0 + 1*x*x + 1*y*y + -1*r)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > -r + x**2 + y**2) & (0 > a*y**3 - 6*x + 1), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['y', 'a', 'r', 'x']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y, 'r': r, 'a': a}
+DEBUG:__main__:z3 post_condition:And(0 > x**2 + y**2 + -1*r, 0 > 1 + -6*x + a*y**3)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1/3, y=0, r=10/9, a=0
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/3, y: 0}
+DEBUG:__main__:PRECOND_0: 36 r - 1 > 0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 1/3, y: lambda_var_0}
+DEBUG:__main__:PRECOND_1: 9 r - 1 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1/16, y=1/8, r=3/128, a=-1024
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/16, y: 1/8}
+DEBUG:__main__:PRECOND_2: 64 r - 1 > 0 /\ [ a + 512 < 0 \/ 9437184 r - a^2 - 1024 a - 409600 > 0 ]
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 1/16, y: lambda_var_0 + 1/8}
+DEBUG:__main__:PRECOND_3: 16777216 a^2 r^3 - 196608 a^2 r^2 + 768 a^2 r - a^2 - 6553600 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=991/16384, y=-7/64, r=1/64, a=487
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 991/16384, y: -7/64}
+DEBUG:__main__:PRECOND_4: 4096 r - 49 > 0 /\ [ 343 a - 262144 > 0 \/ 2473901162496 r - 117649 a^2 + 179830784 a - 98314485760 > 0 ]
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 991/16384, y: lambda_var_0 - 7/64}
+DEBUG:__main__:PRECOND_5: 19342813113834066795298816 a^2 r^3 - 212299182031086915944448 a^2 r^2 + 776704374657093992448 a^2 r - 947200518061237441 a^2 - 7850807744635654566313984 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=5/128, y=15/128, r=1/64, a=-486
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 5/128, y: 15/128}
+DEBUG:__main__:PRECOND_6: 16384 r - 225 > 0 /\ [ 3375 a + 2097152 < 0 \/ 158329674399744 r - 11390625 a^2 - 14155776000 a - 6572373704704 > 0 ]
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 5/128, y: lambda_var_0 + 15/128}
+DEBUG:__main__:PRECOND_7: 4398046511104 a^2 r^3 - 20132659200 a^2 r^2 + 30720000 a^2 r - 15625 a^2 - 2578054119424 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1/64, y=1/128, r=1/1024, a=-2097153
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/64, y: 1/128}
+DEBUG:__main__:PRECOND_8: 16384 r - 1 > 0 /\ [ a + 2097152 < 0 \/ 158329674399744 r - a^2 - 4194304 a - 4407710187520 > 0 ]
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 1/64, y: lambda_var_0 + 1/128}
+DEBUG:__main__:PRECOND_9: 68719476736 a^2 r^3 - 50331648 a^2 r^2 + 12288 a^2 r - a^2 - 56438554624 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=2107/131072, y=89/1024, r=1/128, a=-5505/4
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 2107/131072, y: 89/1024}
+DEBUG:__main__:PRECOND_10: 1048576 r - 7921 > 0 /\ [ 704969 a + 1073741824 < 0 \/ 41505174165846491136 r - 496981290961 a^2 - 1513909399846912 a - 1466453842336940032 > 0 ]
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 2107/131072, y: lambda_var_0 + 89/1024}
+DEBUG:__main__:PRECOND_11: 5070602400912917605986812821504 a^2 r^3 - 3930882217501718170180780032 a^2 r^2 + 1015779045969584562634752 a^2 r - 87495801462998035849 a^2 - 4139645613982577134324311654400 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=253/16384, y=31/512, r=1/256, a=-4089
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 253/16384, y: 31/512}
+DEBUG:__main__:PRECOND_12: 262144 r - 961 > 0 /\ [ 29791 a + 134217728 < 0 \/ 648518346341351424 r - 887503681 a^2 - 7996960669696 a - 20391817526640640 > 0 ]
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 253/16384, y: lambda_var_0 + 31/512}
+DEBUG:__main__:PRECOND_13: 19342813113834066795298816 a^2 r^3 - 13837003610321187766272 a^2 r^2 + 3299462661493751808 a^2 r - 262254607552729 a^2 - 15924580996659860331298816 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1/128, y=11/256, r=1/512, a=-12779
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/128, y: 11/256}
+DEBUG:__main__:PRECOND_14: 65536 r - 121 > 0 /\ [ 1331 a + 16777216 < 0 \/ 10133099161583616 r - 1771561 a^2 - 44660948992 a - 300183854252032 > 0 ]
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 1/128, y: lambda_var_0 + 11/256}
+DEBUG:__main__:PRECOND_15: 4398046511104 a^2 r^3 - 805306368 a^2 r^2 + 49152 a^2 r - a^2 - 3995393327104 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1/256, y=63/2048, r=1/1024, a=-34406
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/256, y: 63/2048}
+DEBUG:__main__:PRECOND_16: 4194304 r - 3969 > 0 /\ [ 250047 a + 8589934592 < 0 \/ 2656331146614175432704 r - 62523502209 a^2 - 4295774749851648 a - 76300618205608542208 > 0 ]
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 1/256, y: lambda_var_0 + 63/2048}
+DEBUG:__main__:PRECOND_17: 281474976710656 a^2 r^3 - 12884901888 a^2 r^2 + 196608 a^2 r - a^2 - 268435456000000 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1/512, y=45/2048, r=1/2048, a=-94924
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/512, y: 45/2048}
+DEBUG:__main__:PRECOND_18: 4194304 r - 2025 > 0 /\ [ 91125 a + 8589934592 < 0 \/ 2656331146614175432704 r - 8303765625 a^2 - 1565515579392000 a - 75069446657476132864 > 0 ]
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 1/512, y: lambda_var_0 + 45/2048}
+DEBUG:__main__:PRECOND_19: 18014398509481984 a^2 r^3 - 206158430208 a^2 r^2 + 786432 a^2 r - a^2 - 17594659945578496 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1/1024, y=255/16384, r=1/4096, a=-265264
+DEBUG:__main__:---------pre-condition 20---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/1024, y: 255/16384}
+DEBUG:__main__:PRECOND_20: 268435456 r - 65025 > 0 /\ [ 16581375 a + 4398046511104 < 0 \/ 696341272098026404630757376 r - 274941996890625 a^2 - 145851316936114176000 a - 19511492735717452300681216 > 0 ]
+DEBUG:__main__:---------pre-condition 21---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 1/1024, y: lambda_var_0 + 255/16384}
+DEBUG:__main__:PRECOND_21: 1152921504606846976 a^2 r^3 - 3298534883328 a^2 r^2 + 3145728 a^2 r - a^2 - 1139450288143335424 > 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1/8192, y=181/16384, r=1/8192, a=-745833
+DEBUG:__main__:---------pre-condition 22---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/8192, y: 181/16384}

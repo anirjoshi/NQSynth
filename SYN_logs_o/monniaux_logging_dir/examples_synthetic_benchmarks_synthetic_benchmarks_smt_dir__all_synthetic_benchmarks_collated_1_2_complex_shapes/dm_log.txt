@@ -1,0 +1,53 @@
+DEBUG:__main__:Starting Log File: dm_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_1_2_complex_shapes.smt
+DEBUG:__main__:ip_vars: ['a', 'r']
+DEBUG:__main__:op_vars: ['y', 'x']
+DEBUG:__main__:post_condition_smt:And(And(And(0 >
+            ... +
+            ... +
+            ... +
+            ... +
+            ... +
+            ... +
+            ... +
+            ... +
+            ... +
+            ... +
+            ... +
+            ...,
+            ...)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > -r + x**4 + y**4) & (0 > 2*a**4 - 20*a**3*x + 6*a**2*y**2 - 260*a*x**3 + 180*a*x**2*y - r + 257*x**4 + 252*x**3*y + 102*x**2*y**2 + 2*y**4 - 3), {}
+DEBUG:__main__:vars sympy:['y', 'a', 'r', 'x']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y, 'r': r, 'a': a}
+DEBUG:__main__:z3 post_condition:And(0 > x**4 + y**4 + -1*r,
+    0 >
+    -3 +
+    -1*r +
+    2*a**4 +
+    2*y**4 +
+    257*x**4 +
+    -260*a*x**3 +
+    -20*x*a**3 +
+    6*a**2*y**2 +
+    102*x**2*y**2 +
+    252*y*x**3 +
+    180*a*y*x**2)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1/8, y=1/2, r=2, a=-1/2
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:PRECOND_0: (-r + x**4 + 1/16 < 0) & (2*a**4 - 20*a**3*x + 3*a**2/2 - 260*a*x**3 + 90*a*x**2 - r + 257*x**4 + 126*x**3 + 51*x**2/2 - 23/8 < 0)
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:PRECOND_1: (r > 257/4096) & (2*a**4 - 5*a**3/2 + 3*a**2/2 + 115*a/128 - r - 8879/4096 < 0)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=-2, y=0, r=513/32, a=-2
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:PRECOND_2: (r - x**4 > 0) & (-2*a**4 + 20*a**3*x + 260*a*x**3 + r - 257*x**4 + 3 > 0)
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:PRECOND_3: (r > 16) & (2*a**4 + 40*a**3 + 2080*a - r + 4109 < 0)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=-1, y=1/4, r=33/32, a=-7/8
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:PRECOND_4: (-r + x**4 + 1/256 < 0) & (2*a**4 - 20*a**3*x + 3*a**2/8 - 260*a*x**3 + 45*a*x**2 - r + 257*x**4 + 63*x**3 + 51*x**2/8 - 383/128 < 0)
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:PRECOND_5: (r > 257/256) & (2*a**4 + 20*a**3 + 3*a**2/8 + 305*a - r + 25265/128 < 0)

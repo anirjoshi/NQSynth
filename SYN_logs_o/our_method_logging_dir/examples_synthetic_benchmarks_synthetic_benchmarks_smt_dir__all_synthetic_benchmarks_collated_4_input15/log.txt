@@ -1,0 +1,44 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_4_input15.smt
+DEBUG:__main__:ip_vars: ['a', 'b']
+DEBUG:__main__:op_vars: ['x', 'y']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*x*x*x*x + 1*y*y*y*y + -1,
+            0 >
+            0 +
+            1*x*x +
+            1*y*y +
+            -2*x*a +
+            -2*y*b +
+            1*a*a +
+            1*b*b +
+            -1)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > x**4 + y**4 - 1) & (0 > a**2 - 2*a*x + b**2 - 2*b*y + x**2 + y**2 - 1), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['y', 'a', 'x', 'b']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y, 'a': a, 'b': b}
+DEBUG:__main__:z3 post_condition:And(0 > -1 + x**4 + y**4,
+    0 > -1 + a**2 + b**2 + x**2 + y**2 + -2*a*x + -2*b*y)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1/8, y=0, a=1/2, b=0
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/8, y: 0}
+DEBUG:__main__:PRECOND_0: b - 1 < 0 /\ b + 1 > 0 /\ [ b^2 + a^2 - 2 a < 0 \/ b^2 + a^2 + 2 a < 0 \/ [ a >= 0 /\ a - 1 < 0 ] \/ [ a < 0 /\ a + 1 > 0 ] ]
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 1/8, y: lambda_var_0}
+DEBUG:__main__:PRECOND_1: 8 a - 9 < 0 /\ 8 a + 7 > 0 /\ [ 131072 b^6 + 393216 a^2 b^4 - 98304 a b^4 - 387072 b^4 + 393216 a^4 b^2 - 196608 a^3 b^2 - 749568 a^2 b^2 + 193536 a b^2 + 249984 b^2 + 131072 a^6 - 98304 a^5 - 362496 a^4 + 191488 a^3 + 749952 a^2 - 193536 a - 512001 < 0 \/ 4194304 b^8 + 16777216 a^2 b^6 - 4194304 a b^6 - 16515072 b^6 + 25165824 a^4 b^4 - 12582912 a^3 b^4 - 47972352 a^2 b^4 + 12386304 a b^4 + 15998976 b^4 + 16777216 a^6 b^2 - 12582912 a^5 b^2 - 46399488 a^4 b^2 + 24510464 a^3 b^2 + 95993856 a^2 b^2 - 24772608 a b^2 - 65536128 b^2 + 4194304 a^8 - 4194304 a^7 - 14942208 a^6 + 12124160 a^5 + 12918784 a^4 - 7741440 a^3 + 1507968 a^2 - 127008 a + 3969 < 0 ]
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=3/4, y=-1/2, a=3/2, b=-1
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 3/4, y: -1/2}
+DEBUG:__main__:PRECOND_2: 2 b - 1 < 0 /\ 2 b + 3 > 0 /\ [ 16 a^4 - 15 < 0 \/ 64 b^8 + 256 b^7 + 256 a^2 b^6 + 192 b^6 + 768 a^2 b^5 - 320 b^5 + 384 a^4 b^4 + 192 a^2 b^4 - 416 b^4 + 768 a^4 b^3 - 896 a^2 b^3 + 256 a^6 b^2 - 192 a^4 b^2 + 576 a^2 b^2 + 168 b^2 + 256 a^6 b - 576 a^4 b + 1152 a^2 b + 72 b + 64 a^8 - 192 a^6 + 96 a^4 - 648 a^2 + 9 < 0 ]
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 3/4, y: lambda_var_0 - 1/2}
+DEBUG:__main__:PRECOND_3: 4 a - 7 < 0 /\ 4 a + 1 > 0 /\ [ 2048 b^6 + 6144 a^2 b^4 - 9216 a b^4 - 2688 b^4 + 6144 a^4 b^2 - 18432 a^3 b^2 + 8448 a^2 b^2 + 8064 a b^2 - 224 b^2 + 2048 a^6 - 9216 a^5 + 11136 a^4 + 1152 a^3 - 672 a^2 - 8064 a - 2009 < 0 \/ 16384 b^8 + 65536 a^2 b^6 - 98304 a b^6 - 28672 b^6 + 98304 a^4 b^4 - 294912 a^3 b^4 + 135168 a^2 b^4 + 129024 a b^4 - 3584 b^4 + 65536 a^6 b^2 - 294912 a^5 b^2 + 356352 a^4 b^2 + 36864 a^3 b^2 - 21504 a^2 b^2 - 258048 a b^2 - 64288 b^2 + 16384 a^8 - 98304 a^7 + 192512 a^6 - 92160 a^5 - 114176 a^4 + 107520 a^3 + 6048 a^2 - 21168 a + 3969 < 0 ]

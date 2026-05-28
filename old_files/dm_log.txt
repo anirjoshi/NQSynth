@@ -1,0 +1,45 @@
+DEBUG:__main__:Starting Log File: dm_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_4_input12.smt
+DEBUG:__main__:ip_vars: ['x']
+DEBUG:__main__:op_vars: ['y']
+DEBUG:__main__:post_condition_smt:And(And(And(0 >= 0 + 1*y*y + 1*x*x + -8,
+            0 >= 0 + 1*y*y*y*y + 1*x*x*x + -2,
+            0 >= 0 + 1*y*y*y + 1*x*x*x*x + -2)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 >= x**2 + y**2 - 8) & (0 >= x**3 + y**4 - 2) & (0 >= x**4 + y**3 - 2), {}
+DEBUG:__main__:vars sympy:['x', 'y']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y}
+DEBUG:__main__:z3 post_condition:And(0 >= -8 + x**2 + y**2,
+    0 >= -2 + x**3 + y**4,
+    0 >= -2 + x**4 + y**3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1/8, y=-1
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:PRECOND_0: (x <= 1) & (x >= -3**(1/4))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=9/8, y=0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:PRECOND_1: Abs(x) <= 2**(1/4)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=39/32, y=-5/8
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:PRECOND_2: Abs(x) <= 1149**(1/4)*2**(3/4)/8
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=627/512, y=-81/128
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:PRECOND_3: Abs(x) <= 2**(3/4)*4725745**(1/4)/64
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=10037/8192, y=-2593/4096
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:PRECOND_4: (x >= -154873375329**(1/4)/512) & (x <= 154873375329**(1/4)/512)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2569533/2097152, y=-165953/262144
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:PRECOND_5: (x <= 8686259432229000019711**(1/3)/16777216) & (x >= -sqrt(2)*40599208722942145**(1/4)/16384)
+DEBUG:__main__:ERROR_UNKNOWN_TERMINATION
+DEBUG:__main__:(x <= 1) & (x >= -3**(1/4)) {'x': 1/8, 'y': -1}
+DEBUG:__main__:Abs(x) <= 2**(1/4) {'x': 9/8, 'y': 0}
+DEBUG:__main__:Abs(x) <= 1149**(1/4)*2**(3/4)/8 {'x': 39/32, 'y': -5/8}
+DEBUG:__main__:Abs(x) <= 2**(3/4)*4725745**(1/4)/64 {'x': 627/512, 'y': -81/128}
+DEBUG:__main__:(x >= -154873375329**(1/4)/512) & (x <= 154873375329**(1/4)/512) {'x': 10037/8192, 'y': -2593/4096}
+DEBUG:__main__:(x <= 8686259432229000019711**(1/3)/16777216) & (x >= -sqrt(2)*40599208722942145**(1/4)/16384) {'x': 2569533/2097152, 'y': -165953/262144}

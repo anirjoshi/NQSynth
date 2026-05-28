@@ -1,0 +1,34 @@
+DEBUG:__main__:Starting Log File: gus_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_Arthan_M2_ArthanM2-chunk-0015.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoSINS', 'skoM']
+DEBUG:__main__:op_vars: ['skoCOSS', 'skoS']
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(skoSINS*
+        (skoM*skoM*skoM*(skoCOSS*-2 + skoM*-5) +
+         skoS*
+         (skoM*skoM*skoM*skoM*-3 +
+          skoS*
+          (skoM*skoM*skoM*skoM*3 + skoS*skoM*skoM*skoM*skoM)) +
+         skoSINS*(skoM*skoM*skoM + skoS*skoM*skoM*skoM)) <=
+        skoM*
+        skoM*
+        skoM*
+        (skoCOSS*skoCOSS*-2 + skoM*(skoCOSS*-6 + skoM*-2)) +
+        skoS*
+        (skoM*
+         skoM*
+         skoM*
+         (skoCOSS*skoCOSS*-2 + skoM*(skoCOSS*-12 + skoM*-6)) +
+         skoS*
+         (skoM*skoM*skoM*skoM*(skoCOSS*-6 + skoM*-6) +
+          skoS*skoM*skoM*skoM*skoM*skoM*-2)),
+        And(Not(skoM*skoM <= 0),
+            And(And(skoSINS*skoSINS -
+                    (1 + skoCOSS*skoCOSS*-1) <=
+                    delta,
+                    1 + skoCOSS*skoCOSS*-1 - skoSINS*skoSINS <=
+                    delta),
+                And(2 <= skoS, 2 <= skoM)))))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (2 <= skoM) & (2 <= skoS) & (skoM**2 > 0) & (skoCOSS**2 + skoSINS**2 - 1 <= delta) & (-skoCOSS**2 - skoSINS**2 + 1 <= delta) & (skoSINS*(skoM**3*(-2*skoCOSS - 5*skoM) + skoS*(-3*skoM**4 + skoS*(skoM**4*skoS + 3*skoM**4)) + skoSINS*(skoM**3*skoS + skoM**3)) <= skoM**3*(-2*skoCOSS**2 + skoM*(-6*skoCOSS - 2*skoM)) + skoS*(skoM**3*(-2*skoCOSS**2 + skoM*(-12*skoCOSS - 6*skoM)) + skoS*(-2*skoM**5*skoS + skoM**4*(-6*skoCOSS - 6*skoM)))), {}
+DEBUG:__main__:vars sympy:['delta', 'skoCOSS', 'skoSINS', 'skoM', 'skoS']

@@ -1,0 +1,6 @@
+(set-logic NRA)
+(synth-fun a_o ( ( delta_i Real ) ) Real )
+(declare-var delta Real)
+( constraint (=> (and (<= 0.0 (+ (- 3.0) delta))) (and (<= 0.0 delta)      (<= (- (* (a_o delta) (a_o delta) ) (- 3.0)) delta)      (<= (- (- 3.0) (* (a_o delta) (a_o delta) )) delta))))
+( check-synth )
+(exit)

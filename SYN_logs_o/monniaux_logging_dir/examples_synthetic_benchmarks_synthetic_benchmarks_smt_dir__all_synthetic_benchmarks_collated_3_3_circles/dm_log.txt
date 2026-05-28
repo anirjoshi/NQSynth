@@ -1,0 +1,104 @@
+DEBUG:__main__:Starting Log File: dm_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_3_3_circles.smt
+DEBUG:__main__:ip_vars: ['a', 'b', 'r2', 'r3']
+DEBUG:__main__:op_vars: ['x', 'y', 'r1']
+DEBUG:__main__:post_condition_smt:And(And(And(0 >= 0 + 1*x*x + 1*y*y + -1*r1*r1,
+            0 >=
+            0 +
+            1*x*x +
+            1*y*y +
+            -2*x*a +
+            -2*y*b +
+            1*a*a +
+            1*b*b +
+            -1*r2*r2,
+            0 >=
+            0 +
+            1*x*x +
+            1*y*y +
+            -2*x*b +
+            -2*y*a +
+            1*a*a +
+            1*b*b +
+            -1*r3*r3)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 >= -r1**2 + x**2 + y**2) & (0 >= a**2 - 2*a*x + b**2 - 2*b*y - r2**2 + x**2 + y**2) & (0 >= a**2 - 2*a*y + b**2 - 2*b*x - r3**2 + x**2 + y**2), {}
+DEBUG:__main__:vars sympy:['y', 'r3', 'b', 'r1', 'a', 'x', 'r2']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y, 'r1': r1, 'a': a, 'b': b, 'r2': r2, 'r3': r3}
+DEBUG:__main__:z3 post_condition:And(0 >= x**2 + y**2 + -1*r1**2,
+    0 >=
+    a**2 + b**2 + x**2 + y**2 + -1*r2**2 + -2*a*x + -2*b*y,
+    0 >=
+    a**2 + b**2 + x**2 + y**2 + -1*r3**2 + -2*a*y + -2*b*x)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1/8, y=1/2, r1=1, a=-1/2, b=-1/2, r2=2, r3=-2
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:PRECOND_0: (-r1**2 + y**2 + 1/64 <= 0) & (a**2 - a/4 + b**2 - 2*b*y - r2**2 + y**2 + 1/64 <= 0) & (a**2 - 2*a*y + b**2 - b/4 - r3**2 + y**2 + 1/64 <= 0)
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:PRECOND_1: (r1**2 >= 17/64) & (a**2 - a + b**2 - b/4 - r3**2 + 17/64 <= 0) & (a**2 - a/4 + b**2 - b - r2**2 + 17/64 <= 0)
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:PRECOND_2: (a**2 - a + b**2 - b/4 - r3**2 + 17/64 <= 0) & (a**2 - a/4 + b**2 - b - r2**2 + 17/64 <= 0)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=0, y=0, r1=0, a=0, b=0, r2=0, r3=0
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:PRECOND_3: (r1**2 - y**2 >= 0) & (a**2 + b**2 - 2*b*y - r2**2 + y**2 <= 0) & (a**2 - 2*a*y + b**2 - r3**2 + y**2 <= 0)
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:PRECOND_4: (r1**2 >= 0) & (a**2 + b**2 - r2**2 <= 0) & (a**2 + b**2 - r3**2 <= 0)
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:PRECOND_5: (a**2 + b**2 - r2**2 <= 0) & (a**2 + b**2 - r3**2 <= 0)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=-1/16, y=-1/4, r1=17/64, a=0, b=-1, r2=-1, r3=-63/64
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:PRECOND_6: (-r1**2 + y**2 + 1/256 <= 0) & (a**2 + a/8 + b**2 - 2*b*y - r2**2 + y**2 + 1/256 <= 0) & (a**2 - 2*a*y + b**2 + b/8 - r3**2 + y**2 + 1/256 <= 0)
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:PRECOND_7: (r1**2 >= 17/256) & (a**2 + a/8 + b**2 + b/2 - r2**2 + 17/256 <= 0) & (a**2 + a/2 + b**2 + b/8 - r3**2 + 17/256 <= 0)
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:PRECOND_8: (a**2 + a/8 + b**2 + b/2 - r2**2 + 17/256 <= 0) & (a**2 + a/2 + b**2 + b/8 - r3**2 + 17/256 <= 0)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=-1/32, y=0, r1=3/64, a=1/4, b=-1/8, r2=-5/16, r3=35/128
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:PRECOND_9: (-r1**2 + y**2 + 1/1024 <= 0) & (a**2 + a/16 + b**2 - 2*b*y - r2**2 + y**2 + 1/1024 <= 0) & (a**2 - 2*a*y + b**2 + b/16 - r3**2 + y**2 + 1/1024 <= 0)
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:PRECOND_10: (r1**2 >= 1/1024) & (a**2 + a/16 + b**2 - r2**2 + 1/1024 <= 0) & (a**2 + b**2 + b/16 - r3**2 + 1/1024 <= 0)
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:PRECOND_11: (a**2 + a/16 + b**2 - r2**2 + 1/1024 <= 0) & (a**2 + b**2 + b/16 - r3**2 + 1/1024 <= 0)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=-7/256, y=1/128, r1=-15/512, a=1/64, b=-3/128, r2=-1/8, r3=5/512
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:PRECOND_12: (-r1**2 + y**2 + 49/65536 <= 0) & (a**2 + 7*a/128 + b**2 - 2*b*y - r2**2 + y**2 + 49/65536 <= 0) & (a**2 - 2*a*y + b**2 + 7*b/128 - r3**2 + y**2 + 49/65536 <= 0)
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:PRECOND_13: (r1**2 >= 53/65536) & (a**2 - a/64 + b**2 + 7*b/128 - r3**2 + 53/65536 <= 0) & (a**2 + 7*a/128 + b**2 - b/64 - r2**2 + 53/65536 <= 0)
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:PRECOND_14: (a**2 - a/64 + b**2 + 7*b/128 - r3**2 + 53/65536 <= 0) & (a**2 + 7*a/128 + b**2 - b/64 - r2**2 + 53/65536 <= 0)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=-1/128, y=3/128, r1=-7/256, a=1/64, b=-1/64, r2=3/64, r3=3/256
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:PRECOND_15: (-r1**2 + y**2 + 1/16384 <= 0) & (a**2 + a/64 + b**2 - 2*b*y - r2**2 + y**2 + 1/16384 <= 0) & (a**2 - 2*a*y + b**2 + b/64 - r3**2 + y**2 + 1/16384 <= 0)
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:PRECOND_16: (r1**2 >= 5/8192) & (a**2 - 3*a/64 + b**2 + b/64 - r3**2 + 5/8192 <= 0) & (a**2 + a/64 + b**2 - 3*b/64 - r2**2 + 5/8192 <= 0)
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:PRECOND_17: (a**2 - 3*a/64 + b**2 + b/64 - r3**2 + 5/8192 <= 0) & (a**2 + a/64 + b**2 - 3*b/64 - r2**2 + 5/8192 <= 0)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=-1/64, y=1/64, r1=-3/128, a=1, b=-1, r2=-23533/16384, r3=-357/256
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:PRECOND_18: (-r1**2 + y**2 + 1/4096 <= 0) & (a**2 + a/32 + b**2 - 2*b*y - r2**2 + y**2 + 1/4096 <= 0) & (a**2 - 2*a*y + b**2 + b/32 - r3**2 + y**2 + 1/4096 <= 0)
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:PRECOND_19: (r1**2 >= 1/2048) & (a**2 - a/32 + b**2 + b/32 - r3**2 + 1/2048 <= 0) & (a**2 + a/32 + b**2 - b/32 - r2**2 + 1/2048 <= 0)
+DEBUG:__main__:---------pre-condition 20---------
+DEBUG:__main__:PRECOND_20: (a**2 - a/32 + b**2 + b/32 - r3**2 + 1/2048 <= 0) & (a**2 + a/32 + b**2 - b/32 - r2**2 + 1/2048 <= 0)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=-1/256, y=1/64, r1=-5/256, a=1/64, b=-1/128, r2=1/32, r3=3/512
+DEBUG:__main__:---------pre-condition 21---------
+DEBUG:__main__:PRECOND_21: (-r1**2 + y**2 + 1/65536 <= 0) & (a**2 + a/128 + b**2 - 2*b*y - r2**2 + y**2 + 1/65536 <= 0) & (a**2 - 2*a*y + b**2 + b/128 - r3**2 + y**2 + 1/65536 <= 0)
+DEBUG:__main__:---------pre-condition 22---------
+DEBUG:__main__:PRECOND_22: (r1**2 >= 17/65536) & (a**2 - a/32 + b**2 + b/128 - r3**2 + 17/65536 <= 0) & (a**2 + a/128 + b**2 - b/32 - r2**2 + 17/65536 <= 0)
+DEBUG:__main__:---------pre-condition 23---------
+DEBUG:__main__:PRECOND_23: (a**2 - a/32 + b**2 + b/128 - r3**2 + 17/65536 <= 0) & (a**2 + a/128 + b**2 - b/32 - r2**2 + 17/65536 <= 0)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=-1/512, y=1/64, r1=65/4096, a=1/64, b=-1/512, r2=-7/256, r3=0
+DEBUG:__main__:---------pre-condition 24---------
+DEBUG:__main__:PRECOND_24: (-r1**2 + y**2 + 1/262144 <= 0) & (a**2 + a/256 + b**2 - 2*b*y - r2**2 + y**2 + 1/262144 <= 0) & (a**2 - 2*a*y + b**2 + b/256 - r3**2 + y**2 + 1/262144 <= 0)
+DEBUG:__main__:---------pre-condition 25---------
+DEBUG:__main__:PRECOND_25: (r1**2 >= 65/262144) & (a**2 - a/32 + b**2 + b/256 - r3**2 + 65/262144 <= 0) & (a**2 + a/256 + b**2 - b/32 - r2**2 + 65/262144 <= 0)
+DEBUG:__main__:---------pre-condition 26---------
+DEBUG:__main__:PRECOND_26: (a**2 - a/32 + b**2 + b/256 - r3**2 + 65/262144 <= 0) & (a**2 + a/256 + b**2 - b/32 - r2**2 + 65/262144 <= 0)

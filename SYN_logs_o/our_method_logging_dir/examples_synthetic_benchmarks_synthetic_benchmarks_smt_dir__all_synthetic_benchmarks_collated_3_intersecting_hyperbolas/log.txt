@@ -1,0 +1,151 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_3_intersecting_hyperbolas.smt
+DEBUG:__main__:ip_vars: ['z']
+DEBUG:__main__:op_vars: ['y', 'x']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*y*y + -1*x*y + 1*z,
+            0 > 0 + 1*x*x + -1*y*y + -10*z)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > -x*y + y**2 + z) & (0 > x**2 - y**2 - 10*z), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['z', 'y', 'x']
+DEBUG:__main__:z3 vars:{'z': z, 'y': y, 'x': x}
+DEBUG:__main__:z3 post_condition:And(0 > z + y**2 + -1*x*y, 0 > x**2 + -1*y**2 + -10*z)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, z=1/32, y=1/8, x=1/2
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 + 1/8, x: 1/2}
+DEBUG:__main__:PRECOND_0: 16 z - 1 < 0 /\ z > 0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: 1/8, x: lambda_var_0 + 1/2}
+DEBUG:__main__:PRECOND_1: z > 0 /\ 8 z - 1 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, z=3/16, y=-1/2, x=-1
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 - 1/2, x: -1}
+DEBUG:__main__:PRECOND_2: 4 z - 1 < 0 /\ z > 0
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: -1/2, x: lambda_var_0 - 1}
+DEBUG:__main__:PRECOND_3: z > 0 /\ z - 2 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, z=2, y=3, x=4
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 + 3, x: 4}
+DEBUG:__main__:PRECOND_4: z - 4 < 0 /\ z > 0
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: 3, x: lambda_var_0 + 4}
+DEBUG:__main__:PRECOND_5: z > 0 /\ z - 72 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, z=577/8, y=-17/2, x=-17
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 - 17/2, x: -17}
+DEBUG:__main__:PRECOND_6: 4 z - 289 < 0 /\ z > 0
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: -17/2, x: lambda_var_0 - 17}
+DEBUG:__main__:PRECOND_7: z > 0 /\ z - 578 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, z=579, y=10, x=68
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 + 10, x: 68}
+DEBUG:__main__:PRECOND_8: z - 1156 < 0 /\ z > 0
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: 10, x: lambda_var_0 + 68}
+DEBUG:__main__:PRECOND_9: z > 0 /\ z - 800 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, z=1157, y=36, x=69
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 + 36, x: 69}
+DEBUG:__main__:PRECOND_10: 4 z - 4761 < 0 /\ z > 0
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: 36, x: lambda_var_0 + 69}
+DEBUG:__main__:PRECOND_11: z > 0 /\ z - 10368 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, z=10369, y=-103, x=-204
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 - 103, x: -204}
+DEBUG:__main__:PRECOND_12: z - 10404 < 0 /\ z > 0
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: -103, x: lambda_var_0 - 204}
+DEBUG:__main__:PRECOND_13: z > 0 /\ z - 84872 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, z=84873, y=-293, x=-583
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 - 293, x: -583}
+DEBUG:__main__:PRECOND_14: 4 z - 339889 < 0 /\ z > 0
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: -293, x: lambda_var_0 - 583}
+DEBUG:__main__:PRECOND_15: z > 0 /\ z - 686792 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, z=690959, y=-294, x=-2645
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 - 294, x: -2645}
+DEBUG:__main__:PRECOND_16: 4 z - 6996025 < 0 /\ z > 0
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: -294, x: lambda_var_0 - 2645}
+DEBUG:__main__:PRECOND_17: z > 0 /\ z - 691488 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, z=1749007, y=-1324, x=-2646
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 - 1324, x: -2646}
+DEBUG:__main__:PRECOND_18: z - 1750329 < 0 /\ z > 0
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: -1324, x: lambda_var_0 - 2646}
+DEBUG:__main__:PRECOND_19: z > 0 /\ z - 14023808 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, z=14042616, y=-1325, x=-11924
+DEBUG:__main__:---------pre-condition 20---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 - 1325, x: -11924}
+DEBUG:__main__:PRECOND_20: z - 35545444 < 0 /\ z > 0
+DEBUG:__main__:---------pre-condition 21---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: -1325, x: lambda_var_0 - 11924}
+DEBUG:__main__:PRECOND_21: z > 0 /\ z - 14045000 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, z=35545518, y=-2108, x=-18971
+DEBUG:__main__:---------pre-condition 22---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 - 2108, x: -18971}
+DEBUG:__main__:PRECOND_22: 4 z - 359898841 < 0 /\ z > 0
+DEBUG:__main__:---------pre-condition 23---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {y: -2108, x: lambda_var_0 - 18971}
+DEBUG:__main__:PRECOND_23: z > 0 /\ z - 35549312 < 0
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, z=89988491, y=-3354, x=-30185
+DEBUG:__main__:---------pre-condition 24---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {y: lambda_var_0 - 3354, x: -30185}

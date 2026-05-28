@@ -1,0 +1,3 @@
+(
+(define-fun x_o ((y_i Real)) Real y_i)
+)

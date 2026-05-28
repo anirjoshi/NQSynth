@@ -1,0 +1,68 @@
+DEBUG:__main__:Starting Log File: dm_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_1_circle_origin_other_circle_radius_fixed.smt
+DEBUG:__main__:ip_vars: ['r']
+DEBUG:__main__:op_vars: ['x', 'y']
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*x*x + 1*y*y + -1*r*r,
+            0 > 0 + -1*x*x + -1*y*y + 25)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > -r**2 + x**2 + y**2) & (0 > -x**2 - y**2 + 25), {}
+DEBUG:__main__:vars sympy:['y', 'r', 'x']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y, 'r': r}
+DEBUG:__main__:z3 post_condition:And(0 > x**2 + y**2 + -1*r**2, 0 > 25 + -1*x**2 + -1*y**2)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1/8, y=5, r=-6
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:PRECOND_0: (y**2 > 1599/64) & (-r**2 + y**2 + 1/64 < 0)
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:PRECOND_1: r**2 > 1601/64
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=-1/16, y=-5, r=-5121/1024
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:PRECOND_2: (y**2 > 6399/256) & (-r**2 + y**2 + 1/256 < 0)
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:PRECOND_3: r**2 > 6401/256
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=3/32, y=-20477/4096, r=-20481/4096
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:PRECOND_4: (y**2 > 25591/1024) & (-r**2 + y**2 + 9/1024 < 0)
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:PRECOND_5: r**2 > 419454985/16777216
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=-13/128, y=-5119/1024, r=40961/8192
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:PRECOND_6: (y**2 > 409431/16384) & (-r**2 + y**2 + 169/16384 < 0)
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:PRECOND_7: r**2 > 26214977/1048576
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=-7/64, y=-81901/16384, r=327683/65536
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:PRECOND_8: (y**2 > 102351/4096) & (-r**2 + y**2 + 49/4096 < 0)
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:PRECOND_9: r**2 > 6710985065/268435456
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=-31/256, y=-10237/2048, r=163841/32768
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:PRECOND_10: (y**2 > 1637439/65536) & (-r**2 + y**2 + 961/65536 < 0)
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:PRECOND_11: r**2 > 104857673/4194304
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=31/256, y=-22511393226472089/4503599627370496, r=5242881/1048576
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:PRECOND_12: (y**2 > 1637439/65536) & (-r**2 + y**2 + 961/65536 < 0)
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:PRECOND_13: r**2 > 507060240091291761920605610618737/20282409603651670423947251286016
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(y**2 > 1599/64) & (-r**2 + y**2 + 1/64 < 0) {'x': 1/8, 'y': 5, 'r': -6}
+DEBUG:__main__:r**2 > 1601/64 {'x': 1/8, 'y': 5, 'r': -6}
+DEBUG:__main__:(y**2 > 6399/256) & (-r**2 + y**2 + 1/256 < 0) {'x': -1/16, 'y': -5, 'r': -5121/1024}
+DEBUG:__main__:r**2 > 6401/256 {'x': -1/16, 'y': -5, 'r': -5121/1024}
+DEBUG:__main__:(y**2 > 25591/1024) & (-r**2 + y**2 + 9/1024 < 0) {'x': 3/32, 'y': -20477/4096, 'r': -20481/4096}
+DEBUG:__main__:r**2 > 419454985/16777216 {'x': 3/32, 'y': -20477/4096, 'r': -20481/4096}
+DEBUG:__main__:(y**2 > 409431/16384) & (-r**2 + y**2 + 169/16384 < 0) {'x': -13/128, 'y': -5119/1024, 'r': 40961/8192}
+DEBUG:__main__:r**2 > 26214977/1048576 {'x': -13/128, 'y': -5119/1024, 'r': 40961/8192}
+DEBUG:__main__:(y**2 > 102351/4096) & (-r**2 + y**2 + 49/4096 < 0) {'x': -7/64, 'y': -81901/16384, 'r': 327683/65536}
+DEBUG:__main__:r**2 > 6710985065/268435456 {'x': -7/64, 'y': -81901/16384, 'r': 327683/65536}
+DEBUG:__main__:(y**2 > 1637439/65536) & (-r**2 + y**2 + 961/65536 < 0) {'x': -31/256, 'y': -10237/2048, 'r': 163841/32768}
+DEBUG:__main__:r**2 > 104857673/4194304 {'x': -31/256, 'y': -10237/2048, 'r': 163841/32768}
+DEBUG:__main__:(y**2 > 1637439/65536) & (-r**2 + y**2 + 961/65536 < 0) {'x': 31/256, 'y': -22511393226472089/4503599627370496, 'r': 5242881/1048576}
+DEBUG:__main__:r**2 > 507060240091291761920605610618737/20282409603651670423947251286016 {'x': 31/256, 'y': -22511393226472089/4503599627370496, 'r': 5242881/1048576}

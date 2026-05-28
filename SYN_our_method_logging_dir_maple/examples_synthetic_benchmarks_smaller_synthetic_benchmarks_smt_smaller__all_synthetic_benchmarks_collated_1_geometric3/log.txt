@@ -1,0 +1,29 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt
+DEBUG:__main__:ip_vars: ['c']
+DEBUG:__main__:op_vars: ['x', 'y']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*x*x + 1*y*y + -1,
+            0 > 0 + 1*x*x + 1*y*y + -6*x + 1*c)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > x**2 + y**2 - 1) & (0 > c + x**2 - 6*x + y**2), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['x', 'c', 'y']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y, 'c': c}
+DEBUG:__main__:z3 post_condition:And(0 > -1 + x**2 + y**2, 0 > c + x**2 + y**2 + -6*x)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1/8, y=0, c=-17/64
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/8, y: 0}
+DEBUG:__main__:PRECOND_0: Or(c < -7, Eq(c + 7, 0), And(c < 9, Or(And(-c < -17, -c ** 2 - 2 * c < -35), -c < -17, c ** 2 + 2 * c < 35, And(c <= 17, Eq(c ** 2 + 2 * c - 35, 0), c < 0))))
+DEBUG:__main__:PRECOND_SYMPY_0: (c < -7) | Eq(c + 7, 0) | ((c < 9) & ((-c < -17) | (c**2 + 2*c < 35) | ((-c < -17) & (-c**2 - 2*c < -35)) | ((c <= 17) & (c < 0) & Eq(c**2 + 2*c - 35, 0))))
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 1/8, y: lambda_var_0}
+DEBUG:__main__:PRECOND_1: Or(4 * c < -1, Eq(4 * c + 1, 0), And(64 * c < 47, Or(-4 * c < 1, And(Eq(4 * c + 1, 0), 64 * c < 47))))
+DEBUG:__main__:PRECOND_SYMPY_1: (4*c < -1) | Eq(4*c + 1, 0) | ((64*c < 47) & ((-4*c < 1) | ((64*c < 47) & Eq(4*c + 1, 0))))
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(c < -7) | Eq(c + 7, 0) | ((c < 9) & ((-c < -17) | (c**2 + 2*c < 35) | ((-c < -17) & (-c**2 - 2*c < -35)) | ((c <= 17) & (c < 0) & Eq(c**2 + 2*c - 35, 0)))) {'x': 1/8, 'y': 0, 'c': -17/64} {x: lambda_var_0 + 1/8, y: 0}
+DEBUG:__main__:(4*c < -1) | Eq(4*c + 1, 0) | ((64*c < 47) & ((-4*c < 1) | ((64*c < 47) & Eq(4*c + 1, 0)))) {'x': 1/8, 'y': 0, 'c': -17/64} {x: 1/8, y: lambda_var_0}

@@ -1,0 +1,10 @@
+DEBUG:__main__:Starting Log File: gus_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_4_input7.smt
+DEBUG:__main__:ip_vars: ['a', 'b', 'r']
+DEBUG:__main__:op_vars: ['x', 'y']
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*x*x*a*a + 1*y*y*b*b + -1*a*a*b*b,
+            0 >
+            0 + 1*x*x + 1*y*y + -20*x + -20*y + -1*r*r + 200)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > -r**2 + x**2 - 20*x + y**2 - 20*y + 200) & (0 > -a**2*b**2 + a**2*x**2 + b**2*y**2), {}
+DEBUG:__main__:vars sympy:['b', 'x', 'y', 'a', 'r']

@@ -1,0 +1,4 @@
+(
+(define-fun skoCOSS_o ((delta_i Real) (skoSINS_i Real) (skoM_i Real)) Real (let ((_let_1 (* skoSINS_i skoSINS_i))) (ite (and (>= delta_i 2) (>= skoM_i 2) (>= (+ delta_i (* (- 1) skoM_i)) 0) (>= (+ delta_i (* (- 1) _let_1)) (- 1)) (or (not (>= delta_i 0)) (not (>= (+ delta_i skoM_i) 0)) (not (>= (+ delta_i _let_1) 1)))) (- 2.0) 0.0)))
+(define-fun skoS_o ((delta_i Real) (skoSINS_i Real) (skoM_i Real)) Real (let ((_let_1 (* skoSINS_i skoSINS_i))) (ite (and (>= delta_i 2) (>= skoM_i 2) (>= (+ delta_i (* (- 1) skoM_i)) 0) (>= (+ delta_i (* (- 1) _let_1)) (- 1)) (or (not (>= delta_i 0)) (not (>= (+ delta_i skoM_i) 0)) (not (>= (+ delta_i _let_1) 1)))) (/ 1 2) 2.0)))
+)

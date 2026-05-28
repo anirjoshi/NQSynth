@@ -1,0 +1,73 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt
+DEBUG:__main__:ip_vars: ['c', 'd']
+DEBUG:__main__:op_vars: ['x', 'y']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + -1*x*x + 1*y*y + -1*c,
+            0 > 0 + -1*y + 1*x*x + -1*d)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > -d + x**2 - y) & (0 > -c - x**2 + y**2), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['c', 'x', 'd', 'y']
+DEBUG:__main__:z3 vars:{'x': x, 'd': d, 'y': y, 'c': c}
+DEBUG:__main__:z3 post_condition:And(0 > x**2 + -1*d + -1*y, 0 > y**2 + -1*c + -1*x**2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=0, d=1, y=0, c=1
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0, y: 0}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000108sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.035744sec
+DEBUG:__main__:PRECOND_0: Or(And(c > 0, d > 0), And(d > 0, c + d > 0))
+DEBUG:__main__:PRECOND_SYMPY_0: ((c > 0) & (d > 0)) | ((d > 0) & (c + d > 0))
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 0, y: lambda_var_0}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000043sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.001907sec
+DEBUG:__main__:PRECOND_1: Or(And(c > 0, d > 0), And(c > 0, c - d ** 2 > 0))
+DEBUG:__main__:PRECOND_SYMPY_1: ((c > 0) & (d > 0)) | ((c > 0) & (c - d**2 > 0))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=5/16, d=-1/8, y=1/4, c=-1/32
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 5/16, y: 1/4}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000041sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.002943sec
+DEBUG:__main__:PRECOND_2: Or(And(d > -1 / 4, c + d > -3 / 16), And(c + d > -3 / 16, c < 1 / 16))
+DEBUG:__main__:PRECOND_SYMPY_2: ((d > -1/4) & (c + d > -3/16)) | ((c < 1/16) & (c + d > -3/16))
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 5/16, y: lambda_var_0 + 1/4}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000024sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.002085sec
+DEBUG:__main__:PRECOND_3: Or(And(Eq(128 * c + 25 * d - 128 * d ** 2, -5775 / 512), d > 25 / 256), And(c > -25 / 256, d > 25 / 256), 128 * c + 25 * d - 128 * d ** 2 > -5775 / 512)
+DEBUG:__main__:PRECOND_SYMPY_3: ((c > -25/256) & (d > 25/256)) | (128*c - 128*d**2 + 25*d > -5775/512) | ((d > 25/256) & Eq(128*c - 128*d**2 + 25*d, -5775/512))
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=-181/2048, d=-63/128, y=1/2, c=7937/32768
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 - 181/2048, y: 1/2}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000028sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.003140sec
+DEBUG:__main__:PRECOND_4: Or(And(d > -1 / 2, c + d > -1 / 4), And(c + d > -1 / 4, c < 1 / 4))
+DEBUG:__main__:PRECOND_SYMPY_4: ((d > -1/2) & (c + d > -1/4)) | ((c < 1/4) & (c + d > -1/4))
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: -181/2048, y: lambda_var_0 + 1/2}
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression sent to kernel in 0.000019sec
+DEBUG:wolframclient.evaluation.kernel.kernelcontroller:Expression received from kernel after 0.001960sec
+DEBUG:__main__:PRECOND_5: Or(And(Eq(2097152 * c + 32761 * d - 2097152 * d ** 2, -136336310223 / 8388608), d > 32761 / 4194304), And(c > -32761 / 4194304, d > 32761 / 4194304), 2097152 * c + 32761 * d - 2097152 * d ** 2 > -136336310223 / 8388608)
+DEBUG:__main__:PRECOND_SYMPY_5: ((c > -32761/4194304) & (d > 32761/4194304)) | (2097152*c - 2097152*d**2 + 32761*d > -136336310223/8388608) | ((d > 32761/4194304) & Eq(2097152*c - 2097152*d**2 + 32761*d, -136336310223/8388608))
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:((c > 0) & (d > 0)) | ((d > 0) & (c + d > 0)) {'x': 0, 'd': 1, 'y': 0, 'c': 1} {x: lambda_var_0, y: 0}
+DEBUG:__main__:((c > 0) & (d > 0)) | ((c > 0) & (c - d**2 > 0)) {'x': 0, 'd': 1, 'y': 0, 'c': 1} {x: 0, y: lambda_var_0}
+DEBUG:__main__:((d > -1/4) & (c + d > -3/16)) | ((c < 1/16) & (c + d > -3/16)) {'x': 5/16, 'd': -1/8, 'y': 1/4, 'c': -1/32} {x: lambda_var_0 + 5/16, y: 1/4}
+DEBUG:__main__:((c > -25/256) & (d > 25/256)) | (128*c - 128*d**2 + 25*d > -5775/512) | ((d > 25/256) & Eq(128*c - 128*d**2 + 25*d, -5775/512)) {'x': 5/16, 'd': -1/8, 'y': 1/4, 'c': -1/32} {x: 5/16, y: lambda_var_0 + 1/4}
+DEBUG:__main__:((d > -1/2) & (c + d > -1/4)) | ((c < 1/4) & (c + d > -1/4)) {'x': -181/2048, 'd': -63/128, 'y': 1/2, 'c': 7937/32768} {x: lambda_var_0 - 181/2048, y: 1/2}
+DEBUG:__main__:((c > -32761/4194304) & (d > 32761/4194304)) | (2097152*c - 2097152*d**2 + 32761*d > -136336310223/8388608) | ((d > 32761/4194304) & Eq(2097152*c - 2097152*d**2 + 32761*d, -136336310223/8388608)) {'x': -181/2048, 'd': -63/128, 'y': 1/2, 'c': 7937/32768} {x: -181/2048, y: lambda_var_0 + 1/2}
+INFO:wolframclient.evaluation.kernel.kernelcontroller:Start termination on kernel <WolframKernelController[wolfram-kernel-1 ❌], "/Applications/Wolfram Engine.app/Contents/MacOS/WolframKernel">
+INFO:wolframclient.evaluation.kernel.kernelcontroller:Killing kernel process: 26382

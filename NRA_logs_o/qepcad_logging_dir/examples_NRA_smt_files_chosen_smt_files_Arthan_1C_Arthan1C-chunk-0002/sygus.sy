@@ -1,0 +1,8 @@
+(set-logic NRA)
+(synth-fun skoCOSS_o ( ( delta_i Real ) ( skoS_i Real ) ) Real )
+(synth-fun skoSINS_o ( ( delta_i Real ) ( skoS_i Real ) ) Real )
+(declare-var delta Real)
+(declare-var skoS Real)
+( constraint (=> (and (<= 0.0 delta) (<= 0.0 (+ (- 217.0) (* 100.0 skoS)))) (let ((a!1 (* skoS (+ (- 4.0) (* skoS (+ 2.0 skoS)))))       (a!3 (* (skoCOSS_o delta skoS) (+ (- 2.0) (* (skoCOSS_o delta skoS) (- 2.0)))))       (a!4 (* (skoCOSS_o delta skoS) (+ (- 10.0) (* (skoCOSS_o delta skoS) (- 2.0)))))       (a!5 (* skoS (+ (- 6.0) (* (skoCOSS_o delta skoS) (- 6.0)) (* skoS (- 2.0)))))) (let ((a!2 (* (skoSINS_o delta skoS)               (+ (- 3.0) (* (skoCOSS_o delta skoS) (- 2.0)) a!1 (* (skoSINS_o delta skoS) (+ 1.0 skoS)))))) (let ((a!6 (<= a!2 (+ 2.0 a!3 (* skoS (+ a!4 a!5))))))   (and (<= 0.0 delta) a!6 (<= (/ 217.0 100.0) skoS)))))))
+( check-synth )
+(exit)

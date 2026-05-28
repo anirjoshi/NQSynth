@@ -1,0 +1,510 @@
+DEBUG:__main__:Starting Log File: dm_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_asin_8_asin-8-chunk-0053.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoX', 'skoS2', 'pi']
+DEBUG:__main__:op_vars: ['skoSP', 'skoSM']
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(Not(skoSP*(-1/20 + pi*(-1/2) + skoS2*pi*-1) <=
+            1/5 + skoSM*(1/20 + pi*(-1/2) + skoS2*pi*-1)),
+        And(Not(pi <= 15707963/5000000),
+            And(Not(31415927/10000000 <= pi),
+                And(Not(skoX <= 0), Not(1 <= skoX))))))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (1 > skoX) & (31415927/10000000 > pi) & (pi > 15707963/5000000) & (skoX > 0) & (skoSP*(-pi*skoS2 - pi/2 - 1/20) > skoSM*(-pi*skoS2 - pi/2 + 1/20) + 1/5), {}
+DEBUG:__main__:vars sympy:['skoSM', 'skoX', 'skoS2', 'delta', 'skoSP', 'pi']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoX': skoX, 'pi': pi, 'skoSP': skoSP, 'skoS2': skoS2, 'skoSM': skoSM}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    1 > skoX,
+    31415927/10000000 > pi,
+    15707963/5000000 < pi,
+    0 < skoX,
+    skoSP*(-1/20 + -1/2*pi + -1*pi*skoS2) >
+    1/5 + skoSM*(1/20 + -1/2*pi + -1*pi*skoS2))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/2, pi=26353589/8388608, skoSP=1/8, skoS2=1/2, skoSM=2
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:PRECOND_0: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2/8 + pi/16 + 1/160 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:PRECOND_1: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (2*pi*skoS2 + pi - 3/10 > pi*skoS2/8 + pi/16 + 1/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=1, skoS2=-25165824/26353589, skoSM=0
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:PRECOND_2: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 1/20 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:PRECOND_3: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 1/20 < -1/5)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=210828717/67108864, skoSP=0, skoS2=-94896128/210828717, skoSM=2
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:PRECOND_4: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5 > 0)
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:PRECOND_5: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (2*pi*skoS2 + pi - 3/10 > 0)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=5, skoS2=-14680064/26353589, skoSM=1
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:PRECOND_6: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (5*pi*skoS2 + 5*pi/2 + 1/4 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:PRECOND_7: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 - 1/4 > 5*pi*skoS2 + 5*pi/2 + 1/4)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=49, skoS2=-13631488/26353589, skoSM=0
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:PRECOND_8: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (49*pi*skoS2 + 49*pi/2 + 49/20 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:PRECOND_9: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (49*pi*skoS2 + 49*pi/2 + 49/20 < -1/5)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=337, skoS2=-13598720/26353589, skoSM=-1
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:PRECOND_10: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (337*pi*skoS2 + 337*pi/2 + 337/20 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:PRECOND_11: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -337*pi*skoS2 - 337*pi/2 - 337/20)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=1877, skoS2=-13596672/26353589, skoSM=-1
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:PRECOND_12: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1877*pi*skoS2 + 1877*pi/2 + 1877/20 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:PRECOND_13: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -1877*pi*skoS2 - 1877*pi/2 - 1877/20)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=4390, skoS2=-13596416/26353589, skoSM=-1
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:PRECOND_14: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (4390*pi*skoS2 + 2195*pi + 439/2 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:PRECOND_15: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -4390*pi*skoS2 - 2195*pi - 439/2)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=13295, skoS2=-13596288/26353589, skoSM=-1
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:PRECOND_16: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (13295*pi*skoS2 + 13295*pi/2 + 2659/4 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:PRECOND_17: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -13295*pi*skoS2 - 13295*pi/2 - 2659/4)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=26974, skoS2=-13596256/26353589, skoSM=-1
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:PRECOND_18: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (26974*pi*skoS2 + 13487*pi + 13487/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:PRECOND_19: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -26974*pi*skoS2 - 13487*pi - 13487/10)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=55554, skoS2=-13596240/26353589, skoSM=-1
+DEBUG:__main__:---------pre-condition 20---------
+DEBUG:__main__:PRECOND_20: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (55554*pi*skoS2 + 27777*pi + 27777/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 21---------
+DEBUG:__main__:PRECOND_21: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -55554*pi*skoS2 - 27777*pi - 27777/10)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=118150, skoS2=-13596232/26353589, skoSM=-1
+DEBUG:__main__:---------pre-condition 22---------
+DEBUG:__main__:PRECOND_22: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (118150*pi*skoS2 + 59075*pi + 11815/2 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 23---------
+DEBUG:__main__:PRECOND_23: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -118150*pi*skoS2 - 59075*pi - 11815/2)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=270601, skoS2=-13596228/26353589, skoSM=-1
+DEBUG:__main__:---------pre-condition 24---------
+DEBUG:__main__:PRECOND_24: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (270601*pi*skoS2 + 270601*pi/2 + 270601/20 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 25---------
+DEBUG:__main__:PRECOND_25: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -270601*pi*skoS2 - 270601*pi/2 - 270601/20)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=762601, skoS2=-13596226/26353589, skoSM=-1
+DEBUG:__main__:---------pre-condition 26---------
+DEBUG:__main__:PRECOND_26: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (762601*pi*skoS2 + 762601*pi/2 + 762601/20 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 27---------
+DEBUG:__main__:PRECOND_27: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -762601*pi*skoS2 - 762601*pi/2 - 762601/20)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=8388608, skoS2=-13596225/26353589, skoSM=-1
+DEBUG:__main__:---------pre-condition 28---------
+DEBUG:__main__:PRECOND_28: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (8388608*pi*skoS2 + 4194304*pi + 2097152/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 29---------
+DEBUG:__main__:PRECOND_29: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -8388608*pi*skoS2 - 4194304*pi - 2097152/5)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=22369622, skoS2=-217539599/421657424, skoSM=-1
+DEBUG:__main__:---------pre-condition 30---------
+DEBUG:__main__:PRECOND_30: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (22369622*pi*skoS2 + 11184811*pi + 11184811/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 31---------
+DEBUG:__main__:PRECOND_31: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -22369622*pi*skoS2 - 11184811*pi - 11184811/10)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=134217728, skoS2=-435079197/843314848, skoSM=-1
+DEBUG:__main__:---------pre-condition 32---------
+DEBUG:__main__:PRECOND_32: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (134217728*pi*skoS2 + 67108864*pi + 33554432/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 33---------
+DEBUG:__main__:PRECOND_33: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -134217728*pi*skoS2 - 67108864*pi - 33554432/5)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=357913942, skoS2=-3480633575/6746518784, skoSM=-1
+DEBUG:__main__:---------pre-condition 34---------
+DEBUG:__main__:PRECOND_34: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (357913942*pi*skoS2 + 178956971*pi + 178956971/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 35---------
+DEBUG:__main__:PRECOND_35: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -357913942*pi*skoS2 - 178956971*pi - 178956971/10)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=2147483648, skoS2=-6961267149/13493037568, skoSM=-1
+DEBUG:__main__:---------pre-condition 36---------
+DEBUG:__main__:PRECOND_36: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (2147483648*pi*skoS2 + 1073741824*pi + 536870912/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 37---------
+DEBUG:__main__:PRECOND_37: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -2147483648*pi*skoS2 - 1073741824*pi - 536870912/5)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=5726623062, skoS2=-55690137191/107944300544, skoSM=-1
+DEBUG:__main__:---------pre-condition 38---------
+DEBUG:__main__:PRECOND_38: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (5726623062*pi*skoS2 + 2863311531*pi + 2863311531/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 39---------
+DEBUG:__main__:PRECOND_39: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -5726623062*pi*skoS2 - 2863311531*pi - 2863311531/10)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=34359738368, skoS2=-111380274381/215888601088, skoSM=-1
+DEBUG:__main__:---------pre-condition 40---------
+DEBUG:__main__:PRECOND_40: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (34359738368*pi*skoS2 + 17179869184*pi + 8589934592/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 41---------
+DEBUG:__main__:PRECOND_41: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -34359738368*pi*skoS2 - 17179869184*pi - 8589934592/5)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=91625968982, skoS2=-891042195047/1727108808704, skoSM=-1
+DEBUG:__main__:---------pre-condition 42---------
+DEBUG:__main__:PRECOND_42: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (91625968982*pi*skoS2 + 45812984491*pi + 45812984491/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 43---------
+DEBUG:__main__:PRECOND_43: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -91625968982*pi*skoS2 - 45812984491*pi - 45812984491/10)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=549755813888, skoS2=-1782084390093/3454217617408, skoSM=-1
+DEBUG:__main__:---------pre-condition 44---------
+DEBUG:__main__:PRECOND_44: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (549755813888*pi*skoS2 + 274877906944*pi + 137438953472/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 45---------
+DEBUG:__main__:PRECOND_45: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -549755813888*pi*skoS2 - 274877906944*pi - 137438953472/5)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=1466015503702, skoS2=-14256675120743/27633740939264, skoSM=-1
+DEBUG:__main__:---------pre-condition 46---------
+DEBUG:__main__:PRECOND_46: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1466015503702*pi*skoS2 + 733007751851*pi + 733007751851/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 47---------
+DEBUG:__main__:PRECOND_47: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -1466015503702*pi*skoS2 - 733007751851*pi - 733007751851/10)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=8796093022208, skoS2=-28513350241485/55267481878528, skoSM=-1
+DEBUG:__main__:---------pre-condition 48---------
+DEBUG:__main__:PRECOND_48: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (8796093022208*pi*skoS2 + 4398046511104*pi + 2199023255552/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 49---------
+DEBUG:__main__:PRECOND_49: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -8796093022208*pi*skoS2 - 4398046511104*pi - 2199023255552/5)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=23456248059222, skoS2=-228106801931879/442139855028224, skoSM=-1
+DEBUG:__main__:---------pre-condition 50---------
+DEBUG:__main__:PRECOND_50: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (23456248059222*pi*skoS2 + 11728124029611*pi + 11728124029611/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 51---------
+DEBUG:__main__:PRECOND_51: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -23456248059222*pi*skoS2 - 11728124029611*pi - 11728124029611/10)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=140737488355328, skoS2=-456213603863757/884279710056448, skoSM=-1
+DEBUG:__main__:---------pre-condition 52---------
+DEBUG:__main__:PRECOND_52: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (140737488355328*pi*skoS2 + 70368744177664*pi + 35184372088832/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 53---------
+DEBUG:__main__:PRECOND_53: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -140737488355328*pi*skoS2 - 70368744177664*pi - 35184372088832/5)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=375299968947542, skoS2=-3649708830910055/7074237680451584, skoSM=-1
+DEBUG:__main__:---------pre-condition 54---------
+DEBUG:__main__:PRECOND_54: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (375299968947542*pi*skoS2 + 187649984473771*pi + 187649984473771/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 55---------
+DEBUG:__main__:PRECOND_55: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -375299968947542*pi*skoS2 - 187649984473771*pi - 187649984473771/10)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=2251799813685248, skoS2=-7299417661820109/14148475360903168, skoSM=-1
+DEBUG:__main__:---------pre-condition 56---------
+DEBUG:__main__:PRECOND_56: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (2251799813685248*pi*skoS2 + 1125899906842624*pi + 562949953421312/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 57---------
+DEBUG:__main__:PRECOND_57: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -2251799813685248*pi*skoS2 - 1125899906842624*pi - 562949953421312/5)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=6004799503160662, skoS2=-58395341294560871/113187802887225344, skoSM=-1
+DEBUG:__main__:---------pre-condition 58---------
+DEBUG:__main__:PRECOND_58: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (6004799503160662*pi*skoS2 + 3002399751580331*pi + 3002399751580331/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 59---------
+DEBUG:__main__:PRECOND_59: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -6004799503160662*pi*skoS2 - 3002399751580331*pi - 3002399751580331/10)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=36028797018963968, skoS2=-116790682589121741/226375605774450688, skoSM=-1
+DEBUG:__main__:---------pre-condition 60---------
+DEBUG:__main__:PRECOND_60: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (36028797018963968*pi*skoS2 + 18014398509481984*pi + 9007199254740992/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5)
+DEBUG:__main__:---------pre-condition 61---------
+DEBUG:__main__:PRECOND_61: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -36028797018963968*pi*skoS2 - 18014398509481984*pi - 9007199254740992/5)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-3, skoS2=-12582912/26353589, skoSM=1/8
+DEBUG:__main__:---------pre-condition 62---------
+DEBUG:__main__:PRECOND_62: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (3*pi*skoS2 + 3*pi/2 + 3/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 63---------
+DEBUG:__main__:PRECOND_63: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (3*pi*skoS2 + 3*pi/2 + 3/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-5, skoS2=-13107200/26353589, skoSM=0
+DEBUG:__main__:---------pre-condition 64---------
+DEBUG:__main__:PRECOND_64: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (5*pi*skoS2 + 5*pi/2 + 1/4 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 65---------
+DEBUG:__main__:PRECOND_65: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (5*pi*skoS2 + 5*pi/2 + 1/4 > 1/5)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-9, skoS2=-13369344/26353589, skoSM=1/8
+DEBUG:__main__:---------pre-condition 66---------
+DEBUG:__main__:PRECOND_66: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (9*pi*skoS2 + 9*pi/2 + 9/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 67---------
+DEBUG:__main__:PRECOND_67: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (9*pi*skoS2 + 9*pi/2 + 9/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-20, skoS2=-13500416/26353589, skoSM=1/8
+DEBUG:__main__:---------pre-condition 68---------
+DEBUG:__main__:PRECOND_68: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (20*pi*skoS2 + 10*pi + 1 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 69---------
+DEBUG:__main__:PRECOND_69: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (20*pi*skoS2 + 10*pi + 1 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-60, skoS2=-13565952/26353589, skoSM=1/8
+DEBUG:__main__:---------pre-condition 70---------
+DEBUG:__main__:PRECOND_70: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (60*pi*skoS2 + 30*pi + 3 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 71---------
+DEBUG:__main__:PRECOND_71: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (60*pi*skoS2 + 30*pi + 3 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-130, skoS2=-13582336/26353589, skoSM=1/8
+DEBUG:__main__:---------pre-condition 72---------
+DEBUG:__main__:PRECOND_72: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (130*pi*skoS2 + 65*pi + 13/2 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 73---------
+DEBUG:__main__:PRECOND_73: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (130*pi*skoS2 + 65*pi + 13/2 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-314, skoS2=-13590528/26353589, skoSM=1/8
+DEBUG:__main__:---------pre-condition 74---------
+DEBUG:__main__:PRECOND_74: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (314*pi*skoS2 + 157*pi + 157/10 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 75---------
+DEBUG:__main__:PRECOND_75: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (314*pi*skoS2 + 157*pi + 157/10 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-1115, skoS2=-13594624/26353589, skoSM=1/8
+DEBUG:__main__:---------pre-condition 76---------
+DEBUG:__main__:PRECOND_76: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1115*pi*skoS2 + 1115*pi/2 + 223/4 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 77---------
+DEBUG:__main__:PRECOND_77: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1115*pi*skoS2 + 1115*pi/2 + 223/4 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-3091, skoS2=-13595648/26353589, skoSM=1/8
+DEBUG:__main__:---------pre-condition 78---------
+DEBUG:__main__:PRECOND_78: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (3091*pi*skoS2 + 3091*pi/2 + 3091/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 79---------
+DEBUG:__main__:PRECOND_79: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (3091*pi*skoS2 + 3091*pi/2 + 3091/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-27468, skoS2=-13596160/26353589, skoSM=1/8
+DEBUG:__main__:---------pre-condition 80---------
+DEBUG:__main__:PRECOND_80: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (27468*pi*skoS2 + 13734*pi + 6867/5 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 81---------
+DEBUG:__main__:PRECOND_81: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (27468*pi*skoS2 + 13734*pi + 6867/5 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-1980645, skoS2=-13596224/26353589, skoSM=1/8
+DEBUG:__main__:---------pre-condition 82---------
+DEBUG:__main__:PRECOND_82: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1980645*pi*skoS2 + 1980645*pi/2 + 396129/4 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 83---------
+DEBUG:__main__:PRECOND_83: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1980645*pi*skoS2 + 1980645*pi/2 + 396129/4 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-4456449, skoS2=-27192449/52707178, skoSM=1/8
+DEBUG:__main__:---------pre-condition 84---------
+DEBUG:__main__:PRECOND_84: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (4456449*pi*skoS2 + 4456449*pi/2 + 4456449/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 85---------
+DEBUG:__main__:PRECOND_85: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (4456449*pi*skoS2 + 4456449*pi/2 + 4456449/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-11883863, skoS2=-54384899/105414356, skoSM=1/8
+DEBUG:__main__:---------pre-condition 86---------
+DEBUG:__main__:PRECOND_86: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (11883863*pi*skoS2 + 11883863*pi/2 + 11883863/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 87---------
+DEBUG:__main__:PRECOND_87: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (11883863*pi*skoS2 + 11883863*pi/2 + 11883863/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-71303169, skoS2=-108769799/210828712, skoSM=1/8
+DEBUG:__main__:---------pre-condition 88---------
+DEBUG:__main__:PRECOND_88: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (71303169*pi*skoS2 + 71303169*pi/2 + 71303169/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 89---------
+DEBUG:__main__:PRECOND_89: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (71303169*pi*skoS2 + 71303169*pi/2 + 71303169/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-190141783, skoS2=-870158393/1686629696, skoSM=1/8
+DEBUG:__main__:---------pre-condition 90---------
+DEBUG:__main__:PRECOND_90: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (190141783*pi*skoS2 + 190141783*pi/2 + 190141783/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 91---------
+DEBUG:__main__:PRECOND_91: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (190141783*pi*skoS2 + 190141783*pi/2 + 190141783/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-1140850689, skoS2=-1740316787/3373259392, skoSM=1/8
+DEBUG:__main__:---------pre-condition 92---------
+DEBUG:__main__:PRECOND_92: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1140850689*pi*skoS2 + 1140850689*pi/2 + 1140850689/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 93---------
+DEBUG:__main__:PRECOND_93: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1140850689*pi*skoS2 + 1140850689*pi/2 + 1140850689/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-3042268503, skoS2=-732764963/1420319744, skoSM=1/8
+DEBUG:__main__:---------pre-condition 94---------
+DEBUG:__main__:PRECOND_94: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (3042268503*pi*skoS2 + 3042268503*pi/2 + 3042268503/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 95---------
+DEBUG:__main__:PRECOND_95: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (3042268503*pi*skoS2 + 3042268503*pi/2 + 3042268503/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-18253611009, skoS2=-27845068595/53972150272, skoSM=1/8
+DEBUG:__main__:---------pre-condition 96---------
+DEBUG:__main__:PRECOND_96: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (18253611009*pi*skoS2 + 18253611009*pi/2 + 18253611009/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 97---------
+DEBUG:__main__:PRECOND_97: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (18253611009*pi*skoS2 + 18253611009*pi/2 + 18253611009/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-48676296023, skoS2=-222760548761/431777202176, skoSM=1/8
+DEBUG:__main__:---------pre-condition 98---------
+DEBUG:__main__:PRECOND_98: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (48676296023*pi*skoS2 + 48676296023*pi/2 + 48676296023/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 99---------
+DEBUG:__main__:PRECOND_99: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (48676296023*pi*skoS2 + 48676296023*pi/2 + 48676296023/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-292057776129, skoS2=-23448478817/45450231808, skoSM=1/8
+DEBUG:__main__:---------pre-condition 100---------
+DEBUG:__main__:PRECOND_100: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (292057776129*pi*skoS2 + 292057776129*pi/2 + 292057776129/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 101---------
+DEBUG:__main__:PRECOND_101: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (292057776129*pi*skoS2 + 292057776129*pi/2 + 292057776129/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-778820736343, skoS2=-3564168780185/6908435234816, skoSM=1/8
+DEBUG:__main__:---------pre-condition 102---------
+DEBUG:__main__:PRECOND_102: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (778820736343*pi*skoS2 + 778820736343*pi/2 + 778820736343/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 103---------
+DEBUG:__main__:PRECOND_103: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (778820736343*pi*skoS2 + 778820736343*pi/2 + 778820736343/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-4672924418049, skoS2=-7128337560371/13816870469632, skoSM=1/8
+DEBUG:__main__:---------pre-condition 104---------
+DEBUG:__main__:PRECOND_104: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (4672924418049*pi*skoS2 + 4672924418049*pi/2 + 4672924418049/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 105---------
+DEBUG:__main__:PRECOND_105: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (4672924418049*pi*skoS2 + 4672924418049*pi/2 + 4672924418049/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-12461131781463, skoS2=-57026700482969/110534963757056, skoSM=1/8
+DEBUG:__main__:---------pre-condition 106---------
+DEBUG:__main__:PRECOND_106: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (12461131781463*pi*skoS2 + 12461131781463*pi/2 + 12461131781463/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 107---------
+DEBUG:__main__:PRECOND_107: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (12461131781463*pi*skoS2 + 12461131781463*pi/2 + 12461131781463/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-74766790688769, skoS2=-114053400965939/221069927514112, skoSM=1/8
+DEBUG:__main__:---------pre-condition 108---------
+DEBUG:__main__:PRECOND_108: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (74766790688769*pi*skoS2 + 74766790688769*pi/2 + 74766790688769/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 109---------
+DEBUG:__main__:PRECOND_109: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (74766790688769*pi*skoS2 + 74766790688769*pi/2 + 74766790688769/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-199378108503383, skoS2=-912427207727513/1768559420112896, skoSM=1/8
+DEBUG:__main__:---------pre-condition 110---------
+DEBUG:__main__:PRECOND_110: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (199378108503383*pi*skoS2 + 199378108503383*pi/2 + 199378108503383/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 111---------
+DEBUG:__main__:PRECOND_111: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (199378108503383*pi*skoS2 + 199378108503383*pi/2 + 199378108503383/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-1196268651020289, skoS2=-1824854415455027/3537118840225792, skoSM=1/8
+DEBUG:__main__:---------pre-condition 112---------
+DEBUG:__main__:PRECOND_112: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1196268651020289*pi*skoS2 + 1196268651020289*pi/2 + 1196268651020289/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 113---------
+DEBUG:__main__:PRECOND_113: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1196268651020289*pi*skoS2 + 1196268651020289*pi/2 + 1196268651020289/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-1740027128756784, skoS2=-29197670647280433/56593901443612672, skoSM=1/8
+DEBUG:__main__:---------pre-condition 114---------
+DEBUG:__main__:PRECOND_114: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1740027128756784*pi*skoS2 + 870013564378392*pi + 435006782189196/5 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 115---------
+DEBUG:__main__:PRECOND_115: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1740027128756784*pi*skoS2 + 870013564378392*pi + 435006782189196/5 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-2251799813685249, skoS2=-58395341294560867/113187802887225344, skoSM=1/8
+DEBUG:__main__:---------pre-condition 116---------
+DEBUG:__main__:PRECOND_116: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (2251799813685249*pi*skoS2 + 2251799813685249*pi/2 + 2251799813685249/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 117---------
+DEBUG:__main__:PRECOND_117: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (2251799813685249*pi*skoS2 + 2251799813685249*pi/2 + 2251799813685249/20 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-2430514084612650, skoS2=-233581365178243469/452751211548901376, skoSM=1/8
+DEBUG:__main__:---------pre-condition 118---------
+DEBUG:__main__:PRECOND_118: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (2430514084612650*pi*skoS2 + 1215257042306325*pi + 243051408461265/2 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 119---------
+DEBUG:__main__:PRECOND_119: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (2430514084612650*pi*skoS2 + 1215257042306325*pi + 243051408461265/2 > -pi*skoS2/8 - pi/16 + 33/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoX=1/20000000, pi=26353589/8388608, skoSP=-3500773799413503, skoS2=-934325460712973877/1811004846195605504, skoSM=1
+DEBUG:__main__:---------pre-condition 120---------
+DEBUG:__main__:PRECOND_120: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (3500773799413503*pi*skoS2 + 3500773799413503*pi/2 + 3500773799413503/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5)
+DEBUG:__main__:---------pre-condition 121---------
+DEBUG:__main__:PRECOND_121: (delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 - 1/4 > -3500773799413503*pi*skoS2 - 3500773799413503*pi/2 - 3500773799413503/20)
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2/8 + pi/16 + 1/160 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/2, 'pi': 26353589/8388608, 'skoSP': 1/8, 'skoS2': 1/2, 'skoSM': 2}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (2*pi*skoS2 + pi - 3/10 > pi*skoS2/8 + pi/16 + 1/160) {'delta': 0, 'skoX': 1/2, 'pi': 26353589/8388608, 'skoSP': 1/8, 'skoS2': 1/2, 'skoSM': 2}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 1/20 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 1, 'skoS2': -25165824/26353589, 'skoSM': 0}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 1/20 < -1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 1, 'skoS2': -25165824/26353589, 'skoSM': 0}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5 > 0) {'delta': 0, 'skoX': 1/20000000, 'pi': 210828717/67108864, 'skoSP': 0, 'skoS2': -94896128/210828717, 'skoSM': 2}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (2*pi*skoS2 + pi - 3/10 > 0) {'delta': 0, 'skoX': 1/20000000, 'pi': 210828717/67108864, 'skoSP': 0, 'skoS2': -94896128/210828717, 'skoSM': 2}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (5*pi*skoS2 + 5*pi/2 + 1/4 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 5, 'skoS2': -14680064/26353589, 'skoSM': 1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 - 1/4 > 5*pi*skoS2 + 5*pi/2 + 1/4) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 5, 'skoS2': -14680064/26353589, 'skoSM': 1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (49*pi*skoS2 + 49*pi/2 + 49/20 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 49, 'skoS2': -13631488/26353589, 'skoSM': 0}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (49*pi*skoS2 + 49*pi/2 + 49/20 < -1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 49, 'skoS2': -13631488/26353589, 'skoSM': 0}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (337*pi*skoS2 + 337*pi/2 + 337/20 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 337, 'skoS2': -13598720/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -337*pi*skoS2 - 337*pi/2 - 337/20) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 337, 'skoS2': -13598720/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1877*pi*skoS2 + 1877*pi/2 + 1877/20 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 1877, 'skoS2': -13596672/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -1877*pi*skoS2 - 1877*pi/2 - 1877/20) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 1877, 'skoS2': -13596672/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (4390*pi*skoS2 + 2195*pi + 439/2 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 4390, 'skoS2': -13596416/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -4390*pi*skoS2 - 2195*pi - 439/2) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 4390, 'skoS2': -13596416/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (13295*pi*skoS2 + 13295*pi/2 + 2659/4 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 13295, 'skoS2': -13596288/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -13295*pi*skoS2 - 13295*pi/2 - 2659/4) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 13295, 'skoS2': -13596288/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (26974*pi*skoS2 + 13487*pi + 13487/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 26974, 'skoS2': -13596256/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -26974*pi*skoS2 - 13487*pi - 13487/10) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 26974, 'skoS2': -13596256/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (55554*pi*skoS2 + 27777*pi + 27777/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 55554, 'skoS2': -13596240/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -55554*pi*skoS2 - 27777*pi - 27777/10) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 55554, 'skoS2': -13596240/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (118150*pi*skoS2 + 59075*pi + 11815/2 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 118150, 'skoS2': -13596232/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -118150*pi*skoS2 - 59075*pi - 11815/2) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 118150, 'skoS2': -13596232/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (270601*pi*skoS2 + 270601*pi/2 + 270601/20 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 270601, 'skoS2': -13596228/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -270601*pi*skoS2 - 270601*pi/2 - 270601/20) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 270601, 'skoS2': -13596228/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (762601*pi*skoS2 + 762601*pi/2 + 762601/20 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 762601, 'skoS2': -13596226/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -762601*pi*skoS2 - 762601*pi/2 - 762601/20) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 762601, 'skoS2': -13596226/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (8388608*pi*skoS2 + 4194304*pi + 2097152/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 8388608, 'skoS2': -13596225/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -8388608*pi*skoS2 - 4194304*pi - 2097152/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 8388608, 'skoS2': -13596225/26353589, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (22369622*pi*skoS2 + 11184811*pi + 11184811/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 22369622, 'skoS2': -217539599/421657424, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -22369622*pi*skoS2 - 11184811*pi - 11184811/10) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 22369622, 'skoS2': -217539599/421657424, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (134217728*pi*skoS2 + 67108864*pi + 33554432/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 134217728, 'skoS2': -435079197/843314848, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -134217728*pi*skoS2 - 67108864*pi - 33554432/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 134217728, 'skoS2': -435079197/843314848, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (357913942*pi*skoS2 + 178956971*pi + 178956971/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 357913942, 'skoS2': -3480633575/6746518784, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -357913942*pi*skoS2 - 178956971*pi - 178956971/10) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 357913942, 'skoS2': -3480633575/6746518784, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (2147483648*pi*skoS2 + 1073741824*pi + 536870912/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 2147483648, 'skoS2': -6961267149/13493037568, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -2147483648*pi*skoS2 - 1073741824*pi - 536870912/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 2147483648, 'skoS2': -6961267149/13493037568, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (5726623062*pi*skoS2 + 2863311531*pi + 2863311531/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 5726623062, 'skoS2': -55690137191/107944300544, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -5726623062*pi*skoS2 - 2863311531*pi - 2863311531/10) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 5726623062, 'skoS2': -55690137191/107944300544, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (34359738368*pi*skoS2 + 17179869184*pi + 8589934592/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 34359738368, 'skoS2': -111380274381/215888601088, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -34359738368*pi*skoS2 - 17179869184*pi - 8589934592/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 34359738368, 'skoS2': -111380274381/215888601088, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (91625968982*pi*skoS2 + 45812984491*pi + 45812984491/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 91625968982, 'skoS2': -891042195047/1727108808704, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -91625968982*pi*skoS2 - 45812984491*pi - 45812984491/10) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 91625968982, 'skoS2': -891042195047/1727108808704, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (549755813888*pi*skoS2 + 274877906944*pi + 137438953472/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 549755813888, 'skoS2': -1782084390093/3454217617408, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -549755813888*pi*skoS2 - 274877906944*pi - 137438953472/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 549755813888, 'skoS2': -1782084390093/3454217617408, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1466015503702*pi*skoS2 + 733007751851*pi + 733007751851/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 1466015503702, 'skoS2': -14256675120743/27633740939264, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -1466015503702*pi*skoS2 - 733007751851*pi - 733007751851/10) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 1466015503702, 'skoS2': -14256675120743/27633740939264, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (8796093022208*pi*skoS2 + 4398046511104*pi + 2199023255552/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 8796093022208, 'skoS2': -28513350241485/55267481878528, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -8796093022208*pi*skoS2 - 4398046511104*pi - 2199023255552/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 8796093022208, 'skoS2': -28513350241485/55267481878528, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (23456248059222*pi*skoS2 + 11728124029611*pi + 11728124029611/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 23456248059222, 'skoS2': -228106801931879/442139855028224, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -23456248059222*pi*skoS2 - 11728124029611*pi - 11728124029611/10) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 23456248059222, 'skoS2': -228106801931879/442139855028224, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (140737488355328*pi*skoS2 + 70368744177664*pi + 35184372088832/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 140737488355328, 'skoS2': -456213603863757/884279710056448, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -140737488355328*pi*skoS2 - 70368744177664*pi - 35184372088832/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 140737488355328, 'skoS2': -456213603863757/884279710056448, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (375299968947542*pi*skoS2 + 187649984473771*pi + 187649984473771/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 375299968947542, 'skoS2': -3649708830910055/7074237680451584, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -375299968947542*pi*skoS2 - 187649984473771*pi - 187649984473771/10) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 375299968947542, 'skoS2': -3649708830910055/7074237680451584, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (2251799813685248*pi*skoS2 + 1125899906842624*pi + 562949953421312/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 2251799813685248, 'skoS2': -7299417661820109/14148475360903168, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -2251799813685248*pi*skoS2 - 1125899906842624*pi - 562949953421312/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 2251799813685248, 'skoS2': -7299417661820109/14148475360903168, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (6004799503160662*pi*skoS2 + 3002399751580331*pi + 3002399751580331/10 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 6004799503160662, 'skoS2': -58395341294560871/113187802887225344, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -6004799503160662*pi*skoS2 - 3002399751580331*pi - 3002399751580331/10) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 6004799503160662, 'skoS2': -58395341294560871/113187802887225344, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (36028797018963968*pi*skoS2 + 18014398509481984*pi + 9007199254740992/5 < skoSM*(20*pi*skoS2 + 10*pi - 1)/20 - 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 36028797018963968, 'skoS2': -116790682589121741/226375605774450688, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 + 3/20 < -36028797018963968*pi*skoS2 - 18014398509481984*pi - 9007199254740992/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': 36028797018963968, 'skoS2': -116790682589121741/226375605774450688, 'skoSM': -1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (3*pi*skoS2 + 3*pi/2 + 3/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -3, 'skoS2': -12582912/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (3*pi*skoS2 + 3*pi/2 + 3/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -3, 'skoS2': -12582912/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (5*pi*skoS2 + 5*pi/2 + 1/4 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -5, 'skoS2': -13107200/26353589, 'skoSM': 0}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (5*pi*skoS2 + 5*pi/2 + 1/4 > 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -5, 'skoS2': -13107200/26353589, 'skoSM': 0}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (9*pi*skoS2 + 9*pi/2 + 9/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -9, 'skoS2': -13369344/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (9*pi*skoS2 + 9*pi/2 + 9/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -9, 'skoS2': -13369344/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (20*pi*skoS2 + 10*pi + 1 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -20, 'skoS2': -13500416/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (20*pi*skoS2 + 10*pi + 1 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -20, 'skoS2': -13500416/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (60*pi*skoS2 + 30*pi + 3 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -60, 'skoS2': -13565952/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (60*pi*skoS2 + 30*pi + 3 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -60, 'skoS2': -13565952/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (130*pi*skoS2 + 65*pi + 13/2 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -130, 'skoS2': -13582336/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (130*pi*skoS2 + 65*pi + 13/2 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -130, 'skoS2': -13582336/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (314*pi*skoS2 + 157*pi + 157/10 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -314, 'skoS2': -13590528/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (314*pi*skoS2 + 157*pi + 157/10 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -314, 'skoS2': -13590528/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1115*pi*skoS2 + 1115*pi/2 + 223/4 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -1115, 'skoS2': -13594624/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1115*pi*skoS2 + 1115*pi/2 + 223/4 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -1115, 'skoS2': -13594624/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (3091*pi*skoS2 + 3091*pi/2 + 3091/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -3091, 'skoS2': -13595648/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (3091*pi*skoS2 + 3091*pi/2 + 3091/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -3091, 'skoS2': -13595648/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (27468*pi*skoS2 + 13734*pi + 6867/5 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -27468, 'skoS2': -13596160/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (27468*pi*skoS2 + 13734*pi + 6867/5 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -27468, 'skoS2': -13596160/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1980645*pi*skoS2 + 1980645*pi/2 + 396129/4 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -1980645, 'skoS2': -13596224/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1980645*pi*skoS2 + 1980645*pi/2 + 396129/4 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -1980645, 'skoS2': -13596224/26353589, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (4456449*pi*skoS2 + 4456449*pi/2 + 4456449/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -4456449, 'skoS2': -27192449/52707178, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (4456449*pi*skoS2 + 4456449*pi/2 + 4456449/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -4456449, 'skoS2': -27192449/52707178, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (11883863*pi*skoS2 + 11883863*pi/2 + 11883863/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -11883863, 'skoS2': -54384899/105414356, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (11883863*pi*skoS2 + 11883863*pi/2 + 11883863/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -11883863, 'skoS2': -54384899/105414356, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (71303169*pi*skoS2 + 71303169*pi/2 + 71303169/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -71303169, 'skoS2': -108769799/210828712, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (71303169*pi*skoS2 + 71303169*pi/2 + 71303169/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -71303169, 'skoS2': -108769799/210828712, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (190141783*pi*skoS2 + 190141783*pi/2 + 190141783/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -190141783, 'skoS2': -870158393/1686629696, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (190141783*pi*skoS2 + 190141783*pi/2 + 190141783/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -190141783, 'skoS2': -870158393/1686629696, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1140850689*pi*skoS2 + 1140850689*pi/2 + 1140850689/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -1140850689, 'skoS2': -1740316787/3373259392, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1140850689*pi*skoS2 + 1140850689*pi/2 + 1140850689/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -1140850689, 'skoS2': -1740316787/3373259392, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (3042268503*pi*skoS2 + 3042268503*pi/2 + 3042268503/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -3042268503, 'skoS2': -732764963/1420319744, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (3042268503*pi*skoS2 + 3042268503*pi/2 + 3042268503/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -3042268503, 'skoS2': -732764963/1420319744, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (18253611009*pi*skoS2 + 18253611009*pi/2 + 18253611009/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -18253611009, 'skoS2': -27845068595/53972150272, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (18253611009*pi*skoS2 + 18253611009*pi/2 + 18253611009/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -18253611009, 'skoS2': -27845068595/53972150272, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (48676296023*pi*skoS2 + 48676296023*pi/2 + 48676296023/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -48676296023, 'skoS2': -222760548761/431777202176, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (48676296023*pi*skoS2 + 48676296023*pi/2 + 48676296023/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -48676296023, 'skoS2': -222760548761/431777202176, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (292057776129*pi*skoS2 + 292057776129*pi/2 + 292057776129/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -292057776129, 'skoS2': -23448478817/45450231808, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (292057776129*pi*skoS2 + 292057776129*pi/2 + 292057776129/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -292057776129, 'skoS2': -23448478817/45450231808, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (778820736343*pi*skoS2 + 778820736343*pi/2 + 778820736343/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -778820736343, 'skoS2': -3564168780185/6908435234816, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (778820736343*pi*skoS2 + 778820736343*pi/2 + 778820736343/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -778820736343, 'skoS2': -3564168780185/6908435234816, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (4672924418049*pi*skoS2 + 4672924418049*pi/2 + 4672924418049/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -4672924418049, 'skoS2': -7128337560371/13816870469632, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (4672924418049*pi*skoS2 + 4672924418049*pi/2 + 4672924418049/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -4672924418049, 'skoS2': -7128337560371/13816870469632, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (12461131781463*pi*skoS2 + 12461131781463*pi/2 + 12461131781463/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -12461131781463, 'skoS2': -57026700482969/110534963757056, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (12461131781463*pi*skoS2 + 12461131781463*pi/2 + 12461131781463/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -12461131781463, 'skoS2': -57026700482969/110534963757056, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (74766790688769*pi*skoS2 + 74766790688769*pi/2 + 74766790688769/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -74766790688769, 'skoS2': -114053400965939/221069927514112, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (74766790688769*pi*skoS2 + 74766790688769*pi/2 + 74766790688769/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -74766790688769, 'skoS2': -114053400965939/221069927514112, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (199378108503383*pi*skoS2 + 199378108503383*pi/2 + 199378108503383/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -199378108503383, 'skoS2': -912427207727513/1768559420112896, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (199378108503383*pi*skoS2 + 199378108503383*pi/2 + 199378108503383/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -199378108503383, 'skoS2': -912427207727513/1768559420112896, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1196268651020289*pi*skoS2 + 1196268651020289*pi/2 + 1196268651020289/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -1196268651020289, 'skoS2': -1824854415455027/3537118840225792, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1196268651020289*pi*skoS2 + 1196268651020289*pi/2 + 1196268651020289/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -1196268651020289, 'skoS2': -1824854415455027/3537118840225792, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1740027128756784*pi*skoS2 + 870013564378392*pi + 435006782189196/5 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -1740027128756784, 'skoS2': -29197670647280433/56593901443612672, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (1740027128756784*pi*skoS2 + 870013564378392*pi + 435006782189196/5 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -1740027128756784, 'skoS2': -29197670647280433/56593901443612672, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (2251799813685249*pi*skoS2 + 2251799813685249*pi/2 + 2251799813685249/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -2251799813685249, 'skoS2': -58395341294560867/113187802887225344, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (2251799813685249*pi*skoS2 + 2251799813685249*pi/2 + 2251799813685249/20 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -2251799813685249, 'skoS2': -58395341294560867/113187802887225344, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (2430514084612650*pi*skoS2 + 1215257042306325*pi + 243051408461265/2 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -2430514084612650, 'skoS2': -233581365178243469/452751211548901376, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (2430514084612650*pi*skoS2 + 1215257042306325*pi + 243051408461265/2 > -pi*skoS2/8 - pi/16 + 33/160) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -2430514084612650, 'skoS2': -233581365178243469/452751211548901376, 'skoSM': 1/8}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (3500773799413503*pi*skoS2 + 3500773799413503*pi/2 + 3500773799413503/20 > -skoSM*(20*pi*skoS2 + 10*pi - 1)/20 + 1/5) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -3500773799413503, 'skoS2': -934325460712973877/1811004846195605504, 'skoSM': 1}
+DEBUG:__main__:(delta >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (pi*skoS2 + pi/2 - 1/4 > -3500773799413503*pi*skoS2 - 3500773799413503*pi/2 - 3500773799413503/20) {'delta': 0, 'skoX': 1/20000000, 'pi': 26353589/8388608, 'skoSP': -3500773799413503, 'skoS2': -934325460712973877/1811004846195605504, 'skoSM': 1}

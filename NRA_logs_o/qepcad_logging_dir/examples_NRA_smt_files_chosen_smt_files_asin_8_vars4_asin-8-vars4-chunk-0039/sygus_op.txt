@@ -1,0 +1,4 @@
+(
+(define-fun skoSP_o ((delta_i Real) (skoX_i Real) (skoS2_i Real)) Real 1.0)
+(define-fun skoSM_o ((delta_i Real) (skoX_i Real) (skoS2_i Real)) Real 1.0)
+)

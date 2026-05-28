@@ -1,0 +1,336 @@
+DEBUG:__main__:Starting Log File: dm_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_asin_8_vars4_asin-8-vars4-chunk-0051.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoX', 'skoS2']
+DEBUG:__main__:op_vars: ['skoSP', 'skoSM']
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(skoX*
+        (4 +
+         skoSM +
+         skoSP +
+         skoX*
+         (1/5 +
+          skoSM*(-61/40 + skoS2*(-63/20)) +
+          skoSP*(13/8 + skoS2*(63/20)))) <=
+        1/5 +
+        skoSM*(-61/40 + skoS2*(-63/20)) +
+        skoSP*(13/8 + skoS2*(63/20)),
+        And(And(skoX - (1 + skoSM*skoSM*-1) <= delta,
+                1 + skoSM*skoSM*-1 - skoX <= delta),
+            And(And(-1 + skoSP*skoSP - skoX <= delta,
+                    skoX - (-1 + skoSP*skoSP) <= delta),
+                And(And(skoS2*skoS2 - 2 <= delta,
+                        2 - skoS2*skoS2 <= delta),
+                    And(Not(skoX <= 0),
+                        And(Not(skoSP <= 0),
+                            And(Not(skoSM <= 0),
+                                And(Not(skoS2 <= 0),
+                                    Not(1 <= skoX))))))))))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (1 > skoX) & (skoS2 > 0) & (skoSM > 0) & (skoSP > 0) & (skoX > 0) & (skoS2**2 - 2 <= delta) & (skoSM**2 + skoX - 1 <= delta) & (2 - skoS2**2 <= delta) & (-skoSP**2 + skoX + 1 <= delta) & (skoSP**2 - skoX - 1 <= delta) & (-skoSM**2 - skoX + 1 <= delta) & (skoX*(skoSM + skoSP + skoX*(skoSM*(-63*skoS2/20 - 61/40) + skoSP*(63*skoS2/20 + 13/8) + 1/5) + 4) <= skoSM*(-63*skoS2/20 - 61/40) + skoSP*(63*skoS2/20 + 13/8) + 1/5), {}
+DEBUG:__main__:vars sympy:['skoS2', 'skoSM', 'skoX', 'skoSP', 'delta']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoX': skoX, 'skoS2': skoS2, 'skoSM': skoSM, 'skoSP': skoSP}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    1 > skoX,
+    0 < skoS2,
+    0 < skoSM,
+    0 < skoSP,
+    0 < skoX,
+    -2 + skoS2**2 <= delta,
+    -1 + skoX + skoSM**2 <= delta,
+    2 + -1*skoS2**2 <= delta,
+    1 + skoX + -1*skoSP**2 <= delta,
+    -1 + skoSP**2 + -1*skoX <= delta,
+    1 + -1*skoX + -1*skoSM**2 <= delta,
+    skoX*
+    (4 +
+     skoSM +
+     skoSP +
+     skoX*
+     (1/5 +
+      skoSM*(-61/40 + -63/20*skoS2) +
+      skoSP*(13/8 + 63/20*skoS2))) <=
+    1/5 +
+    skoSM*(-61/40 + -63/20*skoS2) +
+    skoSP*(13/8 + 63/20*skoS2))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=9, skoX=1/2, skoS2=1, skoSM=1, skoSP=3
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:PRECOND_0: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 8) & (delta >= skoS2**2 - 2) & (delta - skoX >= -8) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (189*skoS2/20 - skoSM*(126*skoS2 + 61)/40 + 203/40 >= skoX*(40*skoSM + skoX*(378*skoS2 - skoSM*(126*skoS2 + 61) + 203) + 280)/40)
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:PRECOND_1: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 8) & (delta >= skoS2**2 - 2) & (delta - skoX >= -8) & (delta >= 2 - skoS2**2) & (63*skoS2/10 + 71/20 >= skoX*(skoX*(126*skoS2 + 71) + 160)/20)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=25, skoX=1/2, skoS2=1/4, skoSM=1, skoSP=5
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:PRECOND_2: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 24) & (delta >= skoS2**2 - 2) & (delta - skoX >= -24) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (63*skoS2/4 - skoSM*(126*skoS2 + 61)/40 + 333/40 >= skoX*(40*skoSM + skoX*(630*skoS2 - skoSM*(126*skoS2 + 61) + 333) + 360)/40)
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:PRECOND_3: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 24) & (delta >= skoS2**2 - 2) & (delta - skoX >= -24) & (delta >= 2 - skoS2**2) & (63*skoS2/5 + 34/5 >= skoX*(skoX*(63*skoS2 + 34) + 50)/5)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=15, skoX=1/2, skoS2=1/4, skoSM=1, skoSP=4
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:PRECOND_4: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 15) & (delta >= skoS2**2 - 2) & (delta - skoX >= -15) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (63*skoS2/5 - skoSM*(126*skoS2 + 61)/40 + 67/10 >= skoX*(40*skoSM + skoX*(504*skoS2 - skoSM*(126*skoS2 + 61) + 268) + 320)/40)
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:PRECOND_5: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 15) & (delta >= skoS2**2 - 2) & (delta - skoX >= -15) & (delta >= 2 - skoS2**2) & (189*skoS2/20 + 207/40 >= 9*skoX*(skoX*(42*skoS2 + 23) + 40)/40)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=23, skoX=3/4, skoS2=1/2, skoSM=1/8, skoSP=79/16
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:PRECOND_6: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 5985/256) & (delta >= skoS2**2 - 2) & (delta - skoX >= -5985/256) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (4977*skoS2/320 - skoSM*(126*skoS2 + 61)/40 + 5263/640 >= skoX*(640*skoSM + skoX*(9954*skoS2 - 16*skoSM*(126*skoS2 + 61) + 5263) + 5720)/640)
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:PRECOND_7: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 5985/256) & (delta >= skoS2**2 - 2) & (delta - skoX >= -63/64) & (delta >= 2 - skoS2**2) & (4851*skoS2/320 + 5141/640 >= skoX*(skoX*(9702*skoS2 + 5141) + 5800)/640)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=289, skoX=3/4, skoS2=1/4, skoSM=1, skoSP=17
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:PRECOND_8: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 288) & (delta >= skoS2**2 - 2) & (delta - skoX >= -288) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (1071*skoS2/20 - skoSM*(126*skoS2 + 61)/40 + 1113/40 >= skoX*(40*skoSM + skoX*(2142*skoS2 - skoSM*(126*skoS2 + 61) + 1113) + 840)/40)
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:PRECOND_9: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 288) & (delta >= skoS2**2 - 2) & (delta - skoX >= -288) & (delta >= 2 - skoS2**2) & (252*skoS2/5 + 263/10 >= skoX*(skoX*(504*skoS2 + 263) + 220)/10)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=255, skoX=3/4, skoS2=1/4, skoSM=1, skoSP=16
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:PRECOND_10: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 255) & (delta >= skoS2**2 - 2) & (delta - skoX >= -255) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (252*skoS2/5 - skoSM*(126*skoS2 + 61)/40 + 131/5 >= skoX*(40*skoSM + skoX*(2016*skoS2 - skoSM*(126*skoS2 + 61) + 1048) + 800)/40)
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:PRECOND_11: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 255) & (delta >= skoS2**2 - 2) & (delta - skoX >= -255) & (delta >= 2 - skoS2**2) & (189*skoS2/4 + 987/40 >= 21*skoX*(skoX*(90*skoS2 + 47) + 40)/40)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=271, skoX=3/4, skoS2=3/16, skoSM=3/8, skoSP=33/2
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:PRECOND_12: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1085/4) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1085/4) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (2079*skoS2/40 - skoSM*(126*skoS2 + 61)/40 + 2161/80 >= skoX*(80*skoSM + skoX*(4158*skoS2 - 2*skoSM*(126*skoS2 + 61) + 2161) + 1640)/80)
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:PRECOND_13: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1085/4) & (delta >= skoS2**2 - 2) & (delta - skoX >= -55/64) & (delta >= 2 - skoS2**2) & (8127*skoS2/160 + 8461/320 >= skoX*(skoX*(16254*skoS2 + 8461) + 6680)/320)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=267, skoX=3/4, skoS2=11/64, skoSM=3/16, skoSP=131/8
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:PRECOND_14: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 17097/64) & (delta >= skoS2**2 - 2) & (delta - skoX >= -17097/64) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (8253*skoS2/160 - skoSM*(126*skoS2 + 61)/40 + 8579/320 >= skoX*(320*skoSM + skoX*(16506*skoS2 - 8*skoSM*(126*skoS2 + 61) + 8579) + 6520)/320)
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:PRECOND_15: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 17097/64) & (delta >= skoS2**2 - 2) & (delta - skoX >= -247/256) & (delta >= 2 - skoS2**2) & (16317*skoS2/320 + 3395/128 >= 7*skoX*(skoX*(4662*skoS2 + 2425) + 1880)/640)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=263, skoX=3/4, skoS2=3/16, skoSM=3/8, skoSP=65/4
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:PRECOND_16: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 4209/16) & (delta >= skoS2**2 - 2) & (delta - skoX >= -4209/16) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (819*skoS2/16 - skoSM*(126*skoS2 + 61)/40 + 4257/160 >= skoX*(160*skoSM + skoX*(8190*skoS2 - 4*skoSM*(126*skoS2 + 61) + 4257) + 3240)/160)
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:PRECOND_17: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 4209/16) & (delta >= skoS2**2 - 2) & (delta - skoX >= -55/64) & (delta >= 2 - skoS2**2) & (8001*skoS2/160 + 8331/320 >= 3*skoX*(skoX*(5334*skoS2 + 2777) + 2200)/320)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=265, skoX=3/4, skoS2=11/64, skoSM=3/16, skoSP=261/16
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:PRECOND_18: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 67865/256) & (delta >= skoS2**2 - 2) & (delta - skoX >= -67865/256) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (16443*skoS2/320 - skoSM*(126*skoS2 + 61)/40 + 17093/640 >= skoX*(640*skoSM + skoX*(32886*skoS2 - 16*skoSM*(126*skoS2 + 61) + 17093) + 13000)/640)
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:PRECOND_19: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 67865/256) & (delta >= skoS2**2 - 2) & (delta - skoX >= -247/256) & (delta >= 2 - skoS2**2) & (8127*skoS2/160 + 1691/64 >= skoX*(skoX*(16254*skoS2 + 8455) + 6560)/320)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=264, skoX=3/4, skoS2=11/64, skoSM=3/16, skoSP=1043/64
+DEBUG:__main__:---------pre-condition 20---------
+DEBUG:__main__:PRECOND_20: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1083753/4096) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1083753/4096) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (65709*skoS2/1280 - skoSM*(126*skoS2 + 61)/40 + 68307/2560 >= skoX*(2560*skoSM + skoX*(131418*skoS2 - 64*skoSM*(126*skoS2 + 61) + 68307) + 51960)/2560)
+DEBUG:__main__:---------pre-condition 21---------
+DEBUG:__main__:PRECOND_21: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1083753/4096) & (delta >= skoS2**2 - 2) & (delta - skoX >= -247/256) & (delta >= 2 - skoS2**2) & (64953*skoS2/1280 + 13515/512 >= 3*skoX*(skoX*(43302*skoS2 + 22525) + 17480)/2560)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=266, skoX=3/4, skoS2=21/128, skoSM=11/128, skoSP=523/32
+DEBUG:__main__:---------pre-condition 22---------
+DEBUG:__main__:PRECOND_22: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 272505/1024) & (delta >= skoS2**2 - 2) & (delta - skoX >= -272505/1024) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (32949*skoS2/640 - skoSM*(126*skoS2 + 61)/40 + 34251/1280 >= skoX*(1280*skoSM + skoX*(65898*skoS2 - 32*skoSM*(126*skoS2 + 61) + 34251) + 26040)/1280)
+DEBUG:__main__:---------pre-condition 23---------
+DEBUG:__main__:PRECOND_23: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 272505/1024) & (delta >= skoS2**2 - 2) & (delta - skoX >= -16263/16384) & (delta >= 2 - skoS2**2) & (131103*skoS2/2560 + 136333/5120 >= skoX*(skoX*(262206*skoS2 + 136333) + 104600)/5120)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1225, skoX=3/4, skoS2=1/8, skoSM=1, skoSP=35
+DEBUG:__main__:---------pre-condition 24---------
+DEBUG:__main__:PRECOND_24: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1224) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1224) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (441*skoS2/4 - skoSM*(126*skoS2 + 61)/40 + 2283/40 >= skoX*(40*skoSM + skoX*(4410*skoS2 - skoSM*(126*skoS2 + 61) + 2283) + 1560)/40)
+DEBUG:__main__:---------pre-condition 25---------
+DEBUG:__main__:PRECOND_25: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 1224) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1224) & (delta >= 2 - skoS2**2) & (1071*skoS2/10 + 1111/20 >= skoX*(skoX*(2142*skoS2 + 1111) + 800)/20)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=284, skoX=3/4, skoS2=5/32, skoSM=1/32, skoSP=135/8
+DEBUG:__main__:---------pre-condition 26---------
+DEBUG:__main__:PRECOND_26: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 18161/64) & (delta >= skoS2**2 - 2) & (delta - skoX >= -18161/64) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (1701*skoS2/32 - skoSM*(126*skoS2 + 61)/40 + 8839/320 >= skoX*(320*skoSM + skoX*(17010*skoS2 - 8*skoSM*(126*skoS2 + 61) + 8839) + 6680)/320)
+DEBUG:__main__:---------pre-condition 27---------
+DEBUG:__main__:PRECOND_27: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 18161/64) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1023/1024) & (delta >= 2 - skoS2**2) & (33957*skoS2/640 + 7059/256 >= 3*skoX*(skoX*(22638*skoS2 + 11765) + 8920)/1280)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=9025, skoX=3/4, skoS2=1/16, skoSM=1, skoSP=95
+DEBUG:__main__:---------pre-condition 28---------
+DEBUG:__main__:PRECOND_28: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 9024) & (delta >= skoS2**2 - 2) & (delta - skoX >= -9024) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (1197*skoS2/4 - skoSM*(126*skoS2 + 61)/40 + 6183/40 >= skoX*(40*skoSM + skoX*(11970*skoS2 - skoSM*(126*skoS2 + 61) + 6183) + 3960)/40)
+DEBUG:__main__:---------pre-condition 29---------
+DEBUG:__main__:PRECOND_29: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 9024) & (delta >= skoS2**2 - 2) & (delta - skoX >= -9024) & (delta >= 2 - skoS2**2) & (2961*skoS2/10 + 3061/20 >= skoX*(skoX*(5922*skoS2 + 3061) + 2000)/20)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1196836, skoX=3/4, skoS2=1/32, skoSM=1, skoSP=1094
+DEBUG:__main__:---------pre-condition 30---------
+DEBUG:__main__:PRECOND_30: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1196835) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1196835) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (34461*skoS2/10 - skoSM*(126*skoS2 + 61)/40 + 35559/20 >= skoX*(40*skoSM + skoX*(137844*skoS2 - skoSM*(126*skoS2 + 61) + 71118) + 43920)/40)
+DEBUG:__main__:---------pre-condition 31---------
+DEBUG:__main__:PRECOND_31: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 1196835) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1196835) & (delta >= 2 - skoS2**2) & (68859*skoS2/20 + 71057/40 >= 7*skoX*(skoX*(19674*skoS2 + 10151) + 6280)/40)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1194648, skoX=3/4, skoS2=1/32, skoSM=1, skoSP=1093
+DEBUG:__main__:---------pre-condition 32---------
+DEBUG:__main__:PRECOND_32: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1194648) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1194648) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (68859*skoS2/20 - skoSM*(126*skoS2 + 61)/40 + 71053/40 >= skoX*(40*skoSM + skoX*(137718*skoS2 - skoSM*(126*skoS2 + 61) + 71053) + 43880)/40)
+DEBUG:__main__:---------pre-condition 33---------
+DEBUG:__main__:PRECOND_33: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 1194648) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1194648) & (delta >= 2 - skoS2**2) & (17199*skoS2/5 + 8874/5 >= 9*skoX*(skoX*(1911*skoS2 + 986) + 610)/5)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1193555, skoX=3/4, skoS2=1/32, skoSM=1, skoSP=2185/2
+DEBUG:__main__:---------pre-condition 34---------
+DEBUG:__main__:PRECOND_34: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 4774221/4) & (delta >= skoS2**2 - 2) & (delta - skoX >= -4774221/4) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (27531*skoS2/8 - skoSM*(126*skoS2 + 61)/40 + 142041/80 >= skoX*(80*skoSM + skoX*(275310*skoS2 - 2*skoSM*(126*skoS2 + 61) + 142041) + 87720)/80)
+DEBUG:__main__:---------pre-condition 35---------
+DEBUG:__main__:PRECOND_35: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 4774221/4) & (delta >= skoS2**2 - 2) & (delta - skoX >= -4774221/4) & (delta >= 2 - skoS2**2) & (137529*skoS2/40 + 141919/80 >= skoX*(skoX*(275058*skoS2 + 141919) + 87800)/80)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=11102224, skoX=3/4, skoS2=15/512, skoSM=1, skoSP=3332
+DEBUG:__main__:---------pre-condition 36---------
+DEBUG:__main__:PRECOND_36: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 11102223) & (delta >= skoS2**2 - 2) & (delta - skoX >= -11102223) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (52479*skoS2/5 - skoSM*(126*skoS2 + 61)/40 + 54147/10 >= skoX*(40*skoSM + skoX*(419832*skoS2 - skoSM*(126*skoS2 + 61) + 216588) + 133440)/40)
+DEBUG:__main__:---------pre-condition 37---------
+DEBUG:__main__:PRECOND_37: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 11102223) & (delta >= skoS2**2 - 2) & (delta - skoX >= -11102223) & (delta >= 2 - skoS2**2) & (209853*skoS2/20 + 216527/40 >= skoX*(skoX*(419706*skoS2 + 216527) + 133480)/40)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=46730896, skoX=3/4, skoS2=59/2048, skoSM=1, skoSP=6836
+DEBUG:__main__:---------pre-condition 38---------
+DEBUG:__main__:PRECOND_38: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 46730895) & (delta >= skoS2**2 - 2) & (delta - skoX >= -46730895) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (107667*skoS2/5 - skoSM*(126*skoS2 + 61)/40 + 111087/10 >= skoX*(40*skoSM + skoX*(861336*skoS2 - skoSM*(126*skoS2 + 61) + 444348) + 273600)/40)
+DEBUG:__main__:---------pre-condition 39---------
+DEBUG:__main__:PRECOND_39: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 46730895) & (delta >= skoS2**2 - 2) & (delta - skoX >= -46730895) & (delta >= 2 - skoS2**2) & (86121*skoS2/4 + 444287/40 >= skoX*(skoX*(861210*skoS2 + 444287) + 273640)/40)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=208109476, skoX=3/4, skoS2=117/4096, skoSM=1, skoSP=14426
+DEBUG:__main__:---------pre-condition 40---------
+DEBUG:__main__:PRECOND_40: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 208109475) & (delta >= skoS2**2 - 2) & (delta - skoX >= -208109475) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (454419*skoS2/10 - skoSM*(126*skoS2 + 61)/40 + 468849/20 >= skoX*(40*skoSM + skoX*(1817676*skoS2 - skoSM*(126*skoS2 + 61) + 937698) + 577200)/40)
+DEBUG:__main__:---------pre-condition 41---------
+DEBUG:__main__:PRECOND_41: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 208109475) & (delta >= skoS2**2 - 2) & (delta - skoX >= -208109475) & (delta >= 2 - skoS2**2) & (181755*skoS2/4 + 937637/40 >= skoX*(skoX*(1817550*skoS2 + 937637) + 577240)/40)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=208080624, skoX=3/4, skoS2=117/4096, skoSM=1, skoSP=14425
+DEBUG:__main__:---------pre-condition 42---------
+DEBUG:__main__:PRECOND_42: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 208080624) & (delta >= skoS2**2 - 2) & (delta - skoX >= -208080624) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (181755*skoS2/4 - skoSM*(126*skoS2 + 61)/40 + 937633/40 >= skoX*(40*skoSM + skoX*(1817550*skoS2 - skoSM*(126*skoS2 + 61) + 937633) + 577160)/40)
+DEBUG:__main__:---------pre-condition 43---------
+DEBUG:__main__:PRECOND_43: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 208080624) & (delta >= skoS2**2 - 2) & (delta - skoX >= -208080624) & (delta >= 2 - skoS2**2) & (227178*skoS2/5 + 234393/10 >= 3*skoX*(skoX*(151452*skoS2 + 78131) + 48100)/10)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1052742916, skoX=3/4, skoS2=233/8192, skoSM=1, skoSP=32446
+DEBUG:__main__:---------pre-condition 44---------
+DEBUG:__main__:PRECOND_44: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1052742915) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1052742915) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (1022049*skoS2/10 - skoSM*(126*skoS2 + 61)/40 + 1054499/20 >= skoX*(40*skoSM + skoX*(4088196*skoS2 - skoSM*(126*skoS2 + 61) + 2108998) + 1298000)/40)
+DEBUG:__main__:---------pre-condition 45---------
+DEBUG:__main__:PRECOND_45: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 1052742915) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1052742915) & (delta >= 2 - skoS2**2) & (408807*skoS2/4 + 2108937/40 >= 3*skoX*(skoX*(1362690*skoS2 + 702979) + 432680)/40)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1052029224, skoX=3/4, skoS2=931/32768, skoSM=1/16, skoSP=32435
+DEBUG:__main__:---------pre-condition 46---------
+DEBUG:__main__:PRECOND_46: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1052029224) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1052029224) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (408681*skoS2/4 - skoSM*(126*skoS2 + 61)/40 + 2108283/40 >= skoX*(40*skoSM + skoX*(4086810*skoS2 - skoSM*(126*skoS2 + 61) + 2108283) + 1297560)/40)
+DEBUG:__main__:---------pre-condition 47---------
+DEBUG:__main__:PRECOND_47: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1052029224) & (delta >= skoS2**2 - 2) & (delta - skoX >= -255/256) & (delta >= 2 - skoS2**2) & (32694417*skoS2/320 + 33732467/640 >= skoX*(skoX*(65388834*skoS2 + 33732467) + 20761000)/640)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=7471182096, skoX=3/4, skoS2=465/16384, skoSM=1, skoSP=86436
+DEBUG:__main__:---------pre-condition 48---------
+DEBUG:__main__:PRECOND_48: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 7471182095) & (delta >= skoS2**2 - 2) & (delta - skoX >= -7471182095) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (1361367*skoS2/5 - skoSM*(126*skoS2 + 61)/40 + 1404587/10 >= skoX*(40*skoSM + skoX*(10890936*skoS2 - skoSM*(126*skoS2 + 61) + 5618348) + 3457600)/40)
+DEBUG:__main__:---------pre-condition 49---------
+DEBUG:__main__:PRECOND_49: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 7471182095) & (delta >= skoS2**2 - 2) & (delta - skoX >= -7471182095) & (delta >= 2 - skoS2**2) & (1089081*skoS2/4 + 5618287/40 >= skoX*(skoX*(10890810*skoS2 + 5618287) + 3457640)/40)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=264934619524, skoX=3/4, skoS2=929/32768, skoSM=1, skoSP=514718
+DEBUG:__main__:---------pre-condition 50---------
+DEBUG:__main__:PRECOND_50: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 264934619523) & (delta >= skoS2**2 - 2) & (delta - skoX >= -264934619523) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (16213617*skoS2/10 - skoSM*(126*skoS2 + 61)/40 + 16728339/20 >= skoX*(40*skoSM + skoX*(64854468*skoS2 - skoSM*(126*skoS2 + 61) + 33456678) + 20588880)/40)
+DEBUG:__main__:---------pre-condition 51---------
+DEBUG:__main__:PRECOND_51: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 264934619523) & (delta >= skoS2**2 - 2) & (delta - skoX >= -264934619523) & (delta >= 2 - skoS2**2) & (32427171*skoS2/20 + 33456617/40 >= skoX*(skoX*(64854342*skoS2 + 33456617) + 20588920)/40)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1828761268489, skoX=3/4, skoS2=7431/262144, skoSM=1, skoSP=1352317
+DEBUG:__main__:---------pre-condition 52---------
+DEBUG:__main__:PRECOND_52: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1828761268488) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1828761268488) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (85195971*skoS2/20 - skoSM*(126*skoS2 + 61)/40 + 87900613/40 >= skoX*(40*skoSM + skoX*(170391942*skoS2 - skoSM*(126*skoS2 + 61) + 87900613) + 54092840)/40)
+DEBUG:__main__:---------pre-condition 53---------
+DEBUG:__main__:PRECOND_53: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 1828761268488) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1828761268488) & (delta >= 2 - skoS2**2) & (21298977*skoS2/5 + 10987569/5 >= 27*skoX*(skoX*(788851*skoS2 + 406947) + 250430)/5)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1621109539983, skoX=3/4, skoS2=59447/2097152, skoSM=1/4, skoSP=1273228
+DEBUG:__main__:---------pre-condition 54---------
+DEBUG:__main__:PRECOND_54: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1621109539983) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1621109539983) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (20053341*skoS2/5 - skoSM*(126*skoS2 + 61)/40 + 20689957/10 >= skoX*(40*skoSM + skoX*(160426728*skoS2 - skoSM*(126*skoS2 + 61) + 82759828) + 50929280)/40)
+DEBUG:__main__:---------pre-condition 55---------
+DEBUG:__main__:PRECOND_55: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1621109539983) & (delta >= skoS2**2 - 2) & (delta - skoX >= -15/16) & (delta >= 2 - skoS2**2) & (320853393*skoS2/80 + 331039251/160 >= 27*skoX*(skoX*(23766918*skoS2 + 12260713) + 7545080)/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1554298291224, skoX=3/4, skoS2=237787/8388608, skoSM=1/16, skoSP=1246715
+DEBUG:__main__:---------pre-condition 56---------
+DEBUG:__main__:PRECOND_56: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1554298291224) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1554298291224) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (15708609*skoS2/4 - skoSM*(126*skoS2 + 61)/40 + 81036483/40 >= skoX*(40*skoSM + skoX*(157086090*skoS2 - skoSM*(126*skoS2 + 61) + 81036483) + 49868760)/40)
+DEBUG:__main__:---------pre-condition 57---------
+DEBUG:__main__:PRECOND_57: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1554298291224) & (delta >= skoS2**2 - 2) & (delta - skoX >= -255/256) & (delta >= 2 - skoS2**2) & (1256688657*skoS2/320 + 1296583667/640 >= skoX*(skoX*(2513377314*skoS2 + 1296583667) + 797900200)/640)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1554297044509, skoX=3/4, skoS2=237787/8388608, skoSM=1/16, skoSP=2493429/2
+DEBUG:__main__:---------pre-condition 58---------
+DEBUG:__main__:PRECOND_58: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 6217188178037/4) & (delta >= skoS2**2 - 2) & (delta - skoX >= -6217188178037/4) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (157086027*skoS2/40 - skoSM*(126*skoS2 + 61)/40 + 162072901/80 >= skoX*(80*skoSM + skoX*(314172054*skoS2 - 2*skoSM*(126*skoS2 + 61) + 162072901) + 99737480)/80)
+DEBUG:__main__:---------pre-condition 59---------
+DEBUG:__main__:PRECOND_59: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 6217188178037/4) & (delta >= skoS2**2 - 2) & (delta - skoX >= -255/256) & (delta >= 2 - skoS2**2) & (1256688153*skoS2/320 + 1296583147/640 >= skoX*(skoX*(2513376306*skoS2 + 1296583147) + 797899880)/640)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1269971224899, skoX=3/4, skoS2=7431/262144, skoSM=1/2, skoSP=1126930
+DEBUG:__main__:---------pre-condition 60---------
+DEBUG:__main__:PRECOND_60: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1269971224899) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1269971224899) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (7099659*skoS2/2 - skoSM*(126*skoS2 + 61)/40 + 36625229/20 >= skoX*(40*skoSM + skoX*(141993180*skoS2 - skoSM*(126*skoS2 + 61) + 73250458) + 45077360)/40)
+DEBUG:__main__:---------pre-condition 61---------
+DEBUG:__main__:PRECOND_61: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1269971224899) & (delta >= skoS2**2 - 2) & (delta - skoX >= -3/4) & (delta >= 2 - skoS2**2) & (141993117*skoS2/40 + 29300171/16 >= skoX*(skoX*(283986234*skoS2 + 146500855) + 90154760)/80)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1615865541888, skoX=3/4, skoS2=475573/16777216, skoSM=1/32, skoSP=1271167
+DEBUG:__main__:---------pre-condition 62---------
+DEBUG:__main__:PRECOND_62: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1615865541888) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1615865541888) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (80083521*skoS2/20 - skoSM*(126*skoS2 + 61)/40 + 82625863/40 >= skoX*(40*skoSM + skoX*(160167042*skoS2 - skoSM*(126*skoS2 + 61) + 82625863) + 50846840)/40)
+DEBUG:__main__:---------pre-condition 63---------
+DEBUG:__main__:PRECOND_63: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1615865541888) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1023/1024) & (delta >= 2 - skoS2**2) & (2562672609*skoS2/640 + 528805511/256 >= skoX*(skoX*(5125345218*skoS2 + 2644027555) + 1627098920)/1280)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1536389998143, skoX=3/4, skoS2=951147/33554432, skoSM=1/64, skoSP=1239512
+DEBUG:__main__:---------pre-condition 64---------
+DEBUG:__main__:PRECOND_64: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1536389998143) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1536389998143) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (19522314*skoS2/5 - skoSM*(126*skoS2 + 61)/40 + 10071036/5 >= skoX*(40*skoSM + skoX*(156178512*skoS2 - skoSM*(126*skoS2 + 61) + 80568288) + 49580640)/40)
+DEBUG:__main__:---------pre-condition 65---------
+DEBUG:__main__:PRECOND_65: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1536389998143) & (delta >= skoS2**2 - 2) & (delta - skoX >= -4095/4096) & (delta >= 2 - skoS2**2) & (4997712321*skoS2/1280 + 5156370371/2560 >= skoX*(skoX*(9995424642*skoS2 + 5156370371) + 3173161000)/2560)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1536388758631, skoX=3/4, skoS2=951147/33554432, skoSM=1/64, skoSP=2479023/2
+DEBUG:__main__:---------pre-condition 66---------
+DEBUG:__main__:PRECOND_66: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 6145555034525/4) & (delta >= skoS2**2 - 2) & (delta - skoX >= -6145555034525/4) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (156178449*skoS2/40 - skoSM*(126*skoS2 + 61)/40 + 161136511/80 >= skoX*(80*skoSM + skoX*(312356898*skoS2 - 2*skoSM*(126*skoS2 + 61) + 161136511) + 99161240)/80)
+DEBUG:__main__:---------pre-condition 67---------
+DEBUG:__main__:PRECOND_67: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 6145555034525/4) & (delta >= skoS2**2 - 2) & (delta - skoX >= -4095/4096) & (delta >= 2 - skoS2**2) & (999542061*skoS2/256 + 5156368291/2560 >= skoX*(skoX*(9995420610*skoS2 + 5156368291) + 3173159720)/2560)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1790118230208, skoX=3/4, skoS2=118893/4194304, skoSM=1/16, skoSP=1337953
+DEBUG:__main__:---------pre-condition 68---------
+DEBUG:__main__:PRECOND_68: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1790118230208) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1790118230208) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (84291039*skoS2/20 - skoSM*(126*skoS2 + 61)/40 + 86966953/40 >= skoX*(40*skoSM + skoX*(168582078*skoS2 - skoSM*(126*skoS2 + 61) + 86966953) + 53518280)/40)
+DEBUG:__main__:---------pre-condition 69---------
+DEBUG:__main__:PRECOND_69: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1790118230208) & (delta >= skoS2**2 - 2) & (delta - skoX >= -255/256) & (delta >= 2 - skoS2**2) & (1348656561*skoS2/320 + 1391471187/640 >= 3*skoX*(skoX*(899104374*skoS2 + 463823729) + 285430840)/640)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=52663744206441, skoX=3/4, skoS2=14861/524288, skoSM=1, skoSP=7256979
+DEBUG:__main__:---------pre-condition 70---------
+DEBUG:__main__:PRECOND_70: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 52663744206440) & (delta >= skoS2**2 - 2) & (delta - skoX >= -52663744206440) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (457189677*skoS2/20 - skoSM*(126*skoS2 + 61)/40 + 471703643/40 >= skoX*(40*skoSM + skoX*(914379354*skoS2 - skoSM*(126*skoS2 + 61) + 471703643) + 290279320)/40)
+DEBUG:__main__:---------pre-condition 71---------
+DEBUG:__main__:PRECOND_71: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 52663744206440) & (delta >= skoS2**2 - 2) & (delta - skoX >= -52663744206440) & (delta >= 2 - skoS2**2) & (228594807*skoS2/10 + 235851791/20 >= 7*skoX*(skoX*(65312802*skoS2 + 33693113) + 20734240)/20)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1773992239568, skoX=3/4, skoS2=951143/33554432, skoSM=1/64, skoSP=1331913
+DEBUG:__main__:---------pre-condition 72---------
+DEBUG:__main__:PRECOND_72: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1773992239568) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1773992239568) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (83910519*skoS2/20 - skoSM*(126*skoS2 + 61)/40 + 86574353/40 >= skoX*(40*skoSM + skoX*(167821038*skoS2 - skoSM*(126*skoS2 + 61) + 86574353) + 53276680)/40)
+DEBUG:__main__:---------pre-condition 73---------
+DEBUG:__main__:PRECOND_73: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1773992239568) & (delta >= skoS2**2 - 2) & (delta - skoX >= -4095/4096) & (delta >= 2 - skoS2**2) & (5370273153*skoS2/1280 + 5540758531/2560 >= 7*skoX*(skoX*(1534363758*skoS2 + 791536933) + 487101080)/2560)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=255271399156225, skoX=3/4, skoS2=118887/4194304, skoSM=1, skoSP=15977215
+DEBUG:__main__:---------pre-condition 74---------
+DEBUG:__main__:PRECOND_74: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 255271399156224) & (delta >= skoS2**2 - 2) & (delta - skoX >= -255271399156224) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (201312909*skoS2/4 - skoSM*(126*skoS2 + 61)/40 + 1038518983/40 >= skoX*(40*skoSM + skoX*(2013129090*skoS2 - skoSM*(126*skoS2 + 61) + 1038518983) + 639088760)/40)
+DEBUG:__main__:---------pre-condition 75---------
+DEBUG:__main__:PRECOND_75: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 255271399156224) & (delta >= skoS2**2 - 2) & (delta - skoX >= -255271399156224) & (delta >= 2 - skoS2**2) & (503282241*skoS2/10 + 519259461/20 >= 21*skoX*(skoX*(47931642*skoS2 + 24726641) + 15216400)/20)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1601986856429584, skoX=3/4, skoS2=237773/8388608, skoSM=1, skoSP=40024828
+DEBUG:__main__:---------pre-condition 76---------
+DEBUG:__main__:PRECOND_76: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1601986856429583) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1601986856429583) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (630391041*skoS2/5 - skoSM*(126*skoS2 + 61)/40 + 650403457/10 >= skoX*(40*skoSM + skoX*(5043128328*skoS2 - skoSM*(126*skoS2 + 61) + 2601613828) + 1600993280)/40)
+DEBUG:__main__:---------pre-condition 77---------
+DEBUG:__main__:PRECOND_77: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 1601986856429583) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1601986856429583) & (delta >= 2 - skoS2**2) & (2521564101*skoS2/20 + 2601613767/40 >= 3*skoX*(skoX*(1681042734*skoS2 + 867204589) + 533664440)/40)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=26164843721316036, skoX=3/4, skoS2=475545/16777216, skoSM=1, skoSP=161755506
+DEBUG:__main__:---------pre-condition 78---------
+DEBUG:__main__:PRECOND_78: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 26164843721316035) & (delta >= skoS2**2 - 2) & (delta - skoX >= -26164843721316035) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (5095298439*skoS2/10 - skoSM*(126*skoS2 + 61)/40 + 5257053949/20 >= skoX*(40*skoSM + skoX*(20381193756*skoS2 - skoSM*(126*skoS2 + 61) + 10514107898) + 6470220400)/40)
+DEBUG:__main__:---------pre-condition 79---------
+DEBUG:__main__:PRECOND_79: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 26164843721316035) & (delta >= skoS2**2 - 2) & (delta - skoX >= -26164843721316035) & (delta >= 2 - skoS2**2) & (2038119363*skoS2/4 + 10514107837/40 >= skoX*(skoX*(20381193630*skoS2 + 10514107837) + 6470220440)/40)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=255271367201795, skoX=3/4, skoS2=118887/4194304, skoSM=1, skoSP=15977214
+DEBUG:__main__:---------pre-condition 80---------
+DEBUG:__main__:PRECOND_80: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 255271367201795) & (delta >= skoS2**2 - 2) & (delta - skoX >= -255271367201795) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (503282241*skoS2/10 - skoSM*(126*skoS2 + 61)/40 + 519259459/20 >= skoX*(40*skoSM + skoX*(2013128964*skoS2 - skoSM*(126*skoS2 + 61) + 1038518918) + 639088720)/40)
+DEBUG:__main__:---------pre-condition 81---------
+DEBUG:__main__:PRECOND_81: (delta >= skoX) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta >= -skoX) & (delta + skoX >= 255271367201795) & (delta >= skoS2**2 - 2) & (delta - skoX >= -255271367201795) & (delta >= 2 - skoS2**2) & (1006564419*skoS2/20 + 1038518857/40 >= skoX*(skoX*(2013128838*skoS2 + 1038518857) + 639088760)/40)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1367159203213455, skoX=3/4, skoS2=1902183/67108864, skoSM=1/4, skoSP=36975116
+DEBUG:__main__:---------pre-condition 82---------
+DEBUG:__main__:PRECOND_82: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1367159203213455) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1367159203213455) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (582358077*skoS2/5 - skoSM*(126*skoS2 + 61)/40 + 600845637/10 >= skoX*(40*skoSM + skoX*(4658864616*skoS2 - skoSM*(126*skoS2 + 61) + 2403382548) + 1479004800)/40)
+DEBUG:__main__:---------pre-condition 83---------
+DEBUG:__main__:PRECOND_83: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 1367159203213455) & (delta >= skoS2**2 - 2) & (delta - skoX >= -15/16) & (delta >= 2 - skoS2**2) & (9317729169*skoS2/80 + 9613530131/160 >= skoX*(skoX*(18635458338*skoS2 + 9613530131) + 5916019240)/160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=455558883448746529, skoX=3/4, skoS2=1902179/67108864, skoSM=1, skoSP=674951023
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=26164843721316035, skoX=3/4, skoS2=7608719/268435456, skoSM=15483066193655751/36028797018963968, skoSP=86841826027241473/536870912
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=209318749770528281/8, skoX=3/4, skoS2=7608719/268435456, skoSM=15483066193655751/36028797018963968, skoSP=86841826027241473/536870912
+DEBUG:__main__:---------pre-condition 84---------
+DEBUG:__main__:PRECOND_84: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 7541502747745674229011117699497985/288230376151711744) & (delta >= skoS2**2 - 2) & (delta - skoX >= -7541502747745674229011117699497985/288230376151711744) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (5471035039716212799*skoS2/10737418240 - skoSM*(126*skoS2 + 61)/40 + 5644718696065663041/21474836480 >= skoX*(21474836480*skoSM + skoX*(10942070079432425598*skoS2 - 536870912*skoSM*(126*skoS2 + 61) + 5644718696065663041) + 3473673126989004840)/21474836480)
+DEBUG:__main__:---------pre-condition 85---------
+DEBUG:__main__:PRECOND_85: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 7541502747745674229011117699497985/288230376151711744) & (delta >= skoS2**2 - 2) & (delta - skoX >= -1058348875876581321604942186931023/1298074214633706907132624082305024) & (delta >= 2 - skoS2**2) & (367154945444116753122838023*skoS2/720575940379279360 + 378810658348060878275294613/1441151880758558720 >= 3*skoX*(skoX*(244769963629411168748558682*skoS2 + 126270219449353626091764871) + 77704752692960834349710600)/1441151880758558720)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=1674549998164226255/64, skoX=3/4, skoS2=15217437/536870912, skoSM=2605100067253121/18014398509481984, skoSP=694734608217931789/4294967296
+DEBUG:__main__:---------pre-condition 86---------
+DEBUG:__main__:PRECOND_86: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 482656175855723157604057614947188905/18446744073709551616) & (delta >= skoS2**2 - 2) & (delta - skoX >= -482656175855723157604057614947188905/18446744073709551616) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (43768280317729702707*skoS2/85899345920 - skoSM*(126*skoS2 + 61)/40 + 45157749568525304653/171798691840 >= skoX*(171798691840*skoSM + skoX*(87536560635459405414*skoS2 - 4294967296*skoSM*(126*skoS2 + 61) + 45157749568525304653) + 27789385015912038920)/171798691840)
+DEBUG:__main__:---------pre-condition 87---------
+DEBUG:__main__:PRECOND_87: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 482656175855723157604057614947188905/18446744073709551616) & (delta >= skoS2**2 - 2) & (delta - skoX >= -317732007298024511225973736335615/324518553658426726783156020576256) & (delta >= 2 - skoS2**2) & (36715494609130731749166861*skoS2/72057594037927936 + 189405329487352855304856131/720575940379279360 >= skoX*(skoX*(367154946091307317491668610*skoS2 + 189405329487352855304856131) + 116557128833983931180436520)/720575940379279360)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=418637499541056563/16, skoX=3/4, skoS2=30434873/1073741824, skoSM=18441772837591/9007199254740992, skoSP=173683652054482947/1073741824
+DEBUG:__main__:---------pre-condition 88---------
+DEBUG:__main__:PRECOND_88: (delta >= 0) & (skoS2 > 0) & (skoSM > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 30166010990982697263411774906957833/1152921504606846976) & (delta >= skoS2**2 - 2) & (delta - skoX >= -30166010990982697263411774906957833/1152921504606846976) & (delta >= skoSM**2 + skoX - 1) & (delta >= 2 - skoS2**2) & (delta >= -skoSM**2 - skoX + 1) & (10942070079432425661*skoS2/21474836480 - skoSM*(126*skoS2 + 61)/40 + 11289437392131326147/42949672960 >= skoX*(42949672960*skoSM + skoX*(21884140158864851322*skoS2 - 1073741824*skoSM*(126*skoS2 + 61) + 11289437392131326147) + 6947346253978009720)/42949672960)
+DEBUG:__main__:---------pre-condition 89---------
+DEBUG:__main__:PRECOND_89: (delta >= 0) & (skoS2 > 0) & (skoX > 0) & (skoX < 1) & (delta + skoX >= 30166010990982697263411774906957833/1152921504606846976) & (delta >= skoS2**2 - 2) & (delta - skoX >= -81129298315621288386584942460783/81129638414606681695789005144064) & (delta >= 2 - skoS2**2) & (18357747320745129934100331*skoS2/36028797018963968 + 18940532964401406284848065/72057594037927936 >= 3*skoX*(skoX*(12238498213830086622733554*skoS2 + 6313510988133802094949355) + 3885237624375175671651560)/72057594037927936)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=357635780818071183, skoX=7/8, skoS2=11229195/16777216, skoSM=1/2, skoSP=598026572
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:IRRATIONAL
+DEBUG:__main__:model:delta=357635779622018041, skoX=7/8, skoS2=11229195/16777216, skoSM=1/2, skoSP=598026571

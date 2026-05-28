@@ -1,0 +1,4 @@
+(
+(define-fun x_o ((r_i Real)) Real (ite (and (not (= r_i 0.0)) (>= (* (- 1) (* r_i r_i)) 0)) (- 1.0) 0.0))
+(define-fun y_o ((r_i Real)) Real (ite (and (not (= r_i 0.0)) (>= (* (- 1) (* r_i r_i)) 0)) 2.0 0.0))
+)

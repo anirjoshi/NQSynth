@@ -1,0 +1,29 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_zankl_gen-09.smt2
+DEBUG:__main__:ip_vars: ['b', 'delta']
+DEBUG:__main__:op_vars: ['a']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(2*a - 1 <= delta, 1 - 2*a <= delta),
+    And(b*b - 2 <= delta, 2 - b*b <= delta),
+    b > a)
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (b > a) & (1 - 2*a <= delta) & (2*a - 1 <= delta) & (b**2 - 2 <= delta) & (2 - b**2 <= delta), {'delta': delta, 'a': a, 'b': b}
+DEBUG:__main__:DIRECTIONS: 1:[[1]]
+DEBUG:__main__:vars sympy:['b', 'delta', 'a']
+DEBUG:__main__:z3 vars:{'delta': delta, 'b': b, 'a': a}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    b > a,
+    1 + -2*a <= delta,
+    -1 + 2*a <= delta,
+    -2 + b**2 <= delta,
+    2 + -1*b**2 <= delta)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=3, b=1/8, a=0
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1]
+DEBUG:__main__:substitution: {a: lambda_var_0}
+DEBUG:__main__:PRECOND_0: delta - b^2 + 2 >= 0 /\ delta + b^2 - 2 >= 0 /\ delta + 2 b - 1 > 0
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(b**2 + delta - 2 >= 0) & (2*b + delta - 1 > 0) & (-b**2 + delta + 2 >= 0) {'delta': 3, 'b': 1/8, 'a': 0} {a: lambda_var_0}

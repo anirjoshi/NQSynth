@@ -1,0 +1,21 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_zankl_gen-13.smt2
+DEBUG:__main__:ip_vars: ['b', 'delta']
+DEBUG:__main__:op_vars: ['a']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(0 <= delta, And(a*a - -2 <= delta, -2 - a*a <= delta))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (a**2 + 2 <= delta) & (-a**2 - 2 <= delta), {'delta': delta, 'a': a}
+DEBUG:__main__:DIRECTIONS: 1:[[1]]
+DEBUG:__main__:vars sympy:['delta', 'a']
+DEBUG:__main__:z3 vars:{'delta': delta, 'a': a}
+DEBUG:__main__:z3 post_condition:And(0 <= delta, 2 + a**2 <= delta, -2 + -1*a**2 <= delta)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, delta=4, a=1/8
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1]
+DEBUG:__main__:substitution: {a: lambda_var_0 + 1/8}
+DEBUG:__main__:PRECOND_0: delta - 2 >= 0
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:delta - 2 >= 0 {'delta': 4, 'a': 1/8} {a: lambda_var_0 + 1/8}

@@ -1,0 +1,15 @@
+DEBUG:__main__:Starting Log File: gus_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_asin_8_vars4_asin-8-vars4-chunk-0010.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoX', 'skoS2']
+DEBUG:__main__:op_vars: ['skoSP', 'skoSM']
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(And(skoS2*skoS2 - 2 <= delta,
+            2 - skoS2*skoS2 <= delta),
+        And(Not(skoX <= 0),
+            And(Not(skoSP <= 0),
+                And(Not(skoSM <= 0),
+                    And(Not(skoS2 <= 0), Not(1 <= skoX)))))))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (1 > skoX) & (skoS2 > 0) & (skoSM > 0) & (skoSP > 0) & (skoX > 0) & (skoS2**2 - 2 <= delta) & (2 - skoS2**2 <= delta), {'delta': delta, 'skoS2': skoS2, 'skoX': skoX, 'skoSP': skoSP, 'skoSM': skoSM}
+DEBUG:__main__:vars sympy:['skoS2', 'skoSM', 'delta', 'skoSP', 'skoX']
+DEBUG:__main__:WEAKEST_PRECOND: delta >= 0 /\ skoS2 > 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0

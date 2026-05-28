@@ -1,0 +1,2985 @@
+DEBUG:__main__:Starting Log File: dm_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_3_intersecting_hyperbolas.smt
+DEBUG:__main__:ip_vars: ['z']
+DEBUG:__main__:op_vars: ['y', 'x']
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*y*y + -1*x*y + 1*z,
+            0 > 0 + 1*x*x + -1*y*y + -10*z)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > -x*y + y**2 + z) & (0 > x**2 - y**2 - 10*z), {}
+DEBUG:__main__:vars sympy:['x', 'z', 'y']
+DEBUG:__main__:z3 vars:{'z': z, 'y': y, 'x': x}
+DEBUG:__main__:z3 post_condition:And(0 > z + y**2 + -1*x*y, 0 > x**2 + -1*y**2 + -10*z)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1/32, y=1/8, x=1/2
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:PRECOND_0: (x - 8*z > 1/8) & (-x**2 + 10*z + 1/64 > 0)
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:PRECOND_1: (z > 3/128) & (z < 3/64)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1/8, y=-1/2, x=-1
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:PRECOND_2: (x + 2*z < -1/2) & (-x**2 + 10*z + 1/4 > 0)
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:PRECOND_3: (z > 3/40) & (z < 1/4)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=7/128, y=1/4, x=1/2
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:PRECOND_4: (x - 4*z > 1/4) & (-x**2 + 10*z + 1/16 > 0)
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:PRECOND_5: (z > 3/160) & (z < 1/16)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=9/128, y=-1/4, x=-5/8
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:PRECOND_6: (x + 4*z < -1/4) & (-x**2 + 10*z + 1/16 > 0)
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:PRECOND_7: (z > 21/640) & (z < 3/32)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=39/16, y=-1, x=-5
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:PRECOND_8: (x + z < -1) & (-x**2 + 10*z + 1 > 0)
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:PRECOND_9: (z > 12/5) & (z < 4)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=129/16, y=-2, x=-9
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:PRECOND_10: (2*x + z < -4) & (-x**2 + 10*z + 4 > 0)
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:PRECOND_11: (z > 77/10) & (z < 14)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=35, y=-4, x=-19
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:PRECOND_12: (4*x + z < -16) & (-x**2 + 10*z + 16 > 0)
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:PRECOND_13: (z > 69/2) & (z < 60)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=129, y=-5, x=-36
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:PRECOND_14: (5*x + z < -25) & (-x**2 + 10*z + 25 > 0)
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:PRECOND_15: (z > 1271/10) & (z < 155)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=201, y=-6, x=-45
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:PRECOND_16: (6*x + z < -36) & (-x**2 + 10*z + 36 > 0)
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:PRECOND_17: (z > 1989/10) & (z < 234)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=289, y=-7, x=-54
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:PRECOND_18: (7*x + z < -49) & (-x**2 + 10*z + 49 > 0)
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:PRECOND_19: (z > 2867/10) & (z < 329)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=393, y=-8, x=-63
+DEBUG:__main__:---------pre-condition 20---------
+DEBUG:__main__:PRECOND_20: (8*x + z < -64) & (-x**2 + 10*z + 64 > 0)
+DEBUG:__main__:---------pre-condition 21---------
+DEBUG:__main__:PRECOND_21: (z > 781/2) & (z < 440)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=8065/16, y=-9, x=-71
+DEBUG:__main__:---------pre-condition 22---------
+DEBUG:__main__:PRECOND_22: (9*x + z < -81) & (-x**2 + 10*z + 81 > 0)
+DEBUG:__main__:---------pre-condition 23---------
+DEBUG:__main__:PRECOND_23: (z > 496) & (z < 558)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1279/2, y=-10, x=-80
+DEBUG:__main__:---------pre-condition 24---------
+DEBUG:__main__:PRECOND_24: (10*x + z < -100) & (-x**2 + 10*z + 100 > 0)
+DEBUG:__main__:---------pre-condition 25---------
+DEBUG:__main__:PRECOND_25: (z > 630) & (z < 700)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=791, y=-11, x=-89
+DEBUG:__main__:---------pre-condition 26---------
+DEBUG:__main__:PRECOND_26: (11*x + z < -121) & (-x**2 + 10*z + 121 > 0)
+DEBUG:__main__:---------pre-condition 27---------
+DEBUG:__main__:PRECOND_27: (z > 780) & (z < 858)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=958, y=-12, x=-98
+DEBUG:__main__:---------pre-condition 28---------
+DEBUG:__main__:PRECOND_28: (12*x + z < -144) & (-x**2 + 10*z + 144 > 0)
+DEBUG:__main__:---------pre-condition 29---------
+DEBUG:__main__:PRECOND_29: (z > 946) & (z < 1032)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1141, y=-13, x=-107
+DEBUG:__main__:---------pre-condition 30---------
+DEBUG:__main__:PRECOND_30: (13*x + z < -169) & (-x**2 + 10*z + 169 > 0)
+DEBUG:__main__:---------pre-condition 31---------
+DEBUG:__main__:PRECOND_31: (z > 1128) & (z < 1222)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1340, y=-14, x=-116
+DEBUG:__main__:---------pre-condition 32---------
+DEBUG:__main__:PRECOND_32: (14*x + z < -196) & (-x**2 + 10*z + 196 > 0)
+DEBUG:__main__:---------pre-condition 33---------
+DEBUG:__main__:PRECOND_33: (z > 1326) & (z < 1428)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1555, y=-15, x=-125
+DEBUG:__main__:---------pre-condition 34---------
+DEBUG:__main__:PRECOND_34: (15*x + z < -225) & (-x**2 + 10*z + 225 > 0)
+DEBUG:__main__:---------pre-condition 35---------
+DEBUG:__main__:PRECOND_35: (z > 1540) & (z < 1650)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1786, y=-16, x=-134
+DEBUG:__main__:---------pre-condition 36---------
+DEBUG:__main__:PRECOND_36: (16*x + z < -256) & (-x**2 + 10*z + 256 > 0)
+DEBUG:__main__:---------pre-condition 37---------
+DEBUG:__main__:PRECOND_37: (z > 1770) & (z < 1888)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=8065/4, y=-17, x=-142
+DEBUG:__main__:---------pre-condition 38---------
+DEBUG:__main__:PRECOND_38: (17*x + z < -289) & (-x**2 + 10*z + 289 > 0)
+DEBUG:__main__:---------pre-condition 39---------
+DEBUG:__main__:PRECOND_39: (z > 3975/2) & (z < 2125)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=2279, y=-18, x=-151
+DEBUG:__main__:---------pre-condition 40---------
+DEBUG:__main__:PRECOND_40: (18*x + z < -324) & (-x**2 + 10*z + 324 > 0)
+DEBUG:__main__:---------pre-condition 41---------
+DEBUG:__main__:PRECOND_41: (z > 22477/10) & (z < 2394)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=2557, y=-19, x=-160
+DEBUG:__main__:---------pre-condition 42---------
+DEBUG:__main__:PRECOND_42: (19*x + z < -361) & (-x**2 + 10*z + 361 > 0)
+DEBUG:__main__:---------pre-condition 43---------
+DEBUG:__main__:PRECOND_43: (z > 25239/10) & (z < 2679)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=2851, y=-20, x=-169
+DEBUG:__main__:---------pre-condition 44---------
+DEBUG:__main__:PRECOND_44: (20*x + z < -400) & (-x**2 + 10*z + 400 > 0)
+DEBUG:__main__:---------pre-condition 45---------
+DEBUG:__main__:PRECOND_45: (z > 28161/10) & (z < 2980)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=3161, y=-21, x=-178
+DEBUG:__main__:---------pre-condition 46---------
+DEBUG:__main__:PRECOND_46: (21*x + z < -441) & (-x**2 + 10*z + 441 > 0)
+DEBUG:__main__:---------pre-condition 47---------
+DEBUG:__main__:PRECOND_47: (z > 31243/10) & (z < 3297)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=3487, y=-22, x=-187
+DEBUG:__main__:---------pre-condition 48---------
+DEBUG:__main__:PRECOND_48: (22*x + z < -484) & (-x**2 + 10*z + 484 > 0)
+DEBUG:__main__:---------pre-condition 49---------
+DEBUG:__main__:PRECOND_49: (z > 6897/2) & (z < 3630)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=3298, y=-23, x=-183
+DEBUG:__main__:---------pre-condition 50---------
+DEBUG:__main__:PRECOND_50: (23*x + z < -529) & (-x**2 + 10*z + 529 > 0)
+DEBUG:__main__:---------pre-condition 51---------
+DEBUG:__main__:PRECOND_51: (z > 3296) & (z < 3680)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=4233, y=-24, x=-207
+DEBUG:__main__:---------pre-condition 52---------
+DEBUG:__main__:PRECOND_52: (24*x + z < -576) & (-x**2 + 10*z + 576 > 0)
+DEBUG:__main__:---------pre-condition 53---------
+DEBUG:__main__:PRECOND_53: (z > 42273/10) & (z < 4392)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=4609, y=-25, x=-216
+DEBUG:__main__:---------pre-condition 54---------
+DEBUG:__main__:PRECOND_54: (25*x + z < -625) & (-x**2 + 10*z + 625 > 0)
+DEBUG:__main__:---------pre-condition 55---------
+DEBUG:__main__:PRECOND_55: (z > 46031/10) & (z < 4775)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=4427, y=-26, x=-212
+DEBUG:__main__:---------pre-condition 56---------
+DEBUG:__main__:PRECOND_56: (26*x + z < -676) & (-x**2 + 10*z + 676 > 0)
+DEBUG:__main__:---------pre-condition 57---------
+DEBUG:__main__:PRECOND_57: (z > 22134/5) & (z < 4836)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=4422, y=-27, x=-212
+DEBUG:__main__:---------pre-condition 58---------
+DEBUG:__main__:PRECOND_58: (27*x + z < -729) & (-x**2 + 10*z + 729 > 0)
+DEBUG:__main__:---------pre-condition 59---------
+DEBUG:__main__:PRECOND_59: (z > 8843/2) & (z < 4995)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=4417, y=-28, x=-212
+DEBUG:__main__:---------pre-condition 60---------
+DEBUG:__main__:PRECOND_60: (28*x + z < -784) & (-x**2 + 10*z + 784 > 0)
+DEBUG:__main__:---------pre-condition 61---------
+DEBUG:__main__:PRECOND_61: (z > 4416) & (z < 5152)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=4411, y=-29, x=-212
+DEBUG:__main__:---------pre-condition 62---------
+DEBUG:__main__:PRECOND_62: (29*x + z < -841) & (-x**2 + 10*z + 841 > 0)
+DEBUG:__main__:---------pre-condition 63---------
+DEBUG:__main__:PRECOND_63: (z > 44103/10) & (z < 5307)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=4405, y=-30, x=-212
+DEBUG:__main__:---------pre-condition 64---------
+DEBUG:__main__:PRECOND_64: (30*x + z < -900) & (-x**2 + 10*z + 900 > 0)
+DEBUG:__main__:---------pre-condition 65---------
+DEBUG:__main__:PRECOND_65: (z > 22022/5) & (z < 5460)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=4399, y=-31, x=-212
+DEBUG:__main__:---------pre-condition 66---------
+DEBUG:__main__:PRECOND_66: (31*x + z < -961) & (-x**2 + 10*z + 961 > 0)
+DEBUG:__main__:---------pre-condition 67---------
+DEBUG:__main__:PRECOND_67: (z > 43983/10) & (z < 5611)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=4393, y=-32, x=-212
+DEBUG:__main__:---------pre-condition 68---------
+DEBUG:__main__:PRECOND_68: (32*x + z < -1024) & (-x**2 + 10*z + 1024 > 0)
+DEBUG:__main__:---------pre-condition 69---------
+DEBUG:__main__:PRECOND_69: (z > 4392) & (z < 5760)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=4392, y=-39, x=-213
+DEBUG:__main__:---------pre-condition 70---------
+DEBUG:__main__:PRECOND_70: (39*x + z < -1521) & (-x**2 + 10*z + 1521 > 0)
+DEBUG:__main__:---------pre-condition 71---------
+DEBUG:__main__:PRECOND_71: (z > 21924/5) & (z < 6786)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=6810, y=-40, x=-264
+DEBUG:__main__:---------pre-condition 72---------
+DEBUG:__main__:PRECOND_72: (40*x + z < -1600) & (-x**2 + 10*z + 1600 > 0)
+DEBUG:__main__:---------pre-condition 73---------
+DEBUG:__main__:PRECOND_73: (z > 34048/5) & (z < 8960)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=6802, y=-41, x=-264
+DEBUG:__main__:---------pre-condition 74---------
+DEBUG:__main__:PRECOND_74: (41*x + z < -1681) & (-x**2 + 10*z + 1681 > 0)
+DEBUG:__main__:---------pre-condition 75---------
+DEBUG:__main__:PRECOND_75: (z > 13603/2) & (z < 9143)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=6794, y=-42, x=-264
+DEBUG:__main__:---------pre-condition 76---------
+DEBUG:__main__:PRECOND_76: (42*x + z < -1764) & (-x**2 + 10*z + 1764 > 0)
+DEBUG:__main__:---------pre-condition 77---------
+DEBUG:__main__:PRECOND_77: (z > 33966/5) & (z < 9324)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=6787, y=-43, x=-264
+DEBUG:__main__:---------pre-condition 78---------
+DEBUG:__main__:PRECOND_78: (43*x + z < -1849) & (-x**2 + 10*z + 1849 > 0)
+DEBUG:__main__:---------pre-condition 79---------
+DEBUG:__main__:PRECOND_79: (z > 67847/10) & (z < 9503)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=14793, y=-44, x=-387
+DEBUG:__main__:---------pre-condition 80---------
+DEBUG:__main__:PRECOND_80: (44*x + z < -1936) & (-x**2 + 10*z + 1936 > 0)
+DEBUG:__main__:---------pre-condition 81---------
+DEBUG:__main__:PRECOND_81: (z > 147833/10) & (z < 15092)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=9532, y=-45, x=-312
+DEBUG:__main__:---------pre-condition 82---------
+DEBUG:__main__:PRECOND_82: (45*x + z < -2025) & (-x**2 + 10*z + 2025 > 0)
+DEBUG:__main__:---------pre-condition 83---------
+DEBUG:__main__:PRECOND_83: (z > 95319/10) & (z < 12015)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=9523, y=-46, x=-312
+DEBUG:__main__:---------pre-condition 84---------
+DEBUG:__main__:PRECOND_84: (46*x + z < -2116) & (-x**2 + 10*z + 2116 > 0)
+DEBUG:__main__:---------pre-condition 85---------
+DEBUG:__main__:PRECOND_85: (z > 47614/5) & (z < 12236)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=9514, y=-47, x=-312
+DEBUG:__main__:---------pre-condition 86---------
+DEBUG:__main__:PRECOND_86: (47*x + z < -2209) & (-x**2 + 10*z + 2209 > 0)
+DEBUG:__main__:---------pre-condition 87---------
+DEBUG:__main__:PRECOND_87: (z > 19027/2) & (z < 12455)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=9505, y=-48, x=-312
+DEBUG:__main__:---------pre-condition 88---------
+DEBUG:__main__:PRECOND_88: (48*x + z < -2304) & (-x**2 + 10*z + 2304 > 0)
+DEBUG:__main__:---------pre-condition 89---------
+DEBUG:__main__:PRECOND_89: (z > 9504) & (z < 12672)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=19007/2, y=-49, x=-312
+DEBUG:__main__:---------pre-condition 90---------
+DEBUG:__main__:PRECOND_90: (49*x + z < -2401) & (-x**2 + 10*z + 2401 > 0)
+DEBUG:__main__:---------pre-condition 91---------
+DEBUG:__main__:PRECOND_91: (z > 94943/10) & (z < 12887)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=12927, y=-50, x=-363
+DEBUG:__main__:---------pre-condition 92---------
+DEBUG:__main__:PRECOND_92: (50*x + z < -2500) & (-x**2 + 10*z + 2500 > 0)
+DEBUG:__main__:---------pre-condition 93---------
+DEBUG:__main__:PRECOND_93: (z > 129269/10) & (z < 15650)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=12917, y=-51, x=-363
+DEBUG:__main__:---------pre-condition 94---------
+DEBUG:__main__:PRECOND_94: (51*x + z < -2601) & (-x**2 + 10*z + 2601 > 0)
+DEBUG:__main__:---------pre-condition 95---------
+DEBUG:__main__:PRECOND_95: (z > 64584/5) & (z < 15912)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=12907, y=-52, x=-363
+DEBUG:__main__:---------pre-condition 96---------
+DEBUG:__main__:PRECOND_96: (52*x + z < -2704) & (-x**2 + 10*z + 2704 > 0)
+DEBUG:__main__:---------pre-condition 97---------
+DEBUG:__main__:PRECOND_97: (z > 25813/2) & (z < 16172)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=12897, y=-53, x=-363
+DEBUG:__main__:---------pre-condition 98---------
+DEBUG:__main__:PRECOND_98: (53*x + z < -2809) & (-x**2 + 10*z + 2809 > 0)
+DEBUG:__main__:---------pre-condition 99---------
+DEBUG:__main__:PRECOND_99: (z > 12896) & (z < 16430)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=12888, y=-54, x=-363
+DEBUG:__main__:---------pre-condition 100---------
+DEBUG:__main__:PRECOND_100: (54*x + z < -2916) & (-x**2 + 10*z + 2916 > 0)
+DEBUG:__main__:---------pre-condition 101---------
+DEBUG:__main__:PRECOND_101: (z > 128853/10) & (z < 16686)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=23329, y=-55, x=-486
+DEBUG:__main__:---------pre-condition 102---------
+DEBUG:__main__:PRECOND_102: (55*x + z < -3025) & (-x**2 + 10*z + 3025 > 0)
+DEBUG:__main__:---------pre-condition 103---------
+DEBUG:__main__:PRECOND_103: (z > 233171/10) & (z < 23705)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=16744, y=-56, x=-413
+DEBUG:__main__:---------pre-condition 104---------
+DEBUG:__main__:PRECOND_104: (56*x + z < -3136) & (-x**2 + 10*z + 3136 > 0)
+DEBUG:__main__:---------pre-condition 105---------
+DEBUG:__main__:PRECOND_105: (z > 167433/10) & (z < 19992)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=16733, y=-57, x=-413
+DEBUG:__main__:---------pre-condition 106---------
+DEBUG:__main__:PRECOND_106: (57*x + z < -3249) & (-x**2 + 10*z + 3249 > 0)
+DEBUG:__main__:---------pre-condition 107---------
+DEBUG:__main__:PRECOND_107: (z > 16732) & (z < 20292)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=16721, y=-58, x=-413
+DEBUG:__main__:---------pre-condition 108---------
+DEBUG:__main__:PRECOND_108: (58*x + z < -3364) & (-x**2 + 10*z + 3364 > 0)
+DEBUG:__main__:---------pre-condition 109---------
+DEBUG:__main__:PRECOND_109: (z > 33441/2) & (z < 20590)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=16709, y=-59, x=-413
+DEBUG:__main__:---------pre-condition 110---------
+DEBUG:__main__:PRECOND_110: (59*x + z < -3481) & (-x**2 + 10*z + 3481 > 0)
+DEBUG:__main__:---------pre-condition 111---------
+DEBUG:__main__:PRECOND_111: (z > 83544/5) & (z < 20886)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=16697, y=-60, x=-413
+DEBUG:__main__:---------pre-condition 112---------
+DEBUG:__main__:PRECOND_112: (60*x + z < -3600) & (-x**2 + 10*z + 3600 > 0)
+DEBUG:__main__:---------pre-condition 113---------
+DEBUG:__main__:PRECOND_113: (z > 166969/10) & (z < 21180)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=16687, y=-61, x=-413
+DEBUG:__main__:---------pre-condition 114---------
+DEBUG:__main__:PRECOND_114: (61*x + z < -3721) & (-x**2 + 10*z + 3721 > 0)
+DEBUG:__main__:---------pre-condition 115---------
+DEBUG:__main__:PRECOND_115: (z > 83424/5) & (z < 21472)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=21519, y=-62, x=-468
+DEBUG:__main__:---------pre-condition 116---------
+DEBUG:__main__:PRECOND_116: (62*x + z < -3844) & (-x**2 + 10*z + 3844 > 0)
+DEBUG:__main__:---------pre-condition 117---------
+DEBUG:__main__:PRECOND_117: (z > 21518) & (z < 25172)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=21506, y=-63, x=-468
+DEBUG:__main__:---------pre-condition 118---------
+DEBUG:__main__:PRECOND_118: (63*x + z < -3969) & (-x**2 + 10*z + 3969 > 0)
+DEBUG:__main__:---------pre-condition 119---------
+DEBUG:__main__:PRECOND_119: (z > 43011/2) & (z < 25515)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=21493, y=-64, x=-468
+DEBUG:__main__:---------pre-condition 120---------
+DEBUG:__main__:PRECOND_120: (64*x + z < -4096) & (-x**2 + 10*z + 4096 > 0)
+DEBUG:__main__:---------pre-condition 121---------
+DEBUG:__main__:PRECOND_121: (z > 107464/5) & (z < 25856)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=21480, y=-65, x=-468
+DEBUG:__main__:---------pre-condition 122---------
+DEBUG:__main__:PRECOND_122: (65*x + z < -4225) & (-x**2 + 10*z + 4225 > 0)
+DEBUG:__main__:---------pre-condition 123---------
+DEBUG:__main__:PRECOND_123: (z > 214799/10) & (z < 26195)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=21473, y=-66, x=-468
+DEBUG:__main__:---------pre-condition 124---------
+DEBUG:__main__:PRECOND_124: (66*x + z < -4356) & (-x**2 + 10*z + 4356 > 0)
+DEBUG:__main__:---------pre-condition 125---------
+DEBUG:__main__:PRECOND_125: (z > 107334/5) & (z < 26532)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=34849, y=-67, x=-594
+DEBUG:__main__:---------pre-condition 126---------
+DEBUG:__main__:PRECOND_126: (67*x + z < -4489) & (-x**2 + 10*z + 4489 > 0)
+DEBUG:__main__:---------pre-condition 127---------
+DEBUG:__main__:PRECOND_127: (z > 348347/10) & (z < 35309)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=26578, y=-68, x=-520
+DEBUG:__main__:---------pre-condition 128---------
+DEBUG:__main__:PRECOND_128: (68*x + z < -4624) & (-x**2 + 10*z + 4624 > 0)
+DEBUG:__main__:---------pre-condition 129---------
+DEBUG:__main__:PRECOND_129: (z > 132888/5) & (z < 30736)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=26564, y=-69, x=-520
+DEBUG:__main__:---------pre-condition 130---------
+DEBUG:__main__:PRECOND_130: (69*x + z < -4761) & (-x**2 + 10*z + 4761 > 0)
+DEBUG:__main__:---------pre-condition 131---------
+DEBUG:__main__:PRECOND_131: (z > 265639/10) & (z < 31119)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=26551, y=-70, x=-520
+DEBUG:__main__:---------pre-condition 132---------
+DEBUG:__main__:PRECOND_132: (70*x + z < -4900) & (-x**2 + 10*z + 4900 > 0)
+DEBUG:__main__:---------pre-condition 133---------
+DEBUG:__main__:PRECOND_133: (z > 26550) & (z < 31500)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=26536, y=-71, x=-520
+DEBUG:__main__:---------pre-condition 134---------
+DEBUG:__main__:PRECOND_134: (71*x + z < -5041) & (-x**2 + 10*z + 5041 > 0)
+DEBUG:__main__:---------pre-condition 135---------
+DEBUG:__main__:PRECOND_135: (z > 265359/10) & (z < 31879)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=26533, y=-72, x=-520
+DEBUG:__main__:---------pre-condition 136---------
+DEBUG:__main__:PRECOND_136: (72*x + z < -5184) & (-x**2 + 10*z + 5184 > 0)
+DEBUG:__main__:---------pre-condition 137---------
+DEBUG:__main__:PRECOND_137: (z > 132608/5) & (z < 32256)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=32301, y=-73, x=-573
+DEBUG:__main__:---------pre-condition 138---------
+DEBUG:__main__:PRECOND_138: (73*x + z < -5329) & (-x**2 + 10*z + 5329 > 0)
+DEBUG:__main__:---------pre-condition 139---------
+DEBUG:__main__:PRECOND_139: (z > 32300) & (z < 36500)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=32286, y=-74, x=-573
+DEBUG:__main__:---------pre-condition 140---------
+DEBUG:__main__:PRECOND_140: (74*x + z < -5476) & (-x**2 + 10*z + 5476 > 0)
+DEBUG:__main__:---------pre-condition 141---------
+DEBUG:__main__:PRECOND_141: (z > 322853/10) & (z < 36926)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=43809, y=-75, x=-666
+DEBUG:__main__:---------pre-condition 142---------
+DEBUG:__main__:PRECOND_142: (75*x + z < -5625) & (-x**2 + 10*z + 5625 > 0)
+DEBUG:__main__:---------pre-condition 143---------
+DEBUG:__main__:PRECOND_143: (z > 437931/10) & (z < 44325)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=44326, y=-76, x=-670
+DEBUG:__main__:---------pre-condition 144---------
+DEBUG:__main__:PRECOND_144: (76*x + z < -5776) & (-x**2 + 10*z + 5776 > 0)
+DEBUG:__main__:---------pre-condition 145---------
+DEBUG:__main__:PRECOND_145: (z > 221562/5) & (z < 45144)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=46209, y=-77, x=-684
+DEBUG:__main__:---------pre-condition 146---------
+DEBUG:__main__:PRECOND_146: (77*x + z < -5929) & (-x**2 + 10*z + 5929 > 0)
+DEBUG:__main__:---------pre-condition 147---------
+DEBUG:__main__:PRECOND_147: (z > 461927/10) & (z < 46739)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=46740, y=-78, x=-688
+DEBUG:__main__:---------pre-condition 148---------
+DEBUG:__main__:PRECOND_148: (78*x + z < -6084) & (-x**2 + 10*z + 6084 > 0)
+DEBUG:__main__:---------pre-condition 149---------
+DEBUG:__main__:PRECOND_149: (z > 46726) & (z < 47580)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=48673, y=-79, x=-702
+DEBUG:__main__:---------pre-condition 150---------
+DEBUG:__main__:PRECOND_150: (79*x + z < -6241) & (-x**2 + 10*z + 6241 > 0)
+DEBUG:__main__:---------pre-condition 151---------
+DEBUG:__main__:PRECOND_151: (z > 486563/10) & (z < 49217)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=49929, y=-80, x=-711
+DEBUG:__main__:---------pre-condition 152---------
+DEBUG:__main__:PRECOND_152: (80*x + z < -6400) & (-x**2 + 10*z + 6400 > 0)
+DEBUG:__main__:---------pre-condition 153---------
+DEBUG:__main__:PRECOND_153: (z > 499121/10) & (z < 50480)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=50481, y=-81, x=-715
+DEBUG:__main__:---------pre-condition 154---------
+DEBUG:__main__:PRECOND_154: (81*x + z < -6561) & (-x**2 + 10*z + 6561 > 0)
+DEBUG:__main__:---------pre-condition 155---------
+DEBUG:__main__:PRECOND_155: (z > 252332/5) & (z < 51354)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=52489, y=-82, x=-729
+DEBUG:__main__:---------pre-condition 156---------
+DEBUG:__main__:PRECOND_156: (82*x + z < -6724) & (-x**2 + 10*z + 6724 > 0)
+DEBUG:__main__:---------pre-condition 157---------
+DEBUG:__main__:PRECOND_157: (z > 524717/10) & (z < 53054)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=53711, y=-83, x=-737
+DEBUG:__main__:---------pre-condition 158---------
+DEBUG:__main__:PRECOND_158: (83*x + z < -6889) & (-x**2 + 10*z + 6889 > 0)
+DEBUG:__main__:---------pre-condition 159---------
+DEBUG:__main__:PRECOND_159: (z > 53628) & (z < 54282)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=55030, y=-84, x=-746
+DEBUG:__main__:---------pre-condition 160---------
+DEBUG:__main__:PRECOND_160: (84*x + z < -7056) & (-x**2 + 10*z + 7056 > 0)
+DEBUG:__main__:---------pre-condition 161---------
+DEBUG:__main__:PRECOND_161: (z > 54946) & (z < 55608)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=56365, y=-85, x=-755
+DEBUG:__main__:---------pre-condition 162---------
+DEBUG:__main__:PRECOND_162: (85*x + z < -7225) & (-x**2 + 10*z + 7225 > 0)
+DEBUG:__main__:---------pre-condition 163---------
+DEBUG:__main__:PRECOND_163: (z > 56280) & (z < 56950)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=57716, y=-86, x=-764
+DEBUG:__main__:---------pre-condition 164---------
+DEBUG:__main__:PRECOND_164: (86*x + z < -7396) & (-x**2 + 10*z + 7396 > 0)
+DEBUG:__main__:---------pre-condition 165---------
+DEBUG:__main__:PRECOND_165: (z > 57630) & (z < 58308)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=58997, y=-87, x=-772
+DEBUG:__main__:---------pre-condition 166---------
+DEBUG:__main__:PRECOND_166: (87*x + z < -7569) & (-x**2 + 10*z + 7569 > 0)
+DEBUG:__main__:---------pre-condition 167---------
+DEBUG:__main__:PRECOND_167: (z > 117683/2) & (z < 59595)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=60379, y=-88, x=-781
+DEBUG:__main__:---------pre-condition 168---------
+DEBUG:__main__:PRECOND_168: (88*x + z < -7744) & (-x**2 + 10*z + 7744 > 0)
+DEBUG:__main__:---------pre-condition 169---------
+DEBUG:__main__:PRECOND_169: (z > 602217/10) & (z < 60984)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=61777, y=-89, x=-790
+DEBUG:__main__:---------pre-condition 170---------
+DEBUG:__main__:PRECOND_170: (89*x + z < -7921) & (-x**2 + 10*z + 7921 > 0)
+DEBUG:__main__:---------pre-condition 171---------
+DEBUG:__main__:PRECOND_171: (z > 616179/10) & (z < 62389)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=63191, y=-90, x=-799
+DEBUG:__main__:---------pre-condition 172---------
+DEBUG:__main__:PRECOND_172: (90*x + z < -8100) & (-x**2 + 10*z + 8100 > 0)
+DEBUG:__main__:---------pre-condition 173---------
+DEBUG:__main__:PRECOND_173: (z > 630301/10) & (z < 63810)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=64531, y=-91, x=-807
+DEBUG:__main__:---------pre-condition 174---------
+DEBUG:__main__:PRECOND_174: (91*x + z < -8281) & (-x**2 + 10*z + 8281 > 0)
+DEBUG:__main__:---------pre-condition 175---------
+DEBUG:__main__:PRECOND_175: (z > 321484/5) & (z < 65156)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=65976, y=-92, x=-816
+DEBUG:__main__:---------pre-condition 176---------
+DEBUG:__main__:PRECOND_176: (92*x + z < -8464) & (-x**2 + 10*z + 8464 > 0)
+DEBUG:__main__:---------pre-condition 177---------
+DEBUG:__main__:PRECOND_177: (z > 328696/5) & (z < 66608)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=67437, y=-93, x=-825
+DEBUG:__main__:---------pre-condition 178---------
+DEBUG:__main__:PRECOND_178: (93*x + z < -8649) & (-x**2 + 10*z + 8649 > 0)
+DEBUG:__main__:---------pre-condition 179---------
+DEBUG:__main__:PRECOND_179: (z > 335988/5) & (z < 68076)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=68914, y=-94, x=-834
+DEBUG:__main__:---------pre-condition 180---------
+DEBUG:__main__:PRECOND_180: (94*x + z < -8836) & (-x**2 + 10*z + 8836 > 0)
+DEBUG:__main__:---------pre-condition 181---------
+DEBUG:__main__:PRECOND_181: (z > 68672) & (z < 69560)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=70407, y=-95, x=-843
+DEBUG:__main__:---------pre-condition 182---------
+DEBUG:__main__:PRECOND_182: (95*x + z < -9025) & (-x**2 + 10*z + 9025 > 0)
+DEBUG:__main__:---------pre-condition 183---------
+DEBUG:__main__:PRECOND_183: (z > 350812/5) & (z < 71060)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=71821, y=-96, x=-851
+DEBUG:__main__:---------pre-condition 184---------
+DEBUG:__main__:PRECOND_184: (96*x + z < -9216) & (-x**2 + 10*z + 9216 > 0)
+DEBUG:__main__:---------pre-condition 185---------
+DEBUG:__main__:PRECOND_185: (z > 142997/2) & (z < 72480)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=73345, y=-97, x=-860
+DEBUG:__main__:---------pre-condition 186---------
+DEBUG:__main__:PRECOND_186: (97*x + z < -9409) & (-x**2 + 10*z + 9409 > 0)
+DEBUG:__main__:---------pre-condition 187---------
+DEBUG:__main__:PRECOND_187: (z > 730191/10) & (z < 74011)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=74885, y=-98, x=-869
+DEBUG:__main__:---------pre-condition 188---------
+DEBUG:__main__:PRECOND_188: (98*x + z < -9604) & (-x**2 + 10*z + 9604 > 0)
+DEBUG:__main__:---------pre-condition 189---------
+DEBUG:__main__:PRECOND_189: (z > 745557/10) & (z < 75558)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=76441, y=-99, x=-878
+DEBUG:__main__:---------pre-condition 190---------
+DEBUG:__main__:PRECOND_190: (99*x + z < -9801) & (-x**2 + 10*z + 9801 > 0)
+DEBUG:__main__:---------pre-condition 191---------
+DEBUG:__main__:PRECOND_191: (z > 761083/10) & (z < 77121)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=78013, y=-100, x=-887
+DEBUG:__main__:---------pre-condition 192---------
+DEBUG:__main__:PRECOND_192: (100*x + z < -10000) & (-x**2 + 10*z + 10000 > 0)
+DEBUG:__main__:---------pre-condition 193---------
+DEBUG:__main__:PRECOND_193: (z > 776769/10) & (z < 78700)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=79501, y=-101, x=-895
+DEBUG:__main__:---------pre-condition 194---------
+DEBUG:__main__:PRECOND_194: (101*x + z < -10201) & (-x**2 + 10*z + 10201 > 0)
+DEBUG:__main__:---------pre-condition 195---------
+DEBUG:__main__:PRECOND_195: (z > 395412/5) & (z < 80194)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=81104, y=-102, x=-904
+DEBUG:__main__:---------pre-condition 196---------
+DEBUG:__main__:PRECOND_196: (102*x + z < -10404) & (-x**2 + 10*z + 10404 > 0)
+DEBUG:__main__:---------pre-condition 197---------
+DEBUG:__main__:PRECOND_197: (z > 403406/5) & (z < 81804)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=82723, y=-103, x=-913
+DEBUG:__main__:---------pre-condition 198---------
+DEBUG:__main__:PRECOND_198: (103*x + z < -10609) & (-x**2 + 10*z + 10609 > 0)
+DEBUG:__main__:---------pre-condition 199---------
+DEBUG:__main__:PRECOND_199: (z > 82296) & (z < 83430)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=84358, y=-104, x=-922
+DEBUG:__main__:---------pre-condition 200---------
+DEBUG:__main__:PRECOND_200: (104*x + z < -10816) & (-x**2 + 10*z + 10816 > 0)
+DEBUG:__main__:---------pre-condition 201---------
+DEBUG:__main__:PRECOND_201: (z > 419634/5) & (z < 85072)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=86009, y=-105, x=-931
+DEBUG:__main__:---------pre-condition 202---------
+DEBUG:__main__:PRECOND_202: (105*x + z < -11025) & (-x**2 + 10*z + 11025 > 0)
+DEBUG:__main__:---------pre-condition 203---------
+DEBUG:__main__:PRECOND_203: (z > 427868/5) & (z < 86730)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=87571, y=-106, x=-939
+DEBUG:__main__:---------pre-condition 204---------
+DEBUG:__main__:PRECOND_204: (106*x + z < -11236) & (-x**2 + 10*z + 11236 > 0)
+DEBUG:__main__:---------pre-condition 205---------
+DEBUG:__main__:PRECOND_205: (z > 174097/2) & (z < 88298)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=89253, y=-107, x=-948
+DEBUG:__main__:---------pre-condition 206---------
+DEBUG:__main__:PRECOND_206: (107*x + z < -11449) & (-x**2 + 10*z + 11449 > 0)
+DEBUG:__main__:---------pre-condition 207---------
+DEBUG:__main__:PRECOND_207: (z > 177451/2) & (z < 89987)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=90951, y=-108, x=-957
+DEBUG:__main__:---------pre-condition 208---------
+DEBUG:__main__:PRECOND_208: (108*x + z < -11664) & (-x**2 + 10*z + 11664 > 0)
+DEBUG:__main__:---------pre-condition 209---------
+DEBUG:__main__:PRECOND_209: (z > 180837/2) & (z < 91692)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=92665, y=-109, x=-966
+DEBUG:__main__:---------pre-condition 210---------
+DEBUG:__main__:PRECOND_210: (109*x + z < -11881) & (-x**2 + 10*z + 11881 > 0)
+DEBUG:__main__:---------pre-condition 211---------
+DEBUG:__main__:PRECOND_211: (z > 184255/2) & (z < 93413)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=94395, y=-110, x=-975
+DEBUG:__main__:---------pre-condition 212---------
+DEBUG:__main__:PRECOND_212: (110*x + z < -12100) & (-x**2 + 10*z + 12100 > 0)
+DEBUG:__main__:---------pre-condition 213---------
+DEBUG:__main__:PRECOND_213: (z > 187705/2) & (z < 95150)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=96031, y=-111, x=-983
+DEBUG:__main__:---------pre-condition 214---------
+DEBUG:__main__:PRECOND_214: (111*x + z < -12321) & (-x**2 + 10*z + 12321 > 0)
+DEBUG:__main__:---------pre-condition 215---------
+DEBUG:__main__:PRECOND_215: (z > 476984/5) & (z < 96792)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=97792, y=-112, x=-992
+DEBUG:__main__:---------pre-condition 216---------
+DEBUG:__main__:PRECOND_216: (112*x + z < -12544) & (-x**2 + 10*z + 12544 > 0)
+DEBUG:__main__:---------pre-condition 217---------
+DEBUG:__main__:PRECOND_217: (z > 97152) & (z < 98560)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=99569, y=-113, x=-1001
+DEBUG:__main__:---------pre-condition 218---------
+DEBUG:__main__:PRECOND_218: (113*x + z < -12769) & (-x**2 + 10*z + 12769 > 0)
+DEBUG:__main__:---------pre-condition 219---------
+DEBUG:__main__:PRECOND_219: (z > 494616/5) & (z < 100344)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=101362, y=-114, x=-1010
+DEBUG:__main__:---------pre-condition 220---------
+DEBUG:__main__:PRECOND_220: (114*x + z < -12996) & (-x**2 + 10*z + 12996 > 0)
+DEBUG:__main__:---------pre-condition 221---------
+DEBUG:__main__:PRECOND_221: (z > 503552/5) & (z < 102144)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=103171, y=-115, x=-1019
+DEBUG:__main__:---------pre-condition 222---------
+DEBUG:__main__:PRECOND_222: (115*x + z < -13225) & (-x**2 + 10*z + 13225 > 0)
+DEBUG:__main__:---------pre-condition 223---------
+DEBUG:__main__:PRECOND_223: (z > 512568/5) & (z < 103960)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=104996, y=-116, x=-1028
+DEBUG:__main__:---------pre-condition 224---------
+DEBUG:__main__:PRECOND_224: (116*x + z < -13456) & (-x**2 + 10*z + 13456 > 0)
+DEBUG:__main__:---------pre-condition 225---------
+DEBUG:__main__:PRECOND_225: (z > 521664/5) & (z < 105792)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=106721, y=-117, x=-1036
+DEBUG:__main__:---------pre-condition 226---------
+DEBUG:__main__:PRECOND_226: (117*x + z < -13689) & (-x**2 + 10*z + 13689 > 0)
+DEBUG:__main__:---------pre-condition 227---------
+DEBUG:__main__:PRECOND_227: (z > 1059607/10) & (z < 107523)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=108577, y=-118, x=-1045
+DEBUG:__main__:---------pre-condition 228---------
+DEBUG:__main__:PRECOND_228: (118*x + z < -13924) & (-x**2 + 10*z + 13924 > 0)
+DEBUG:__main__:---------pre-condition 229---------
+DEBUG:__main__:PRECOND_229: (z > 1078101/10) & (z < 109386)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=110449, y=-119, x=-1054
+DEBUG:__main__:---------pre-condition 230---------
+DEBUG:__main__:PRECOND_230: (119*x + z < -14161) & (-x**2 + 10*z + 14161 > 0)
+DEBUG:__main__:---------pre-condition 231---------
+DEBUG:__main__:PRECOND_231: (z > 219351/2) & (z < 111265)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=112337, y=-120, x=-1063
+DEBUG:__main__:---------pre-condition 232---------
+DEBUG:__main__:PRECOND_232: (120*x + z < -14400) & (-x**2 + 10*z + 14400 > 0)
+DEBUG:__main__:---------pre-condition 233---------
+DEBUG:__main__:PRECOND_233: (z > 1115569/10) & (z < 113160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=114241, y=-121, x=-1072
+DEBUG:__main__:---------pre-condition 234---------
+DEBUG:__main__:PRECOND_234: (121*x + z < -14641) & (-x**2 + 10*z + 14641 > 0)
+DEBUG:__main__:---------pre-condition 235---------
+DEBUG:__main__:PRECOND_235: (z > 1134543/10) & (z < 115071)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=116040, y=-122, x=-1080
+DEBUG:__main__:---------pre-condition 236---------
+DEBUG:__main__:PRECOND_236: (122*x + z < -14884) & (-x**2 + 10*z + 14884 > 0)
+DEBUG:__main__:---------pre-condition 237---------
+DEBUG:__main__:PRECOND_237: (z > 575758/5) & (z < 116876)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=117975, y=-123, x=-1089
+DEBUG:__main__:---------pre-condition 238---------
+DEBUG:__main__:PRECOND_238: (123*x + z < -15129) & (-x**2 + 10*z + 15129 > 0)
+DEBUG:__main__:---------pre-condition 239---------
+DEBUG:__main__:PRECOND_239: (z > 585396/5) & (z < 118818)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=119926, y=-124, x=-1098
+DEBUG:__main__:---------pre-condition 240---------
+DEBUG:__main__:PRECOND_240: (124*x + z < -15376) & (-x**2 + 10*z + 15376 > 0)
+DEBUG:__main__:---------pre-condition 241---------
+DEBUG:__main__:PRECOND_241: (z > 595114/5) & (z < 120776)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=121893, y=-125, x=-1107
+DEBUG:__main__:---------pre-condition 242---------
+DEBUG:__main__:PRECOND_242: (125*x + z < -15625) & (-x**2 + 10*z + 15625 > 0)
+DEBUG:__main__:---------pre-condition 243---------
+DEBUG:__main__:PRECOND_243: (z > 604912/5) & (z < 122750)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=123876, y=-126, x=-1116
+DEBUG:__main__:---------pre-condition 244---------
+DEBUG:__main__:PRECOND_244: (126*x + z < -15876) & (-x**2 + 10*z + 15876 > 0)
+DEBUG:__main__:---------pre-condition 245---------
+DEBUG:__main__:PRECOND_245: (z > 122958) & (z < 124740)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=125875, y=-127, x=-1125
+DEBUG:__main__:---------pre-condition 246---------
+DEBUG:__main__:PRECOND_246: (127*x + z < -16129) & (-x**2 + 10*z + 16129 > 0)
+DEBUG:__main__:---------pre-condition 247---------
+DEBUG:__main__:PRECOND_247: (z > 624748/5) & (z < 126746)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=127763, y=-128, x=-1133
+DEBUG:__main__:---------pre-condition 248---------
+DEBUG:__main__:PRECOND_248: (128*x + z < -16384) & (-x**2 + 10*z + 16384 > 0)
+DEBUG:__main__:---------pre-condition 249---------
+DEBUG:__main__:PRECOND_249: (z > 253461/2) & (z < 128640)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=129793, y=-129, x=-1142
+DEBUG:__main__:---------pre-condition 250---------
+DEBUG:__main__:PRECOND_250: (129*x + z < -16641) & (-x**2 + 10*z + 16641 > 0)
+DEBUG:__main__:---------pre-condition 251---------
+DEBUG:__main__:PRECOND_251: (z > 1287523/10) & (z < 130677)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=131839, y=-130, x=-1151
+DEBUG:__main__:---------pre-condition 252---------
+DEBUG:__main__:PRECOND_252: (130*x + z < -16900) & (-x**2 + 10*z + 16900 > 0)
+DEBUG:__main__:---------pre-condition 253---------
+DEBUG:__main__:PRECOND_253: (z > 1307901/10) & (z < 132730)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=133901, y=-131, x=-1160
+DEBUG:__main__:---------pre-condition 254---------
+DEBUG:__main__:PRECOND_254: (131*x + z < -17161) & (-x**2 + 10*z + 17161 > 0)
+DEBUG:__main__:---------pre-condition 255---------
+DEBUG:__main__:PRECOND_255: (z > 1328439/10) & (z < 134799)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=135979, y=-132, x=-1169
+DEBUG:__main__:---------pre-condition 256---------
+DEBUG:__main__:PRECOND_256: (132*x + z < -17424) & (-x**2 + 10*z + 17424 > 0)
+DEBUG:__main__:---------pre-condition 257---------
+DEBUG:__main__:PRECOND_257: (z > 1349137/10) & (z < 136884)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=138073, y=-133, x=-1178
+DEBUG:__main__:---------pre-condition 258---------
+DEBUG:__main__:PRECOND_258: (133*x + z < -17689) & (-x**2 + 10*z + 17689 > 0)
+DEBUG:__main__:---------pre-condition 259---------
+DEBUG:__main__:PRECOND_259: (z > 273999/2) & (z < 138985)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=140050, y=-134, x=-1186
+DEBUG:__main__:---------pre-condition 260---------
+DEBUG:__main__:PRECOND_260: (134*x + z < -17956) & (-x**2 + 10*z + 17956 > 0)
+DEBUG:__main__:---------pre-condition 261---------
+DEBUG:__main__:PRECOND_261: (z > 138864) & (z < 140968)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=142175, y=-135, x=-1195
+DEBUG:__main__:---------pre-condition 262---------
+DEBUG:__main__:PRECOND_262: (135*x + z < -18225) & (-x**2 + 10*z + 18225 > 0)
+DEBUG:__main__:---------pre-condition 263---------
+DEBUG:__main__:PRECOND_263: (z > 140980) & (z < 143100)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=144316, y=-136, x=-1204
+DEBUG:__main__:---------pre-condition 264---------
+DEBUG:__main__:PRECOND_264: (136*x + z < -18496) & (-x**2 + 10*z + 18496 > 0)
+DEBUG:__main__:---------pre-condition 265---------
+DEBUG:__main__:PRECOND_265: (z > 143112) & (z < 145248)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=146473, y=-137, x=-1213
+DEBUG:__main__:---------pre-condition 266---------
+DEBUG:__main__:PRECOND_266: (137*x + z < -18769) & (-x**2 + 10*z + 18769 > 0)
+DEBUG:__main__:---------pre-condition 267---------
+DEBUG:__main__:PRECOND_267: (z > 145260) & (z < 147412)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=148646, y=-138, x=-1222
+DEBUG:__main__:---------pre-condition 268---------
+DEBUG:__main__:PRECOND_268: (138*x + z < -19044) & (-x**2 + 10*z + 19044 > 0)
+DEBUG:__main__:---------pre-condition 269---------
+DEBUG:__main__:PRECOND_269: (z > 147424) & (z < 149592)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=150697, y=-139, x=-1230
+DEBUG:__main__:---------pre-condition 270---------
+DEBUG:__main__:PRECOND_270: (139*x + z < -19321) & (-x**2 + 10*z + 19321 > 0)
+DEBUG:__main__:---------pre-condition 271---------
+DEBUG:__main__:PRECOND_271: (z > 1493579/10) & (z < 151649)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=152901, y=-140, x=-1239
+DEBUG:__main__:---------pre-condition 272---------
+DEBUG:__main__:PRECOND_272: (140*x + z < -19600) & (-x**2 + 10*z + 19600 > 0)
+DEBUG:__main__:---------pre-condition 273---------
+DEBUG:__main__:PRECOND_273: (z > 1515521/10) & (z < 153860)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=155121, y=-141, x=-1248
+DEBUG:__main__:---------pre-condition 274---------
+DEBUG:__main__:PRECOND_274: (141*x + z < -19881) & (-x**2 + 10*z + 19881 > 0)
+DEBUG:__main__:---------pre-condition 275---------
+DEBUG:__main__:PRECOND_275: (z > 1537623/10) & (z < 156087)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=157357, y=-142, x=-1257
+DEBUG:__main__:---------pre-condition 276---------
+DEBUG:__main__:PRECOND_276: (142*x + z < -20164) & (-x**2 + 10*z + 20164 > 0)
+DEBUG:__main__:---------pre-condition 277---------
+DEBUG:__main__:PRECOND_277: (z > 311977/2) & (z < 158330)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=159609, y=-143, x=-1266
+DEBUG:__main__:---------pre-condition 278---------
+DEBUG:__main__:PRECOND_278: (143*x + z < -20449) & (-x**2 + 10*z + 20449 > 0)
+DEBUG:__main__:---------pre-condition 279---------
+DEBUG:__main__:PRECOND_279: (z > 1582307/10) & (z < 160589)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=161877, y=-144, x=-1275
+DEBUG:__main__:---------pre-condition 280---------
+DEBUG:__main__:PRECOND_280: (144*x + z < -20736) & (-x**2 + 10*z + 20736 > 0)
+DEBUG:__main__:---------pre-condition 281---------
+DEBUG:__main__:PRECOND_281: (z > 1604889/10) & (z < 162864)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=164161, y=-145, x=-1284
+DEBUG:__main__:---------pre-condition 282---------
+DEBUG:__main__:PRECOND_282: (145*x + z < -21025) & (-x**2 + 10*z + 21025 > 0)
+DEBUG:__main__:---------pre-condition 283---------
+DEBUG:__main__:PRECOND_283: (z > 1627631/10) & (z < 165155)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=166316, y=-146, x=-1292
+DEBUG:__main__:---------pre-condition 284---------
+DEBUG:__main__:PRECOND_284: (146*x + z < -21316) & (-x**2 + 10*z + 21316 > 0)
+DEBUG:__main__:---------pre-condition 285---------
+DEBUG:__main__:PRECOND_285: (z > 823974/5) & (z < 167316)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=168631, y=-147, x=-1301
+DEBUG:__main__:---------pre-condition 286---------
+DEBUG:__main__:PRECOND_286: (147*x + z < -21609) & (-x**2 + 10*z + 21609 > 0)
+DEBUG:__main__:---------pre-condition 287---------
+DEBUG:__main__:PRECOND_287: (z > 835496/5) & (z < 169638)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=170962, y=-148, x=-1310
+DEBUG:__main__:---------pre-condition 288---------
+DEBUG:__main__:PRECOND_288: (148*x + z < -21904) & (-x**2 + 10*z + 21904 > 0)
+DEBUG:__main__:---------pre-condition 289---------
+DEBUG:__main__:PRECOND_289: (z > 847098/5) & (z < 171976)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=173309, y=-149, x=-1319
+DEBUG:__main__:---------pre-condition 290---------
+DEBUG:__main__:PRECOND_290: (149*x + z < -22201) & (-x**2 + 10*z + 22201 > 0)
+DEBUG:__main__:---------pre-condition 291---------
+DEBUG:__main__:PRECOND_291: (z > 171756) & (z < 174330)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=175672, y=-150, x=-1328
+DEBUG:__main__:---------pre-condition 292---------
+DEBUG:__main__:PRECOND_292: (150*x + z < -22500) & (-x**2 + 10*z + 22500 > 0)
+DEBUG:__main__:---------pre-condition 293---------
+DEBUG:__main__:PRECOND_293: (z > 870542/5) & (z < 176700)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=178051, y=-151, x=-1337
+DEBUG:__main__:---------pre-condition 294---------
+DEBUG:__main__:PRECOND_294: (151*x + z < -22801) & (-x**2 + 10*z + 22801 > 0)
+DEBUG:__main__:---------pre-condition 295---------
+DEBUG:__main__:PRECOND_295: (z > 882384/5) & (z < 179086)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=180295, y=-152, x=-1345
+DEBUG:__main__:---------pre-condition 296---------
+DEBUG:__main__:PRECOND_296: (152*x + z < -23104) & (-x**2 + 10*z + 23104 > 0)
+DEBUG:__main__:---------pre-condition 297---------
+DEBUG:__main__:PRECOND_297: (z > 1785921/10) & (z < 181336)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=182705, y=-153, x=-1354
+DEBUG:__main__:---------pre-condition 298---------
+DEBUG:__main__:PRECOND_298: (153*x + z < -23409) & (-x**2 + 10*z + 23409 > 0)
+DEBUG:__main__:---------pre-condition 299---------
+DEBUG:__main__:PRECOND_299: (z > 1809907/10) & (z < 183753)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=185131, y=-154, x=-1363
+DEBUG:__main__:---------pre-condition 300---------
+DEBUG:__main__:PRECOND_300: (154*x + z < -23716) & (-x**2 + 10*z + 23716 > 0)
+DEBUG:__main__:---------pre-condition 301---------
+DEBUG:__main__:PRECOND_301: (z > 1834053/10) & (z < 186186)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=187573, y=-155, x=-1372
+DEBUG:__main__:---------pre-condition 302---------
+DEBUG:__main__:PRECOND_302: (155*x + z < -24025) & (-x**2 + 10*z + 24025 > 0)
+DEBUG:__main__:---------pre-condition 303---------
+DEBUG:__main__:PRECOND_303: (z > 1858359/10) & (z < 188635)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=190031, y=-156, x=-1381
+DEBUG:__main__:---------pre-condition 304---------
+DEBUG:__main__:PRECOND_304: (156*x + z < -24336) & (-x**2 + 10*z + 24336 > 0)
+DEBUG:__main__:---------pre-condition 305---------
+DEBUG:__main__:PRECOND_305: (z > 376565/2) & (z < 191100)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=192505, y=-157, x=-1390
+DEBUG:__main__:---------pre-condition 306---------
+DEBUG:__main__:PRECOND_306: (157*x + z < -24649) & (-x**2 + 10*z + 24649 > 0)
+DEBUG:__main__:---------pre-condition 307---------
+DEBUG:__main__:PRECOND_307: (z > 1907451/10) & (z < 193581)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=194838, y=-158, x=-1398
+DEBUG:__main__:---------pre-condition 308---------
+DEBUG:__main__:PRECOND_308: (158*x + z < -24964) & (-x**2 + 10*z + 24964 > 0)
+DEBUG:__main__:---------pre-condition 309---------
+DEBUG:__main__:PRECOND_309: (z > 192944) & (z < 195920)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=197343, y=-159, x=-1407
+DEBUG:__main__:---------pre-condition 310---------
+DEBUG:__main__:PRECOND_310: (159*x + z < -25281) & (-x**2 + 10*z + 25281 > 0)
+DEBUG:__main__:---------pre-condition 311---------
+DEBUG:__main__:PRECOND_311: (z > 977184/5) & (z < 198432)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=199864, y=-160, x=-1416
+DEBUG:__main__:---------pre-condition 312---------
+DEBUG:__main__:PRECOND_312: (160*x + z < -25600) & (-x**2 + 10*z + 25600 > 0)
+DEBUG:__main__:---------pre-condition 313---------
+DEBUG:__main__:PRECOND_313: (z > 989728/5) & (z < 200960)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=202401, y=-161, x=-1425
+DEBUG:__main__:---------pre-condition 314---------
+DEBUG:__main__:PRECOND_314: (161*x + z < -25921) & (-x**2 + 10*z + 25921 > 0)
+DEBUG:__main__:---------pre-condition 315---------
+DEBUG:__main__:PRECOND_315: (z > 1002352/5) & (z < 203504)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=204954, y=-162, x=-1434
+DEBUG:__main__:---------pre-condition 316---------
+DEBUG:__main__:PRECOND_316: (162*x + z < -26244) & (-x**2 + 10*z + 26244 > 0)
+DEBUG:__main__:---------pre-condition 317---------
+DEBUG:__main__:PRECOND_317: (z > 1015056/5) & (z < 206064)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=207523, y=-163, x=-1443
+DEBUG:__main__:---------pre-condition 318---------
+DEBUG:__main__:PRECOND_318: (163*x + z < -26569) & (-x**2 + 10*z + 26569 > 0)
+DEBUG:__main__:---------pre-condition 319---------
+DEBUG:__main__:PRECOND_319: (z > 205568) & (z < 208640)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=209945, y=-164, x=-1451
+DEBUG:__main__:---------pre-condition 320---------
+DEBUG:__main__:PRECOND_320: (164*x + z < -26896) & (-x**2 + 10*z + 26896 > 0)
+DEBUG:__main__:---------pre-condition 321---------
+DEBUG:__main__:PRECOND_321: (z > 415701/2) & (z < 211068)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=212545, y=-165, x=-1460
+DEBUG:__main__:---------pre-condition 322---------
+DEBUG:__main__:PRECOND_322: (165*x + z < -27225) & (-x**2 + 10*z + 27225 > 0)
+DEBUG:__main__:---------pre-condition 323---------
+DEBUG:__main__:PRECOND_323: (z > 420875/2) & (z < 213675)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=215161, y=-166, x=-1469
+DEBUG:__main__:---------pre-condition 324---------
+DEBUG:__main__:PRECOND_324: (166*x + z < -27556) & (-x**2 + 10*z + 27556 > 0)
+DEBUG:__main__:---------pre-condition 325---------
+DEBUG:__main__:PRECOND_325: (z > 426081/2) & (z < 216298)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=217793, y=-167, x=-1478
+DEBUG:__main__:---------pre-condition 326---------
+DEBUG:__main__:PRECOND_326: (167*x + z < -27889) & (-x**2 + 10*z + 27889 > 0)
+DEBUG:__main__:---------pre-condition 327---------
+DEBUG:__main__:PRECOND_327: (z > 431319/2) & (z < 218937)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=220441, y=-168, x=-1487
+DEBUG:__main__:---------pre-condition 328---------
+DEBUG:__main__:PRECOND_328: (168*x + z < -28224) & (-x**2 + 10*z + 28224 > 0)
+DEBUG:__main__:---------pre-condition 329---------
+DEBUG:__main__:PRECOND_329: (z > 436589/2) & (z < 221592)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=223105, y=-169, x=-1496
+DEBUG:__main__:---------pre-condition 330---------
+DEBUG:__main__:PRECOND_330: (169*x + z < -28561) & (-x**2 + 10*z + 28561 > 0)
+DEBUG:__main__:---------pre-condition 331---------
+DEBUG:__main__:PRECOND_331: (z > 441891/2) & (z < 224263)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=225785, y=-170, x=-1505
+DEBUG:__main__:---------pre-condition 332---------
+DEBUG:__main__:PRECOND_332: (170*x + z < -28900) & (-x**2 + 10*z + 28900 > 0)
+DEBUG:__main__:---------pre-condition 333---------
+DEBUG:__main__:PRECOND_333: (z > 447225/2) & (z < 226950)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=228311, y=-171, x=-1513
+DEBUG:__main__:---------pre-condition 334---------
+DEBUG:__main__:PRECOND_334: (171*x + z < -29241) & (-x**2 + 10*z + 29241 > 0)
+DEBUG:__main__:---------pre-condition 335---------
+DEBUG:__main__:PRECOND_335: (z > 1129964/5) & (z < 229482)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=231022, y=-172, x=-1522
+DEBUG:__main__:---------pre-condition 336---------
+DEBUG:__main__:PRECOND_336: (172*x + z < -29584) & (-x**2 + 10*z + 29584 > 0)
+DEBUG:__main__:---------pre-condition 337---------
+DEBUG:__main__:PRECOND_337: (z > 228690) & (z < 232200)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=233749, y=-173, x=-1531
+DEBUG:__main__:---------pre-condition 338---------
+DEBUG:__main__:PRECOND_338: (173*x + z < -29929) & (-x**2 + 10*z + 29929 > 0)
+DEBUG:__main__:---------pre-condition 339---------
+DEBUG:__main__:PRECOND_339: (z > 1157016/5) & (z < 234934)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=236492, y=-174, x=-1540
+DEBUG:__main__:---------pre-condition 340---------
+DEBUG:__main__:PRECOND_340: (174*x + z < -30276) & (-x**2 + 10*z + 30276 > 0)
+DEBUG:__main__:---------pre-condition 341---------
+DEBUG:__main__:PRECOND_341: (z > 1170662/5) & (z < 237684)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=239251, y=-175, x=-1549
+DEBUG:__main__:---------pre-condition 342---------
+DEBUG:__main__:PRECOND_342: (175*x + z < -30625) & (-x**2 + 10*z + 30625 > 0)
+DEBUG:__main__:---------pre-condition 343---------
+DEBUG:__main__:PRECOND_343: (z > 1184388/5) & (z < 240450)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=242026, y=-176, x=-1558
+DEBUG:__main__:---------pre-condition 344---------
+DEBUG:__main__:PRECOND_344: (176*x + z < -30976) & (-x**2 + 10*z + 30976 > 0)
+DEBUG:__main__:---------pre-condition 345---------
+DEBUG:__main__:PRECOND_345: (z > 1198194/5) & (z < 243232)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=244641, y=-177, x=-1566
+DEBUG:__main__:---------pre-condition 346---------
+DEBUG:__main__:PRECOND_346: (177*x + z < -31329) & (-x**2 + 10*z + 31329 > 0)
+DEBUG:__main__:---------pre-condition 347---------
+DEBUG:__main__:PRECOND_347: (z > 2421027/10) & (z < 245853)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=247447, y=-178, x=-1575
+DEBUG:__main__:---------pre-condition 348---------
+DEBUG:__main__:PRECOND_348: (178*x + z < -31684) & (-x**2 + 10*z + 31684 > 0)
+DEBUG:__main__:---------pre-condition 349---------
+DEBUG:__main__:PRECOND_349: (z > 2448941/10) & (z < 248666)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=250269, y=-179, x=-1584
+DEBUG:__main__:---------pre-condition 350---------
+DEBUG:__main__:PRECOND_350: (179*x + z < -32041) & (-x**2 + 10*z + 32041 > 0)
+DEBUG:__main__:---------pre-condition 351---------
+DEBUG:__main__:PRECOND_351: (z > 495403/2) & (z < 251495)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=253107, y=-180, x=-1593
+DEBUG:__main__:---------pre-condition 352---------
+DEBUG:__main__:PRECOND_352: (180*x + z < -32400) & (-x**2 + 10*z + 32400 > 0)
+DEBUG:__main__:---------pre-condition 353---------
+DEBUG:__main__:PRECOND_353: (z > 2505249/10) & (z < 254340)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=255961, y=-181, x=-1602
+DEBUG:__main__:---------pre-condition 354---------
+DEBUG:__main__:PRECOND_354: (181*x + z < -32761) & (-x**2 + 10*z + 32761 > 0)
+DEBUG:__main__:---------pre-condition 355---------
+DEBUG:__main__:PRECOND_355: (z > 2533643/10) & (z < 257201)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=258831, y=-182, x=-1611
+DEBUG:__main__:---------pre-condition 356---------
+DEBUG:__main__:PRECOND_356: (182*x + z < -33124) & (-x**2 + 10*z + 33124 > 0)
+DEBUG:__main__:---------pre-condition 357---------
+DEBUG:__main__:PRECOND_357: (z > 2562197/10) & (z < 260078)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=261717, y=-183, x=-1620
+DEBUG:__main__:---------pre-condition 358---------
+DEBUG:__main__:PRECOND_358: (183*x + z < -33489) & (-x**2 + 10*z + 33489 > 0)
+DEBUG:__main__:---------pre-condition 359---------
+DEBUG:__main__:PRECOND_359: (z > 2590911/10) & (z < 262971)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=264436, y=-184, x=-1628
+DEBUG:__main__:---------pre-condition 360---------
+DEBUG:__main__:PRECOND_360: (184*x + z < -33856) & (-x**2 + 10*z + 33856 > 0)
+DEBUG:__main__:---------pre-condition 361---------
+DEBUG:__main__:PRECOND_361: (z > 1308264/5) & (z < 265696)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=267353, y=-185, x=-1637
+DEBUG:__main__:---------pre-condition 362---------
+DEBUG:__main__:PRECOND_362: (185*x + z < -34225) & (-x**2 + 10*z + 34225 > 0)
+DEBUG:__main__:---------pre-condition 363---------
+DEBUG:__main__:PRECOND_363: (z > 1322772/5) & (z < 268620)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=270286, y=-186, x=-1646
+DEBUG:__main__:---------pre-condition 364---------
+DEBUG:__main__:PRECOND_364: (186*x + z < -34596) & (-x**2 + 10*z + 34596 > 0)
+DEBUG:__main__:---------pre-condition 365---------
+DEBUG:__main__:PRECOND_365: (z > 267472) & (z < 271560)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=273235, y=-187, x=-1655
+DEBUG:__main__:---------pre-condition 366---------
+DEBUG:__main__:PRECOND_366: (187*x + z < -34969) & (-x**2 + 10*z + 34969 > 0)
+DEBUG:__main__:---------pre-condition 367---------
+DEBUG:__main__:PRECOND_367: (z > 1352028/5) & (z < 274516)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=276200, y=-188, x=-1664
+DEBUG:__main__:---------pre-condition 368---------
+DEBUG:__main__:PRECOND_368: (188*x + z < -35344) & (-x**2 + 10*z + 35344 > 0)
+DEBUG:__main__:---------pre-condition 369---------
+DEBUG:__main__:PRECOND_369: (z > 1366776/5) & (z < 277488)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=279181, y=-189, x=-1673
+DEBUG:__main__:---------pre-condition 370---------
+DEBUG:__main__:PRECOND_370: (189*x + z < -35721) & (-x**2 + 10*z + 35721 > 0)
+DEBUG:__main__:---------pre-condition 371---------
+DEBUG:__main__:PRECOND_371: (z > 1381604/5) & (z < 280476)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=282178, y=-190, x=-1682
+DEBUG:__main__:---------pre-condition 372---------
+DEBUG:__main__:PRECOND_372: (190*x + z < -36100) & (-x**2 + 10*z + 36100 > 0)
+DEBUG:__main__:---------pre-condition 373---------
+DEBUG:__main__:PRECOND_373: (z > 1396512/5) & (z < 283480)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=285001, y=-191, x=-1690
+DEBUG:__main__:---------pre-condition 374---------
+DEBUG:__main__:PRECOND_374: (191*x + z < -36481) & (-x**2 + 10*z + 36481 > 0)
+DEBUG:__main__:---------pre-condition 375---------
+DEBUG:__main__:PRECOND_375: (z > 2819619/10) & (z < 286309)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=288029, y=-192, x=-1699
+DEBUG:__main__:---------pre-condition 376---------
+DEBUG:__main__:PRECOND_376: (192*x + z < -36864) & (-x**2 + 10*z + 36864 > 0)
+DEBUG:__main__:---------pre-condition 377---------
+DEBUG:__main__:PRECOND_377: (z > 2849737/10) & (z < 289344)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=291073, y=-193, x=-1708
+DEBUG:__main__:---------pre-condition 378---------
+DEBUG:__main__:PRECOND_378: (193*x + z < -37249) & (-x**2 + 10*z + 37249 > 0)
+DEBUG:__main__:---------pre-condition 379---------
+DEBUG:__main__:PRECOND_379: (z > 576003/2) & (z < 292395)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=294133, y=-194, x=-1717
+DEBUG:__main__:---------pre-condition 380---------
+DEBUG:__main__:PRECOND_380: (194*x + z < -37636) & (-x**2 + 10*z + 37636 > 0)
+DEBUG:__main__:---------pre-condition 381---------
+DEBUG:__main__:PRECOND_381: (z > 2910453/10) & (z < 295462)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=297209, y=-195, x=-1726
+DEBUG:__main__:---------pre-condition 382---------
+DEBUG:__main__:PRECOND_382: (195*x + z < -38025) & (-x**2 + 10*z + 38025 > 0)
+DEBUG:__main__:---------pre-condition 383---------
+DEBUG:__main__:PRECOND_383: (z > 2941051/10) & (z < 298545)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=300301, y=-196, x=-1735
+DEBUG:__main__:---------pre-condition 384---------
+DEBUG:__main__:PRECOND_384: (196*x + z < -38416) & (-x**2 + 10*z + 38416 > 0)
+DEBUG:__main__:---------pre-condition 385---------
+DEBUG:__main__:PRECOND_385: (z > 2971809/10) & (z < 301644)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=303409, y=-197, x=-1744
+DEBUG:__main__:---------pre-condition 386---------
+DEBUG:__main__:PRECOND_386: (197*x + z < -38809) & (-x**2 + 10*z + 38809 > 0)
+DEBUG:__main__:---------pre-condition 387---------
+DEBUG:__main__:PRECOND_387: (z > 3002727/10) & (z < 304759)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=306336, y=-198, x=-1752
+DEBUG:__main__:---------pre-condition 388---------
+DEBUG:__main__:PRECOND_388: (198*x + z < -39204) & (-x**2 + 10*z + 39204 > 0)
+DEBUG:__main__:---------pre-condition 389---------
+DEBUG:__main__:PRECOND_389: (z > 303030) & (z < 307692)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=309475, y=-199, x=-1761
+DEBUG:__main__:---------pre-condition 390---------
+DEBUG:__main__:PRECOND_390: (199*x + z < -39601) & (-x**2 + 10*z + 39601 > 0)
+DEBUG:__main__:---------pre-condition 391---------
+DEBUG:__main__:PRECOND_391: (z > 306152) & (z < 310838)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=312630, y=-200, x=-1770
+DEBUG:__main__:---------pre-condition 392---------
+DEBUG:__main__:PRECOND_392: (200*x + z < -40000) & (-x**2 + 10*z + 40000 > 0)
+DEBUG:__main__:---------pre-condition 393---------
+DEBUG:__main__:PRECOND_393: (z > 309290) & (z < 314000)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=315801, y=-201, x=-1779
+DEBUG:__main__:---------pre-condition 394---------
+DEBUG:__main__:PRECOND_394: (201*x + z < -40401) & (-x**2 + 10*z + 40401 > 0)
+DEBUG:__main__:---------pre-condition 395---------
+DEBUG:__main__:PRECOND_395: (z > 312444) & (z < 317178)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=318988, y=-202, x=-1788
+DEBUG:__main__:---------pre-condition 396---------
+DEBUG:__main__:PRECOND_396: (202*x + z < -40804) & (-x**2 + 10*z + 40804 > 0)
+DEBUG:__main__:---------pre-condition 397---------
+DEBUG:__main__:PRECOND_397: (z > 315614) & (z < 320372)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=322191, y=-203, x=-1797
+DEBUG:__main__:---------pre-condition 398---------
+DEBUG:__main__:PRECOND_398: (203*x + z < -41209) & (-x**2 + 10*z + 41209 > 0)
+DEBUG:__main__:---------pre-condition 399---------
+DEBUG:__main__:PRECOND_399: (z > 318800) & (z < 323582)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=325207, y=-204, x=-1805
+DEBUG:__main__:---------pre-condition 400---------
+DEBUG:__main__:PRECOND_400: (204*x + z < -41616) & (-x**2 + 10*z + 41616 > 0)
+DEBUG:__main__:---------pre-condition 401---------
+DEBUG:__main__:PRECOND_401: (z > 3216409/10) & (z < 326604)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=328441, y=-205, x=-1814
+DEBUG:__main__:---------pre-condition 402---------
+DEBUG:__main__:PRECOND_402: (205*x + z < -42025) & (-x**2 + 10*z + 42025 > 0)
+DEBUG:__main__:---------pre-condition 403---------
+DEBUG:__main__:PRECOND_403: (z > 3248571/10) & (z < 329845)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=331691, y=-206, x=-1823
+DEBUG:__main__:---------pre-condition 404---------
+DEBUG:__main__:PRECOND_404: (206*x + z < -42436) & (-x**2 + 10*z + 42436 > 0)
+DEBUG:__main__:---------pre-condition 405---------
+DEBUG:__main__:PRECOND_405: (z > 3280893/10) & (z < 333102)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=334957, y=-207, x=-1832
+DEBUG:__main__:---------pre-condition 406---------
+DEBUG:__main__:PRECOND_406: (207*x + z < -42849) & (-x**2 + 10*z + 42849 > 0)
+DEBUG:__main__:---------pre-condition 407---------
+DEBUG:__main__:PRECOND_407: (z > 662675/2) & (z < 336375)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=338239, y=-208, x=-1841
+DEBUG:__main__:---------pre-condition 408---------
+DEBUG:__main__:PRECOND_408: (208*x + z < -43264) & (-x**2 + 10*z + 43264 > 0)
+DEBUG:__main__:---------pre-condition 409---------
+DEBUG:__main__:PRECOND_409: (z > 3346017/10) & (z < 339664)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=341537, y=-209, x=-1850
+DEBUG:__main__:---------pre-condition 410---------
+DEBUG:__main__:PRECOND_410: (209*x + z < -43681) & (-x**2 + 10*z + 43681 > 0)
+DEBUG:__main__:---------pre-condition 411---------
+DEBUG:__main__:PRECOND_411: (z > 3378819/10) & (z < 342969)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=344851, y=-210, x=-1859
+DEBUG:__main__:---------pre-condition 412---------
+DEBUG:__main__:PRECOND_412: (210*x + z < -44100) & (-x**2 + 10*z + 44100 > 0)
+DEBUG:__main__:---------pre-condition 413---------
+DEBUG:__main__:PRECOND_413: (z > 3411781/10) & (z < 346290)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=347971, y=-211, x=-1867
+DEBUG:__main__:---------pre-condition 414---------
+DEBUG:__main__:PRECOND_414: (211*x + z < -44521) & (-x**2 + 10*z + 44521 > 0)
+DEBUG:__main__:---------pre-condition 415---------
+DEBUG:__main__:PRECOND_415: (z > 1720584/5) & (z < 349416)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=351316, y=-212, x=-1876
+DEBUG:__main__:---------pre-condition 416---------
+DEBUG:__main__:PRECOND_416: (212*x + z < -44944) & (-x**2 + 10*z + 44944 > 0)
+DEBUG:__main__:---------pre-condition 417---------
+DEBUG:__main__:PRECOND_417: (z > 1737216/5) & (z < 352768)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=354677, y=-213, x=-1885
+DEBUG:__main__:---------pre-condition 418---------
+DEBUG:__main__:PRECOND_418: (213*x + z < -45369) & (-x**2 + 10*z + 45369 > 0)
+DEBUG:__main__:---------pre-condition 419---------
+DEBUG:__main__:PRECOND_419: (z > 1753928/5) & (z < 356136)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=358054, y=-214, x=-1894
+DEBUG:__main__:---------pre-condition 420---------
+DEBUG:__main__:PRECOND_420: (214*x + z < -45796) & (-x**2 + 10*z + 45796 > 0)
+DEBUG:__main__:---------pre-condition 421---------
+DEBUG:__main__:PRECOND_421: (z > 354144) & (z < 359520)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=361447, y=-215, x=-1903
+DEBUG:__main__:---------pre-condition 422---------
+DEBUG:__main__:PRECOND_422: (215*x + z < -46225) & (-x**2 + 10*z + 46225 > 0)
+DEBUG:__main__:---------pre-condition 423---------
+DEBUG:__main__:PRECOND_423: (z > 1787592/5) & (z < 362920)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=364856, y=-216, x=-1912
+DEBUG:__main__:---------pre-condition 424---------
+DEBUG:__main__:PRECOND_424: (216*x + z < -46656) & (-x**2 + 10*z + 46656 > 0)
+DEBUG:__main__:---------pre-condition 425---------
+DEBUG:__main__:PRECOND_425: (z > 1804544/5) & (z < 366336)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=368281, y=-217, x=-1921
+DEBUG:__main__:---------pre-condition 426---------
+DEBUG:__main__:PRECOND_426: (217*x + z < -47089) & (-x**2 + 10*z + 47089 > 0)
+DEBUG:__main__:---------pre-condition 427---------
+DEBUG:__main__:PRECOND_427: (z > 1821576/5) & (z < 369768)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=371505, y=-218, x=-1929
+DEBUG:__main__:---------pre-condition 428---------
+DEBUG:__main__:PRECOND_428: (218*x + z < -47524) & (-x**2 + 10*z + 47524 > 0)
+DEBUG:__main__:---------pre-condition 429---------
+DEBUG:__main__:PRECOND_429: (z > 3673517/10) & (z < 372998)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=374961, y=-219, x=-1938
+DEBUG:__main__:---------pre-condition 430---------
+DEBUG:__main__:PRECOND_430: (219*x + z < -47961) & (-x**2 + 10*z + 47961 > 0)
+DEBUG:__main__:---------pre-condition 431---------
+DEBUG:__main__:PRECOND_431: (z > 3707883/10) & (z < 376461)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=378433, y=-220, x=-1947
+DEBUG:__main__:---------pre-condition 432---------
+DEBUG:__main__:PRECOND_432: (220*x + z < -48400) & (-x**2 + 10*z + 48400 > 0)
+DEBUG:__main__:---------pre-condition 433---------
+DEBUG:__main__:PRECOND_433: (z > 3742409/10) & (z < 379940)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=381921, y=-221, x=-1956
+DEBUG:__main__:---------pre-condition 434---------
+DEBUG:__main__:PRECOND_434: (221*x + z < -48841) & (-x**2 + 10*z + 48841 > 0)
+DEBUG:__main__:---------pre-condition 435---------
+DEBUG:__main__:PRECOND_435: (z > 755419/2) & (z < 383435)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=385425, y=-222, x=-1965
+DEBUG:__main__:---------pre-condition 436---------
+DEBUG:__main__:PRECOND_436: (222*x + z < -49284) & (-x**2 + 10*z + 49284 > 0)
+DEBUG:__main__:---------pre-condition 437---------
+DEBUG:__main__:PRECOND_437: (z > 3811941/10) & (z < 386946)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=388945, y=-223, x=-1974
+DEBUG:__main__:---------pre-condition 438---------
+DEBUG:__main__:PRECOND_438: (223*x + z < -49729) & (-x**2 + 10*z + 49729 > 0)
+DEBUG:__main__:---------pre-condition 439---------
+DEBUG:__main__:PRECOND_439: (z > 3846947/10) & (z < 390473)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=392481, y=-224, x=-1983
+DEBUG:__main__:---------pre-condition 440---------
+DEBUG:__main__:PRECOND_440: (224*x + z < -50176) & (-x**2 + 10*z + 50176 > 0)
+DEBUG:__main__:---------pre-condition 441---------
+DEBUG:__main__:PRECOND_441: (z > 3882113/10) & (z < 394016)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=395809, y=-225, x=-1991
+DEBUG:__main__:---------pre-condition 442---------
+DEBUG:__main__:PRECOND_442: (225*x + z < -50625) & (-x**2 + 10*z + 50625 > 0)
+DEBUG:__main__:---------pre-condition 443---------
+DEBUG:__main__:PRECOND_443: (z > 1956728/5) & (z < 397350)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=399376, y=-226, x=-2000
+DEBUG:__main__:---------pre-condition 444---------
+DEBUG:__main__:PRECOND_444: (226*x + z < -51076) & (-x**2 + 10*z + 51076 > 0)
+DEBUG:__main__:---------pre-condition 445---------
+DEBUG:__main__:PRECOND_445: (z > 1974462/5) & (z < 400924)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=402959, y=-227, x=-2009
+DEBUG:__main__:---------pre-condition 446---------
+DEBUG:__main__:PRECOND_446: (227*x + z < -51529) & (-x**2 + 10*z + 51529 > 0)
+DEBUG:__main__:---------pre-condition 447---------
+DEBUG:__main__:PRECOND_447: (z > 1992276/5) & (z < 404514)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=406558, y=-228, x=-2018
+DEBUG:__main__:---------pre-condition 448---------
+DEBUG:__main__:PRECOND_448: (228*x + z < -51984) & (-x**2 + 10*z + 51984 > 0)
+DEBUG:__main__:---------pre-condition 449---------
+DEBUG:__main__:PRECOND_449: (z > 402034) & (z < 408120)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=410173, y=-229, x=-2027
+DEBUG:__main__:---------pre-condition 450---------
+DEBUG:__main__:PRECOND_450: (229*x + z < -52441) & (-x**2 + 10*z + 52441 > 0)
+DEBUG:__main__:---------pre-condition 451---------
+DEBUG:__main__:PRECOND_451: (z > 2028144/5) & (z < 411742)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=413804, y=-230, x=-2036
+DEBUG:__main__:---------pre-condition 452---------
+DEBUG:__main__:PRECOND_452: (230*x + z < -52900) & (-x**2 + 10*z + 52900 > 0)
+DEBUG:__main__:---------pre-condition 453---------
+DEBUG:__main__:PRECOND_453: (z > 2046198/5) & (z < 415380)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=417451, y=-231, x=-2045
+DEBUG:__main__:---------pre-condition 454---------
+DEBUG:__main__:PRECOND_454: (231*x + z < -53361) & (-x**2 + 10*z + 53361 > 0)
+DEBUG:__main__:---------pre-condition 455---------
+DEBUG:__main__:PRECOND_455: (z > 2064332/5) & (z < 419034)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=420883, y=-232, x=-2053
+DEBUG:__main__:---------pre-condition 456---------
+DEBUG:__main__:PRECOND_456: (232*x + z < -53824) & (-x**2 + 10*z + 53824 > 0)
+DEBUG:__main__:---------pre-condition 457---------
+DEBUG:__main__:PRECOND_457: (z > 832197/2) & (z < 422472)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=424561, y=-233, x=-2062
+DEBUG:__main__:---------pre-condition 458---------
+DEBUG:__main__:PRECOND_458: (233*x + z < -54289) & (-x**2 + 10*z + 54289 > 0)
+DEBUG:__main__:---------pre-condition 459---------
+DEBUG:__main__:PRECOND_459: (z > 839511/2) & (z < 426157)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=428255, y=-234, x=-2071
+DEBUG:__main__:---------pre-condition 460---------
+DEBUG:__main__:PRECOND_460: (234*x + z < -54756) & (-x**2 + 10*z + 54756 > 0)
+DEBUG:__main__:---------pre-condition 461---------
+DEBUG:__main__:PRECOND_461: (z > 846857/2) & (z < 429858)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=431965, y=-235, x=-2080
+DEBUG:__main__:---------pre-condition 462---------
+DEBUG:__main__:PRECOND_462: (235*x + z < -55225) & (-x**2 + 10*z + 55225 > 0)
+DEBUG:__main__:---------pre-condition 463---------
+DEBUG:__main__:PRECOND_463: (z > 854235/2) & (z < 433575)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=435691, y=-236, x=-2089
+DEBUG:__main__:---------pre-condition 464---------
+DEBUG:__main__:PRECOND_464: (236*x + z < -55696) & (-x**2 + 10*z + 55696 > 0)
+DEBUG:__main__:---------pre-condition 465---------
+DEBUG:__main__:PRECOND_465: (z > 861645/2) & (z < 437308)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=439433, y=-237, x=-2098
+DEBUG:__main__:---------pre-condition 466---------
+DEBUG:__main__:PRECOND_466: (237*x + z < -56169) & (-x**2 + 10*z + 56169 > 0)
+DEBUG:__main__:---------pre-condition 467---------
+DEBUG:__main__:PRECOND_467: (z > 869087/2) & (z < 441057)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=443191, y=-238, x=-2107
+DEBUG:__main__:---------pre-condition 468---------
+DEBUG:__main__:PRECOND_468: (238*x + z < -56644) & (-x**2 + 10*z + 56644 > 0)
+DEBUG:__main__:---------pre-condition 469---------
+DEBUG:__main__:PRECOND_469: (z > 876561/2) & (z < 444822)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=446727, y=-239, x=-2115
+DEBUG:__main__:---------pre-condition 470---------
+DEBUG:__main__:PRECOND_470: (239*x + z < -57121) & (-x**2 + 10*z + 57121 > 0)
+DEBUG:__main__:---------pre-condition 471---------
+DEBUG:__main__:PRECOND_471: (z > 2208052/5) & (z < 448364)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=450516, y=-240, x=-2124
+DEBUG:__main__:---------pre-condition 472---------
+DEBUG:__main__:PRECOND_472: (240*x + z < -57600) & (-x**2 + 10*z + 57600 > 0)
+DEBUG:__main__:---------pre-condition 473---------
+DEBUG:__main__:PRECOND_473: (z > 2226888/5) & (z < 452160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=454321, y=-241, x=-2133
+DEBUG:__main__:---------pre-condition 474---------
+DEBUG:__main__:PRECOND_474: (241*x + z < -58081) & (-x**2 + 10*z + 58081 > 0)
+DEBUG:__main__:---------pre-condition 475---------
+DEBUG:__main__:PRECOND_475: (z > 2245804/5) & (z < 455972)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=458142, y=-242, x=-2142
+DEBUG:__main__:---------pre-condition 476---------
+DEBUG:__main__:PRECOND_476: (242*x + z < -58564) & (-x**2 + 10*z + 58564 > 0)
+DEBUG:__main__:---------pre-condition 477---------
+DEBUG:__main__:PRECOND_477: (z > 452960) & (z < 459800)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=461979, y=-243, x=-2151
+DEBUG:__main__:---------pre-condition 478---------
+DEBUG:__main__:PRECOND_478: (243*x + z < -59049) & (-x**2 + 10*z + 59049 > 0)
+DEBUG:__main__:---------pre-condition 479---------
+DEBUG:__main__:PRECOND_479: (z > 2283876/5) & (z < 463644)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=465832, y=-244, x=-2160
+DEBUG:__main__:---------pre-condition 480---------
+DEBUG:__main__:PRECOND_480: (244*x + z < -59536) & (-x**2 + 10*z + 59536 > 0)
+DEBUG:__main__:---------pre-condition 481---------
+DEBUG:__main__:PRECOND_481: (z > 2303032/5) & (z < 467504)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=469701, y=-245, x=-2169
+DEBUG:__main__:---------pre-condition 482---------
+DEBUG:__main__:PRECOND_482: (245*x + z < -60025) & (-x**2 + 10*z + 60025 > 0)
+DEBUG:__main__:---------pre-condition 483---------
+DEBUG:__main__:PRECOND_483: (z > 2322268/5) & (z < 471380)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=473586, y=-246, x=-2178
+DEBUG:__main__:---------pre-condition 484---------
+DEBUG:__main__:PRECOND_484: (246*x + z < -60516) & (-x**2 + 10*z + 60516 > 0)
+DEBUG:__main__:---------pre-condition 485---------
+DEBUG:__main__:PRECOND_485: (z > 2341584/5) & (z < 475272)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=477241, y=-247, x=-2186
+DEBUG:__main__:---------pre-condition 486---------
+DEBUG:__main__:PRECOND_486: (247*x + z < -61009) & (-x**2 + 10*z + 61009 > 0)
+DEBUG:__main__:---------pre-condition 487---------
+DEBUG:__main__:PRECOND_487: (z > 4717587/10) & (z < 478933)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=481157, y=-248, x=-2195
+DEBUG:__main__:---------pre-condition 488---------
+DEBUG:__main__:PRECOND_488: (248*x + z < -61504) & (-x**2 + 10*z + 61504 > 0)
+DEBUG:__main__:---------pre-condition 489---------
+DEBUG:__main__:PRECOND_489: (z > 4756521/10) & (z < 482856)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=485089, y=-249, x=-2204
+DEBUG:__main__:---------pre-condition 490---------
+DEBUG:__main__:PRECOND_490: (249*x + z < -62001) & (-x**2 + 10*z + 62001 > 0)
+DEBUG:__main__:---------pre-condition 491---------
+DEBUG:__main__:PRECOND_491: (z > 959123/2) & (z < 486795)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=489037, y=-250, x=-2213
+DEBUG:__main__:---------pre-condition 492---------
+DEBUG:__main__:PRECOND_492: (250*x + z < -62500) & (-x**2 + 10*z + 62500 > 0)
+DEBUG:__main__:---------pre-condition 493---------
+DEBUG:__main__:PRECOND_493: (z > 4834869/10) & (z < 490750)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=493001, y=-251, x=-2222
+DEBUG:__main__:---------pre-condition 494---------
+DEBUG:__main__:PRECOND_494: (251*x + z < -63001) & (-x**2 + 10*z + 63001 > 0)
+DEBUG:__main__:---------pre-condition 495---------
+DEBUG:__main__:PRECOND_495: (z > 4874283/10) & (z < 494721)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=496981, y=-252, x=-2231
+DEBUG:__main__:---------pre-condition 496---------
+DEBUG:__main__:PRECOND_496: (252*x + z < -63504) & (-x**2 + 10*z + 63504 > 0)
+DEBUG:__main__:---------pre-condition 497---------
+DEBUG:__main__:PRECOND_497: (z > 4913857/10) & (z < 498708)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=500977, y=-253, x=-2240
+DEBUG:__main__:---------pre-condition 498---------
+DEBUG:__main__:PRECOND_498: (253*x + z < -64009) & (-x**2 + 10*z + 64009 > 0)
+DEBUG:__main__:---------pre-condition 499---------
+DEBUG:__main__:PRECOND_499: (z > 4953591/10) & (z < 502711)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=504736, y=-254, x=-2248
+DEBUG:__main__:---------pre-condition 500---------
+DEBUG:__main__:PRECOND_500: (254*x + z < -64516) & (-x**2 + 10*z + 64516 > 0)
+DEBUG:__main__:---------pre-condition 501---------
+DEBUG:__main__:PRECOND_501: (z > 2494494/5) & (z < 506476)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=508763, y=-255, x=-2257
+DEBUG:__main__:---------pre-condition 502---------
+DEBUG:__main__:PRECOND_502: (255*x + z < -65025) & (-x**2 + 10*z + 65025 > 0)
+DEBUG:__main__:---------pre-condition 503---------
+DEBUG:__main__:PRECOND_503: (z > 2514512/5) & (z < 510510)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=512806, y=-256, x=-2266
+DEBUG:__main__:---------pre-condition 504---------
+DEBUG:__main__:PRECOND_504: (256*x + z < -65536) & (-x**2 + 10*z + 65536 > 0)
+DEBUG:__main__:---------pre-condition 505---------
+DEBUG:__main__:PRECOND_505: (z > 506922) & (z < 514560)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=516865, y=-257, x=-2275
+DEBUG:__main__:---------pre-condition 506---------
+DEBUG:__main__:PRECOND_506: (257*x + z < -66049) & (-x**2 + 10*z + 66049 > 0)
+DEBUG:__main__:---------pre-condition 507---------
+DEBUG:__main__:PRECOND_507: (z > 2554788/5) & (z < 518626)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=520940, y=-258, x=-2284
+DEBUG:__main__:---------pre-condition 508---------
+DEBUG:__main__:PRECOND_508: (258*x + z < -66564) & (-x**2 + 10*z + 66564 > 0)
+DEBUG:__main__:---------pre-condition 509---------
+DEBUG:__main__:PRECOND_509: (z > 2575046/5) & (z < 522708)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=525031, y=-259, x=-2293
+DEBUG:__main__:---------pre-condition 510---------
+DEBUG:__main__:PRECOND_510: (259*x + z < -67081) & (-x**2 + 10*z + 67081 > 0)
+DEBUG:__main__:---------pre-condition 511---------
+DEBUG:__main__:PRECOND_511: (z > 2595384/5) & (z < 526806)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=529138, y=-260, x=-2302
+DEBUG:__main__:---------pre-condition 512---------
+DEBUG:__main__:PRECOND_512: (260*x + z < -67600) & (-x**2 + 10*z + 67600 > 0)
+DEBUG:__main__:---------pre-condition 513---------
+DEBUG:__main__:PRECOND_513: (z > 2615802/5) & (z < 530920)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=533001, y=-261, x=-2310
+DEBUG:__main__:---------pre-condition 514---------
+DEBUG:__main__:PRECOND_514: (261*x + z < -68121) & (-x**2 + 10*z + 68121 > 0)
+DEBUG:__main__:---------pre-condition 515---------
+DEBUG:__main__:PRECOND_515: (z > 5267979/10) & (z < 534789)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=537139, y=-262, x=-2319
+DEBUG:__main__:---------pre-condition 516---------
+DEBUG:__main__:PRECOND_516: (262*x + z < -68644) & (-x**2 + 10*z + 68644 > 0)
+DEBUG:__main__:---------pre-condition 517---------
+DEBUG:__main__:PRECOND_517: (z > 5309117/10) & (z < 538934)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=541293, y=-263, x=-2328
+DEBUG:__main__:---------pre-condition 518---------
+DEBUG:__main__:PRECOND_518: (263*x + z < -69169) & (-x**2 + 10*z + 69169 > 0)
+DEBUG:__main__:---------pre-condition 519---------
+DEBUG:__main__:PRECOND_519: (z > 1070083/2) & (z < 543095)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=545463, y=-264, x=-2337
+DEBUG:__main__:---------pre-condition 520---------
+DEBUG:__main__:PRECOND_520: (264*x + z < -69696) & (-x**2 + 10*z + 69696 > 0)
+DEBUG:__main__:---------pre-condition 521---------
+DEBUG:__main__:PRECOND_521: (z > 5391873/10) & (z < 547272)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=549649, y=-265, x=-2346
+DEBUG:__main__:---------pre-condition 522---------
+DEBUG:__main__:PRECOND_522: (265*x + z < -70225) & (-x**2 + 10*z + 70225 > 0)
+DEBUG:__main__:---------pre-condition 523---------
+DEBUG:__main__:PRECOND_523: (z > 5433491/10) & (z < 551465)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=553851, y=-266, x=-2355
+DEBUG:__main__:---------pre-condition 524---------
+DEBUG:__main__:PRECOND_524: (266*x + z < -70756) & (-x**2 + 10*z + 70756 > 0)
+DEBUG:__main__:---------pre-condition 525---------
+DEBUG:__main__:PRECOND_525: (z > 5475269/10) & (z < 555674)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=558069, y=-267, x=-2364
+DEBUG:__main__:---------pre-condition 526---------
+DEBUG:__main__:PRECOND_526: (267*x + z < -71289) & (-x**2 + 10*z + 71289 > 0)
+DEBUG:__main__:---------pre-condition 527---------
+DEBUG:__main__:PRECOND_527: (z > 5517207/10) & (z < 559899)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=562036, y=-268, x=-2372
+DEBUG:__main__:---------pre-condition 528---------
+DEBUG:__main__:PRECOND_528: (268*x + z < -71824) & (-x**2 + 10*z + 71824 > 0)
+DEBUG:__main__:---------pre-condition 529---------
+DEBUG:__main__:PRECOND_529: (z > 555456) & (z < 563872)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=566285, y=-269, x=-2381
+DEBUG:__main__:---------pre-condition 530---------
+DEBUG:__main__:PRECOND_530: (269*x + z < -72361) & (-x**2 + 10*z + 72361 > 0)
+DEBUG:__main__:---------pre-condition 531---------
+DEBUG:__main__:PRECOND_531: (z > 559680) & (z < 568128)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=570550, y=-270, x=-2390
+DEBUG:__main__:---------pre-condition 532---------
+DEBUG:__main__:PRECOND_532: (270*x + z < -72900) & (-x**2 + 10*z + 72900 > 0)
+DEBUG:__main__:---------pre-condition 533---------
+DEBUG:__main__:PRECOND_533: (z > 563920) & (z < 572400)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=574831, y=-271, x=-2399
+DEBUG:__main__:---------pre-condition 534---------
+DEBUG:__main__:PRECOND_534: (271*x + z < -73441) & (-x**2 + 10*z + 73441 > 0)
+DEBUG:__main__:---------pre-condition 535---------
+DEBUG:__main__:PRECOND_535: (z > 568176) & (z < 576688)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=579128, y=-272, x=-2408
+DEBUG:__main__:---------pre-condition 536---------
+DEBUG:__main__:PRECOND_536: (272*x + z < -73984) & (-x**2 + 10*z + 73984 > 0)
+DEBUG:__main__:---------pre-condition 537---------
+DEBUG:__main__:PRECOND_537: (z > 572448) & (z < 580992)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=583441, y=-273, x=-2417
+DEBUG:__main__:---------pre-condition 538---------
+DEBUG:__main__:PRECOND_538: (273*x + z < -74529) & (-x**2 + 10*z + 74529 > 0)
+DEBUG:__main__:---------pre-condition 539---------
+DEBUG:__main__:PRECOND_539: (z > 576736) & (z < 585312)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=587770, y=-274, x=-2426
+DEBUG:__main__:---------pre-condition 540---------
+DEBUG:__main__:PRECOND_540: (274*x + z < -75076) & (-x**2 + 10*z + 75076 > 0)
+DEBUG:__main__:---------pre-condition 541---------
+DEBUG:__main__:PRECOND_541: (z > 581040) & (z < 589648)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=591841, y=-275, x=-2434
+DEBUG:__main__:---------pre-condition 542---------
+DEBUG:__main__:PRECOND_542: (275*x + z < -75625) & (-x**2 + 10*z + 75625 > 0)
+DEBUG:__main__:---------pre-condition 543---------
+DEBUG:__main__:PRECOND_543: (z > 5848731/10) & (z < 593725)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=596201, y=-276, x=-2443
+DEBUG:__main__:---------pre-condition 544---------
+DEBUG:__main__:PRECOND_544: (276*x + z < -76176) & (-x**2 + 10*z + 76176 > 0)
+DEBUG:__main__:---------pre-condition 545---------
+DEBUG:__main__:PRECOND_545: (z > 5892073/10) & (z < 598092)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=600577, y=-277, x=-2452
+DEBUG:__main__:---------pre-condition 546---------
+DEBUG:__main__:PRECOND_546: (277*x + z < -76729) & (-x**2 + 10*z + 76729 > 0)
+DEBUG:__main__:---------pre-condition 547---------
+DEBUG:__main__:PRECOND_547: (z > 1187115/2) & (z < 602475)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=604969, y=-278, x=-2461
+DEBUG:__main__:---------pre-condition 548---------
+DEBUG:__main__:PRECOND_548: (278*x + z < -77284) & (-x**2 + 10*z + 77284 > 0)
+DEBUG:__main__:---------pre-condition 549---------
+DEBUG:__main__:PRECOND_549: (z > 5979237/10) & (z < 606874)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=609377, y=-279, x=-2470
+DEBUG:__main__:---------pre-condition 550---------
+DEBUG:__main__:PRECOND_550: (279*x + z < -77841) & (-x**2 + 10*z + 77841 > 0)
+DEBUG:__main__:---------pre-condition 551---------
+DEBUG:__main__:PRECOND_551: (z > 6023059/10) & (z < 611289)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=613801, y=-280, x=-2479
+DEBUG:__main__:---------pre-condition 552---------
+DEBUG:__main__:PRECOND_552: (280*x + z < -78400) & (-x**2 + 10*z + 78400 > 0)
+DEBUG:__main__:---------pre-condition 553---------
+DEBUG:__main__:PRECOND_553: (z > 6067041/10) & (z < 615720)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=618241, y=-281, x=-2488
+DEBUG:__main__:---------pre-condition 554---------
+DEBUG:__main__:PRECOND_554: (281*x + z < -78961) & (-x**2 + 10*z + 78961 > 0)
+DEBUG:__main__:---------pre-condition 555---------
+DEBUG:__main__:PRECOND_555: (z > 6111183/10) & (z < 620167)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=622697, y=-282, x=-2497
+DEBUG:__main__:---------pre-condition 556---------
+DEBUG:__main__:PRECOND_556: (282*x + z < -79524) & (-x**2 + 10*z + 79524 > 0)
+DEBUG:__main__:---------pre-condition 557---------
+DEBUG:__main__:PRECOND_557: (z > 1231097/2) & (z < 624630)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=626887, y=-283, x=-2505
+DEBUG:__main__:---------pre-condition 558---------
+DEBUG:__main__:PRECOND_558: (283*x + z < -80089) & (-x**2 + 10*z + 80089 > 0)
+DEBUG:__main__:---------pre-condition 559---------
+DEBUG:__main__:PRECOND_559: (z > 3097468/5) & (z < 628826)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=631374, y=-284, x=-2514
+DEBUG:__main__:---------pre-condition 560---------
+DEBUG:__main__:PRECOND_560: (284*x + z < -80656) & (-x**2 + 10*z + 80656 > 0)
+DEBUG:__main__:---------pre-condition 561---------
+DEBUG:__main__:PRECOND_561: (z > 623954) & (z < 633320)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=635877, y=-285, x=-2523
+DEBUG:__main__:---------pre-condition 562---------
+DEBUG:__main__:PRECOND_562: (285*x + z < -81225) & (-x**2 + 10*z + 81225 > 0)
+DEBUG:__main__:---------pre-condition 563---------
+DEBUG:__main__:PRECOND_563: (z > 3142152/5) & (z < 637830)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=640396, y=-286, x=-2532
+DEBUG:__main__:---------pre-condition 564---------
+DEBUG:__main__:PRECOND_564: (286*x + z < -81796) & (-x**2 + 10*z + 81796 > 0)
+DEBUG:__main__:---------pre-condition 565---------
+DEBUG:__main__:PRECOND_565: (z > 3164614/5) & (z < 642356)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=644931, y=-287, x=-2541
+DEBUG:__main__:---------pre-condition 566---------
+DEBUG:__main__:PRECOND_566: (287*x + z < -82369) & (-x**2 + 10*z + 82369 > 0)
+DEBUG:__main__:---------pre-condition 567---------
+DEBUG:__main__:PRECOND_567: (z > 3187156/5) & (z < 646898)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=649482, y=-288, x=-2550
+DEBUG:__main__:---------pre-condition 568---------
+DEBUG:__main__:PRECOND_568: (288*x + z < -82944) & (-x**2 + 10*z + 82944 > 0)
+DEBUG:__main__:---------pre-condition 569---------
+DEBUG:__main__:PRECOND_569: (z > 3209778/5) & (z < 651456)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=654049, y=-289, x=-2559
+DEBUG:__main__:---------pre-condition 570---------
+DEBUG:__main__:PRECOND_570: (289*x + z < -83521) & (-x**2 + 10*z + 83521 > 0)
+DEBUG:__main__:---------pre-condition 571---------
+DEBUG:__main__:PRECOND_571: (z > 646496) & (z < 656030)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=658343, y=-290, x=-2567
+DEBUG:__main__:---------pre-condition 572---------
+DEBUG:__main__:PRECOND_572: (290*x + z < -84100) & (-x**2 + 10*z + 84100 > 0)
+DEBUG:__main__:---------pre-condition 573---------
+DEBUG:__main__:PRECOND_573: (z > 6505389/10) & (z < 660330)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=662941, y=-291, x=-2576
+DEBUG:__main__:---------pre-condition 574---------
+DEBUG:__main__:PRECOND_574: (291*x + z < -84681) & (-x**2 + 10*z + 84681 > 0)
+DEBUG:__main__:---------pre-condition 575---------
+DEBUG:__main__:PRECOND_575: (z > 1310219/2) & (z < 664935)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=667555, y=-292, x=-2585
+DEBUG:__main__:---------pre-condition 576---------
+DEBUG:__main__:PRECOND_576: (292*x + z < -85264) & (-x**2 + 10*z + 85264 > 0)
+DEBUG:__main__:---------pre-condition 577---------
+DEBUG:__main__:PRECOND_577: (z > 6596961/10) & (z < 669556)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=672185, y=-293, x=-2594
+DEBUG:__main__:---------pre-condition 578---------
+DEBUG:__main__:PRECOND_578: (293*x + z < -85849) & (-x**2 + 10*z + 85849 > 0)
+DEBUG:__main__:---------pre-condition 579---------
+DEBUG:__main__:PRECOND_579: (z > 6642987/10) & (z < 674193)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=676831, y=-294, x=-2603
+DEBUG:__main__:---------pre-condition 580---------
+DEBUG:__main__:PRECOND_580: (294*x + z < -86436) & (-x**2 + 10*z + 86436 > 0)
+DEBUG:__main__:---------pre-condition 581---------
+DEBUG:__main__:PRECOND_581: (z > 6689173/10) & (z < 678846)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=681493, y=-295, x=-2612
+DEBUG:__main__:---------pre-condition 582---------
+DEBUG:__main__:PRECOND_582: (295*x + z < -87025) & (-x**2 + 10*z + 87025 > 0)
+DEBUG:__main__:---------pre-condition 583---------
+DEBUG:__main__:PRECOND_583: (z > 6735519/10) & (z < 683515)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=686171, y=-296, x=-2621
+DEBUG:__main__:---------pre-condition 584---------
+DEBUG:__main__:PRECOND_584: (296*x + z < -87616) & (-x**2 + 10*z + 87616 > 0)
+DEBUG:__main__:---------pre-condition 585---------
+DEBUG:__main__:PRECOND_585: (z > 1356405/2) & (z < 688200)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=690569, y=-297, x=-2629
+DEBUG:__main__:---------pre-condition 586---------
+DEBUG:__main__:PRECOND_586: (297*x + z < -88209) & (-x**2 + 10*z + 88209 > 0)
+DEBUG:__main__:---------pre-condition 587---------
+DEBUG:__main__:PRECOND_587: (z > 3411716/5) & (z < 692604)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=695278, y=-298, x=-2638
+DEBUG:__main__:---------pre-condition 588---------
+DEBUG:__main__:PRECOND_588: (298*x + z < -88804) & (-x**2 + 10*z + 88804 > 0)
+DEBUG:__main__:---------pre-condition 589---------
+DEBUG:__main__:PRECOND_589: (z > 687024) & (z < 697320)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=700003, y=-299, x=-2647
+DEBUG:__main__:---------pre-condition 590---------
+DEBUG:__main__:PRECOND_590: (299*x + z < -89401) & (-x**2 + 10*z + 89401 > 0)
+DEBUG:__main__:---------pre-condition 591---------
+DEBUG:__main__:PRECOND_591: (z > 3458604/5) & (z < 702052)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=704744, y=-300, x=-2656
+DEBUG:__main__:---------pre-condition 592---------
+DEBUG:__main__:PRECOND_592: (300*x + z < -90000) & (-x**2 + 10*z + 90000 > 0)
+DEBUG:__main__:---------pre-condition 593---------
+DEBUG:__main__:PRECOND_593: (z > 3482168/5) & (z < 706800)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=709501, y=-301, x=-2665
+DEBUG:__main__:---------pre-condition 594---------
+DEBUG:__main__:PRECOND_594: (301*x + z < -90601) & (-x**2 + 10*z + 90601 > 0)
+DEBUG:__main__:---------pre-condition 595---------
+DEBUG:__main__:PRECOND_595: (z > 3505812/5) & (z < 711564)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=714274, y=-302, x=-2674
+DEBUG:__main__:---------pre-condition 596---------
+DEBUG:__main__:PRECOND_596: (302*x + z < -91204) & (-x**2 + 10*z + 91204 > 0)
+DEBUG:__main__:---------pre-condition 597---------
+DEBUG:__main__:PRECOND_597: (z > 3529536/5) & (z < 716344)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=719063, y=-303, x=-2683
+DEBUG:__main__:---------pre-condition 598---------
+DEBUG:__main__:PRECOND_598: (303*x + z < -91809) & (-x**2 + 10*z + 91809 > 0)
+DEBUG:__main__:---------pre-condition 599---------
+DEBUG:__main__:PRECOND_599: (z > 710668) & (z < 721140)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=723868, y=-304, x=-2692
+DEBUG:__main__:---------pre-condition 600---------
+DEBUG:__main__:PRECOND_600: (304*x + z < -92416) & (-x**2 + 10*z + 92416 > 0)
+DEBUG:__main__:---------pre-condition 601---------
+DEBUG:__main__:PRECOND_601: (z > 3577224/5) & (z < 725952)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=728385, y=-305, x=-2700
+DEBUG:__main__:---------pre-condition 602---------
+DEBUG:__main__:PRECOND_602: (305*x + z < -93025) & (-x**2 + 10*z + 93025 > 0)
+DEBUG:__main__:---------pre-condition 603---------
+DEBUG:__main__:PRECOND_603: (z > 1439395/2) & (z < 730475)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=733221, y=-306, x=-2709
+DEBUG:__main__:---------pre-condition 604---------
+DEBUG:__main__:PRECOND_604: (306*x + z < -93636) & (-x**2 + 10*z + 93636 > 0)
+DEBUG:__main__:---------pre-condition 605---------
+DEBUG:__main__:PRECOND_605: (z > 1449009/2) & (z < 735318)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=738073, y=-307, x=-2718
+DEBUG:__main__:---------pre-condition 606---------
+DEBUG:__main__:PRECOND_606: (307*x + z < -94249) & (-x**2 + 10*z + 94249 > 0)
+DEBUG:__main__:---------pre-condition 607---------
+DEBUG:__main__:PRECOND_607: (z > 1458655/2) & (z < 740177)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=742941, y=-308, x=-2727
+DEBUG:__main__:---------pre-condition 608---------
+DEBUG:__main__:PRECOND_608: (308*x + z < -94864) & (-x**2 + 10*z + 94864 > 0)
+DEBUG:__main__:---------pre-condition 609---------
+DEBUG:__main__:PRECOND_609: (z > 1468333/2) & (z < 745052)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=747825, y=-309, x=-2736
+DEBUG:__main__:---------pre-condition 610---------
+DEBUG:__main__:PRECOND_610: (309*x + z < -95481) & (-x**2 + 10*z + 95481 > 0)
+DEBUG:__main__:---------pre-condition 611---------
+DEBUG:__main__:PRECOND_611: (z > 1478043/2) & (z < 749943)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=752725, y=-310, x=-2745
+DEBUG:__main__:---------pre-condition 612---------
+DEBUG:__main__:PRECOND_612: (310*x + z < -96100) & (-x**2 + 10*z + 96100 > 0)
+DEBUG:__main__:---------pre-condition 613---------
+DEBUG:__main__:PRECOND_613: (z > 1487785/2) & (z < 754850)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=757641, y=-311, x=-2754
+DEBUG:__main__:---------pre-condition 614---------
+DEBUG:__main__:PRECOND_614: (311*x + z < -96721) & (-x**2 + 10*z + 96721 > 0)
+DEBUG:__main__:---------pre-condition 615---------
+DEBUG:__main__:PRECOND_615: (z > 1497559/2) & (z < 759773)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=762262, y=-312, x=-2762
+DEBUG:__main__:---------pre-condition 616---------
+DEBUG:__main__:PRECOND_616: (312*x + z < -97344) & (-x**2 + 10*z + 97344 > 0)
+DEBUG:__main__:---------pre-condition 617---------
+DEBUG:__main__:PRECOND_617: (z > 753130) & (z < 764400)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=767209, y=-313, x=-2771
+DEBUG:__main__:---------pre-condition 618---------
+DEBUG:__main__:PRECOND_618: (313*x + z < -97969) & (-x**2 + 10*z + 97969 > 0)
+DEBUG:__main__:---------pre-condition 619---------
+DEBUG:__main__:PRECOND_619: (z > 3790236/5) & (z < 769354)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=772172, y=-314, x=-2780
+DEBUG:__main__:---------pre-condition 620---------
+DEBUG:__main__:PRECOND_620: (314*x + z < -98596) & (-x**2 + 10*z + 98596 > 0)
+DEBUG:__main__:---------pre-condition 621---------
+DEBUG:__main__:PRECOND_621: (z > 3814902/5) & (z < 774324)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=777151, y=-315, x=-2789
+DEBUG:__main__:---------pre-condition 622---------
+DEBUG:__main__:PRECOND_622: (315*x + z < -99225) & (-x**2 + 10*z + 99225 > 0)
+DEBUG:__main__:---------pre-condition 623---------
+DEBUG:__main__:PRECOND_623: (z > 3839648/5) & (z < 779310)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=782146, y=-316, x=-2798
+DEBUG:__main__:---------pre-condition 624---------
+DEBUG:__main__:PRECOND_624: (316*x + z < -99856) & (-x**2 + 10*z + 99856 > 0)
+DEBUG:__main__:---------pre-condition 625---------
+DEBUG:__main__:PRECOND_625: (z > 3864474/5) & (z < 784312)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=787157, y=-317, x=-2807
+DEBUG:__main__:---------pre-condition 626---------
+DEBUG:__main__:PRECOND_626: (317*x + z < -100489) & (-x**2 + 10*z + 100489 > 0)
+DEBUG:__main__:---------pre-condition 627---------
+DEBUG:__main__:PRECOND_627: (z > 777876) & (z < 789330)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=792184, y=-318, x=-2816
+DEBUG:__main__:---------pre-condition 628---------
+DEBUG:__main__:PRECOND_628: (318*x + z < -101124) & (-x**2 + 10*z + 101124 > 0)
+DEBUG:__main__:---------pre-condition 629---------
+DEBUG:__main__:PRECOND_629: (z > 3914366/5) & (z < 794364)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=797227, y=-319, x=-2825
+DEBUG:__main__:---------pre-condition 630---------
+DEBUG:__main__:PRECOND_630: (319*x + z < -101761) & (-x**2 + 10*z + 101761 > 0)
+DEBUG:__main__:---------pre-condition 631---------
+DEBUG:__main__:PRECOND_631: (z > 3939432/5) & (z < 799414)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=801967, y=-320, x=-2833
+DEBUG:__main__:---------pre-condition 632---------
+DEBUG:__main__:PRECOND_632: (320*x + z < -102400) & (-x**2 + 10*z + 102400 > 0)
+DEBUG:__main__:---------pre-condition 633---------
+DEBUG:__main__:PRECOND_633: (z > 7923489/10) & (z < 804160)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=807041, y=-321, x=-2842
+DEBUG:__main__:---------pre-condition 634---------
+DEBUG:__main__:PRECOND_634: (321*x + z < -103041) & (-x**2 + 10*z + 103041 > 0)
+DEBUG:__main__:---------pre-condition 635---------
+DEBUG:__main__:PRECOND_635: (z > 7973923/10) & (z < 809241)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=812131, y=-322, x=-2851
+DEBUG:__main__:---------pre-condition 636---------
+DEBUG:__main__:PRECOND_636: (322*x + z < -103684) & (-x**2 + 10*z + 103684 > 0)
+DEBUG:__main__:---------pre-condition 637---------
+DEBUG:__main__:PRECOND_637: (z > 8024517/10) & (z < 814338)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=817237, y=-323, x=-2860
+DEBUG:__main__:---------pre-condition 638---------
+DEBUG:__main__:PRECOND_638: (323*x + z < -104329) & (-x**2 + 10*z + 104329 > 0)
+DEBUG:__main__:---------pre-condition 639---------
+DEBUG:__main__:PRECOND_639: (z > 8075271/10) & (z < 819451)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=822359, y=-324, x=-2869
+DEBUG:__main__:---------pre-condition 640---------
+DEBUG:__main__:PRECOND_640: (324*x + z < -104976) & (-x**2 + 10*z + 104976 > 0)
+DEBUG:__main__:---------pre-condition 641---------
+DEBUG:__main__:PRECOND_641: (z > 1625237/2) & (z < 824580)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=827497, y=-325, x=-2878
+DEBUG:__main__:---------pre-condition 642---------
+DEBUG:__main__:PRECOND_642: (325*x + z < -105625) & (-x**2 + 10*z + 105625 > 0)
+DEBUG:__main__:---------pre-condition 643---------
+DEBUG:__main__:PRECOND_643: (z > 8177259/10) & (z < 829725)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=832651, y=-326, x=-2887
+DEBUG:__main__:---------pre-condition 644---------
+DEBUG:__main__:PRECOND_644: (326*x + z < -106276) & (-x**2 + 10*z + 106276 > 0)
+DEBUG:__main__:---------pre-condition 645---------
+DEBUG:__main__:PRECOND_645: (z > 8228493/10) & (z < 834886)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=837495, y=-327, x=-2895
+DEBUG:__main__:---------pre-condition 646---------
+DEBUG:__main__:PRECOND_646: (327*x + z < -106929) & (-x**2 + 10*z + 106929 > 0)
+DEBUG:__main__:---------pre-condition 647---------
+DEBUG:__main__:PRECOND_647: (z > 4137048/5) & (z < 839736)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=842680, y=-328, x=-2904
+DEBUG:__main__:---------pre-condition 648---------
+DEBUG:__main__:PRECOND_648: (328*x + z < -107584) & (-x**2 + 10*z + 107584 > 0)
+DEBUG:__main__:---------pre-condition 649---------
+DEBUG:__main__:PRECOND_649: (z > 4162816/5) & (z < 844928)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=847881, y=-329, x=-2913
+DEBUG:__main__:---------pre-condition 650---------
+DEBUG:__main__:PRECOND_650: (329*x + z < -108241) & (-x**2 + 10*z + 108241 > 0)
+DEBUG:__main__:---------pre-condition 651---------
+DEBUG:__main__:PRECOND_651: (z > 4188664/5) & (z < 850136)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=853098, y=-330, x=-2922
+DEBUG:__main__:---------pre-condition 652---------
+DEBUG:__main__:PRECOND_652: (330*x + z < -108900) & (-x**2 + 10*z + 108900 > 0)
+DEBUG:__main__:---------pre-condition 653---------
+DEBUG:__main__:PRECOND_653: (z > 4214592/5) & (z < 855360)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=858331, y=-331, x=-2931
+DEBUG:__main__:---------pre-condition 654---------
+DEBUG:__main__:PRECOND_654: (331*x + z < -109561) & (-x**2 + 10*z + 109561 > 0)
+DEBUG:__main__:---------pre-condition 655---------
+DEBUG:__main__:PRECOND_655: (z > 848120) & (z < 860600)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=863580, y=-332, x=-2940
+DEBUG:__main__:---------pre-condition 656---------
+DEBUG:__main__:PRECOND_656: (332*x + z < -110224) & (-x**2 + 10*z + 110224 > 0)
+DEBUG:__main__:---------pre-condition 657---------
+DEBUG:__main__:PRECOND_657: (z > 4266688/5) & (z < 865856)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=868845, y=-333, x=-2949
+DEBUG:__main__:---------pre-condition 658---------
+DEBUG:__main__:PRECOND_658: (333*x + z < -110889) & (-x**2 + 10*z + 110889 > 0)
+DEBUG:__main__:---------pre-condition 659---------
+DEBUG:__main__:PRECOND_659: (z > 4292856/5) & (z < 871128)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=874126, y=-334, x=-2958
+DEBUG:__main__:---------pre-condition 660---------
+DEBUG:__main__:PRECOND_660: (334*x + z < -111556) & (-x**2 + 10*z + 111556 > 0)
+DEBUG:__main__:---------pre-condition 661---------
+DEBUG:__main__:PRECOND_661: (z > 4319104/5) & (z < 876416)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=879089, y=-335, x=-2966
+DEBUG:__main__:---------pre-condition 662---------
+DEBUG:__main__:PRECOND_662: (335*x + z < -112225) & (-x**2 + 10*z + 112225 > 0)
+DEBUG:__main__:---------pre-condition 663---------
+DEBUG:__main__:PRECOND_663: (z > 8684931/10) & (z < 881385)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=884401, y=-336, x=-2975
+DEBUG:__main__:---------pre-condition 664---------
+DEBUG:__main__:PRECOND_664: (336*x + z < -112896) & (-x**2 + 10*z + 112896 > 0)
+DEBUG:__main__:---------pre-condition 665---------
+DEBUG:__main__:PRECOND_665: (z > 8737729/10) & (z < 886704)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=889729, y=-337, x=-2984
+DEBUG:__main__:---------pre-condition 666---------
+DEBUG:__main__:PRECOND_666: (337*x + z < -113569) & (-x**2 + 10*z + 113569 > 0)
+DEBUG:__main__:---------pre-condition 667---------
+DEBUG:__main__:PRECOND_667: (z > 8790687/10) & (z < 892039)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=895073, y=-338, x=-2993
+DEBUG:__main__:---------pre-condition 668---------
+DEBUG:__main__:PRECOND_668: (338*x + z < -114244) & (-x**2 + 10*z + 114244 > 0)
+DEBUG:__main__:---------pre-condition 669---------
+DEBUG:__main__:PRECOND_669: (z > 1768761/2) & (z < 897390)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=900433, y=-339, x=-3002
+DEBUG:__main__:---------pre-condition 670---------
+DEBUG:__main__:PRECOND_670: (339*x + z < -114921) & (-x**2 + 10*z + 114921 > 0)
+DEBUG:__main__:---------pre-condition 671---------
+DEBUG:__main__:PRECOND_671: (z > 8897083/10) & (z < 902757)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=905809, y=-340, x=-3011
+DEBUG:__main__:---------pre-condition 672---------
+DEBUG:__main__:PRECOND_672: (340*x + z < -115600) & (-x**2 + 10*z + 115600 > 0)
+DEBUG:__main__:---------pre-condition 673---------
+DEBUG:__main__:PRECOND_673: (z > 8950521/10) & (z < 908140)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=911201, y=-341, x=-3020
+DEBUG:__main__:---------pre-condition 674---------
+DEBUG:__main__:PRECOND_674: (341*x + z < -116281) & (-x**2 + 10*z + 116281 > 0)
+DEBUG:__main__:---------pre-condition 675---------
+DEBUG:__main__:PRECOND_675: (z > 9004119/10) & (z < 913539)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=916268, y=-342, x=-3028
+DEBUG:__main__:---------pre-condition 676---------
+DEBUG:__main__:PRECOND_676: (342*x + z < -116964) & (-x**2 + 10*z + 116964 > 0)
+DEBUG:__main__:---------pre-condition 677---------
+DEBUG:__main__:PRECOND_677: (z > 905182) & (z < 918612)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=921691, y=-343, x=-3037
+DEBUG:__main__:---------pre-condition 678---------
+DEBUG:__main__:PRECOND_678: (343*x + z < -117649) & (-x**2 + 10*z + 117649 > 0)
+DEBUG:__main__:---------pre-condition 679---------
+DEBUG:__main__:PRECOND_679: (z > 910572) & (z < 924042)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=927130, y=-344, x=-3046
+DEBUG:__main__:---------pre-condition 680---------
+DEBUG:__main__:PRECOND_680: (344*x + z < -118336) & (-x**2 + 10*z + 118336 > 0)
+DEBUG:__main__:---------pre-condition 681---------
+DEBUG:__main__:PRECOND_681: (z > 915978) & (z < 929488)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=932585, y=-345, x=-3055
+DEBUG:__main__:---------pre-condition 682---------
+DEBUG:__main__:PRECOND_682: (345*x + z < -119025) & (-x**2 + 10*z + 119025 > 0)
+DEBUG:__main__:---------pre-condition 683---------
+DEBUG:__main__:PRECOND_683: (z > 921400) & (z < 934950)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=938056, y=-346, x=-3064
+DEBUG:__main__:---------pre-condition 684---------
+DEBUG:__main__:PRECOND_684: (346*x + z < -119716) & (-x**2 + 10*z + 119716 > 0)
+DEBUG:__main__:---------pre-condition 685---------
+DEBUG:__main__:PRECOND_685: (z > 926838) & (z < 940428)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=943543, y=-347, x=-3073
+DEBUG:__main__:---------pre-condition 686---------
+DEBUG:__main__:PRECOND_686: (347*x + z < -120409) & (-x**2 + 10*z + 120409 > 0)
+DEBUG:__main__:---------pre-condition 687---------
+DEBUG:__main__:PRECOND_687: (z > 932292) & (z < 945922)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=949046, y=-348, x=-3082
+DEBUG:__main__:---------pre-condition 688---------
+DEBUG:__main__:PRECOND_688: (348*x + z < -121104) & (-x**2 + 10*z + 121104 > 0)
+DEBUG:__main__:---------pre-condition 689---------
+DEBUG:__main__:PRECOND_689: (z > 937762) & (z < 951432)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=954217, y=-349, x=-3090
+DEBUG:__main__:---------pre-condition 690---------
+DEBUG:__main__:PRECOND_690: (349*x + z < -121801) & (-x**2 + 10*z + 121801 > 0)
+DEBUG:__main__:---------pre-condition 691---------
+DEBUG:__main__:PRECOND_691: (z > 9426299/10) & (z < 956609)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=959751, y=-350, x=-3099
+DEBUG:__main__:---------pre-condition 692---------
+DEBUG:__main__:PRECOND_692: (350*x + z < -122500) & (-x**2 + 10*z + 122500 > 0)
+DEBUG:__main__:---------pre-condition 693---------
+DEBUG:__main__:PRECOND_693: (z > 9481301/10) & (z < 962150)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=965301, y=-351, x=-3108
+DEBUG:__main__:---------pre-condition 694---------
+DEBUG:__main__:PRECOND_694: (351*x + z < -123201) & (-x**2 + 10*z + 123201 > 0)
+DEBUG:__main__:---------pre-condition 695---------
+DEBUG:__main__:PRECOND_695: (z > 9536463/10) & (z < 967707)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=970867, y=-352, x=-3117
+DEBUG:__main__:---------pre-condition 696---------
+DEBUG:__main__:PRECOND_696: (352*x + z < -123904) & (-x**2 + 10*z + 123904 > 0)
+DEBUG:__main__:---------pre-condition 697---------
+DEBUG:__main__:PRECOND_697: (z > 1918357/2) & (z < 973280)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=976449, y=-353, x=-3126
+DEBUG:__main__:---------pre-condition 698---------
+DEBUG:__main__:PRECOND_698: (353*x + z < -124609) & (-x**2 + 10*z + 124609 > 0)
+DEBUG:__main__:---------pre-condition 699---------
+DEBUG:__main__:PRECOND_699: (z > 9647267/10) & (z < 978869)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=982047, y=-354, x=-3135
+DEBUG:__main__:---------pre-condition 700---------
+DEBUG:__main__:PRECOND_700: (354*x + z < -125316) & (-x**2 + 10*z + 125316 > 0)
+DEBUG:__main__:---------pre-condition 701---------
+DEBUG:__main__:PRECOND_701: (z > 9702909/10) & (z < 984474)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=987661, y=-355, x=-3144
+DEBUG:__main__:---------pre-condition 702---------
+DEBUG:__main__:PRECOND_702: (355*x + z < -126025) & (-x**2 + 10*z + 126025 > 0)
+DEBUG:__main__:---------pre-condition 703---------
+DEBUG:__main__:PRECOND_703: (z > 9758711/10) & (z < 990095)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=993291, y=-356, x=-3153
+DEBUG:__main__:---------pre-condition 704---------
+DEBUG:__main__:PRECOND_704: (356*x + z < -126736) & (-x**2 + 10*z + 126736 > 0)
+DEBUG:__main__:---------pre-condition 705---------
+DEBUG:__main__:PRECOND_705: (z > 9814673/10) & (z < 995732)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=998581, y=-357, x=-3161
+DEBUG:__main__:---------pre-condition 706---------
+DEBUG:__main__:PRECOND_706: (357*x + z < -127449) & (-x**2 + 10*z + 127449 > 0)
+DEBUG:__main__:---------pre-condition 707---------
+DEBUG:__main__:PRECOND_707: (z > 4932236/5) & (z < 1001028)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1004242, y=-358, x=-3170
+DEBUG:__main__:---------pre-condition 708---------
+DEBUG:__main__:PRECOND_708: (358*x + z < -128164) & (-x**2 + 10*z + 128164 > 0)
+DEBUG:__main__:---------pre-condition 709---------
+DEBUG:__main__:PRECOND_709: (z > 4960368/5) & (z < 1006696)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1009919, y=-359, x=-3179
+DEBUG:__main__:---------pre-condition 710---------
+DEBUG:__main__:PRECOND_710: (359*x + z < -128881) & (-x**2 + 10*z + 128881 > 0)
+DEBUG:__main__:---------pre-condition 711---------
+DEBUG:__main__:PRECOND_711: (z > 997716) & (z < 1012380)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1015612, y=-360, x=-3188
+DEBUG:__main__:---------pre-condition 712---------
+DEBUG:__main__:PRECOND_712: (360*x + z < -129600) & (-x**2 + 10*z + 129600 > 0)
+DEBUG:__main__:---------pre-condition 713---------
+DEBUG:__main__:PRECOND_713: (z > 5016872/5) & (z < 1018080)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1021321, y=-361, x=-3197
+DEBUG:__main__:---------pre-condition 714---------
+DEBUG:__main__:PRECOND_714: (361*x + z < -130321) & (-x**2 + 10*z + 130321 > 0)
+DEBUG:__main__:---------pre-condition 715---------
+DEBUG:__main__:PRECOND_715: (z > 5045244/5) & (z < 1023796)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1027046, y=-362, x=-3206
+DEBUG:__main__:---------pre-condition 716---------
+DEBUG:__main__:PRECOND_716: (362*x + z < -131044) & (-x**2 + 10*z + 131044 > 0)
+DEBUG:__main__:---------pre-condition 717---------
+DEBUG:__main__:PRECOND_717: (z > 5073696/5) & (z < 1029528)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1032787, y=-363, x=-3215
+DEBUG:__main__:---------pre-condition 718---------
+DEBUG:__main__:PRECOND_718: (363*x + z < -131769) & (-x**2 + 10*z + 131769 > 0)
+DEBUG:__main__:---------pre-condition 719---------
+DEBUG:__main__:PRECOND_719: (z > 5102228/5) & (z < 1035276)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1038544, y=-364, x=-3224
+DEBUG:__main__:---------pre-condition 720---------
+DEBUG:__main__:PRECOND_720: (364*x + z < -132496) & (-x**2 + 10*z + 132496 > 0)
+DEBUG:__main__:---------pre-condition 721---------
+DEBUG:__main__:PRECOND_721: (z > 1026168) & (z < 1041040)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1043953, y=-365, x=-3232
+DEBUG:__main__:---------pre-condition 722---------
+DEBUG:__main__:PRECOND_722: (365*x + z < -133225) & (-x**2 + 10*z + 133225 > 0)
+DEBUG:__main__:---------pre-condition 723---------
+DEBUG:__main__:PRECOND_723: (z > 10312599/10) & (z < 1046455)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1049741, y=-366, x=-3241
+DEBUG:__main__:---------pre-condition 724---------
+DEBUG:__main__:PRECOND_724: (366*x + z < -133956) & (-x**2 + 10*z + 133956 > 0)
+DEBUG:__main__:---------pre-condition 725---------
+DEBUG:__main__:PRECOND_725: (z > 2074025/2) & (z < 1052250)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1055545, y=-367, x=-3250
+DEBUG:__main__:---------pre-condition 726---------
+DEBUG:__main__:PRECOND_726: (367*x + z < -134689) & (-x**2 + 10*z + 134689 > 0)
+DEBUG:__main__:---------pre-condition 727---------
+DEBUG:__main__:PRECOND_727: (z > 10427811/10) & (z < 1058061)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1061365, y=-368, x=-3259
+DEBUG:__main__:---------pre-condition 728---------
+DEBUG:__main__:PRECOND_728: (368*x + z < -135424) & (-x**2 + 10*z + 135424 > 0)
+DEBUG:__main__:---------pre-condition 729---------
+DEBUG:__main__:PRECOND_729: (z > 10485657/10) & (z < 1063888)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1067201, y=-369, x=-3268
+DEBUG:__main__:---------pre-condition 730---------
+DEBUG:__main__:PRECOND_730: (369*x + z < -136161) & (-x**2 + 10*z + 136161 > 0)
+DEBUG:__main__:---------pre-condition 731---------
+DEBUG:__main__:PRECOND_731: (z > 10543663/10) & (z < 1069731)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1073053, y=-370, x=-3277
+DEBUG:__main__:---------pre-condition 732---------
+DEBUG:__main__:PRECOND_732: (370*x + z < -136900) & (-x**2 + 10*z + 136900 > 0)
+DEBUG:__main__:---------pre-condition 733---------
+DEBUG:__main__:PRECOND_733: (z > 10601829/10) & (z < 1075590)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1078921, y=-371, x=-3286
+DEBUG:__main__:---------pre-condition 734---------
+DEBUG:__main__:PRECOND_734: (371*x + z < -137641) & (-x**2 + 10*z + 137641 > 0)
+DEBUG:__main__:---------pre-condition 735---------
+DEBUG:__main__:PRECOND_735: (z > 2132031/2) & (z < 1081465)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1084434, y=-372, x=-3294
+DEBUG:__main__:---------pre-condition 736---------
+DEBUG:__main__:PRECOND_736: (372*x + z < -138384) & (-x**2 + 10*z + 138384 > 0)
+DEBUG:__main__:---------pre-condition 737---------
+DEBUG:__main__:PRECOND_737: (z > 5356026/5) & (z < 1086984)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1090333, y=-373, x=-3303
+DEBUG:__main__:---------pre-condition 738---------
+DEBUG:__main__:PRECOND_738: (373*x + z < -139129) & (-x**2 + 10*z + 139129 > 0)
+DEBUG:__main__:---------pre-condition 739---------
+DEBUG:__main__:PRECOND_739: (z > 1077068) & (z < 1092890)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1096248, y=-374, x=-3312
+DEBUG:__main__:---------pre-condition 740---------
+DEBUG:__main__:PRECOND_740: (374*x + z < -139876) & (-x**2 + 10*z + 139876 > 0)
+DEBUG:__main__:---------pre-condition 741---------
+DEBUG:__main__:PRECOND_741: (z > 5414734/5) & (z < 1098812)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1102179, y=-375, x=-3321
+DEBUG:__main__:---------pre-condition 742---------
+DEBUG:__main__:PRECOND_742: (375*x + z < -140625) & (-x**2 + 10*z + 140625 > 0)
+DEBUG:__main__:---------pre-condition 743---------
+DEBUG:__main__:PRECOND_743: (z > 5444208/5) & (z < 1104750)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1108126, y=-376, x=-3330
+DEBUG:__main__:---------pre-condition 744---------
+DEBUG:__main__:PRECOND_744: (376*x + z < -141376) & (-x**2 + 10*z + 141376 > 0)
+DEBUG:__main__:---------pre-condition 745---------
+DEBUG:__main__:PRECOND_745: (z > 5473762/5) & (z < 1110704)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1114089, y=-377, x=-3339
+DEBUG:__main__:---------pre-condition 746---------
+DEBUG:__main__:PRECOND_746: (377*x + z < -142129) & (-x**2 + 10*z + 142129 > 0)
+DEBUG:__main__:---------pre-condition 747---------
+DEBUG:__main__:PRECOND_747: (z > 5503396/5) & (z < 1116674)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1120068, y=-378, x=-3348
+DEBUG:__main__:---------pre-condition 748---------
+DEBUG:__main__:PRECOND_748: (378*x + z < -142884) & (-x**2 + 10*z + 142884 > 0)
+DEBUG:__main__:---------pre-condition 749---------
+DEBUG:__main__:PRECOND_749: (z > 1106622) & (z < 1122660)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1126063, y=-379, x=-3357
+DEBUG:__main__:---------pre-condition 750---------
+DEBUG:__main__:PRECOND_750: (379*x + z < -143641) & (-x**2 + 10*z + 143641 > 0)
+DEBUG:__main__:---------pre-condition 751---------
+DEBUG:__main__:PRECOND_751: (z > 5562904/5) & (z < 1128662)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1131695, y=-380, x=-3365
+DEBUG:__main__:---------pre-condition 752---------
+DEBUG:__main__:PRECOND_752: (380*x + z < -144400) & (-x**2 + 10*z + 144400 > 0)
+DEBUG:__main__:---------pre-condition 753---------
+DEBUG:__main__:PRECOND_753: (z > 2235765/2) & (z < 1134300)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1137721, y=-381, x=-3374
+DEBUG:__main__:---------pre-condition 754---------
+DEBUG:__main__:PRECOND_754: (381*x + z < -145161) & (-x**2 + 10*z + 145161 > 0)
+DEBUG:__main__:---------pre-condition 755---------
+DEBUG:__main__:PRECOND_755: (z > 2247743/2) & (z < 1140333)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1143763, y=-382, x=-3383
+DEBUG:__main__:---------pre-condition 756---------
+DEBUG:__main__:PRECOND_756: (382*x + z < -145924) & (-x**2 + 10*z + 145924 > 0)
+DEBUG:__main__:---------pre-condition 757---------
+DEBUG:__main__:PRECOND_757: (z > 2259753/2) & (z < 1146382)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1149821, y=-383, x=-3392
+DEBUG:__main__:---------pre-condition 758---------
+DEBUG:__main__:PRECOND_758: (383*x + z < -146689) & (-x**2 + 10*z + 146689 > 0)
+DEBUG:__main__:---------pre-condition 759---------
+DEBUG:__main__:PRECOND_759: (z > 2271795/2) & (z < 1152447)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1155895, y=-384, x=-3401
+DEBUG:__main__:---------pre-condition 760---------
+DEBUG:__main__:PRECOND_760: (384*x + z < -147456) & (-x**2 + 10*z + 147456 > 0)
+DEBUG:__main__:---------pre-condition 761---------
+DEBUG:__main__:PRECOND_761: (z > 2283869/2) & (z < 1158528)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1161985, y=-385, x=-3410
+DEBUG:__main__:---------pre-condition 762---------
+DEBUG:__main__:PRECOND_762: (385*x + z < -148225) & (-x**2 + 10*z + 148225 > 0)
+DEBUG:__main__:---------pre-condition 763---------
+DEBUG:__main__:PRECOND_763: (z > 2295975/2) & (z < 1164625)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1168091, y=-386, x=-3419
+DEBUG:__main__:---------pre-condition 764---------
+DEBUG:__main__:PRECOND_764: (386*x + z < -148996) & (-x**2 + 10*z + 148996 > 0)
+DEBUG:__main__:---------pre-condition 765---------
+DEBUG:__main__:PRECOND_765: (z > 2308113/2) & (z < 1170738)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1173827, y=-387, x=-3427
+DEBUG:__main__:---------pre-condition 766---------
+DEBUG:__main__:PRECOND_766: (387*x + z < -149769) & (-x**2 + 10*z + 149769 > 0)
+DEBUG:__main__:---------pre-condition 767---------
+DEBUG:__main__:PRECOND_767: (z > 1159456) & (z < 1176480)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1179964, y=-388, x=-3436
+DEBUG:__main__:---------pre-condition 768---------
+DEBUG:__main__:PRECOND_768: (388*x + z < -150544) & (-x**2 + 10*z + 150544 > 0)
+DEBUG:__main__:---------pre-condition 769---------
+DEBUG:__main__:PRECOND_769: (z > 5827776/5) & (z < 1182624)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1186117, y=-389, x=-3445
+DEBUG:__main__:---------pre-condition 770---------
+DEBUG:__main__:PRECOND_770: (389*x + z < -151321) & (-x**2 + 10*z + 151321 > 0)
+DEBUG:__main__:---------pre-condition 771---------
+DEBUG:__main__:PRECOND_771: (z > 5858352/5) & (z < 1188784)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1192286, y=-390, x=-3454
+DEBUG:__main__:---------pre-condition 772---------
+DEBUG:__main__:PRECOND_772: (390*x + z < -152100) & (-x**2 + 10*z + 152100 > 0)
+DEBUG:__main__:---------pre-condition 773---------
+DEBUG:__main__:PRECOND_773: (z > 5889008/5) & (z < 1194960)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1198471, y=-391, x=-3463
+DEBUG:__main__:---------pre-condition 774---------
+DEBUG:__main__:PRECOND_774: (391*x + z < -152881) & (-x**2 + 10*z + 152881 > 0)
+DEBUG:__main__:---------pre-condition 775---------
+DEBUG:__main__:PRECOND_775: (z > 5919744/5) & (z < 1201152)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1204672, y=-392, x=-3472
+DEBUG:__main__:---------pre-condition 776---------
+DEBUG:__main__:PRECOND_776: (392*x + z < -153664) & (-x**2 + 10*z + 153664 > 0)
+DEBUG:__main__:---------pre-condition 777---------
+DEBUG:__main__:PRECOND_777: (z > 1190112) & (z < 1207360)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1210889, y=-393, x=-3481
+DEBUG:__main__:---------pre-condition 778---------
+DEBUG:__main__:PRECOND_778: (393*x + z < -154449) & (-x**2 + 10*z + 154449 > 0)
+DEBUG:__main__:---------pre-condition 779---------
+DEBUG:__main__:PRECOND_779: (z > 5981456/5) & (z < 1213584)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1217122, y=-394, x=-3490
+DEBUG:__main__:---------pre-condition 780---------
+DEBUG:__main__:PRECOND_780: (394*x + z < -155236) & (-x**2 + 10*z + 155236 > 0)
+DEBUG:__main__:---------pre-condition 781---------
+DEBUG:__main__:PRECOND_781: (z > 6012432/5) & (z < 1219824)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1222977, y=-395, x=-3498
+DEBUG:__main__:---------pre-condition 782---------
+DEBUG:__main__:PRECOND_782: (395*x + z < -156025) & (-x**2 + 10*z + 156025 > 0)
+DEBUG:__main__:---------pre-condition 783---------
+DEBUG:__main__:PRECOND_783: (z > 12079979/10) & (z < 1225685)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1229241, y=-396, x=-3507
+DEBUG:__main__:---------pre-condition 784---------
+DEBUG:__main__:PRECOND_784: (396*x + z < -156816) & (-x**2 + 10*z + 156816 > 0)
+DEBUG:__main__:---------pre-condition 785---------
+DEBUG:__main__:PRECOND_785: (z > 12142233/10) & (z < 1231956)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1235521, y=-397, x=-3516
+DEBUG:__main__:---------pre-condition 786---------
+DEBUG:__main__:PRECOND_786: (397*x + z < -157609) & (-x**2 + 10*z + 157609 > 0)
+DEBUG:__main__:---------pre-condition 787---------
+DEBUG:__main__:PRECOND_787: (z > 12204647/10) & (z < 1238243)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1241817, y=-398, x=-3525
+DEBUG:__main__:---------pre-condition 788---------
+DEBUG:__main__:PRECOND_788: (398*x + z < -158404) & (-x**2 + 10*z + 158404 > 0)
+DEBUG:__main__:---------pre-condition 789---------
+DEBUG:__main__:PRECOND_789: (z > 12267221/10) & (z < 1244546)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1248129, y=-399, x=-3534
+DEBUG:__main__:---------pre-condition 790---------
+DEBUG:__main__:PRECOND_790: (399*x + z < -159201) & (-x**2 + 10*z + 159201 > 0)
+DEBUG:__main__:---------pre-condition 791---------
+DEBUG:__main__:PRECOND_791: (z > 2465991/2) & (z < 1250865)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1254457, y=-400, x=-3543
+DEBUG:__main__:---------pre-condition 792---------
+DEBUG:__main__:PRECOND_792: (400*x + z < -160000) & (-x**2 + 10*z + 160000 > 0)
+DEBUG:__main__:---------pre-condition 793---------
+DEBUG:__main__:PRECOND_793: (z > 12392849/10) & (z < 1257200)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1260801, y=-401, x=-3552
+DEBUG:__main__:---------pre-condition 794---------
+DEBUG:__main__:PRECOND_794: (401*x + z < -160801) & (-x**2 + 10*z + 160801 > 0)
+DEBUG:__main__:---------pre-condition 795---------
+DEBUG:__main__:PRECOND_795: (z > 12455903/10) & (z < 1263551)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1266760, y=-402, x=-3560
+DEBUG:__main__:---------pre-condition 796---------
+DEBUG:__main__:PRECOND_796: (402*x + z < -161604) & (-x**2 + 10*z + 161604 > 0)
+DEBUG:__main__:---------pre-condition 797---------
+DEBUG:__main__:PRECOND_797: (z > 6255998/5) & (z < 1269516)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1273135, y=-403, x=-3569
+DEBUG:__main__:---------pre-condition 798---------
+DEBUG:__main__:PRECOND_798: (403*x + z < -162409) & (-x**2 + 10*z + 162409 > 0)
+DEBUG:__main__:---------pre-condition 799---------
+DEBUG:__main__:PRECOND_799: (z > 6287676/5) & (z < 1275898)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1279526, y=-404, x=-3578
+DEBUG:__main__:---------pre-condition 800---------
+DEBUG:__main__:PRECOND_800: (404*x + z < -163216) & (-x**2 + 10*z + 163216 > 0)
+DEBUG:__main__:---------pre-condition 801---------
+DEBUG:__main__:PRECOND_801: (z > 6319434/5) & (z < 1282296)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1285933, y=-405, x=-3587
+DEBUG:__main__:---------pre-condition 802---------
+DEBUG:__main__:PRECOND_802: (405*x + z < -164025) & (-x**2 + 10*z + 164025 > 0)
+DEBUG:__main__:---------pre-condition 803---------
+DEBUG:__main__:PRECOND_803: (z > 6351272/5) & (z < 1288710)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1292356, y=-406, x=-3596
+DEBUG:__main__:---------pre-condition 804---------
+DEBUG:__main__:PRECOND_804: (406*x + z < -164836) & (-x**2 + 10*z + 164836 > 0)
+DEBUG:__main__:---------pre-condition 805---------
+DEBUG:__main__:PRECOND_805: (z > 1276638) & (z < 1295140)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1298795, y=-407, x=-3605
+DEBUG:__main__:---------pre-condition 806---------
+DEBUG:__main__:PRECOND_806: (407*x + z < -165649) & (-x**2 + 10*z + 165649 > 0)
+DEBUG:__main__:---------pre-condition 807---------
+DEBUG:__main__:PRECOND_807: (z > 6415188/5) & (z < 1301586)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1305250, y=-408, x=-3614
+DEBUG:__main__:---------pre-condition 808---------
+DEBUG:__main__:PRECOND_808: (408*x + z < -166464) & (-x**2 + 10*z + 166464 > 0)
+DEBUG:__main__:---------pre-condition 809---------
+DEBUG:__main__:PRECOND_809: (z > 6447266/5) & (z < 1308048)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1311721, y=-409, x=-3623
+DEBUG:__main__:---------pre-condition 810---------
+DEBUG:__main__:PRECOND_810: (409*x + z < -167281) & (-x**2 + 10*z + 167281 > 0)
+DEBUG:__main__:---------pre-condition 811---------
+DEBUG:__main__:PRECOND_811: (z > 6479424/5) & (z < 1314526)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1317799, y=-410, x=-3631
+DEBUG:__main__:---------pre-condition 812---------
+DEBUG:__main__:PRECOND_812: (410*x + z < -168100) & (-x**2 + 10*z + 168100 > 0)
+DEBUG:__main__:---------pre-condition 813---------
+DEBUG:__main__:PRECOND_813: (z > 13016061/10) & (z < 1320610)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1324301, y=-411, x=-3640
+DEBUG:__main__:---------pre-condition 814---------
+DEBUG:__main__:PRECOND_814: (411*x + z < -168921) & (-x**2 + 10*z + 168921 > 0)
+DEBUG:__main__:---------pre-condition 815---------
+DEBUG:__main__:PRECOND_815: (z > 13080679/10) & (z < 1327119)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1330819, y=-412, x=-3649
+DEBUG:__main__:---------pre-condition 816---------
+DEBUG:__main__:PRECOND_816: (412*x + z < -169744) & (-x**2 + 10*z + 169744 > 0)
+DEBUG:__main__:---------pre-condition 817---------
+DEBUG:__main__:PRECOND_817: (z > 13145457/10) & (z < 1333644)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1337353, y=-413, x=-3658
+DEBUG:__main__:---------pre-condition 818---------
+DEBUG:__main__:PRECOND_818: (413*x + z < -170569) & (-x**2 + 10*z + 170569 > 0)
+DEBUG:__main__:---------pre-condition 819---------
+DEBUG:__main__:PRECOND_819: (z > 2642079/2) & (z < 1340185)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1343903, y=-414, x=-3667
+DEBUG:__main__:---------pre-condition 820---------
+DEBUG:__main__:PRECOND_820: (414*x + z < -171396) & (-x**2 + 10*z + 171396 > 0)
+DEBUG:__main__:---------pre-condition 821---------
+DEBUG:__main__:PRECOND_821: (z > 13275493/10) & (z < 1346742)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1350469, y=-415, x=-3676
+DEBUG:__main__:---------pre-condition 822---------
+DEBUG:__main__:PRECOND_822: (415*x + z < -172225) & (-x**2 + 10*z + 172225 > 0)
+DEBUG:__main__:---------pre-condition 823---------
+DEBUG:__main__:PRECOND_823: (z > 13340751/10) & (z < 1353315)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1357051, y=-416, x=-3685
+DEBUG:__main__:---------pre-condition 824---------
+DEBUG:__main__:PRECOND_824: (416*x + z < -173056) & (-x**2 + 10*z + 173056 > 0)
+DEBUG:__main__:---------pre-condition 825---------
+DEBUG:__main__:PRECOND_825: (z > 13406169/10) & (z < 1359904)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1363649, y=-417, x=-3694
+DEBUG:__main__:---------pre-condition 826---------
+DEBUG:__main__:PRECOND_826: (417*x + z < -173889) & (-x**2 + 10*z + 173889 > 0)
+DEBUG:__main__:---------pre-condition 827---------
+DEBUG:__main__:PRECOND_827: (z > 13471747/10) & (z < 1366509)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1369846, y=-418, x=-3702
+DEBUG:__main__:---------pre-condition 828---------
+DEBUG:__main__:PRECOND_828: (418*x + z < -174724) & (-x**2 + 10*z + 174724 > 0)
+DEBUG:__main__:---------pre-condition 829---------
+DEBUG:__main__:PRECOND_829: (z > 1353008) & (z < 1372712)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1376475, y=-419, x=-3711
+DEBUG:__main__:---------pre-condition 830---------
+DEBUG:__main__:PRECOND_830: (419*x + z < -175561) & (-x**2 + 10*z + 175561 > 0)
+DEBUG:__main__:---------pre-condition 831---------
+DEBUG:__main__:PRECOND_831: (z > 1359596) & (z < 1379348)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1383120, y=-420, x=-3720
+DEBUG:__main__:---------pre-condition 832---------
+DEBUG:__main__:PRECOND_832: (420*x + z < -176400) & (-x**2 + 10*z + 176400 > 0)
+DEBUG:__main__:---------pre-condition 833---------
+DEBUG:__main__:PRECOND_833: (z > 1366200) & (z < 1386000)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1389781, y=-421, x=-3729
+DEBUG:__main__:---------pre-condition 834---------
+DEBUG:__main__:PRECOND_834: (421*x + z < -177241) & (-x**2 + 10*z + 177241 > 0)
+DEBUG:__main__:---------pre-condition 835---------
+DEBUG:__main__:PRECOND_835: (z > 1372820) & (z < 1392668)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1396458, y=-422, x=-3738
+DEBUG:__main__:---------pre-condition 836---------
+DEBUG:__main__:PRECOND_836: (422*x + z < -178084) & (-x**2 + 10*z + 178084 > 0)
+DEBUG:__main__:---------pre-condition 837---------
+DEBUG:__main__:PRECOND_837: (z > 1379456) & (z < 1399352)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1403151, y=-423, x=-3747
+DEBUG:__main__:---------pre-condition 838---------
+DEBUG:__main__:PRECOND_838: (423*x + z < -178929) & (-x**2 + 10*z + 178929 > 0)
+DEBUG:__main__:---------pre-condition 839---------
+DEBUG:__main__:PRECOND_839: (z > 1386108) & (z < 1406052)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1409860, y=-424, x=-3756
+DEBUG:__main__:---------pre-condition 840---------
+DEBUG:__main__:PRECOND_840: (424*x + z < -179776) & (-x**2 + 10*z + 179776 > 0)
+DEBUG:__main__:---------pre-condition 841---------
+DEBUG:__main__:PRECOND_841: (z > 1392776) & (z < 1412768)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1416161, y=-425, x=-3764
+DEBUG:__main__:---------pre-condition 842---------
+DEBUG:__main__:PRECOND_842: (425*x + z < -180625) & (-x**2 + 10*z + 180625 > 0)
+DEBUG:__main__:---------pre-condition 843---------
+DEBUG:__main__:PRECOND_843: (z > 13987071/10) & (z < 1419075)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1422901, y=-426, x=-3773
+DEBUG:__main__:---------pre-condition 844---------
+DEBUG:__main__:PRECOND_844: (426*x + z < -181476) & (-x**2 + 10*z + 181476 > 0)
+DEBUG:__main__:---------pre-condition 845---------
+DEBUG:__main__:PRECOND_845: (z > 14054053/10) & (z < 1425822)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1429657, y=-427, x=-3782
+DEBUG:__main__:---------pre-condition 846---------
+DEBUG:__main__:PRECOND_846: (427*x + z < -182329) & (-x**2 + 10*z + 182329 > 0)
+DEBUG:__main__:---------pre-condition 847---------
+DEBUG:__main__:PRECOND_847: (z > 2824239/2) & (z < 1432585)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1436429, y=-428, x=-3791
+DEBUG:__main__:---------pre-condition 848---------
+DEBUG:__main__:PRECOND_848: (428*x + z < -183184) & (-x**2 + 10*z + 183184 > 0)
+DEBUG:__main__:---------pre-condition 849---------
+DEBUG:__main__:PRECOND_849: (z > 14188497/10) & (z < 1439364)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1443217, y=-429, x=-3800
+DEBUG:__main__:---------pre-condition 850---------
+DEBUG:__main__:PRECOND_850: (429*x + z < -184041) & (-x**2 + 10*z + 184041 > 0)
+DEBUG:__main__:---------pre-condition 851---------
+DEBUG:__main__:PRECOND_851: (z > 14255959/10) & (z < 1446159)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1450021, y=-430, x=-3809
+DEBUG:__main__:---------pre-condition 852---------
+DEBUG:__main__:PRECOND_852: (430*x + z < -184900) & (-x**2 + 10*z + 184900 > 0)
+DEBUG:__main__:---------pre-condition 853---------
+DEBUG:__main__:PRECOND_853: (z > 14323581/10) & (z < 1452970)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1456841, y=-431, x=-3818
+DEBUG:__main__:---------pre-condition 854---------
+DEBUG:__main__:PRECOND_854: (431*x + z < -185761) & (-x**2 + 10*z + 185761 > 0)
+DEBUG:__main__:---------pre-condition 855---------
+DEBUG:__main__:PRECOND_855: (z > 14391363/10) & (z < 1459797)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1463677, y=-432, x=-3827
+DEBUG:__main__:---------pre-condition 856---------
+DEBUG:__main__:PRECOND_856: (432*x + z < -186624) & (-x**2 + 10*z + 186624 > 0)
+DEBUG:__main__:---------pre-condition 857---------
+DEBUG:__main__:PRECOND_857: (z > 2891861/2) & (z < 1466640)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1470097, y=-433, x=-3835
+DEBUG:__main__:---------pre-condition 858---------
+DEBUG:__main__:PRECOND_858: (433*x + z < -187489) & (-x**2 + 10*z + 187489 > 0)
+DEBUG:__main__:---------pre-condition 859---------
+DEBUG:__main__:PRECOND_859: (z > 7259868/5) & (z < 1473066)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1476964, y=-434, x=-3844
+DEBUG:__main__:---------pre-condition 860---------
+DEBUG:__main__:PRECOND_860: (434*x + z < -188356) & (-x**2 + 10*z + 188356 > 0)
+DEBUG:__main__:---------pre-condition 861---------
+DEBUG:__main__:PRECOND_861: (z > 1458798) & (z < 1479940)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1483847, y=-435, x=-3853
+DEBUG:__main__:---------pre-condition 862---------
+DEBUG:__main__:PRECOND_862: (435*x + z < -189225) & (-x**2 + 10*z + 189225 > 0)
+DEBUG:__main__:---------pre-condition 863---------
+DEBUG:__main__:PRECOND_863: (z > 7328192/5) & (z < 1486830)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1490746, y=-436, x=-3862
+DEBUG:__main__:---------pre-condition 864---------
+DEBUG:__main__:PRECOND_864: (436*x + z < -190096) & (-x**2 + 10*z + 190096 > 0)
+DEBUG:__main__:---------pre-condition 865---------
+DEBUG:__main__:PRECOND_865: (z > 7362474/5) & (z < 1493736)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1497661, y=-437, x=-3871
+DEBUG:__main__:---------pre-condition 866---------
+DEBUG:__main__:PRECOND_866: (437*x + z < -190969) & (-x**2 + 10*z + 190969 > 0)
+DEBUG:__main__:---------pre-condition 867---------
+DEBUG:__main__:PRECOND_867: (z > 7396836/5) & (z < 1500658)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1504592, y=-438, x=-3880
+DEBUG:__main__:---------pre-condition 868---------
+DEBUG:__main__:PRECOND_868: (438*x + z < -191844) & (-x**2 + 10*z + 191844 > 0)
+DEBUG:__main__:---------pre-condition 869---------
+DEBUG:__main__:PRECOND_869: (z > 7431278/5) & (z < 1507596)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1511539, y=-439, x=-3889
+DEBUG:__main__:---------pre-condition 870---------
+DEBUG:__main__:PRECOND_870: (439*x + z < -192721) & (-x**2 + 10*z + 192721 > 0)
+DEBUG:__main__:---------pre-condition 871---------
+DEBUG:__main__:PRECOND_871: (z > 1493160) & (z < 1514550)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1518063, y=-440, x=-3897
+DEBUG:__main__:---------pre-condition 872---------
+DEBUG:__main__:PRECOND_872: (440*x + z < -193600) & (-x**2 + 10*z + 193600 > 0)
+DEBUG:__main__:---------pre-condition 873---------
+DEBUG:__main__:PRECOND_873: (z > 14993009/10) & (z < 1521080)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1525041, y=-441, x=-3906
+DEBUG:__main__:---------pre-condition 874---------
+DEBUG:__main__:PRECOND_874: (441*x + z < -194481) & (-x**2 + 10*z + 194481 > 0)
+DEBUG:__main__:---------pre-condition 875---------
+DEBUG:__main__:PRECOND_875: (z > 3012471/2) & (z < 1528065)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1532035, y=-442, x=-3915
+DEBUG:__main__:---------pre-condition 876---------
+DEBUG:__main__:PRECOND_876: (442*x + z < -195364) & (-x**2 + 10*z + 195364 > 0)
+DEBUG:__main__:---------pre-condition 877---------
+DEBUG:__main__:PRECOND_877: (z > 15131861/10) & (z < 1535066)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1539045, y=-443, x=-3924
+DEBUG:__main__:---------pre-condition 878---------
+DEBUG:__main__:PRECOND_878: (443*x + z < -196249) & (-x**2 + 10*z + 196249 > 0)
+DEBUG:__main__:---------pre-condition 879---------
+DEBUG:__main__:PRECOND_879: (z > 15201527/10) & (z < 1542083)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1546071, y=-444, x=-3933
+DEBUG:__main__:---------pre-condition 880---------
+DEBUG:__main__:PRECOND_880: (444*x + z < -197136) & (-x**2 + 10*z + 197136 > 0)
+DEBUG:__main__:---------pre-condition 881---------
+DEBUG:__main__:PRECOND_881: (z > 15271353/10) & (z < 1549116)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1553113, y=-445, x=-3942
+DEBUG:__main__:---------pre-condition 882---------
+DEBUG:__main__:PRECOND_882: (445*x + z < -198025) & (-x**2 + 10*z + 198025 > 0)
+DEBUG:__main__:---------pre-condition 883---------
+DEBUG:__main__:PRECOND_883: (z > 15341339/10) & (z < 1556165)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1560171, y=-446, x=-3951
+DEBUG:__main__:---------pre-condition 884---------
+DEBUG:__main__:PRECOND_884: (446*x + z < -198916) & (-x**2 + 10*z + 198916 > 0)
+DEBUG:__main__:---------pre-condition 885---------
+DEBUG:__main__:PRECOND_885: (z > 3082297/2) & (z < 1563230)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1567245, y=-447, x=-3960
+DEBUG:__main__:---------pre-condition 886---------
+DEBUG:__main__:PRECOND_886: (447*x + z < -199809) & (-x**2 + 10*z + 199809 > 0)
+DEBUG:__main__:---------pre-condition 887---------
+DEBUG:__main__:PRECOND_887: (z > 15481791/10) & (z < 1570311)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1573888, y=-448, x=-3968
+DEBUG:__main__:---------pre-condition 888---------
+DEBUG:__main__:PRECOND_888: (448*x + z < -200704) & (-x**2 + 10*z + 200704 > 0)
+DEBUG:__main__:---------pre-condition 889---------
+DEBUG:__main__:PRECOND_889: (z > 1554432) & (z < 1576960)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1580993, y=-449, x=-3977
+DEBUG:__main__:---------pre-condition 890---------
+DEBUG:__main__:PRECOND_890: (449*x + z < -201601) & (-x**2 + 10*z + 201601 > 0)
+DEBUG:__main__:---------pre-condition 891---------
+DEBUG:__main__:PRECOND_891: (z > 7807464/5) & (z < 1584072)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1588114, y=-450, x=-3986
+DEBUG:__main__:---------pre-condition 892---------
+DEBUG:__main__:PRECOND_892: (450*x + z < -202500) & (-x**2 + 10*z + 202500 > 0)
+DEBUG:__main__:---------pre-condition 893---------
+DEBUG:__main__:PRECOND_893: (z > 7842848/5) & (z < 1591200)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1595251, y=-451, x=-3995
+DEBUG:__main__:---------pre-condition 894---------
+DEBUG:__main__:PRECOND_894: (451*x + z < -203401) & (-x**2 + 10*z + 203401 > 0)
+DEBUG:__main__:---------pre-condition 895---------
+DEBUG:__main__:PRECOND_895: (z > 7878312/5) & (z < 1598344)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1602404, y=-452, x=-4004
+DEBUG:__main__:---------pre-condition 896---------
+DEBUG:__main__:PRECOND_896: (452*x + z < -204304) & (-x**2 + 10*z + 204304 > 0)
+DEBUG:__main__:---------pre-condition 897---------
+DEBUG:__main__:PRECOND_897: (z > 7913856/5) & (z < 1605504)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1609573, y=-453, x=-4013
+DEBUG:__main__:---------pre-condition 898---------
+DEBUG:__main__:PRECOND_898: (453*x + z < -205209) & (-x**2 + 10*z + 205209 > 0)
+DEBUG:__main__:---------pre-condition 899---------
+DEBUG:__main__:PRECOND_899: (z > 1589896) & (z < 1612680)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1616758, y=-454, x=-4022
+DEBUG:__main__:---------pre-condition 900---------
+DEBUG:__main__:PRECOND_900: (454*x + z < -206116) & (-x**2 + 10*z + 206116 > 0)
+DEBUG:__main__:---------pre-condition 901---------
+DEBUG:__main__:PRECOND_901: (z > 7985184/5) & (z < 1619872)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1623959, y=-455, x=-4031
+DEBUG:__main__:---------pre-condition 902---------
+DEBUG:__main__:PRECOND_902: (455*x + z < -207025) & (-x**2 + 10*z + 207025 > 0)
+DEBUG:__main__:---------pre-condition 903---------
+DEBUG:__main__:PRECOND_903: (z > 8020968/5) & (z < 1627080)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1630721, y=-456, x=-4039
+DEBUG:__main__:---------pre-condition 904---------
+DEBUG:__main__:PRECOND_904: (456*x + z < -207936) & (-x**2 + 10*z + 207936 > 0)
+DEBUG:__main__:---------pre-condition 905---------
+DEBUG:__main__:PRECOND_905: (z > 3221117/2) & (z < 1633848)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1637953, y=-457, x=-4048
+DEBUG:__main__:---------pre-condition 906---------
+DEBUG:__main__:PRECOND_906: (457*x + z < -208849) & (-x**2 + 10*z + 208849 > 0)
+DEBUG:__main__:---------pre-condition 907---------
+DEBUG:__main__:PRECOND_907: (z > 3235491/2) & (z < 1641087)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1645201, y=-458, x=-4057
+DEBUG:__main__:---------pre-condition 908---------
+DEBUG:__main__:PRECOND_908: (458*x + z < -209764) & (-x**2 + 10*z + 209764 > 0)
+DEBUG:__main__:---------pre-condition 909---------
+DEBUG:__main__:PRECOND_909: (z > 3249897/2) & (z < 1648342)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1652465, y=-459, x=-4066
+DEBUG:__main__:---------pre-condition 910---------
+DEBUG:__main__:PRECOND_910: (459*x + z < -210681) & (-x**2 + 10*z + 210681 > 0)
+DEBUG:__main__:---------pre-condition 911---------
+DEBUG:__main__:PRECOND_911: (z > 3264335/2) & (z < 1655613)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1659745, y=-460, x=-4075
+DEBUG:__main__:---------pre-condition 912---------
+DEBUG:__main__:PRECOND_912: (460*x + z < -211600) & (-x**2 + 10*z + 211600 > 0)
+DEBUG:__main__:---------pre-condition 913---------
+DEBUG:__main__:PRECOND_913: (z > 3278805/2) & (z < 1662900)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1667041, y=-461, x=-4084
+DEBUG:__main__:---------pre-condition 914---------
+DEBUG:__main__:PRECOND_914: (461*x + z < -212521) & (-x**2 + 10*z + 212521 > 0)
+DEBUG:__main__:---------pre-condition 915---------
+DEBUG:__main__:PRECOND_915: (z > 3293307/2) & (z < 1670203)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1674353, y=-462, x=-4093
+DEBUG:__main__:---------pre-condition 916---------
+DEBUG:__main__:PRECOND_916: (462*x + z < -213444) & (-x**2 + 10*z + 213444 > 0)
+DEBUG:__main__:---------pre-condition 917---------
+DEBUG:__main__:PRECOND_917: (z > 3307841/2) & (z < 1677522)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1681219, y=-463, x=-4101
+DEBUG:__main__:---------pre-condition 918---------
+DEBUG:__main__:PRECOND_918: (463*x + z < -214369) & (-x**2 + 10*z + 214369 > 0)
+DEBUG:__main__:---------pre-condition 919---------
+DEBUG:__main__:PRECOND_919: (z > 8301916/5) & (z < 1684394)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1688562, y=-464, x=-4110
+DEBUG:__main__:---------pre-condition 920---------
+DEBUG:__main__:PRECOND_920: (464*x + z < -215296) & (-x**2 + 10*z + 215296 > 0)
+DEBUG:__main__:---------pre-condition 921---------
+DEBUG:__main__:PRECOND_921: (z > 8338402/5) & (z < 1691744)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1695921, y=-465, x=-4119
+DEBUG:__main__:---------pre-condition 922---------
+DEBUG:__main__:PRECOND_922: (465*x + z < -216225) & (-x**2 + 10*z + 216225 > 0)
+DEBUG:__main__:---------pre-condition 923---------
+DEBUG:__main__:PRECOND_923: (z > 8374968/5) & (z < 1699110)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1703296, y=-466, x=-4128
+DEBUG:__main__:---------pre-condition 924---------
+DEBUG:__main__:PRECOND_924: (466*x + z < -217156) & (-x**2 + 10*z + 217156 > 0)
+DEBUG:__main__:---------pre-condition 925---------
+DEBUG:__main__:PRECOND_925: (z > 8411614/5) & (z < 1706492)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1710687, y=-467, x=-4137
+DEBUG:__main__:---------pre-condition 926---------
+DEBUG:__main__:PRECOND_926: (467*x + z < -218089) & (-x**2 + 10*z + 218089 > 0)
+DEBUG:__main__:---------pre-condition 927---------
+DEBUG:__main__:PRECOND_927: (z > 1689668) & (z < 1713890)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1718094, y=-468, x=-4146
+DEBUG:__main__:---------pre-condition 928---------
+DEBUG:__main__:PRECOND_928: (468*x + z < -219024) & (-x**2 + 10*z + 219024 > 0)
+DEBUG:__main__:---------pre-condition 929---------
+DEBUG:__main__:PRECOND_929: (z > 8485146/5) & (z < 1721304)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1725517, y=-469, x=-4155
+DEBUG:__main__:---------pre-condition 930---------
+DEBUG:__main__:PRECOND_930: (469*x + z < -219961) & (-x**2 + 10*z + 219961 > 0)
+DEBUG:__main__:---------pre-condition 931---------
+DEBUG:__main__:PRECOND_931: (z > 8522032/5) & (z < 1728734)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1732956, y=-470, x=-4164
+DEBUG:__main__:---------pre-condition 932---------
+DEBUG:__main__:PRECOND_932: (470*x + z < -220900) & (-x**2 + 10*z + 220900 > 0)
+DEBUG:__main__:---------pre-condition 933---------
+DEBUG:__main__:PRECOND_933: (z > 8558998/5) & (z < 1736180)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1739941, y=-471, x=-4172
+DEBUG:__main__:---------pre-condition 934---------
+DEBUG:__main__:PRECOND_934: (471*x + z < -221841) & (-x**2 + 10*z + 221841 > 0)
+DEBUG:__main__:---------pre-condition 935---------
+DEBUG:__main__:PRECOND_935: (z > 17183743/10) & (z < 1743171)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1747411, y=-472, x=-4181
+DEBUG:__main__:---------pre-condition 936---------
+DEBUG:__main__:PRECOND_936: (472*x + z < -222784) & (-x**2 + 10*z + 222784 > 0)
+DEBUG:__main__:---------pre-condition 937---------
+DEBUG:__main__:PRECOND_937: (z > 17257977/10) & (z < 1750648)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1754897, y=-473, x=-4190
+DEBUG:__main__:---------pre-condition 938---------
+DEBUG:__main__:PRECOND_938: (473*x + z < -223729) & (-x**2 + 10*z + 223729 > 0)
+DEBUG:__main__:---------pre-condition 939---------
+DEBUG:__main__:PRECOND_939: (z > 17332371/10) & (z < 1758141)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1762399, y=-474, x=-4199
+DEBUG:__main__:---------pre-condition 940---------
+DEBUG:__main__:PRECOND_940: (474*x + z < -224676) & (-x**2 + 10*z + 224676 > 0)
+DEBUG:__main__:---------pre-condition 941---------
+DEBUG:__main__:PRECOND_941: (z > 3481385/2) & (z < 1765650)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1769917, y=-475, x=-4208
+DEBUG:__main__:---------pre-condition 942---------
+DEBUG:__main__:PRECOND_942: (475*x + z < -225625) & (-x**2 + 10*z + 225625 > 0)
+DEBUG:__main__:---------pre-condition 943---------
+DEBUG:__main__:PRECOND_943: (z > 17481639/10) & (z < 1773175)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1777451, y=-476, x=-4217
+DEBUG:__main__:---------pre-condition 944---------
+DEBUG:__main__:PRECOND_944: (476*x + z < -226576) & (-x**2 + 10*z + 226576 > 0)
+DEBUG:__main__:---------pre-condition 945---------
+DEBUG:__main__:PRECOND_945: (z > 17556513/10) & (z < 1780716)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1785001, y=-477, x=-4226
+DEBUG:__main__:---------pre-condition 946---------
+DEBUG:__main__:PRECOND_946: (477*x + z < -227529) & (-x**2 + 10*z + 227529 > 0)
+DEBUG:__main__:---------pre-condition 947---------
+DEBUG:__main__:PRECOND_947: (z > 17631547/10) & (z < 1788273)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1792567, y=-478, x=-4235
+DEBUG:__main__:---------pre-condition 948---------
+DEBUG:__main__:PRECOND_948: (478*x + z < -228484) & (-x**2 + 10*z + 228484 > 0)
+DEBUG:__main__:---------pre-condition 949---------
+DEBUG:__main__:PRECOND_949: (z > 17706741/10) & (z < 1795846)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1799671, y=-479, x=-4243
+DEBUG:__main__:---------pre-condition 950---------
+DEBUG:__main__:PRECOND_950: (479*x + z < -229441) & (-x**2 + 10*z + 229441 > 0)
+DEBUG:__main__:---------pre-condition 951---------
+DEBUG:__main__:PRECOND_951: (z > 8886804/5) & (z < 1802956)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1807268, y=-480, x=-4252
+DEBUG:__main__:---------pre-condition 952---------
+DEBUG:__main__:PRECOND_952: (480*x + z < -230400) & (-x**2 + 10*z + 230400 > 0)
+DEBUG:__main__:---------pre-condition 953---------
+DEBUG:__main__:PRECOND_953: (z > 8924552/5) & (z < 1810560)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1814881, y=-481, x=-4261
+DEBUG:__main__:---------pre-condition 954---------
+DEBUG:__main__:PRECOND_954: (481*x + z < -231361) & (-x**2 + 10*z + 231361 > 0)
+DEBUG:__main__:---------pre-condition 955---------
+DEBUG:__main__:PRECOND_955: (z > 1792476) & (z < 1818180)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1822510, y=-482, x=-4270
+DEBUG:__main__:---------pre-condition 956---------
+DEBUG:__main__:PRECOND_956: (482*x + z < -232324) & (-x**2 + 10*z + 232324 > 0)
+DEBUG:__main__:---------pre-condition 957---------
+DEBUG:__main__:PRECOND_957: (z > 9000288/5) & (z < 1825816)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1830155, y=-483, x=-4279
+DEBUG:__main__:---------pre-condition 958---------
+DEBUG:__main__:PRECOND_958: (483*x + z < -233289) & (-x**2 + 10*z + 233289 > 0)
+DEBUG:__main__:---------pre-condition 959---------
+DEBUG:__main__:PRECOND_959: (z > 9038276/5) & (z < 1833468)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1837816, y=-484, x=-4288
+DEBUG:__main__:---------pre-condition 960---------
+DEBUG:__main__:PRECOND_960: (484*x + z < -234256) & (-x**2 + 10*z + 234256 > 0)
+DEBUG:__main__:---------pre-condition 961---------
+DEBUG:__main__:PRECOND_961: (z > 9076344/5) & (z < 1841136)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1845493, y=-485, x=-4297
+DEBUG:__main__:---------pre-condition 962---------
+DEBUG:__main__:PRECOND_962: (485*x + z < -235225) & (-x**2 + 10*z + 235225 > 0)
+DEBUG:__main__:---------pre-condition 963---------
+DEBUG:__main__:PRECOND_963: (z > 9114492/5) & (z < 1848820)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1852701, y=-486, x=-4305
+DEBUG:__main__:---------pre-condition 964---------
+DEBUG:__main__:PRECOND_964: (486*x + z < -236196) & (-x**2 + 10*z + 236196 > 0)
+DEBUG:__main__:---------pre-condition 965---------
+DEBUG:__main__:PRECOND_965: (z > 18296829/10) & (z < 1856034)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1860409, y=-487, x=-4314
+DEBUG:__main__:---------pre-condition 966---------
+DEBUG:__main__:PRECOND_966: (487*x + z < -237169) & (-x**2 + 10*z + 237169 > 0)
+DEBUG:__main__:---------pre-condition 967---------
+DEBUG:__main__:PRECOND_967: (z > 18373427/10) & (z < 1863749)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1868133, y=-488, x=-4323
+DEBUG:__main__:---------pre-condition 968---------
+DEBUG:__main__:PRECOND_968: (488*x + z < -238144) & (-x**2 + 10*z + 238144 > 0)
+DEBUG:__main__:---------pre-condition 969---------
+DEBUG:__main__:PRECOND_969: (z > 3690037/2) & (z < 1871480)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1875873, y=-489, x=-4332
+DEBUG:__main__:---------pre-condition 970---------
+DEBUG:__main__:PRECOND_970: (489*x + z < -239121) & (-x**2 + 10*z + 239121 > 0)
+DEBUG:__main__:---------pre-condition 971---------
+DEBUG:__main__:PRECOND_971: (z > 18527103/10) & (z < 1879227)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1883629, y=-490, x=-4341
+DEBUG:__main__:---------pre-condition 972---------
+DEBUG:__main__:PRECOND_972: (490*x + z < -240100) & (-x**2 + 10*z + 240100 > 0)
+DEBUG:__main__:---------pre-condition 973---------
+DEBUG:__main__:PRECOND_973: (z > 18604181/10) & (z < 1886990)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1891401, y=-491, x=-4350
+DEBUG:__main__:---------pre-condition 974---------
+DEBUG:__main__:PRECOND_974: (491*x + z < -241081) & (-x**2 + 10*z + 241081 > 0)
+DEBUG:__main__:---------pre-condition 975---------
+DEBUG:__main__:PRECOND_975: (z > 18681419/10) & (z < 1894769)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1899189, y=-492, x=-4359
+DEBUG:__main__:---------pre-condition 976---------
+DEBUG:__main__:PRECOND_976: (492*x + z < -242064) & (-x**2 + 10*z + 242064 > 0)
+DEBUG:__main__:---------pre-condition 977---------
+DEBUG:__main__:PRECOND_977: (z > 18758817/10) & (z < 1902564)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1906993, y=-493, x=-4368
+DEBUG:__main__:---------pre-condition 978---------
+DEBUG:__main__:PRECOND_978: (493*x + z < -243049) & (-x**2 + 10*z + 243049 > 0)
+DEBUG:__main__:---------pre-condition 979---------
+DEBUG:__main__:PRECOND_979: (z > 3767275/2) & (z < 1910375)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1914320, y=-494, x=-4376
+DEBUG:__main__:---------pre-condition 980---------
+DEBUG:__main__:PRECOND_980: (494*x + z < -244036) & (-x**2 + 10*z + 244036 > 0)
+DEBUG:__main__:---------pre-condition 981---------
+DEBUG:__main__:PRECOND_981: (z > 1890534) & (z < 1917708)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1922155, y=-495, x=-4385
+DEBUG:__main__:---------pre-condition 982---------
+DEBUG:__main__:PRECOND_982: (495*x + z < -245025) & (-x**2 + 10*z + 245025 > 0)
+DEBUG:__main__:---------pre-condition 983---------
+DEBUG:__main__:PRECOND_983: (z > 1898320) & (z < 1925550)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1930006, y=-496, x=-4394
+DEBUG:__main__:---------pre-condition 984---------
+DEBUG:__main__:PRECOND_984: (496*x + z < -246016) & (-x**2 + 10*z + 246016 > 0)
+DEBUG:__main__:---------pre-condition 985---------
+DEBUG:__main__:PRECOND_985: (z > 1906122) & (z < 1933408)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1937873, y=-497, x=-4403
+DEBUG:__main__:---------pre-condition 986---------
+DEBUG:__main__:PRECOND_986: (497*x + z < -247009) & (-x**2 + 10*z + 247009 > 0)
+DEBUG:__main__:---------pre-condition 987---------
+DEBUG:__main__:PRECOND_987: (z > 1913940) & (z < 1941282)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1945756, y=-498, x=-4412
+DEBUG:__main__:---------pre-condition 988---------
+DEBUG:__main__:PRECOND_988: (498*x + z < -248004) & (-x**2 + 10*z + 248004 > 0)
+DEBUG:__main__:---------pre-condition 989---------
+DEBUG:__main__:PRECOND_989: (z > 1921774) & (z < 1949172)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: z=1953655, y=-499, x=-4421
+DEBUG:__main__:---------pre-condition 990---------
+DEBUG:__main__:PRECOND_990: (499*x + z < -249001) & (-x**2 + 10*z + 249001 > 0)

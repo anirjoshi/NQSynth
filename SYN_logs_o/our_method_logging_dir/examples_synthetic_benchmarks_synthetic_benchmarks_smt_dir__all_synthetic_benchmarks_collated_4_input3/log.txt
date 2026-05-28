@@ -1,0 +1,27 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_4_input3.smt
+DEBUG:__main__:ip_vars: ['c']
+DEBUG:__main__:op_vars: ['x', 'y']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 >= 0 + 1*x*x + -1*y + 1*c,
+            0 >= 0 + 1*x*x + 1*y*y + -1*c*c)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 >= c + x**2 - y) & (0 >= -c**2 + x**2 + y**2), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['x', 'y', 'c']
+DEBUG:__main__:z3 vars:{'c': c, 'x': x, 'y': y}
+DEBUG:__main__:z3 post_condition:And(0 >= c + x**2 + -1*y, 0 >= x**2 + y**2 + -1*c**2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, c=1/8, x=0, y=1/8
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0, y: 1/8}
+DEBUG:__main__:PRECOND_0: 8 c - 1 <= 0 /\ [ 8 c - 1 = 0 \/ 8 c + 1 <= 0 ]
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 0, y: lambda_var_0 + 1/8}
+DEBUG:__main__:PRECOND_1: TRUE
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(8*c - 1 <= 0) & (Eq(8*c - 1, 0) | (8*c + 1 <= 0)) {'c': 1/8, 'x': 0, 'y': 1/8} {x: lambda_var_0, y: 1/8}
+DEBUG:__main__:True {'c': 1/8, 'x': 0, 'y': 1/8} {x: 0, y: lambda_var_0 + 1/8}

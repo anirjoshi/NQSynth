@@ -1,0 +1,2 @@
+sage: sage
+sygus: cvc5 --sygus-qe-preproc --lang=sygus2

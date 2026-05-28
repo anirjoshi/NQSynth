@@ -1,0 +1,481 @@
+(RPS) ani@CGJ9MTYH6Y:~/Desktop/RRI/IJCAR26_repo/Rational-Program-Synthesis/tool_ijcar2026$ python script_execute_all_benchmarks_mathematica.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/ --ip_op_benchmark_dir examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller/ --timeout 120
+['examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt', 'examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt', 'examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt', 'examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt', 'examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt']
+
+_____examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt__________________________________________
+
+command: rm -rf sage_files ip_op_vars.txt log.txt timer_log.txt program.py
+output: , 
+
+examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.txt
+command: cp examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.txt ip_op_vars.txt
+output: , 
+
+command: timeout -k 3s 120s python NQS_mathematica/main_tool.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt --ip_op_vars ip_op_vars.txt
+output: Starting Wolfram Session at /Applications/Wolfram Engine.app/Contents/MacOS/WolframKernel...
+POST_CONDITION: (0 > x**2 + y**2 - 5) & (0 > -x**2 - y**2 + 4999/1000)
+Input_Vars: ['y']
+Output_Vars: ['x']
+working...
+
+direction: [1]
+substitution: {x: lambda_var_0 + 1/8}
+(lambda_var_0**2 + lambda_var_0/4 + y**2 - 39867/8000 > 0) & (lambda_var_0**2 + lambda_var_0/4 + y**2 - 319/64 < 0)
+math_cmd: ToString[LogicalExpand[Resolve[Exists[lambda$var$0, (lambda$var$0^2 + lambda$var$0/4 + y^2 - 39867/8000 > 0 && lambda$var$0^2 + lambda$var$0/4 + y^2 - 319/64 < 0)], Reals]], InputForm]
+
+WEAKEST_PRE_COND_SYNTHESIZED
+(y < sqrt(5)) & (-sqrt(5) < y) , {'x': 1/8, 'y': 1143/512} , {x: lambda_var_0 + 1/8}
+, rm: log.txt: No such file or directory
+, 0
+
+command: tail -1 timer_log.txt
+output: WEAKEST_PRE_COND_SYNTHESIZED
+, 
+
+command: mkdir -p our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_2_circles_fixed_radii/
+output: , 
+
+command: mv log.txt our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_2_circles_fixed_radii/
+output: , 
+
+TIME_Z3_START:328423.703220333
+TIME_Z3_FINISH:328423.706998375
+RATIONAL_POINT
+TIME_SUBS_SIMPLIFY_START:328423.707535583
+TIME_SUBS_SIMPLIFY_STOP:328423.804764625
+TIME_MATHEMATICA_START:328423.80543525
+TIME_MATHEMATICA_FINISH:328423.851337166
+TIME_PROG_SYN_START:328423.853392541
+TIME_PROG_SYN_FINISH:328423.85421725
+TIME_Z3_START:328423.854251666
+TIME_Z3_FINISH:328423.859291541
+TIME_PROG_SYN_START:328423.859358583
+TIME_PROG_SYN_STOP:328423.860095791
+WEAKEST_PRE_COND_SYNTHESIZED
+command: mv timer_log.txt our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_2_circles_fixed_radii/
+output: , 
+
+command: mv program.py our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_2_circles_fixed_radii/
+output: , 
+
+command: cp ip_op_vars.txt our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_2_circles_fixed_radii/
+output: , 
+
+STATUS: WEAKEST_PRE_CONDITION
+TIME: 1.3444781303405762
+command: rm pre_condition.smt2
+output: , rm: pre_condition.smt2: No such file or directory
+
+
+
+
+
+_____examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt__________________________________________
+
+command: rm -rf sage_files ip_op_vars.txt log.txt timer_log.txt program.py
+output: , 
+
+examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_1_geometric3.txt
+command: cp examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_1_geometric3.txt ip_op_vars.txt
+output: , 
+
+command: timeout -k 3s 120s python NQS_mathematica/main_tool.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_1_geometric3.smt --ip_op_vars ip_op_vars.txt
+output: Starting Wolfram Session at /Applications/Wolfram Engine.app/Contents/MacOS/WolframKernel...
+POST_CONDITION: (0 > x**2 + y**2 - 1) & (0 > c + x**2 - 6*x + y**2)
+Input_Vars: ['c']
+Output_Vars: ['x', 'y']
+working...
+
+direction: [1, 0]
+substitution: {x: lambda_var_0 + 1/8, y: 0}
+(4*lambda_var_0**2 + lambda_var_0 < 63/16) & (c + lambda_var_0**2 - 23*lambda_var_0/4 - 47/64 < 0)
+math_cmd: ToString[LogicalExpand[Resolve[Exists[lambda$var$0, (4*lambda$var$0^2 + lambda$var$0 < 63/16 && c + lambda$var$0^2 - 23*lambda$var$0/4 - 47/64 < 0)], Reals]], InputForm]
+
+direction: [0, 1]
+substitution: {x: 1/8, y: lambda_var_0}
+(lambda_var_0**2 < 63/64) & (c + lambda_var_0**2 - 47/64 < 0)
+math_cmd: ToString[LogicalExpand[Resolve[Exists[lambda$var$0, (lambda$var$0^2 < 63/64 && c + lambda$var$0^2 - 47/64 < 0)], Reals]], InputForm]
+
+WEAKEST_PRE_COND_SYNTHESIZED
+c < 5 , {'x': 1/8, 'y': 0, 'c': -17/64} , {x: lambda_var_0 + 1/8, y: 0}
+c < 47/64 , {'x': 1/8, 'y': 0, 'c': -17/64} , {x: 1/8, y: lambda_var_0}
+, rm: log.txt: No such file or directory
+, 0
+
+command: tail -1 timer_log.txt
+output: WEAKEST_PRE_COND_SYNTHESIZED
+, 
+
+command: mkdir -p our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_geometric3/
+output: , 
+
+command: mv log.txt our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_geometric3/
+output: , 
+
+TIME_Z3_START:328425.0832925
+TIME_Z3_FINISH:328425.08730975
+RATIONAL_POINT
+TIME_SUBS_SIMPLIFY_START:328425.087969708
+TIME_SUBS_SIMPLIFY_STOP:328425.186449958
+TIME_MATHEMATICA_START:328425.186986833
+TIME_MATHEMATICA_FINISH:328425.229910208
+TIME_PROG_SYN_START:328425.23125375
+TIME_PROG_SYN_FINISH:328425.232181666
+TIME_SUBS_SIMPLIFY_START:328425.232345625
+TIME_SUBS_SIMPLIFY_STOP:328425.254492916
+TIME_MATHEMATICA_START:328425.254734541
+TIME_MATHEMATICA_FINISH:328425.256553
+TIME_PROG_SYN_START:328425.257110125
+TIME_PROG_SYN_FINISH:328425.257812875
+TIME_Z3_START:328425.257844916
+TIME_Z3_FINISH:328425.258688708
+TIME_PROG_SYN_START:328425.258721375
+TIME_PROG_SYN_STOP:328425.259338458
+WEAKEST_PRE_COND_SYNTHESIZED
+command: mv timer_log.txt our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_geometric3/
+output: , 
+
+command: mv program.py our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_geometric3/
+output: , 
+
+command: cp ip_op_vars.txt our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_1_geometric3/
+output: , 
+
+STATUS: WEAKEST_PRE_CONDITION
+TIME: 1.3723220825195312
+command: rm pre_condition.smt2
+output: , rm: pre_condition.smt2: No such file or directory
+
+
+
+
+
+_____examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt__________________________________________
+
+command: rm -rf sage_files ip_op_vars.txt log.txt timer_log.txt program.py
+output: , 
+
+examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_4_input11_2.txt
+command: cp examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_4_input11_2.txt ip_op_vars.txt
+output: , 
+
+command: timeout -k 3s 120s python NQS_mathematica/main_tool.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input11_2.smt --ip_op_vars ip_op_vars.txt
+output: Starting Wolfram Session at /Applications/Wolfram Engine.app/Contents/MacOS/WolframKernel...
+POST_CONDITION: (0 > -d + x**2 - y) & (0 > -c - x**2 + y**2)
+Input_Vars: ['c', 'd']
+Output_Vars: ['x', 'y']
+working...
+
+direction: [1, 0]
+substitution: {x: lambda_var_0, y: 0}
+(c + lambda_var_0**2 > 0) & (d - lambda_var_0**2 > 0)
+math_cmd: ToString[LogicalExpand[Resolve[Exists[lambda$var$0, (c + lambda$var$0^2 > 0 && d - lambda$var$0^2 > 0)], Reals]], InputForm]
+
+direction: [0, 1]
+substitution: {x: 0, y: lambda_var_0}
+(d > -lambda_var_0) & (c - lambda_var_0**2 > 0)
+math_cmd: ToString[LogicalExpand[Resolve[Exists[lambda$var$0, (d > -lambda$var$0 && c - lambda$var$0^2 > 0)], Reals]], InputForm]
+
+direction: [1, 0]
+substitution: {x: lambda_var_0 + 5/16, y: 1/4}
+(c + (16*lambda_var_0 + 5)**2/256 - 1/16 > 0) & (d - (16*lambda_var_0 + 5)**2/256 + 1/4 > 0)
+math_cmd: ToString[LogicalExpand[Resolve[Exists[lambda$var$0, (c + (16*lambda$var$0 + 5)^2/256 - 1/16 > 0 && d - (16*lambda$var$0 + 5)^2/256 + 1/4 > 0)], Reals]], InputForm]
+
+direction: [0, 1]
+substitution: {x: 5/16, y: lambda_var_0 + 1/4}
+(d + lambda_var_0 > -39/256) & (c - lambda_var_0**2 - lambda_var_0/2 + 9/256 > 0)
+math_cmd: ToString[LogicalExpand[Resolve[Exists[lambda$var$0, (d + lambda$var$0 > -39/256 && c - lambda$var$0^2 - lambda$var$0/2 + 9/256 > 0)], Reals]], InputForm]
+
+direction: [1, 0]
+substitution: {x: lambda_var_0 - 181/2048, y: 1/2}
+(c + (2048*lambda_var_0 - 181)**2/4194304 - 1/4 > 0) & (d - (2048*lambda_var_0 - 181)**2/4194304 + 1/2 > 0)
+math_cmd: ToString[LogicalExpand[Resolve[Exists[lambda$var$0, (c + (2048*lambda$var$0 - 181)^2/4194304 - 1/4 > 0 && d - (2048*lambda$var$0 - 181)^2/4194304 + 1/2 > 0)], Reals]], InputForm]
+
+direction: [0, 1]
+substitution: {x: -181/2048, y: lambda_var_0 + 1/2}
+(d + lambda_var_0 > -2064391/4194304) & (-c + lambda_var_0**2 + lambda_var_0 + 1015815/4194304 < 0)
+math_cmd: ToString[LogicalExpand[Resolve[Exists[lambda$var$0, (d + lambda$var$0 > -2064391/4194304 && -c + lambda$var$0^2 + lambda$var$0 + 1015815/4194304 < 0)], Reals]], InputForm]
+
+WEAKEST_PRE_COND_SYNTHESIZED
+((c > 0) & (d > 0)) | ((d > 0) & (c + d > 0)) , {'x': 0, 'd': 1, 'y': 0, 'c': 1} , {x: lambda_var_0, y: 0}
+((c > 0) & (d > 0)) | ((c > 0) & (c - d**2 > 0)) , {'x': 0, 'd': 1, 'y': 0, 'c': 1} , {x: 0, y: lambda_var_0}
+((d > -1/4) & (c + d > -3/16)) | ((c < 1/16) & (c + d > -3/16)) , {'x': 5/16, 'd': -1/8, 'y': 1/4, 'c': -1/32} , {x: lambda_var_0 + 5/16, y: 1/4}
+((c > -25/256) & (d > 25/256)) | (128*c - 128*d**2 + 25*d > -5775/512) | ((d > 25/256) & Eq(128*c - 128*d**2 + 25*d, -5775/512)) , {'x': 5/16, 'd': -1/8, 'y': 1/4, 'c': -1/32} , {x: 5/16, y: lambda_var_0 + 1/4}
+((d > -1/2) & (c + d > -1/4)) | ((c < 1/4) & (c + d > -1/4)) , {'x': -181/2048, 'd': -63/128, 'y': 1/2, 'c': 7937/32768} , {x: lambda_var_0 - 181/2048, y: 1/2}
+((c > -32761/4194304) & (d > 32761/4194304)) | (2097152*c - 2097152*d**2 + 32761*d > -136336310223/8388608) | ((d > 32761/4194304) & Eq(2097152*c - 2097152*d**2 + 32761*d, -136336310223/8388608)) , {'x': -181/2048, 'd': -63/128, 'y': 1/2, 'c': 7937/32768} , {x: -181/2048, y: lambda_var_0 + 1/2}
+, rm: log.txt: No such file or directory
+, 0
+
+command: tail -1 timer_log.txt
+output: WEAKEST_PRE_COND_SYNTHESIZED
+, 
+
+command: mkdir -p our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input11_2/
+output: , 
+
+command: mv log.txt our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input11_2/
+output: , 
+
+TIME_Z3_START:328426.461900708
+TIME_Z3_FINISH:328426.465754666
+RATIONAL_POINT
+TIME_SUBS_SIMPLIFY_START:328426.466375916
+TIME_SUBS_SIMPLIFY_STOP:328426.567487375
+TIME_MATHEMATICA_START:328426.5678765
+TIME_MATHEMATICA_FINISH:328426.611022375
+TIME_PROG_SYN_START:328426.613311541
+TIME_PROG_SYN_FINISH:328426.614286
+TIME_SUBS_SIMPLIFY_START:328426.614425875
+TIME_SUBS_SIMPLIFY_STOP:328426.664322083
+TIME_MATHEMATICA_START:328426.664660083
+TIME_MATHEMATICA_FINISH:328426.667013708
+TIME_PROG_SYN_START:328426.668915416
+TIME_PROG_SYN_FINISH:328426.669888291
+TIME_Z3_START:328426.669923541
+TIME_Z3_FINISH:328426.670904
+RATIONAL_POINT
+TIME_SUBS_SIMPLIFY_START:328426.671558541
+TIME_SUBS_SIMPLIFY_STOP:328426.725248875
+TIME_MATHEMATICA_START:328426.725886083
+TIME_MATHEMATICA_FINISH:328426.729207708
+TIME_PROG_SYN_START:328426.730722708
+TIME_PROG_SYN_FINISH:328426.731921041
+TIME_SUBS_SIMPLIFY_START:328426.732130291
+TIME_SUBS_SIMPLIFY_STOP:328426.763433583
+TIME_MATHEMATICA_START:328426.763814875
+TIME_MATHEMATICA_FINISH:328426.766196875
+TIME_PROG_SYN_START:328426.770458041
+TIME_PROG_SYN_FINISH:328426.772055375
+TIME_Z3_START:328426.772089125
+TIME_Z3_FINISH:328426.773313083
+RATIONAL_POINT
+TIME_SUBS_SIMPLIFY_START:328426.773939833
+TIME_SUBS_SIMPLIFY_STOP:328426.827402666
+TIME_MATHEMATICA_START:328426.828016541
+TIME_MATHEMATICA_FINISH:328426.831442666
+TIME_PROG_SYN_START:328426.832674583
+TIME_PROG_SYN_FINISH:328426.834429166
+TIME_SUBS_SIMPLIFY_START:328426.834639541
+TIME_SUBS_SIMPLIFY_STOP:328426.863713125
+TIME_MATHEMATICA_START:328426.86403975
+TIME_MATHEMATICA_FINISH:328426.866291
+TIME_PROG_SYN_START:328426.870695625
+TIME_PROG_SYN_FINISH:328426.872942708
+TIME_Z3_START:328426.872980125
+TIME_Z3_FINISH:328426.876529666
+TIME_PROG_SYN_START:328426.876576666
+TIME_PROG_SYN_STOP:328426.878834208
+WEAKEST_PRE_COND_SYNTHESIZED
+command: mv timer_log.txt our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input11_2/
+output: , 
+
+command: mv program.py our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input11_2/
+output: , 
+
+command: cp ip_op_vars.txt our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input11_2/
+output: , 
+
+STATUS: WEAKEST_PRE_CONDITION
+TIME: 1.5938401222229004
+command: rm pre_condition.smt2
+output: , rm: pre_condition.smt2: No such file or directory
+
+
+
+
+
+_____examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt__________________________________________
+
+command: rm -rf sage_files ip_op_vars.txt log.txt timer_log.txt program.py
+output: , 
+
+examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_4_input2.txt
+command: cp examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_4_input2.txt ip_op_vars.txt
+output: , 
+
+command: timeout -k 3s 120s python NQS_mathematica/main_tool.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_input2.smt --ip_op_vars ip_op_vars.txt
+output: Starting Wolfram Session at /Applications/Wolfram Engine.app/Contents/MacOS/WolframKernel...
+POST_CONDITION: (0 >= -x + y**2) & (0 >= x - y**2)
+Input_Vars: ['x']
+Output_Vars: ['y']
+working...
+
+direction: [1]
+substitution: {y: lambda_var_0 + 1/8}
+Eq(x - (8*lambda_var_0 + 1)**2/64, 0)
+math_cmd: ToString[LogicalExpand[Resolve[Exists[lambda$var$0, x - (8*lambda$var$0 + 1)^2/64 == 0], Reals]], InputForm]
+
+WEAKEST_PRE_COND_SYNTHESIZED
+x >= 0 , {'y': 1/8, 'x': 1/64} , {y: lambda_var_0 + 1/8}
+, rm: log.txt: No such file or directory
+, 0
+
+command: tail -1 timer_log.txt
+output: WEAKEST_PRE_COND_SYNTHESIZED
+, 
+
+command: mkdir -p our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input2/
+output: , 
+
+command: mv log.txt our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input2/
+output: , 
+
+TIME_Z3_START:328428.101631625
+TIME_Z3_FINISH:328428.105206708
+RATIONAL_POINT
+TIME_SUBS_SIMPLIFY_START:328428.105736791
+TIME_SUBS_SIMPLIFY_STOP:328428.20078325
+TIME_MATHEMATICA_START:328428.201216333
+TIME_MATHEMATICA_FINISH:328428.243208541
+TIME_PROG_SYN_START:328428.244460708
+TIME_PROG_SYN_FINISH:328428.245226041
+TIME_Z3_START:328428.245264541
+TIME_Z3_FINISH:328428.245744333
+TIME_PROG_SYN_START:328428.245777333
+TIME_PROG_SYN_STOP:328428.246294166
+WEAKEST_PRE_COND_SYNTHESIZED
+command: mv timer_log.txt our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input2/
+output: , 
+
+command: mv program.py our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input2/
+output: , 
+
+command: cp ip_op_vars.txt our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_input2/
+output: , 
+
+STATUS: WEAKEST_PRE_CONDITION
+TIME: 1.3259789943695068
+command: rm pre_condition.smt2
+output: , rm: pre_condition.smt2: No such file or directory
+
+
+
+
+
+_____examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt__________________________________________
+
+command: rm -rf sage_files ip_op_vars.txt log.txt timer_log.txt program.py
+output: , 
+
+examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_4_kissing_set_relax.txt
+command: cp examples/synthetic_benchmarks_smaller/synthetic_benchmarks_ip_op_dir_smaller//_all_synthetic_benchmarks_collated_4_kissing_set_relax.txt ip_op_vars.txt
+output: , 
+
+command: timeout -k 3s 120s python NQS_mathematica/main_tool.py examples/synthetic_benchmarks_smaller/synthetic_benchmarks_smt_smaller/_all_synthetic_benchmarks_collated_4_kissing_set_relax.smt --ip_op_vars ip_op_vars.txt
+output: , rm: log.txt: No such file or directory
+/Users/ani/anaconda3/envs/RPS/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+, 124
+
+command: pkill -9 -f WolframKernel
+output: , 
+
+command: tail -1 timer_log.txt
+output: TIME_PROG_SYN_START: 328546.449474166
+, 
+
+command: mkdir -p our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_kissing_set_relax/
+output: , 
+
+command: mv log.txt our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_kissing_set_relax/
+output: , 
+
+TIME_Z3_START:328429.878844
+TIME_Z3_FINISH:328429.88346425
+RATIONAL_POINT
+TIME_SUBS_SIMPLIFY_START:328429.884653291
+TIME_SUBS_SIMPLIFY_STOP:328434.21170175
+TIME_MATHEMATICA_START:328434.214091583
+TIME_MATHEMATICA_FINISH:328435.765738208
+TIME_PROG_SYN_START:328438.252540791
+TIME_PROG_SYN_FINISH:328438.669571541
+TIME_SUBS_SIMPLIFY_START:328438.669993958
+TIME_SUBS_SIMPLIFY_STOP:328442.906565666
+TIME_MATHEMATICA_START:328442.908774625
+TIME_MATHEMATICA_FINISH:328443.304594875
+TIME_PROG_SYN_START:328445.245139583
+TIME_PROG_SYN_FINISH:328446.044420416
+TIME_SUBS_SIMPLIFY_START:328446.044887041
+TIME_SUBS_SIMPLIFY_STOP:328451.539602666
+TIME_MATHEMATICA_START:328451.541984541
+TIME_MATHEMATICA_FINISH:328451.704532041
+TIME_PROG_SYN_START:328451.959283583
+TIME_PROG_SYN_FINISH:328452.801168
+TIME_SUBS_SIMPLIFY_START:328452.801577166
+TIME_SUBS_SIMPLIFY_STOP:328458.163986083
+TIME_MATHEMATICA_START:328458.1661885
+TIME_MATHEMATICA_FINISH:328458.372746833
+TIME_PROG_SYN_START:328458.920588458
+TIME_PROG_SYN_FINISH:328459.905503125
+TIME_SUBS_SIMPLIFY_START:328459.905960916
+TIME_SUBS_SIMPLIFY_STOP:328464.191045833
+TIME_MATHEMATICA_START:328464.193330791
+TIME_MATHEMATICA_FINISH:328464.37610525
+TIME_PROG_SYN_START:328464.737163916
+TIME_PROG_SYN_FINISH:328465.816812583
+TIME_SUBS_SIMPLIFY_START:328465.817280875
+TIME_SUBS_SIMPLIFY_STOP:328470.155866458
+TIME_MATHEMATICA_START:328470.158804208
+TIME_MATHEMATICA_FINISH:328470.425100708
+TIME_PROG_SYN_START:328471.314898708
+TIME_PROG_SYN_FINISH:328472.573490875
+TIME_SUBS_SIMPLIFY_START:328472.573906416
+TIME_SUBS_SIMPLIFY_STOP:328478.118831416
+TIME_MATHEMATICA_START:328478.121156541
+TIME_MATHEMATICA_FINISH:328478.298772083
+TIME_PROG_SYN_START:328478.662571291
+TIME_PROG_SYN_FINISH:328480.013853333
+TIME_SUBS_SIMPLIFY_START:328480.01428425
+TIME_SUBS_SIMPLIFY_STOP:328485.356838875
+TIME_MATHEMATICA_START:328485.35901725
+TIME_MATHEMATICA_FINISH:328485.618124208
+TIME_PROG_SYN_START:328486.509096166
+TIME_PROG_SYN_FINISH:328488.051778958
+TIME_SUBS_SIMPLIFY_START:328488.052174291
+TIME_SUBS_SIMPLIFY_STOP:328492.274862833
+TIME_MATHEMATICA_START:328492.277201041
+TIME_MATHEMATICA_FINISH:328492.443690791
+TIME_PROG_SYN_START:328492.678714208
+TIME_PROG_SYN_FINISH:328494.288311041
+TIME_SUBS_SIMPLIFY_START:328494.288792666
+TIME_SUBS_SIMPLIFY_STOP:328498.535556958
+TIME_MATHEMATICA_START:328498.537852875
+TIME_MATHEMATICA_FINISH:328498.719871125
+TIME_PROG_SYN_START:328499.075675833
+TIME_PROG_SYN_FINISH:328500.800001
+TIME_Z3_START:328500.800085041
+TIME_Z3_FINISH:328523.175426875
+RATIONAL_POINT
+TIME_SUBS_SIMPLIFY_START:328523.545438625
+TIME_SUBS_SIMPLIFY_STOP:328527.878004583
+TIME_MATHEMATICA_START:328527.880156708
+TIME_MATHEMATICA_FINISH:328528.120723166
+TIME_PROG_SYN_START:328528.83362525
+TIME_PROG_SYN_FINISH:328530.687865541
+TIME_SUBS_SIMPLIFY_START:328530.688413666
+TIME_SUBS_SIMPLIFY_STOP:328534.996752666
+TIME_MATHEMATICA_START:328534.999153208
+TIME_MATHEMATICA_FINISH:328536.106413916
+TIME_PROG_SYN_START:328539.30903475
+TIME_PROG_SYN_FINISH:328541.673005833
+TIME_SUBS_SIMPLIFY_START:328541.673527541
+TIME_SUBS_SIMPLIFY_STOP:328546.140558875
+TIME_MATHEMATICA_START:328546.142873333
+TIME_MATHEMATICA_FINISH:328546.31307225
+TIME_PROG_SYN_START:328546.449474166
+POSSIBLE_ERROR_CURRENT_STATUS NOT_NONE prog_syn
+RETURNING: 22.379962084058207 5.068900250014849 0.0 0 2 2 13 False None 60.50928396004019 15.82744970911881
+command: mv timer_log.txt our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_kissing_set_relax/
+output: , 
+
+command: mv program.py our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_kissing_set_relax/
+output: , 
+
+command: cp ip_op_vars.txt our_method_logging_dir_mathematica/examples_synthetic_benchmarks_smaller_synthetic_benchmarks_smt_smaller__all_synthetic_benchmarks_collated_4_kissing_set_relax/
+output: , 
+
+STATUS: TIMEOUT
+TIME: 120.01718401908875
+command: rm pre_condition.smt2
+output: , rm: pre_condition.smt2: No such file or directory
+
+

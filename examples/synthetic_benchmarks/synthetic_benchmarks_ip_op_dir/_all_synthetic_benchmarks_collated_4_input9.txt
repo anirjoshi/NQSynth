@@ -1,0 +1,2 @@
+input variables:r1, r2
+output variables:y, x

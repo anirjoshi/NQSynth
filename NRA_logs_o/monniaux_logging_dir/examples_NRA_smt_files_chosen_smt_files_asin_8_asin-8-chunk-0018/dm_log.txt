@@ -1,0 +1,37 @@
+DEBUG:__main__:Starting Log File: dm_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_asin_8_asin-8-chunk-0018.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoX', 'skoS2', 'pi']
+DEBUG:__main__:op_vars: ['skoSP', 'skoSM']
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(And(skoS2*skoS2 - 2 <= delta,
+            2 - skoS2*skoS2 <= delta),
+        And(Not(pi <= 15707963/5000000),
+            And(Not(31415927/10000000 <= pi),
+                And(0 <= skoSP,
+                    And(0 <= skoSM,
+                        And(0 <= skoS2,
+                            And(Not(skoX <= 0),
+                                Not(1 <= skoX)))))))))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (0 <= skoS2) & (0 <= skoSM) & (0 <= skoSP) & (1 > skoX) & (31415927/10000000 > pi) & (pi > 15707963/5000000) & (skoX > 0) & (skoS2**2 - 2 <= delta) & (2 - skoS2**2 <= delta), {'delta': delta, 'skoS2': skoS2, 'pi': pi, 'skoSP': skoSP, 'skoSM': skoSM, 'skoX': skoX}
+DEBUG:__main__:vars sympy:['pi', 'delta', 'skoSM', 'skoSP', 'skoX', 'skoS2']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoS2': skoS2, 'skoSM': skoSM, 'skoSP': skoSP, 'skoX': skoX, 'pi': pi}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    0 <= skoS2,
+    0 <= skoSM,
+    0 <= skoSP,
+    1 > skoX,
+    31415927/10000000 > pi,
+    15707963/5000000 < pi,
+    0 < skoX,
+    -2 + skoS2**2 <= delta,
+    2 + -1*skoS2**2 <= delta)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=2, skoS2=1, skoSM=0, skoSP=0, skoX=1/2, pi=26353589/8388608
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:PRECOND_0: (delta >= 0) & (skoS2 >= 0) & (skoSM >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta >= skoS2**2 - 2) & (delta >= 2 - skoS2**2)
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:PRECOND_1: (delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta >= skoS2**2 - 2) & (delta >= 2 - skoS2**2)
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(delta >= 0) & (skoS2 >= 0) & (skoSM >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta >= skoS2**2 - 2) & (delta >= 2 - skoS2**2) {'delta': 2, 'skoS2': 1, 'skoSM': 0, 'skoSP': 0, 'skoX': 1/2, 'pi': 26353589/8388608}
+DEBUG:__main__:(delta >= 0) & (skoS2 >= 0) & (pi > 15707963/5000000) & (skoX > 0) & (pi < 31415927/10000000) & (skoX < 1) & (delta >= skoS2**2 - 2) & (delta >= 2 - skoS2**2) {'delta': 2, 'skoS2': 1, 'skoSM': 0, 'skoSP': 0, 'skoX': 1/2, 'pi': 26353589/8388608}

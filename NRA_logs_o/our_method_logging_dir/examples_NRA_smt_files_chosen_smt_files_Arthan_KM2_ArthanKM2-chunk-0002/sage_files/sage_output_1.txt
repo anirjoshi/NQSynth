@@ -1,0 +1,1 @@
+delta >= 0 /\ 20 skoS - 9 > 0 /\ skoS^6 + 6 skoS^5 - 5 skoS^4 + 150 skoS^3 + 111 skoS^2 - 452 skoS - 178 >= 0

@@ -1,0 +1,2 @@
+input variables:a
+output variables:x, y, z

@@ -1,0 +1,7 @@
+(set-logic NRA)
+(synth-fun y_o ( ( z_i Real ) ) Real )
+(synth-fun x_o ( ( z_i Real ) ) Real )
+(declare-var z Real)
+( constraint (=> (and (< 0.0 z)) (let ((a!1 (> 0.0 (+ 0.0 (* 1.0 (y_o z) (y_o z) ) (* (- 1.0) (x_o z) (y_o z) ) (* 1.0 z))))       (a!2 (> 0.0 (+ 0.0 (* 1.0 (x_o z) (x_o z) ) (* (- 1.0) (y_o z) (y_o z) ) (* (- 10.0) z)))))   (and a!1 a!2))))
+( check-synth )
+(exit)

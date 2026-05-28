@@ -1,0 +1,2 @@
+secnum delta delta2
+hours minutes seconds

@@ -1,0 +1,51 @@
+DEBUG:__main__:Starting Log File: dm_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_Arthan_KM2_ArthanKM2-chunk-0004.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoS']
+DEBUG:__main__:op_vars: ['skoCOSS', 'skoSINS']
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(Not(skoSINS*
+            (-5/2 +
+             skoCOSS*(-1/2) +
+             skoS*(-3/2 + skoS*(3/2 + skoS*(1/2))) +
+             skoSINS*(1/4 + skoS*(1/4))) <=
+            -2 +
+            skoCOSS*(-3 + skoCOSS*(-1/2)) +
+            skoS*
+            (-6 +
+             skoCOSS*(-6 + skoCOSS*(-1/2)) +
+             skoS*(-6 + skoCOSS*-3 + skoS*-2))),
+        9/20 <= skoS))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (9/20 <= skoS) & (skoSINS*(-skoCOSS/2 + skoS*(skoS*(skoS/2 + 3/2) - 3/2) + skoSINS*(skoS/4 + 1/4) - 5/2) > skoCOSS*(-skoCOSS/2 - 3) + skoS*(skoCOSS*(-skoCOSS/2 - 6) + skoS*(-3*skoCOSS - 2*skoS - 6) - 6) - 2), {}
+DEBUG:__main__:vars sympy:['skoS', 'delta', 'skoCOSS', 'skoSINS']
+DEBUG:__main__:z3 vars:{'delta': delta, 'skoS': skoS, 'skoSINS': skoSINS, 'skoCOSS': skoCOSS}
+DEBUG:__main__:z3 post_condition:And(0 <= delta,
+    9/20 <= skoS,
+    skoSINS*
+    (-5/2 +
+     -1/2*skoCOSS +
+     skoS*(-3/2 + skoS*(3/2 + 1/2*skoS)) +
+     skoSINS*(1/4 + 1/4*skoS)) >
+    -2 +
+    skoCOSS*(-3 + -1/2*skoCOSS) +
+    skoS*
+    (-6 +
+     skoCOSS*(-6 + -1/2*skoCOSS) +
+     skoS*(-6 + -3*skoCOSS + -2*skoS)))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoS=2, skoSINS=1/8, skoCOSS=-2
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:PRECOND_0: (delta >= 0) & (skoS >= 9/20) & (2*skoS*(skoS**2 - 2) - 2 > -skoSINS*(2*skoS*(skoS*(skoS + 3) - 3) + skoSINS*(skoS + 1) - 6)/4)
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:PRECOND_1: (delta >= 0) & (skoS >= 9/20) & (176*skoS**3 + 16*skoS**2 - 357*skoS > 559/3)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: delta=0, skoS=9/20, skoSINS=0, skoCOSS=0
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:PRECOND_2: (delta >= 0) & (skoS >= 9/20) & (2*skoS*(skoS*(skoS + 3) + 3) + 2 > -skoSINS*(2*skoS*(skoS*(skoS + 3) - 3) + skoSINS*(skoS + 1) - 10)/4)
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:PRECOND_3: (delta >= 0) & (skoS >= 9/20) & (skoS**3 + 3*skoS**2 + 3*skoS > -1)
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(delta >= 0) & (skoS >= 9/20) & (2*skoS*(skoS**2 - 2) - 2 > -skoSINS*(2*skoS*(skoS*(skoS + 3) - 3) + skoSINS*(skoS + 1) - 6)/4) {'delta': 0, 'skoS': 2, 'skoSINS': 1/8, 'skoCOSS': -2}
+DEBUG:__main__:(delta >= 0) & (skoS >= 9/20) & (176*skoS**3 + 16*skoS**2 - 357*skoS > 559/3) {'delta': 0, 'skoS': 2, 'skoSINS': 1/8, 'skoCOSS': -2}
+DEBUG:__main__:(delta >= 0) & (skoS >= 9/20) & (2*skoS*(skoS*(skoS + 3) + 3) + 2 > -skoSINS*(2*skoS*(skoS*(skoS + 3) - 3) + skoSINS*(skoS + 1) - 10)/4) {'delta': 0, 'skoS': 9/20, 'skoSINS': 0, 'skoCOSS': 0}
+DEBUG:__main__:(delta >= 0) & (skoS >= 9/20) & (skoS**3 + 3*skoS**2 + 3*skoS > -1) {'delta': 0, 'skoS': 9/20, 'skoSINS': 0, 'skoCOSS': 0}

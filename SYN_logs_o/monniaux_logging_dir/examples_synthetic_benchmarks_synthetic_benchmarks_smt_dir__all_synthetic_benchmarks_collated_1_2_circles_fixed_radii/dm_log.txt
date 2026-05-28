@@ -1,0 +1,1043 @@
+DEBUG:__main__:Starting Log File: dm_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_1_2_circles_fixed_radii.smt
+DEBUG:__main__:ip_vars: ['y']
+DEBUG:__main__:op_vars: ['x']
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*x*x + 1*y*y + -5,
+            0 > 0 + -1*x*x + -1*y*y + 4999/1000)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > x**2 + y**2 - 5) & (0 > -x**2 - y**2 + 4999/1000), {}
+DEBUG:__main__:vars sympy:['y', 'x']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y}
+DEBUG:__main__:z3 post_condition:And(0 > -5 + x**2 + y**2, 0 > 4999/1000 + -1*x**2 + -1*y**2)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1/8, y=1143/512
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:PRECOND_0: ((y > sqrt(199335)/200) | (y > -sqrt(319)/8)) & ((y > sqrt(199335)/200) | (y < -sqrt(199335)/200)) & ((y > -sqrt(319)/8) | (y < sqrt(319)/8)) & ((y < -sqrt(199335)/200) | (y < sqrt(319)/8))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1143/512, y=1/8
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:PRECOND_1: ((y > sqrt(2505535)/12800) | (y > -sqrt(4271)/512)) & ((y > sqrt(2505535)/12800) | (y < -sqrt(2505535)/12800)) & ((y > -sqrt(4271)/512) | (y < sqrt(4271)/512)) & ((y < -sqrt(2505535)/12800) | (y < sqrt(4271)/512))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2047/2048, y=2
+DEBUG:__main__:---------pre-condition 2---------
+DEBUG:__main__:PRECOND_2: ((y > sqrt(10485697935)/51200) | (y > -sqrt(16781311)/2048)) & ((y > sqrt(10485697935)/51200) | (y < -sqrt(10485697935)/51200)) & ((y > -sqrt(16781311)/2048) | (y < sqrt(16781311)/2048)) & ((y < -sqrt(10485697935)/51200) | (y < sqrt(16781311)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=89/128, y=17/8
+DEBUG:__main__:---------pre-condition 3---------
+DEBUG:__main__:PRECOND_3: ((y > sqrt(46239135)/3200) | (y > -sqrt(73999)/128)) & ((y > sqrt(46239135)/3200) | (y < -sqrt(46239135)/3200)) & ((y > -sqrt(73999)/128) | (y < sqrt(73999)/128)) & ((y < -sqrt(46239135)/3200) | (y < sqrt(73999)/128))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=8191/4096, y=-1
+DEBUG:__main__:---------pre-condition 4---------
+DEBUG:__main__:PRECOND_4: ((y > sqrt(10485513615)/102400) | (y > -sqrt(16793599)/4096)) & ((y > sqrt(10485513615)/102400) | (y < -sqrt(10485513615)/102400)) & ((y > -sqrt(16793599)/4096) | (y < sqrt(16793599)/4096)) & ((y < -sqrt(10485513615)/102400) | (y < sqrt(16793599)/4096))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=9155/4096, y=1/16
+DEBUG:__main__:---------pre-condition 5---------
+DEBUG:__main__:PRECOND_5: ((y > 3*sqrt(3838735)/102400) | (y > -sqrt(72055)/4096)) & ((y > 3*sqrt(3838735)/102400) | (y < -3*sqrt(3838735)/102400)) & ((y > -sqrt(72055)/4096) | (y < sqrt(72055)/4096)) & ((y < -3*sqrt(3838735)/102400) | (y < sqrt(72055)/4096))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=221/256, y=33/16
+DEBUG:__main__:---------pre-condition 6---------
+DEBUG:__main__:PRECOND_6: ((y > sqrt(174233415)/6400) | (y > -sqrt(278839)/256)) & ((y > sqrt(174233415)/6400) | (y < -sqrt(174233415)/6400)) & ((y > -sqrt(278839)/256) | (y < sqrt(278839)/256)) & ((y < -sqrt(174233415)/6400) | (y < sqrt(278839)/256))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=957/1024, y=65/32
+DEBUG:__main__:---------pre-condition 7---------
+DEBUG:__main__:PRECOND_7: ((y > sqrt(2703739015)/25600) | (y > -sqrt(4327031)/1024)) & ((y > sqrt(2703739015)/25600) | (y < -sqrt(2703739015)/25600)) & ((y > -sqrt(4327031)/1024) | (y < sqrt(4327031)/1024)) & ((y < -sqrt(2703739015)/25600) | (y < sqrt(4327031)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=18317/8192, y=0
+DEBUG:__main__:---------pre-condition 8---------
+DEBUG:__main__:PRECOND_8: (y > -sqrt(31831)/8192) & (y < sqrt(31831)/8192)
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=991/1024, y=129/64
+DEBUG:__main__:---------pre-condition 9---------
+DEBUG:__main__:PRECOND_9: ((y > sqrt(2662344015)/25600) | (y > -sqrt(4260799)/1024)) & ((y > sqrt(2662344015)/25600) | (y < -sqrt(2662344015)/25600)) & ((y > -sqrt(4260799)/1024) | (y < sqrt(4260799)/1024)) & ((y < -sqrt(2662344015)/25600) | (y < sqrt(4260799)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=4575/2048, y=3/32
+DEBUG:__main__:---------pre-condition 10---------
+DEBUG:__main__:PRECOND_10: ((y > sqrt(22937935)/51200) | (y > -sqrt(40895)/2048)) & ((y > sqrt(22937935)/51200) | (y < -sqrt(22937935)/51200)) & ((y > -sqrt(40895)/2048) | (y < sqrt(40895)/2048)) & ((y < -sqrt(22937935)/51200) | (y < sqrt(40895)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=18295/8192, y=7/64
+DEBUG:__main__:---------pre-condition 11---------
+DEBUG:__main__:PRECOND_11: ((y > sqrt(481366335)/204800) | (y > -sqrt(837295)/8192)) & ((y > sqrt(481366335)/204800) | (y < -sqrt(481366335)/204800)) & ((y > -sqrt(837295)/8192) | (y < sqrt(837295)/8192)) & ((y < -sqrt(481366335)/204800) | (y < sqrt(837295)/8192))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2015/2048, y=257/128
+DEBUG:__main__:---------pre-condition 12---------
+DEBUG:__main__:PRECOND_12: ((y > 3*sqrt(1174104215)/51200) | (y > -sqrt(16911295)/2048)) & ((y > 3*sqrt(1174104215)/51200) | (y < -3*sqrt(1174104215)/51200)) & ((y > -sqrt(16911295)/2048) | (y < sqrt(16911295)/2048)) & ((y < -3*sqrt(1174104215)/51200) | (y < sqrt(16911295)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1999/2048, y=-515/256
+DEBUG:__main__:---------pre-condition 13---------
+DEBUG:__main__:PRECOND_13: ((y > 3*sqrt(1178564215)/51200) | (y > -sqrt(16975519)/2048)) & ((y > 3*sqrt(1178564215)/51200) | (y < -3*sqrt(1178564215)/51200)) & ((y > -sqrt(16975519)/2048) | (y < sqrt(16975519)/2048)) & ((y < -3*sqrt(1178564215)/51200) | (y < sqrt(16975519)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2031/2048, y=513/256
+DEBUG:__main__:---------pre-condition 14---------
+DEBUG:__main__:PRECOND_14: ((y > sqrt(10526477935)/51200) | (y > -sqrt(16846559)/2048)) & ((y > sqrt(10526477935)/51200) | (y < -sqrt(10526477935)/51200)) & ((y > -sqrt(16846559)/2048) | (y < sqrt(16846559)/2048)) & ((y < -sqrt(10526477935)/51200) | (y < sqrt(16846559)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2007/2048, y=1029/512
+DEBUG:__main__:---------pre-condition 15---------
+DEBUG:__main__:PRECOND_15: ((y > sqrt(10587047935)/51200) | (y > -sqrt(16943471)/2048)) & ((y > sqrt(10587047935)/51200) | (y < -sqrt(10587047935)/51200)) & ((y > -sqrt(16943471)/2048) | (y < sqrt(16943471)/2048)) & ((y < -sqrt(10587047935)/51200) | (y < sqrt(16943471)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2023/2048, y=1027/512
+DEBUG:__main__:---------pre-condition 16---------
+DEBUG:__main__:PRECOND_16: ((y > sqrt(10546747935)/51200) | (y > -sqrt(16878991)/2048)) & ((y > sqrt(10546747935)/51200) | (y < -sqrt(10546747935)/51200)) & ((y > -sqrt(16878991)/2048) | (y < sqrt(16878991)/2048)) & ((y < -sqrt(10546747935)/51200) | (y < sqrt(16878991)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=995/1024, y=-1031/512
+DEBUG:__main__:---------pre-condition 17---------
+DEBUG:__main__:PRECOND_17: ((y > 3*sqrt(295264335)/25600) | (y > -sqrt(4252855)/1024)) & ((y > 3*sqrt(295264335)/25600) | (y < -3*sqrt(295264335)/25600)) & ((y > -sqrt(4252855)/1024) | (y < sqrt(4252855)/1024)) & ((y < -3*sqrt(295264335)/25600) | (y < sqrt(4252855)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1843/2048, y=-131/64
+DEBUG:__main__:---------pre-condition 18---------
+DEBUG:__main__:PRECOND_18: ((y > sqrt(10981672935)/51200) | (y > -sqrt(17574871)/2048)) & ((y > sqrt(10981672935)/51200) | (y < -sqrt(10981672935)/51200)) & ((y > -sqrt(17574871)/2048) | (y < sqrt(17574871)/2048)) & ((y < -sqrt(10981672935)/51200) | (y < sqrt(17574871)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1879/2048, y=261/128
+DEBUG:__main__:---------pre-condition 19---------
+DEBUG:__main__:PRECOND_19: ((y > sqrt(10897927935)/51200) | (y > -sqrt(17440879)/2048)) & ((y > sqrt(10897927935)/51200) | (y < -sqrt(10897927935)/51200)) & ((y > -sqrt(17440879)/2048) | (y < sqrt(17440879)/2048)) & ((y < -sqrt(10897927935)/51200) | (y < sqrt(17440879)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=903/1024, y=-263/128
+DEBUG:__main__:---------pre-condition 20---------
+DEBUG:__main__:PRECOND_20: ((y > sqrt(2766514015)/25600) | (y > -sqrt(4427471)/1024)) & ((y > sqrt(2766514015)/25600) | (y < -sqrt(2766514015)/25600)) & ((y > -sqrt(4427471)/1024) | (y < sqrt(4427471)/1024)) & ((y < -sqrt(2766514015)/25600) | (y < sqrt(4427471)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2011/2048, y=2057/1024
+DEBUG:__main__:---------pre-condition 21---------
+DEBUG:__main__:PRECOND_21: ((y > sqrt(10577002935)/51200) | (y > -sqrt(16927399)/2048)) & ((y > sqrt(10577002935)/51200) | (y < -sqrt(10577002935)/51200)) & ((y > -sqrt(16927399)/2048) | (y < sqrt(16927399)/2048)) & ((y < -sqrt(10577002935)/51200) | (y < sqrt(16927399)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2013/2048, y=-4113/2048
+DEBUG:__main__:---------pre-condition 22---------
+DEBUG:__main__:PRECOND_22: ((y > sqrt(10571972935)/51200) | (y > -79*sqrt(2711)/2048)) & ((y > sqrt(10571972935)/51200) | (y < -sqrt(10571972935)/51200)) & ((y > -79*sqrt(2711)/2048) | (y < 79*sqrt(2711)/2048)) & ((y < -sqrt(10571972935)/51200) | (y < 79*sqrt(2711)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1787/2048, y=527/256
+DEBUG:__main__:---------pre-condition 23---------
+DEBUG:__main__:PRECOND_23: ((y > sqrt(11108722935)/51200) | (y > -sqrt(17778151)/2048)) & ((y > sqrt(11108722935)/51200) | (y < -sqrt(11108722935)/51200)) & ((y > -sqrt(17778151)/2048) | (y < sqrt(17778151)/2048)) & ((y < -sqrt(11108722935)/51200) | (y < sqrt(17778151)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=889/1024, y=-1055/512
+DEBUG:__main__:---------pre-condition 24---------
+DEBUG:__main__:PRECOND_24: ((y > sqrt(2782194015)/25600) | (y > -sqrt(4452559)/1024)) & ((y > sqrt(2782194015)/25600) | (y < -sqrt(2782194015)/25600)) & ((y > -sqrt(4452559)/1024) | (y < sqrt(4452559)/1024)) & ((y < -sqrt(2782194015)/25600) | (y < sqrt(4452559)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1825/2048, y=525/256
+DEBUG:__main__:---------pre-condition 25---------
+DEBUG:__main__:PRECOND_25: ((y > sqrt(11022937935)/51200) | (y > -sqrt(17640895)/2048)) & ((y > sqrt(11022937935)/51200) | (y < -sqrt(11022937935)/51200)) & ((y > -sqrt(17640895)/2048) | (y < sqrt(17640895)/2048)) & ((y < -sqrt(11022937935)/51200) | (y < sqrt(17640895)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1897/2048, y=-521/256
+DEBUG:__main__:---------pre-condition 26---------
+DEBUG:__main__:PRECOND_26: ((y > sqrt(10855447935)/51200) | (y > -sqrt(17372911)/2048)) & ((y > sqrt(10855447935)/51200) | (y < -sqrt(10855447935)/51200)) & ((y > -sqrt(17372911)/2048) | (y < sqrt(17372911)/2048)) & ((y < -sqrt(10855447935)/51200) | (y < sqrt(17372911)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2039/2048, y=1025/512
+DEBUG:__main__:---------pre-condition 27---------
+DEBUG:__main__:PRECOND_27: ((y > -sqrt(16813999)/2048) | (y > 59*sqrt(3018135)/51200)) & ((y > -sqrt(16813999)/2048) | (y < sqrt(16813999)/2048)) & ((y > 59*sqrt(3018135)/51200) | (y < -59*sqrt(3018135)/51200)) & ((y < sqrt(16813999)/2048) | (y < -59*sqrt(3018135)/51200))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1773/2048, y=-2111/1024
+DEBUG:__main__:---------pre-condition 28---------
+DEBUG:__main__:PRECOND_28: ((y > sqrt(11139872935)/51200) | (y > -sqrt(17827991)/2048)) & ((y > sqrt(11139872935)/51200) | (y < -sqrt(11139872935)/51200)) & ((y > -sqrt(17827991)/2048) | (y < sqrt(17827991)/2048)) & ((y < -sqrt(11139872935)/51200) | (y < sqrt(17827991)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=503/512, y=8227/4096
+DEBUG:__main__:---------pre-condition 29---------
+DEBUG:__main__:PRECOND_29: ((y > -sqrt(1057711)/512) | (y > sqrt(660905535)/12800)) & ((y > -sqrt(1057711)/512) | (y < sqrt(1057711)/512)) & ((y > sqrt(660905535)/12800) | (y < -sqrt(660905535)/12800)) & ((y < sqrt(1057711)/512) | (y < -sqrt(660905535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1905/2048, y=1041/512
+DEBUG:__main__:---------pre-condition 30---------
+DEBUG:__main__:PRECOND_30: ((y > sqrt(10836437935)/51200) | (y > -sqrt(17342495)/2048)) & ((y > sqrt(10836437935)/51200) | (y < -sqrt(10836437935)/51200)) & ((y > -sqrt(17342495)/2048) | (y < sqrt(17342495)/2048)) & ((y < -sqrt(10836437935)/51200) | (y < sqrt(17342495)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=443/512, y=-8445/4096
+DEBUG:__main__:---------pre-condition 31---------
+DEBUG:__main__:PRECOND_31: ((y > -sqrt(1114471)/512) | (y > 3*sqrt(77375615)/12800)) & ((y > -sqrt(1114471)/512) | (y < sqrt(1114471)/512)) & ((y > 3*sqrt(77375615)/12800) | (y < -3*sqrt(77375615)/12800)) & ((y < sqrt(1114471)/512) | (y < -3*sqrt(77375615)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=59/64, y=1043/512
+DEBUG:__main__:---------pre-condition 32---------
+DEBUG:__main__:PRECOND_32: ((y > sqrt(10621815)/1600) | (y > -sqrt(16999)/64)) & ((y > sqrt(10621815)/1600) | (y < -sqrt(10621815)/1600)) & ((y > -sqrt(16999)/64) | (y < sqrt(16999)/64)) & ((y < -sqrt(10621815)/1600) | (y < sqrt(16999)/64))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2003/2048, y=2059/1024
+DEBUG:__main__:---------pre-condition 33---------
+DEBUG:__main__:PRECOND_33: ((y > sqrt(10597072935)/51200) | (y > -sqrt(16959511)/2048)) & ((y > sqrt(10597072935)/51200) | (y < -sqrt(10597072935)/51200)) & ((y > -sqrt(16959511)/2048) | (y < sqrt(16959511)/2048)) & ((y < -sqrt(10597072935)/51200) | (y < sqrt(16959511)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1883/2048, y=2087/1024
+DEBUG:__main__:---------pre-condition 34---------
+DEBUG:__main__:PRECOND_34: ((y > sqrt(10888522935)/51200) | (y > -19*sqrt(48271)/2048)) & ((y > sqrt(10888522935)/51200) | (y < -sqrt(10888522935)/51200)) & ((y > -19*sqrt(48271)/2048) | (y < 19*sqrt(48271)/2048)) & ((y < -sqrt(10888522935)/51200) | (y < 19*sqrt(48271)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1861/2048, y=-523/256
+DEBUG:__main__:---------pre-condition 35---------
+DEBUG:__main__:PRECOND_35: ((y > sqrt(10940002935)/51200) | (y > -sqrt(17508199)/2048)) & ((y > sqrt(10940002935)/51200) | (y < -sqrt(10940002935)/51200)) & ((y > -sqrt(17508199)/2048) | (y < sqrt(17508199)/2048)) & ((y < -sqrt(10940002935)/51200) | (y < sqrt(17508199)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1007/1024, y=8225/4096
+DEBUG:__main__:---------pre-condition 36---------
+DEBUG:__main__:PRECOND_36: ((y > sqrt(2642364015)/25600) | (y > -sqrt(4228831)/1024)) & ((y > sqrt(2642364015)/25600) | (y < -sqrt(2642364015)/25600)) & ((y > -sqrt(4228831)/1024) | (y < sqrt(4228831)/1024)) & ((y < -sqrt(2642364015)/25600) | (y < sqrt(4228831)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=955/1024, y=2081/1024
+DEBUG:__main__:---------pre-condition 37---------
+DEBUG:__main__:PRECOND_37: ((y > sqrt(2706129015)/25600) | (y > -sqrt(4330855)/1024)) & ((y > sqrt(2706129015)/25600) | (y < -sqrt(2706129015)/25600)) & ((y > -sqrt(4330855)/1024) | (y < sqrt(4330855)/1024)) & ((y < -sqrt(2706129015)/25600) | (y < sqrt(4330855)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=935/1024, y=1045/512
+DEBUG:__main__:---------pre-condition 38---------
+DEBUG:__main__:PRECOND_38: ((y > -59*sqrt(1255)/1024) | (y > sqrt(2729754015)/25600)) & ((y > -59*sqrt(1255)/1024) | (y < 59*sqrt(1255)/1024)) & ((y > sqrt(2729754015)/25600) | (y < -sqrt(2729754015)/25600)) & ((y < 59*sqrt(1255)/1024) | (y < -sqrt(2729754015)/25600))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=111/128, y=-4221/2048
+DEBUG:__main__:---------pre-condition 39---------
+DEBUG:__main__:PRECOND_39: ((y > sqrt(43489135)/3200) | (y > -sqrt(69599)/128)) & ((y > sqrt(43489135)/3200) | (y < -sqrt(43489135)/3200)) & ((y > -sqrt(69599)/128) | (y < sqrt(69599)/128)) & ((y < -sqrt(43489135)/3200) | (y < sqrt(69599)/128))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=4573/2048, y=15/128
+DEBUG:__main__:---------pre-condition 40---------
+DEBUG:__main__:PRECOND_40: ((y > 3*sqrt(3819215)/51200) | (y > -sqrt(59191)/2048)) & ((y > 3*sqrt(3819215)/51200) | (y < -3*sqrt(3819215)/51200)) & ((y > -sqrt(59191)/2048) | (y < sqrt(59191)/2048)) & ((y < -3*sqrt(3819215)/51200) | (y < sqrt(59191)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=473/512, y=-2085/1024
+DEBUG:__main__:---------pre-condition 41---------
+DEBUG:__main__:PRECOND_41: ((y > -sqrt(1086991)/512) | (y > sqrt(679205535)/12800)) & ((y > -sqrt(1086991)/512) | (y < sqrt(1086991)/512)) & ((y > sqrt(679205535)/12800) | (y < -sqrt(679205535)/12800)) & ((y < sqrt(1086991)/512) | (y < -sqrt(679205535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=945/1024, y=4171/2048
+DEBUG:__main__:---------pre-condition 42---------
+DEBUG:__main__:PRECOND_42: ((y > sqrt(2718004015)/25600) | (y > -sqrt(4349855)/1024)) & ((y > sqrt(2718004015)/25600) | (y < -sqrt(2718004015)/25600)) & ((y > -sqrt(4349855)/1024) | (y < sqrt(4349855)/1024)) & ((y < -sqrt(2718004015)/25600) | (y < sqrt(4349855)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1771/2048, y=-16891/8192
+DEBUG:__main__:---------pre-condition 43---------
+DEBUG:__main__:PRECOND_43: ((y > sqrt(11144302935)/51200) | (y > -sqrt(17835079)/2048)) & ((y > sqrt(11144302935)/51200) | (y < -sqrt(11144302935)/51200)) & ((y > -sqrt(17835079)/2048) | (y < sqrt(17835079)/2048)) & ((y < -sqrt(11144302935)/51200) | (y < sqrt(17835079)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2009/2048, y=4115/2048
+DEBUG:__main__:---------pre-condition 44---------
+DEBUG:__main__:PRECOND_44: ((y > sqrt(10582027935)/51200) | (y > -sqrt(16935439)/2048)) & ((y > sqrt(10582027935)/51200) | (y < -sqrt(10582027935)/51200)) & ((y > -sqrt(16935439)/2048) | (y < sqrt(16935439)/2048)) & ((y < -sqrt(10582027935)/51200) | (y < sqrt(16935439)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2043/2048, y=2049/1024
+DEBUG:__main__:---------pre-condition 45---------
+DEBUG:__main__:PRECOND_45: ((y > sqrt(10495922935)/51200) | (y > -sqrt(16797671)/2048)) & ((y > sqrt(10495922935)/51200) | (y < -sqrt(10495922935)/51200)) & ((y > -sqrt(16797671)/2048) | (y < sqrt(16797671)/2048)) & ((y < -sqrt(10495922935)/51200) | (y < sqrt(16797671)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1783/2048, y=2109/1024
+DEBUG:__main__:---------pre-condition 46---------
+DEBUG:__main__:PRECOND_46: ((y > 3*sqrt(1235294215)/51200) | (y > -sqrt(17792431)/2048)) & ((y > 3*sqrt(1235294215)/51200) | (y < -3*sqrt(1235294215)/51200)) & ((y > -sqrt(17792431)/2048) | (y < sqrt(17792431)/2048)) & ((y < -3*sqrt(1235294215)/51200) | (y < sqrt(17792431)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=937/1024, y=2089/1024
+DEBUG:__main__:---------pre-condition 47---------
+DEBUG:__main__:PRECOND_47: ((y > sqrt(2727414015)/25600) | (y > -sqrt(4364911)/1024)) & ((y > sqrt(2727414015)/25600) | (y < -sqrt(2727414015)/25600)) & ((y > -sqrt(4364911)/1024) | (y < sqrt(4364911)/1024)) & ((y < -sqrt(2727414015)/25600) | (y < sqrt(4364911)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=917/1024, y=-1049/512
+DEBUG:__main__:---------pre-condition 48---------
+DEBUG:__main__:PRECOND_48: ((y > sqrt(2750589015)/25600) | (y > -sqrt(4401991)/1024)) & ((y > sqrt(2750589015)/25600) | (y < -sqrt(2750589015)/25600)) & ((y > -sqrt(4401991)/1024) | (y < sqrt(4401991)/1024)) & ((y < -sqrt(2750589015)/25600) | (y < sqrt(4401991)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=251/256, y=8231/4096
+DEBUG:__main__:---------pre-condition 49---------
+DEBUG:__main__:PRECOND_49: ((y > 3*sqrt(18375935)/6400) | (y > -sqrt(264679)/256)) & ((y > 3*sqrt(18375935)/6400) | (y < -3*sqrt(18375935)/6400)) & ((y > -sqrt(264679)/256) | (y < sqrt(264679)/256)) & ((y < -3*sqrt(18375935)/6400) | (y < sqrt(264679)/256))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2041/2048, y=-4099/2048
+DEBUG:__main__:---------pre-condition 50---------
+DEBUG:__main__:PRECOND_50: ((y > sqrt(10501027935)/51200) | (y > -sqrt(16805839)/2048)) & ((y > sqrt(10501027935)/51200) | (y < -sqrt(10501027935)/51200)) & ((y > -sqrt(16805839)/2048) | (y < sqrt(16805839)/2048)) & ((y < -sqrt(10501027935)/51200) | (y < sqrt(16805839)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=9145/4096, y=31/256
+DEBUG:__main__:---------pre-condition 51---------
+DEBUG:__main__:PRECOND_51: ((y > sqrt(148923615)/102400) | (y > -sqrt(255055)/4096)) & ((y > sqrt(148923615)/102400) | (y < -sqrt(148923615)/102400)) & ((y > -sqrt(255055)/4096) | (y < sqrt(255055)/4096)) & ((y < -sqrt(148923615)/102400) | (y < sqrt(255055)/4096))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=887/1024, y=-8443/4096
+DEBUG:__main__:---------pre-condition 52---------
+DEBUG:__main__:PRECOND_52: ((y > 3*sqrt(309379335)/25600) | (y > -sqrt(4456111)/1024)) & ((y > 3*sqrt(309379335)/25600) | (y < -3*sqrt(309379335)/25600)) & ((y > -sqrt(4456111)/1024) | (y < sqrt(4456111)/1024)) & ((y < -3*sqrt(309379335)/25600) | (y < sqrt(4456111)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=919/1024, y=2097/1024
+DEBUG:__main__:---------pre-condition 53---------
+DEBUG:__main__:PRECOND_53: ((y > sqrt(2748294015)/25600) | (y > -sqrt(4398319)/1024)) & ((y > sqrt(2748294015)/25600) | (y < -sqrt(2748294015)/25600)) & ((y > -sqrt(4398319)/1024) | (y < sqrt(4398319)/1024)) & ((y < -sqrt(2748294015)/25600) | (y < sqrt(4398319)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=255/256, y=8199/4096
+DEBUG:__main__:---------pre-condition 54---------
+DEBUG:__main__:PRECOND_54: ((y > sqrt(164118415)/6400) | (y > -sqrt(262655)/256)) & ((y > sqrt(164118415)/6400) | (y < -sqrt(164118415)/6400)) & ((y > -sqrt(262655)/256) | (y < sqrt(262655)/256)) & ((y < -sqrt(164118415)/6400) | (y < sqrt(262655)/256))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=933/1024, y=2091/1024
+DEBUG:__main__:---------pre-condition 55---------
+DEBUG:__main__:PRECOND_55: ((y > sqrt(2732089015)/25600) | (y > -sqrt(4372391)/1024)) & ((y > sqrt(2732089015)/25600) | (y < -sqrt(2732089015)/25600)) & ((y > -sqrt(4372391)/1024) | (y < sqrt(4372391)/1024)) & ((y < -sqrt(2732089015)/25600) | (y < sqrt(4372391)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=18289/8192, y=253/2048
+DEBUG:__main__:---------pre-condition 56---------
+DEBUG:__main__:PRECOND_56: ((y > -sqrt(1056799)/8192) | (y > sqrt(618556335)/204800)) & ((y > -sqrt(1056799)/8192) | (y < sqrt(1056799)/8192)) & ((y > sqrt(618556335)/204800) | (y < -sqrt(618556335)/204800)) & ((y < sqrt(1056799)/8192) | (y < -sqrt(618556335)/204800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=18291/8192, y=61/512
+DEBUG:__main__:---------pre-condition 57---------
+DEBUG:__main__:PRECOND_57: ((y > sqrt(572831335)/204800) | (y > -sqrt(983639)/8192)) & ((y > sqrt(572831335)/204800) | (y < -sqrt(572831335)/204800)) & ((y > -sqrt(983639)/8192) | (y < sqrt(983639)/8192)) & ((y < -sqrt(572831335)/204800) | (y < sqrt(983639)/8192))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=227/256, y=-1051/512
+DEBUG:__main__:---------pre-condition 58---------
+DEBUG:__main__:PRECOND_58: ((y > sqrt(172553415)/6400) | (y > -sqrt(276151)/256)) & ((y > sqrt(172553415)/6400) | (y < -sqrt(172553415)/6400)) & ((y > -sqrt(276151)/256) | (y < sqrt(276151)/256)) & ((y < -sqrt(172553415)/6400) | (y < sqrt(276151)/256))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=9147/4096, y=29/256
+DEBUG:__main__:---------pre-condition 59---------
+DEBUG:__main__:PRECOND_59: ((y > sqrt(126058615)/102400) | (y > -sqrt(218471)/4096)) & ((y > sqrt(126058615)/102400) | (y < -sqrt(126058615)/102400)) & ((y > -sqrt(218471)/4096) | (y < sqrt(218471)/4096)) & ((y < -sqrt(126058615)/102400) | (y < sqrt(218471)/4096))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=463/512, y=-1047/512
+DEBUG:__main__:---------pre-condition 60---------
+DEBUG:__main__:PRECOND_60: ((y > -sqrt(1096351)/512) | (y > sqrt(685055535)/12800)) & ((y > -sqrt(1096351)/512) | (y < sqrt(1096351)/512)) & ((y > sqrt(685055535)/12800) | (y < -sqrt(685055535)/12800)) & ((y < sqrt(1096351)/512) | (y < -sqrt(685055535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1775/2048, y=-16885/8192
+DEBUG:__main__:---------pre-condition 61---------
+DEBUG:__main__:PRECOND_61: ((y > sqrt(11135437935)/51200) | (y > -sqrt(17820895)/2048)) & ((y > sqrt(11135437935)/51200) | (y < -sqrt(11135437935)/51200)) & ((y > -sqrt(17820895)/2048) | (y < sqrt(17820895)/2048)) & ((y < -sqrt(11135437935)/51200) | (y < sqrt(17820895)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1777/2048, y=-8441/4096
+DEBUG:__main__:---------pre-condition 62---------
+DEBUG:__main__:PRECOND_62: ((y > sqrt(11130997935)/51200) | (y > -sqrt(17813791)/2048)) & ((y > sqrt(11130997935)/51200) | (y < -sqrt(11130997935)/51200)) & ((y > -sqrt(17813791)/2048) | (y < sqrt(17813791)/2048)) & ((y < -sqrt(11130997935)/51200) | (y < sqrt(17813791)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1863/2048, y=-4183/2048
+DEBUG:__main__:---------pre-condition 63---------
+DEBUG:__main__:PRECOND_63: ((y > sqrt(10935347935)/51200) | (y > -sqrt(17500751)/2048)) & ((y > sqrt(10935347935)/51200) | (y < -sqrt(10935347935)/51200)) & ((y > -sqrt(17500751)/2048) | (y < sqrt(17500751)/2048)) & ((y < -sqrt(10935347935)/51200) | (y < sqrt(17500751)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2005/2048, y=-4117/2048
+DEBUG:__main__:---------pre-condition 64---------
+DEBUG:__main__:PRECOND_64: ((y > sqrt(10592062935)/51200) | (y > -11*sqrt(140095)/2048)) & ((y > sqrt(10592062935)/51200) | (y < -sqrt(10592062935)/51200)) & ((y > -11*sqrt(140095)/2048) | (y < 11*sqrt(140095)/2048)) & ((y < -sqrt(10592062935)/51200) | (y < 11*sqrt(140095)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=29/32, y=-2093/1024
+DEBUG:__main__:---------pre-condition 65---------
+DEBUG:__main__:PRECOND_65: ((y > sqrt(2673735)/800) | (y > -sqrt(4279)/32)) & ((y > sqrt(2673735)/800) | (y < -sqrt(2673735)/800)) & ((y > -sqrt(4279)/32) | (y < sqrt(4279)/32)) & ((y < -sqrt(2673735)/800) | (y < sqrt(4279)/32))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=455/512, y=-2101/1024
+DEBUG:__main__:---------pre-condition 66---------
+DEBUG:__main__:PRECOND_66: ((y > -sqrt(1103695)/512) | (y > sqrt(689645535)/12800)) & ((y > -sqrt(1103695)/512) | (y < sqrt(1103695)/512)) & ((y > sqrt(689645535)/12800) | (y < -sqrt(689645535)/12800)) & ((y < sqrt(1103695)/512) | (y < -sqrt(689645535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2019/2048, y=-2055/1024
+DEBUG:__main__:---------pre-condition 67---------
+DEBUG:__main__:PRECOND_67: ((y > sqrt(10556852935)/51200) | (y > -sqrt(16895159)/2048)) & ((y > sqrt(10556852935)/51200) | (y < -sqrt(10556852935)/51200)) & ((y > -sqrt(16895159)/2048) | (y < sqrt(16895159)/2048)) & ((y < -sqrt(10556852935)/51200) | (y < sqrt(16895159)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=911/1024, y=4201/2048
+DEBUG:__main__:---------pre-condition 68---------
+DEBUG:__main__:PRECOND_68: ((y > sqrt(2757444015)/25600) | (y > -sqrt(4412959)/1024)) & ((y > sqrt(2757444015)/25600) | (y < -sqrt(2757444015)/25600)) & ((y > -sqrt(4412959)/1024) | (y < sqrt(4412959)/1024)) & ((y < -sqrt(2757444015)/25600) | (y < sqrt(4412959)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2027/2048, y=2053/1024
+DEBUG:__main__:---------pre-condition 69---------
+DEBUG:__main__:PRECOND_69: ((y > sqrt(10536622935)/51200) | (y > -sqrt(16862791)/2048)) & ((y > sqrt(10536622935)/51200) | (y < -sqrt(10536622935)/51200)) & ((y > -sqrt(16862791)/2048) | (y < sqrt(16862791)/2048)) & ((y < -sqrt(10536622935)/51200) | (y < sqrt(16862791)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1797/2048, y=-1053/512
+DEBUG:__main__:---------pre-condition 70---------
+DEBUG:__main__:PRECOND_70: ((y > sqrt(11086322935)/51200) | (y > -sqrt(17742311)/2048)) & ((y > sqrt(11086322935)/51200) | (y < -sqrt(11086322935)/51200)) & ((y > -sqrt(17742311)/2048) | (y < sqrt(17742311)/2048)) & ((y < -sqrt(11086322935)/51200) | (y < sqrt(17742311)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=18293/8192, y=117/1024
+DEBUG:__main__:---------pre-condition 71---------
+DEBUG:__main__:PRECOND_71: ((y > 3*sqrt(58566815)/204800) | (y > -sqrt(910471)/8192)) & ((y > 3*sqrt(58566815)/204800) | (y < -3*sqrt(58566815)/204800)) & ((y > -sqrt(910471)/8192) | (y < sqrt(910471)/8192)) & ((y < -3*sqrt(58566815)/204800) | (y < sqrt(910471)/8192))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1005/1024, y=8229/4096
+DEBUG:__main__:---------pre-condition 72---------
+DEBUG:__main__:PRECOND_72: ((y > sqrt(2644879015)/25600) | (y > -sqrt(4232855)/1024)) & ((y > sqrt(2644879015)/25600) | (y < -sqrt(2644879015)/25600)) & ((y > -sqrt(4232855)/1024) | (y < sqrt(4232855)/1024)) & ((y < -sqrt(2644879015)/25600) | (y < sqrt(4232855)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2001/2048, y=-4119/2048
+DEBUG:__main__:---------pre-condition 73---------
+DEBUG:__main__:PRECOND_73: ((y > sqrt(10602077935)/51200) | (y > -sqrt(16967519)/2048)) & ((y > sqrt(10602077935)/51200) | (y < -sqrt(10602077935)/51200)) & ((y > -sqrt(16967519)/2048) | (y < sqrt(16967519)/2048)) & ((y < -sqrt(10602077935)/51200) | (y < sqrt(16967519)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=931/1024, y=-8367/4096
+DEBUG:__main__:---------pre-condition 74---------
+DEBUG:__main__:PRECOND_74: ((y > 3*sqrt(303824335)/25600) | (y > -sqrt(4376119)/1024)) & ((y > 3*sqrt(303824335)/25600) | (y < -3*sqrt(303824335)/25600)) & ((y > -sqrt(4376119)/1024) | (y < sqrt(4376119)/1024)) & ((y < -3*sqrt(303824335)/25600) | (y < sqrt(4376119)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=459/512, y=-4195/2048
+DEBUG:__main__:---------pre-condition 75---------
+DEBUG:__main__:PRECOND_75: ((y > -sqrt(1100039)/512) | (y > sqrt(687360535)/12800)) & ((y > -sqrt(1100039)/512) | (y < sqrt(1100039)/512)) & ((y > sqrt(687360535)/12800) | (y < -sqrt(687360535)/12800)) & ((y < sqrt(1100039)/512) | (y < -sqrt(687360535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=947/1024, y=4169/2048
+DEBUG:__main__:---------pre-condition 76---------
+DEBUG:__main__:PRECOND_76: ((y > sqrt(2715639015)/25600) | (y > -sqrt(4346071)/1024)) & ((y > sqrt(2715639015)/25600) | (y < -sqrt(2715639015)/25600)) & ((y > -sqrt(4346071)/1024) | (y < sqrt(4346071)/1024)) & ((y < -sqrt(2715639015)/25600) | (y < sqrt(4346071)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=927/1024, y=4187/2048
+DEBUG:__main__:---------pre-condition 77---------
+DEBUG:__main__:PRECOND_77: ((y > sqrt(2739064015)/25600) | (y > -sqrt(4383551)/1024)) & ((y > sqrt(2739064015)/25600) | (y < -sqrt(2739064015)/25600)) & ((y > -sqrt(4383551)/1024) | (y < sqrt(4383551)/1024)) & ((y < -sqrt(2739064015)/25600) | (y < sqrt(4383551)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=909/1024, y=-4203/2048
+DEBUG:__main__:---------pre-condition 78---------
+DEBUG:__main__:PRECOND_78: ((y > sqrt(2759719015)/25600) | (y > -sqrt(4416599)/1024)) & ((y > sqrt(2759719015)/25600) | (y < -sqrt(2759719015)/25600)) & ((y > -sqrt(4416599)/1024) | (y < sqrt(4416599)/1024)) & ((y < -sqrt(2759719015)/25600) | (y < sqrt(4416599)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1003/1024, y=8233/4096
+DEBUG:__main__:---------pre-condition 79---------
+DEBUG:__main__:PRECOND_79: ((y > 27*sqrt(3631535)/25600) | (y > -sqrt(4236871)/1024)) & ((y > 27*sqrt(3631535)/25600) | (y < -27*sqrt(3631535)/25600)) & ((y > -sqrt(4236871)/1024) | (y < sqrt(4236871)/1024)) & ((y < -27*sqrt(3631535)/25600) | (y < sqrt(4236871)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1891/2048, y=-8341/4096
+DEBUG:__main__:---------pre-condition 80---------
+DEBUG:__main__:PRECOND_80: ((y > 3*sqrt(1207739215)/51200) | (y > -sqrt(17395639)/2048)) & ((y > 3*sqrt(1207739215)/51200) | (y < -3*sqrt(1207739215)/51200)) & ((y > -sqrt(17395639)/2048) | (y < sqrt(17395639)/2048)) & ((y < -3*sqrt(1207739215)/51200) | (y < sqrt(17395639)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=125/128, y=-8239/4096
+DEBUG:__main__:---------pre-condition 81---------
+DEBUG:__main__:PRECOND_81: ((y > sqrt(41424135)/3200) | (y > -sqrt(66295)/128)) & ((y > sqrt(41424135)/3200) | (y < -sqrt(41424135)/3200)) & ((y > -sqrt(66295)/128) | (y < sqrt(66295)/128)) & ((y < -sqrt(41424135)/3200) | (y < sqrt(66295)/128))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=9149/4096, y=13/128
+DEBUG:__main__:---------pre-condition 82---------
+DEBUG:__main__:PRECOND_82: ((y > -sqrt(181879)/4096) | (y > 53*sqrt(36735)/102400)) & ((y > -sqrt(181879)/4096) | (y < sqrt(181879)/4096)) & ((y > 53*sqrt(36735)/102400) | (y < -53*sqrt(36735)/102400)) & ((y < sqrt(181879)/4096) | (y < -53*sqrt(36735)/102400))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1859/2048, y=-4185/2048
+DEBUG:__main__:---------pre-condition 83---------
+DEBUG:__main__:PRECOND_83: ((y > sqrt(10944652935)/51200) | (y > -sqrt(17515639)/2048)) & ((y > sqrt(10944652935)/51200) | (y < -sqrt(10944652935)/51200)) & ((y > -sqrt(17515639)/2048) | (y < sqrt(17515639)/2048)) & ((y < -sqrt(10944652935)/51200) | (y < sqrt(17515639)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=18299/8192, y=203/2048
+DEBUG:__main__:---------pre-condition 84---------
+DEBUG:__main__:PRECOND_84: ((y > sqrt(389881335)/204800) | (y > -sqrt(690919)/8192)) & ((y > sqrt(389881335)/204800) | (y < -sqrt(389881335)/204800)) & ((y > -sqrt(690919)/8192) | (y < sqrt(690919)/8192)) & ((y < -sqrt(389881335)/204800) | (y < sqrt(690919)/8192))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2045/2048, y=4097/2048
+DEBUG:__main__:---------pre-condition 85---------
+DEBUG:__main__:PRECOND_85: ((y > sqrt(10490812935)/51200) | (y > -sqrt(16789495)/2048)) & ((y > sqrt(10490812935)/51200) | (y < -sqrt(10490812935)/51200)) & ((y > -sqrt(16789495)/2048) | (y < sqrt(16789495)/2048)) & ((y < -sqrt(10490812935)/51200) | (y < sqrt(16789495)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=7/8, y=-2107/1024
+DEBUG:__main__:---------pre-condition 86---------
+DEBUG:__main__:PRECOND_86: ((y > 3*sqrt(18815)/200) | (y > -sqrt(271)/8)) & ((y > 3*sqrt(18815)/200) | (y < -3*sqrt(18815)/200)) & ((y > -sqrt(271)/8) | (y < sqrt(271)/8)) & ((y < -3*sqrt(18815)/200) | (y < sqrt(271)/8))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2021/2048, y=-4109/2048
+DEBUG:__main__:---------pre-condition 87---------
+DEBUG:__main__:PRECOND_87: ((y > sqrt(10551802935)/51200) | (y > -sqrt(16887079)/2048)) & ((y > sqrt(10551802935)/51200) | (y < -sqrt(10551802935)/51200)) & ((y > -sqrt(16887079)/2048) | (y < sqrt(16887079)/2048)) & ((y < -sqrt(10551802935)/51200) | (y < sqrt(16887079)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2287/1024, y=27/256
+DEBUG:__main__:---------pre-condition 88---------
+DEBUG:__main__:PRECOND_88: ((y > -sqrt(12511)/1024) | (y > sqrt(7164015)/25600)) & ((y > -sqrt(12511)/1024) | (y < sqrt(12511)/1024)) & ((y > sqrt(7164015)/25600) | (y < -sqrt(7164015)/25600)) & ((y < sqrt(12511)/1024) | (y < -sqrt(7164015)/25600))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1829/2048, y=2099/1024
+DEBUG:__main__:---------pre-condition 89---------
+DEBUG:__main__:PRECOND_89: ((y > sqrt(11013802935)/51200) | (y > -sqrt(17626279)/2048)) & ((y > sqrt(11013802935)/51200) | (y < -sqrt(11013802935)/51200)) & ((y > -sqrt(17626279)/2048) | (y < sqrt(17626279)/2048)) & ((y < -sqrt(11013802935)/51200) | (y < sqrt(17626279)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=511/512, y=8195/4096
+DEBUG:__main__:---------pre-condition 90---------
+DEBUG:__main__:PRECOND_90: ((y > -sqrt(1049599)/512) | (y > 9*sqrt(8096735)/12800)) & ((y > -sqrt(1049599)/512) | (y < sqrt(1049599)/512)) & ((y > 9*sqrt(8096735)/12800) | (y < -9*sqrt(8096735)/12800)) & ((y < sqrt(1049599)/512) | (y < -9*sqrt(8096735)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=18297/8192, y=107/1024
+DEBUG:__main__:---------pre-condition 91---------
+DEBUG:__main__:PRECOND_91: ((y > sqrt(435626335)/204800) | (y > -sqrt(764111)/8192)) & ((y > sqrt(435626335)/204800) | (y < -sqrt(435626335)/204800)) & ((y > -sqrt(764111)/8192) | (y < sqrt(764111)/8192)) & ((y < -sqrt(435626335)/204800) | (y < sqrt(764111)/8192))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=993/1024, y=-2063/1024
+DEBUG:__main__:---------pre-condition 92---------
+DEBUG:__main__:PRECOND_92: ((y > sqrt(2659864015)/25600) | (y > -sqrt(4256831)/1024)) & ((y > sqrt(2659864015)/25600) | (y < -sqrt(2659864015)/25600)) & ((y > -sqrt(4256831)/1024) | (y < sqrt(4256831)/1024)) & ((y < -sqrt(2659864015)/25600) | (y < sqrt(4256831)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2035/2048, y=2051/1024
+DEBUG:__main__:---------pre-condition 93---------
+DEBUG:__main__:PRECOND_93: ((y > 3*sqrt(1168479215)/51200) | (y > -sqrt(16830295)/2048)) & ((y > 3*sqrt(1168479215)/51200) | (y < -3*sqrt(1168479215)/51200)) & ((y > -sqrt(16830295)/2048) | (y < sqrt(16830295)/2048)) & ((y < -3*sqrt(1168479215)/51200) | (y < sqrt(16830295)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=31/32, y=-4127/2048
+DEBUG:__main__:---------pre-condition 94---------
+DEBUG:__main__:PRECOND_94: ((y > sqrt(2598735)/800) | (y > -sqrt(4159)/32)) & ((y > sqrt(2598735)/800) | (y < -sqrt(2598735)/800)) & ((y > -sqrt(4159)/32) | (y < sqrt(4159)/32)) & ((y < -sqrt(2598735)/800) | (y < sqrt(4159)/32))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=929/1024, y=-8371/4096
+DEBUG:__main__:---------pre-condition 95---------
+DEBUG:__main__:PRECOND_95: ((y > sqrt(2736744015)/25600) | (y > -sqrt(4379839)/1024)) & ((y > sqrt(2736744015)/25600) | (y < -sqrt(2736744015)/25600)) & ((y > -sqrt(4379839)/1024) | (y < sqrt(4379839)/1024)) & ((y < -sqrt(2736744015)/25600) | (y < sqrt(4379839)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1785/2048, y=-4217/2048
+DEBUG:__main__:---------pre-condition 96---------
+DEBUG:__main__:PRECOND_96: ((y > sqrt(11113187935)/51200) | (y > -sqrt(17785295)/2048)) & ((y > sqrt(11113187935)/51200) | (y < -sqrt(11113187935)/51200)) & ((y > -sqrt(17785295)/2048) | (y < sqrt(17785295)/2048)) & ((y < -sqrt(11113187935)/51200) | (y < sqrt(17785295)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=465/512, y=8369/4096
+DEBUG:__main__:---------pre-condition 97---------
+DEBUG:__main__:PRECOND_97: ((y > -sqrt(1094495)/512) | (y > sqrt(683895535)/12800)) & ((y > -sqrt(1094495)/512) | (y < sqrt(1094495)/512)) & ((y > sqrt(683895535)/12800) | (y < -sqrt(683895535)/12800)) & ((y < sqrt(1094495)/512) | (y < -sqrt(683895535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1817/2048, y=-67251/32768
+DEBUG:__main__:---------pre-condition 98---------
+DEBUG:__main__:PRECOND_98: ((y > 3*sqrt(1226794215)/51200) | (y > -sqrt(17670031)/2048)) & ((y > 3*sqrt(1226794215)/51200) | (y < -3*sqrt(1226794215)/51200)) & ((y > -sqrt(17670031)/2048) | (y < sqrt(17670031)/2048)) & ((y < -3*sqrt(1226794215)/51200) | (y < sqrt(17670031)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=223/256, y=-8435/4096
+DEBUG:__main__:---------pre-condition 99---------
+DEBUG:__main__:PRECOND_99: ((y > sqrt(173678415)/6400) | (y > -sqrt(277951)/256)) & ((y > sqrt(173678415)/6400) | (y < -sqrt(173678415)/6400)) & ((y > -sqrt(277951)/256) | (y < sqrt(277951)/256)) & ((y < -sqrt(173678415)/6400) | (y < sqrt(277951)/256))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=893/1024, y=-8433/4096
+DEBUG:__main__:---------pre-condition 100---------
+DEBUG:__main__:PRECOND_100: ((y > sqrt(2777739015)/25600) | (y > -sqrt(4445431)/1024)) & ((y > sqrt(2777739015)/25600) | (y < -sqrt(2777739015)/25600)) & ((y > -sqrt(4445431)/1024) | (y < sqrt(4445431)/1024)) & ((y < -sqrt(2777739015)/25600) | (y < sqrt(4445431)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1011/1024, y=8217/4096
+DEBUG:__main__:---------pre-condition 101---------
+DEBUG:__main__:PRECOND_101: ((y > sqrt(2637319015)/25600) | (y > -sqrt(4220759)/1024)) & ((y > sqrt(2637319015)/25600) | (y < -sqrt(2637319015)/25600)) & ((y > -sqrt(4220759)/1024) | (y < sqrt(4220759)/1024)) & ((y < -sqrt(2637319015)/25600) | (y < sqrt(4220759)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=445/512, y=-4219/2048
+DEBUG:__main__:---------pre-condition 102---------
+DEBUG:__main__:PRECOND_102: ((y > -sqrt(1112695)/512) | (y > sqrt(695270535)/12800)) & ((y > -sqrt(1112695)/512) | (y < sqrt(1112695)/512)) & ((y > sqrt(695270535)/12800) | (y < -sqrt(695270535)/12800)) & ((y < sqrt(1112695)/512) | (y < -sqrt(695270535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=897/1024, y=-4213/2048
+DEBUG:__main__:---------pre-condition 103---------
+DEBUG:__main__:PRECOND_103: ((y > sqrt(2773264015)/25600) | (y > -sqrt(4438271)/1024)) & ((y > sqrt(2773264015)/25600) | (y < -sqrt(2773264015)/25600)) & ((y > -sqrt(4438271)/1024) | (y < sqrt(4438271)/1024)) & ((y < -sqrt(2773264015)/25600) | (y < sqrt(4438271)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1827/2048, y=4199/2048
+DEBUG:__main__:---------pre-condition 104---------
+DEBUG:__main__:PRECOND_104: ((y > sqrt(11018372935)/51200) | (y > -sqrt(17633591)/2048)) & ((y > sqrt(11018372935)/51200) | (y < -sqrt(11018372935)/51200)) & ((y > -sqrt(17633591)/2048) | (y < sqrt(17633591)/2048)) & ((y < -sqrt(11018372935)/51200) | (y < sqrt(17633591)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=117/128, y=-4179/2048
+DEBUG:__main__:---------pre-condition 105---------
+DEBUG:__main__:PRECOND_105: ((y > sqrt(42634135)/3200) | (y > -31*sqrt(71)/128)) & ((y > sqrt(42634135)/3200) | (y < -sqrt(42634135)/3200)) & ((y > -31*sqrt(71)/128) | (y < 31*sqrt(71)/128)) & ((y < -sqrt(42634135)/3200) | (y < 31*sqrt(71)/128))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=895/1024, y=-4215/2048
+DEBUG:__main__:---------pre-condition 106---------
+DEBUG:__main__:PRECOND_106: ((y > 3*sqrt(308389335)/25600) | (y > -sqrt(4441855)/1024)) & ((y > 3*sqrt(308389335)/25600) | (y < -3*sqrt(308389335)/25600)) & ((y > -sqrt(4441855)/1024) | (y < sqrt(4441855)/1024)) & ((y < -3*sqrt(308389335)/25600) | (y < sqrt(4441855)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=9153/4096, y=5/64
+DEBUG:__main__:---------pre-condition 107---------
+DEBUG:__main__:PRECOND_107: ((y > -sqrt(108671)/4096) | (y > sqrt(57433615)/102400)) & ((y > -sqrt(108671)/4096) | (y < sqrt(108671)/4096)) & ((y > sqrt(57433615)/102400) | (y < -sqrt(57433615)/102400)) & ((y < sqrt(108671)/4096) | (y < -sqrt(57433615)/102400))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=237/256, y=8337/4096
+DEBUG:__main__:---------pre-condition 108---------
+DEBUG:__main__:PRECOND_108: ((y > sqrt(169653415)/6400) | (y > -sqrt(271511)/256)) & ((y > sqrt(169653415)/6400) | (y < -sqrt(169653415)/6400)) & ((y > -sqrt(271511)/256) | (y < sqrt(271511)/256)) & ((y < -sqrt(169653415)/6400) | (y < sqrt(271511)/256))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1819/2048, y=-8405/4096
+DEBUG:__main__:---------pre-condition 109---------
+DEBUG:__main__:PRECOND_109: ((y > 3*sqrt(1226289215)/51200) | (y > -sqrt(17662759)/2048)) & ((y > 3*sqrt(1226289215)/51200) | (y < -3*sqrt(1226289215)/51200)) & ((y > -sqrt(17662759)/2048) | (y < sqrt(17662759)/2048)) & ((y < -3*sqrt(1226289215)/51200) | (y < sqrt(17662759)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1001/1024, y=-8237/4096
+DEBUG:__main__:---------pre-condition 110---------
+DEBUG:__main__:PRECOND_110: ((y > sqrt(2649894015)/25600) | (y > -sqrt(4240879)/1024)) & ((y > sqrt(2649894015)/25600) | (y < -sqrt(2649894015)/25600)) & ((y > -sqrt(4240879)/1024) | (y < sqrt(4240879)/1024)) & ((y < -sqrt(2649894015)/25600) | (y < sqrt(4240879)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1779/2048, y=-8439/4096
+DEBUG:__main__:---------pre-condition 111---------
+DEBUG:__main__:PRECOND_111: ((y > sqrt(11126552935)/51200) | (y > -sqrt(17806679)/2048)) & ((y > sqrt(11126552935)/51200) | (y < -sqrt(11126552935)/51200)) & ((y > -sqrt(17806679)/2048) | (y < sqrt(17806679)/2048)) & ((y < -sqrt(11126552935)/51200) | (y < sqrt(17806679)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=891/1024, y=-8437/4096
+DEBUG:__main__:---------pre-condition 112---------
+DEBUG:__main__:PRECOND_112: ((y > sqrt(2779969015)/25600) | (y > -sqrt(4448999)/1024)) & ((y > sqrt(2779969015)/25600) | (y < -sqrt(2779969015)/25600)) & ((y > -sqrt(4448999)/1024) | (y < sqrt(4448999)/1024)) & ((y < -sqrt(2779969015)/25600) | (y < sqrt(4448999)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1985/2048, y=8253/4096
+DEBUG:__main__:---------pre-condition 113---------
+DEBUG:__main__:PRECOND_113: ((y > sqrt(10641937935)/51200) | (y > -sqrt(17031295)/2048)) & ((y > sqrt(10641937935)/51200) | (y < -sqrt(10641937935)/51200)) & ((y > -sqrt(17031295)/2048) | (y < sqrt(17031295)/2048)) & ((y < -sqrt(10641937935)/51200) | (y < sqrt(17031295)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1901/2048, y=2083/1024
+DEBUG:__main__:---------pre-condition 114---------
+DEBUG:__main__:PRECOND_114: ((y > sqrt(10845952935)/51200) | (y > -sqrt(17357719)/2048)) & ((y > sqrt(10845952935)/51200) | (y < -sqrt(10845952935)/51200)) & ((y > -sqrt(17357719)/2048) | (y < sqrt(17357719)/2048)) & ((y < -sqrt(10845952935)/51200) | (y < sqrt(17357719)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1853/2048, y=-66999/32768
+DEBUG:__main__:---------pre-condition 115---------
+DEBUG:__main__:PRECOND_115: ((y > 3*sqrt(1217619215)/51200) | (y > -sqrt(17537911)/2048)) & ((y > 3*sqrt(1217619215)/51200) | (y < -3*sqrt(1217619215)/51200)) & ((y > -sqrt(17537911)/2048) | (y < sqrt(17537911)/2048)) & ((y < -3*sqrt(1217619215)/51200) | (y < sqrt(17537911)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=501/512, y=8235/4096
+DEBUG:__main__:---------pre-condition 116---------
+DEBUG:__main__:PRECOND_116: ((y > -sqrt(1059719)/512) | (y > sqrt(662160535)/12800)) & ((y > -sqrt(1059719)/512) | (y < sqrt(1059719)/512)) & ((y > sqrt(662160535)/12800) | (y < -sqrt(662160535)/12800)) & ((y < sqrt(1059719)/512) | (y < -sqrt(662160535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1023/1024, y=8193/4096
+DEBUG:__main__:---------pre-condition 117---------
+DEBUG:__main__:PRECOND_117: ((y > sqrt(2622064015)/25600) | (y > -sqrt(4196351)/1024)) & ((y > sqrt(2622064015)/25600) | (y < -sqrt(2622064015)/25600)) & ((y > -sqrt(4196351)/1024) | (y < sqrt(4196351)/1024)) & ((y < -sqrt(2622064015)/25600) | (y < sqrt(4196351)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1835/2048, y=8391/4096
+DEBUG:__main__:---------pre-condition 118---------
+DEBUG:__main__:PRECOND_118: ((y > 3*sqrt(1222229215)/51200) | (y > -sqrt(17604295)/2048)) & ((y > 3*sqrt(1222229215)/51200) | (y < -3*sqrt(1222229215)/51200)) & ((y > -sqrt(17604295)/2048) | (y < sqrt(17604295)/2048)) & ((y < -3*sqrt(1222229215)/51200) | (y < sqrt(17604295)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=143/64, y=11/128
+DEBUG:__main__:---------pre-condition 119---------
+DEBUG:__main__:PRECOND_119: ((y > sqrt(16815)/1600) | (y > -sqrt(31)/64)) & ((y > sqrt(16815)/1600) | (y < -sqrt(16815)/1600)) & ((y > -sqrt(31)/64) | (y < sqrt(31)/64)) & ((y < -sqrt(16815)/1600) | (y < sqrt(31)/64))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1983/2048, y=-8255/4096
+DEBUG:__main__:---------pre-condition 120---------
+DEBUG:__main__:PRECOND_120: ((y > sqrt(10646897935)/51200) | (y > -sqrt(17039231)/2048)) & ((y > sqrt(10646897935)/51200) | (y < -sqrt(10646897935)/51200)) & ((y > -sqrt(17039231)/2048) | (y < sqrt(17039231)/2048)) & ((y < -sqrt(10646897935)/51200) | (y < sqrt(17039231)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=57/64, y=-8401/4096
+DEBUG:__main__:---------pre-condition 121---------
+DEBUG:__main__:PRECOND_121: ((y > sqrt(10766815)/1600) | (y > -sqrt(17231)/64)) & ((y > sqrt(10766815)/1600) | (y < -sqrt(10766815)/1600)) & ((y > -sqrt(17231)/64) | (y < sqrt(17231)/64)) & ((y < -sqrt(10766815)/1600) | (y < sqrt(17231)/64))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=239/256, y=-4161/2048
+DEBUG:__main__:---------pre-condition 122---------
+DEBUG:__main__:PRECOND_122: ((y > sqrt(169058415)/6400) | (y > -sqrt(270559)/256)) & ((y > sqrt(169058415)/6400) | (y < -sqrt(169058415)/6400)) & ((y > -sqrt(270559)/256) | (y < sqrt(270559)/256)) & ((y < -sqrt(169058415)/6400) | (y < sqrt(270559)/256))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2033/2048, y=4103/2048
+DEBUG:__main__:---------pre-condition 123---------
+DEBUG:__main__:PRECOND_123: ((y > 3*sqrt(1169044215)/51200) | (y > -sqrt(16838431)/2048)) & ((y > 3*sqrt(1169044215)/51200) | (y < -3*sqrt(1169044215)/51200)) & ((y > -sqrt(16838431)/2048) | (y < sqrt(16838431)/2048)) & ((y < -3*sqrt(1169044215)/51200) | (y < sqrt(16838431)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=497/512, y=-4125/2048
+DEBUG:__main__:---------pre-condition 124---------
+DEBUG:__main__:PRECOND_124: ((y > 3*sqrt(73850615)/12800) | (y > -11*sqrt(8791)/512)) & ((y > 3*sqrt(73850615)/12800) | (y < -3*sqrt(73850615)/12800)) & ((y > -11*sqrt(8791)/512) | (y < 11*sqrt(8791)/512)) & ((y < -3*sqrt(73850615)/12800) | (y < 11*sqrt(8791)/512))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2029/2048, y=4105/2048
+DEBUG:__main__:---------pre-condition 125---------
+DEBUG:__main__:PRECOND_125: ((y > sqrt(10531552935)/51200) | (y > -sqrt(16854679)/2048)) & ((y > sqrt(10531552935)/51200) | (y < -sqrt(10531552935)/51200)) & ((y > -sqrt(16854679)/2048) | (y < sqrt(16854679)/2048)) & ((y < -sqrt(10531552935)/51200) | (y < sqrt(16854679)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1791/2048, y=-8429/4096
+DEBUG:__main__:---------pre-condition 126---------
+DEBUG:__main__:PRECOND_126: ((y > sqrt(11099777935)/51200) | (y > -sqrt(17763839)/2048)) & ((y > sqrt(11099777935)/51200) | (y < -sqrt(11099777935)/51200)) & ((y > -sqrt(17763839)/2048) | (y < sqrt(17763839)/2048)) & ((y < -sqrt(11099777935)/51200) | (y < sqrt(17763839)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1793/2048, y=8427/4096
+DEBUG:__main__:---------pre-condition 127---------
+DEBUG:__main__:PRECOND_127: ((y > sqrt(11095297935)/51200) | (y > -sqrt(17756671)/2048)) & ((y > sqrt(11095297935)/51200) | (y < -sqrt(11095297935)/51200)) & ((y > -sqrt(17756671)/2048) | (y < sqrt(17756671)/2048)) & ((y < -sqrt(11095297935)/51200) | (y < sqrt(17756671)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=18305/8192, y=165/2048
+DEBUG:__main__:---------pre-condition 128---------
+DEBUG:__main__:PRECOND_128: ((y > sqrt(252616335)/204800) | (y > -11*sqrt(3895)/8192)) & ((y > sqrt(252616335)/204800) | (y < -sqrt(252616335)/204800)) & ((y > -11*sqrt(3895)/8192) | (y < 11*sqrt(3895)/8192)) & ((y < -sqrt(252616335)/204800) | (y < 11*sqrt(3895)/8192))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=457/512, y=-8397/4096
+DEBUG:__main__:---------pre-condition 129---------
+DEBUG:__main__:PRECOND_129: ((y > -sqrt(1101871)/512) | (y > 3*sqrt(76500615)/12800)) & ((y > -sqrt(1101871)/512) | (y < sqrt(1101871)/512)) & ((y > 3*sqrt(76500615)/12800) | (y < -3*sqrt(76500615)/12800)) & ((y < sqrt(1101871)/512) | (y < -3*sqrt(76500615)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=447/512, y=-8431/4096
+DEBUG:__main__:---------pre-condition 130---------
+DEBUG:__main__:PRECOND_130: ((y > -sqrt(1110911)/512) | (y > sqrt(694155535)/12800)) & ((y > -sqrt(1110911)/512) | (y < sqrt(1110911)/512)) & ((y > sqrt(694155535)/12800) | (y < -sqrt(694155535)/12800)) & ((y < sqrt(1110911)/512) | (y < -sqrt(694155535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1781/2048, y=-16875/8192
+DEBUG:__main__:---------pre-condition 131---------
+DEBUG:__main__:PRECOND_131: ((y > 3*sqrt(1235789215)/51200) | (y > -sqrt(17799559)/2048)) & ((y > 3*sqrt(1235789215)/51200) | (y < -3*sqrt(1235789215)/51200)) & ((y > -sqrt(17799559)/2048) | (y < sqrt(17799559)/2048)) & ((y < -3*sqrt(1235789215)/51200) | (y < sqrt(17799559)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1855/2048, y=-16747/8192
+DEBUG:__main__:---------pre-condition 132---------
+DEBUG:__main__:PRECOND_132: ((y > 3*sqrt(1217104215)/51200) | (y > -sqrt(17530495)/2048)) & ((y > 3*sqrt(1217104215)/51200) | (y < -3*sqrt(1217104215)/51200)) & ((y > -sqrt(17530495)/2048) | (y < sqrt(17530495)/2048)) & ((y < -3*sqrt(1217104215)/51200) | (y < sqrt(17530495)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1821/2048, y=-8403/4096
+DEBUG:__main__:---------pre-condition 133---------
+DEBUG:__main__:PRECOND_133: ((y > sqrt(11032052935)/51200) | (y > -sqrt(17655479)/2048)) & ((y > sqrt(11032052935)/51200) | (y < -sqrt(11032052935)/51200)) & ((y > -sqrt(17655479)/2048) | (y < sqrt(17655479)/2048)) & ((y < -sqrt(11032052935)/51200) | (y < sqrt(17655479)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=9151/4096, y=23/256
+DEBUG:__main__:---------pre-condition 134---------
+DEBUG:__main__:PRECOND_134: ((y > -sqrt(145279)/4096) | (y > 3*sqrt(8923735)/102400)) & ((y > -sqrt(145279)/4096) | (y < sqrt(145279)/4096)) & ((y > 3*sqrt(8923735)/102400) | (y < -3*sqrt(8923735)/102400)) & ((y < sqrt(145279)/4096) | (y < -3*sqrt(8923735)/102400))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=901/1024, y=-2105/1024
+DEBUG:__main__:---------pre-condition 135---------
+DEBUG:__main__:PRECOND_135: ((y > sqrt(2768769015)/25600) | (y > -sqrt(4431079)/1024)) & ((y > sqrt(2768769015)/25600) | (y < -sqrt(2768769015)/25600)) & ((y > -sqrt(4431079)/1024) | (y < sqrt(4431079)/1024)) & ((y < -sqrt(2768769015)/25600) | (y < sqrt(4431079)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1789/2048, y=-16861/8192
+DEBUG:__main__:---------pre-condition 136---------
+DEBUG:__main__:PRECOND_136: ((y > sqrt(11104252935)/51200) | (y > -sqrt(17770999)/2048)) & ((y > sqrt(11104252935)/51200) | (y < -sqrt(11104252935)/51200)) & ((y > -sqrt(17770999)/2048) | (y < sqrt(17770999)/2048)) & ((y < -sqrt(11104252935)/51200) | (y < sqrt(17770999)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1857/2048, y=-16743/8192
+DEBUG:__main__:---------pre-condition 137---------
+DEBUG:__main__:PRECOND_137: ((y > sqrt(10949297935)/51200) | (y > -sqrt(17523071)/2048)) & ((y > sqrt(10949297935)/51200) | (y < -sqrt(10949297935)/51200)) & ((y > -sqrt(17523071)/2048) | (y < sqrt(17523071)/2048)) & ((y < -sqrt(10949297935)/51200) | (y < sqrt(17523071)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1899/2048, y=-4167/2048
+DEBUG:__main__:---------pre-condition 138---------
+DEBUG:__main__:PRECOND_138: ((y > sqrt(10850702935)/51200) | (y > -sqrt(17365319)/2048)) & ((y > sqrt(10850702935)/51200) | (y < -sqrt(10850702935)/51200)) & ((y > -sqrt(17365319)/2048) | (y < sqrt(17365319)/2048)) & ((y < -sqrt(10850702935)/51200) | (y < sqrt(17365319)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=449/512, y=-8425/4096
+DEBUG:__main__:---------pre-condition 139---------
+DEBUG:__main__:PRECOND_139: ((y > -sqrt(1109119)/512) | (y > sqrt(693035535)/12800)) & ((y > -sqrt(1109119)/512) | (y < sqrt(1109119)/512)) & ((y > sqrt(693035535)/12800) | (y < -sqrt(693035535)/12800)) & ((y < sqrt(1109119)/512) | (y < -sqrt(693035535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=467/512, y=4181/2048
+DEBUG:__main__:---------pre-condition 140---------
+DEBUG:__main__:PRECOND_140: ((y > -sqrt(1092631)/512) | (y > sqrt(682730535)/12800)) & ((y > -sqrt(1092631)/512) | (y < sqrt(1092631)/512)) & ((y > sqrt(682730535)/12800) | (y < -sqrt(682730535)/12800)) & ((y < sqrt(1092631)/512) | (y < -sqrt(682730535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1987/2048, y=8251/4096
+DEBUG:__main__:---------pre-condition 141---------
+DEBUG:__main__:PRECOND_141: ((y > sqrt(10636972935)/51200) | (y > -sqrt(17023351)/2048)) & ((y > sqrt(10636972935)/51200) | (y < -sqrt(10636972935)/51200)) & ((y > -sqrt(17023351)/2048) | (y < sqrt(17023351)/2048)) & ((y < -sqrt(10636972935)/51200) | (y < sqrt(17023351)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=18301/8192, y=191/2048
+DEBUG:__main__:---------pre-condition 142---------
+DEBUG:__main__:PRECOND_142: ((y > 9*sqrt(4248535)/204800) | (y > -sqrt(617719)/8192)) & ((y > 9*sqrt(4248535)/204800) | (y < -9*sqrt(4248535)/204800)) & ((y > -sqrt(617719)/8192) | (y < sqrt(617719)/8192)) & ((y < -9*sqrt(4248535)/204800) | (y < sqrt(617719)/8192))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1795/2048, y=-16851/8192
+DEBUG:__main__:---------pre-condition 143---------
+DEBUG:__main__:PRECOND_143: ((y > sqrt(11090812935)/51200) | (y > -sqrt(17749495)/2048)) & ((y > sqrt(11090812935)/51200) | (y < -sqrt(11090812935)/51200)) & ((y > -sqrt(17749495)/2048) | (y < sqrt(17749495)/2048)) & ((y < -sqrt(11090812935)/51200) | (y < sqrt(17749495)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1799/2048, y=-4211/2048
+DEBUG:__main__:---------pre-condition 144---------
+DEBUG:__main__:PRECOND_144: ((y > 3*sqrt(1231314215)/51200) | (y > -89*sqrt(2239)/2048)) & ((y > 3*sqrt(1231314215)/51200) | (y < -3*sqrt(1231314215)/51200)) & ((y > -89*sqrt(2239)/2048) | (y < 89*sqrt(2239)/2048)) & ((y < -3*sqrt(1231314215)/51200) | (y < 89*sqrt(2239)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=943/1024, y=4173/2048
+DEBUG:__main__:---------pre-condition 145---------
+DEBUG:__main__:PRECOND_145: ((y > sqrt(2720364015)/25600) | (y > -sqrt(4353631)/1024)) & ((y > sqrt(2720364015)/25600) | (y < -sqrt(2720364015)/25600)) & ((y > -sqrt(4353631)/1024) | (y < sqrt(4353631)/1024)) & ((y < -sqrt(2720364015)/25600) | (y < sqrt(4353631)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2017/2048, y=-4111/2048
+DEBUG:__main__:---------pre-condition 146---------
+DEBUG:__main__:PRECOND_146: ((y > -sqrt(16903231)/2048) | (y > 57*sqrt(3250815)/51200)) & ((y > -sqrt(16903231)/2048) | (y < sqrt(16903231)/2048)) & ((y > 57*sqrt(3250815)/51200) | (y < -57*sqrt(3250815)/51200)) & ((y < sqrt(16903231)/2048) | (y < -57*sqrt(3250815)/51200))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1995/2048, y=-2061/1024
+DEBUG:__main__:---------pre-condition 147---------
+DEBUG:__main__:PRECOND_147: ((y > sqrt(10617062935)/51200) | (y > -sqrt(16991495)/2048)) & ((y > sqrt(10617062935)/51200) | (y < -sqrt(10617062935)/51200)) & ((y > -sqrt(16991495)/2048) | (y < sqrt(16991495)/2048)) & ((y < -sqrt(10617062935)/51200) | (y < sqrt(16991495)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=231/256, y=2095/1024
+DEBUG:__main__:---------pre-condition 148---------
+DEBUG:__main__:PRECOND_148: ((y > 29*sqrt(203815)/6400) | (y > -sqrt(274319)/256)) & ((y > 29*sqrt(203815)/6400) | (y < -29*sqrt(203815)/6400)) & ((y > -sqrt(274319)/256) | (y < sqrt(274319)/256)) & ((y < -29*sqrt(203815)/6400) | (y < sqrt(274319)/256))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1801/2048, y=-67361/32768
+DEBUG:__main__:---------pre-condition 149---------
+DEBUG:__main__:PRECOND_149: ((y > 9*sqrt(136757135)/51200) | (y > -sqrt(17727919)/2048)) & ((y > 9*sqrt(136757135)/51200) | (y < -9*sqrt(136757135)/51200)) & ((y > -sqrt(17727919)/2048) | (y < sqrt(17727919)/2048)) & ((y < -9*sqrt(136757135)/51200) | (y < sqrt(17727919)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=925/1024, y=4189/2048
+DEBUG:__main__:---------pre-condition 150---------
+DEBUG:__main__:PRECOND_150: ((y > sqrt(2741379015)/25600) | (y > -sqrt(4387255)/1024)) & ((y > sqrt(2741379015)/25600) | (y < -sqrt(2741379015)/25600)) & ((y > -sqrt(4387255)/1024) | (y < sqrt(4387255)/1024)) & ((y < -sqrt(2741379015)/25600) | (y < sqrt(4387255)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1903/2048, y=-4165/2048
+DEBUG:__main__:---------pre-condition 151---------
+DEBUG:__main__:PRECOND_151: ((y > sqrt(10841197935)/51200) | (y > -sqrt(17350111)/2048)) & ((y > sqrt(10841197935)/51200) | (y < -sqrt(10841197935)/51200)) & ((y > -sqrt(17350111)/2048) | (y < sqrt(17350111)/2048)) & ((y < -sqrt(10841197935)/51200) | (y < sqrt(17350111)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=18303/8192, y=179/2048
+DEBUG:__main__:---------pre-condition 152---------
+DEBUG:__main__:PRECOND_152: ((y > sqrt(298376335)/204800) | (y > -sqrt(544511)/8192)) & ((y > sqrt(298376335)/204800) | (y < -sqrt(298376335)/204800)) & ((y > -sqrt(544511)/8192) | (y < sqrt(544511)/8192)) & ((y < -sqrt(298376335)/204800) | (y < sqrt(544511)/8192))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2025/2048, y=4107/2048
+DEBUG:__main__:---------pre-condition 153---------
+DEBUG:__main__:PRECOND_153: ((y > sqrt(10541687935)/51200) | (y > -sqrt(16870895)/2048)) & ((y > sqrt(10541687935)/51200) | (y < -sqrt(10541687935)/51200)) & ((y > -sqrt(16870895)/2048) | (y < sqrt(16870895)/2048)) & ((y < -sqrt(10541687935)/51200) | (y < sqrt(16870895)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1021/1024, y=8197/4096
+DEBUG:__main__:---------pre-condition 154---------
+DEBUG:__main__:PRECOND_154: ((y > 3*sqrt(291624335)/25600) | (y > -sqrt(4200439)/1024)) & ((y > 3*sqrt(291624335)/25600) | (y < -3*sqrt(291624335)/25600)) & ((y > -sqrt(4200439)/1024) | (y < sqrt(4200439)/1024)) & ((y < -3*sqrt(291624335)/25600) | (y < sqrt(4200439)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=4577/2048, y=9/128
+DEBUG:__main__:---------pre-condition 155---------
+DEBUG:__main__:PRECOND_155: ((y > sqrt(11497935)/51200) | (y > -sqrt(22591)/2048)) & ((y > sqrt(11497935)/51200) | (y < -sqrt(11497935)/51200)) & ((y > -sqrt(22591)/2048) | (y < sqrt(22591)/2048)) & ((y < -sqrt(11497935)/51200) | (y < sqrt(22591)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1877/2048, y=4177/2048
+DEBUG:__main__:---------pre-condition 156---------
+DEBUG:__main__:PRECOND_156: ((y > sqrt(10902622935)/51200) | (y > -sqrt(17448391)/2048)) & ((y > sqrt(10902622935)/51200) | (y < -sqrt(10902622935)/51200)) & ((y > -sqrt(17448391)/2048) | (y < sqrt(17448391)/2048)) & ((y < -sqrt(10902622935)/51200) | (y < sqrt(17448391)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1881/2048, y=-4175/2048
+DEBUG:__main__:---------pre-condition 157---------
+DEBUG:__main__:PRECOND_157: ((y > sqrt(10893227935)/51200) | (y > -sqrt(17433359)/2048)) & ((y > sqrt(10893227935)/51200) | (y < -sqrt(10893227935)/51200)) & ((y > -sqrt(17433359)/2048) | (y < sqrt(17433359)/2048)) & ((y < -sqrt(10893227935)/51200) | (y < sqrt(17433359)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=899/1024, y=-8423/4096
+DEBUG:__main__:---------pre-condition 158---------
+DEBUG:__main__:PRECOND_158: ((y > sqrt(2771019015)/25600) | (y > -sqrt(4434679)/1024)) & ((y > sqrt(2771019015)/25600) | (y < -sqrt(2771019015)/25600)) & ((y > -sqrt(4434679)/1024) | (y < sqrt(4434679)/1024)) & ((y < -sqrt(2771019015)/25600) | (y < sqrt(4434679)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=119/128, y=8329/4096
+DEBUG:__main__:---------pre-condition 159---------
+DEBUG:__main__:PRECOND_159: ((y > sqrt(42339135)/3200) | (y > -sqrt(67759)/128)) & ((y > sqrt(42339135)/3200) | (y < -sqrt(42339135)/3200)) & ((y > -sqrt(67759)/128) | (y < sqrt(67759)/128)) & ((y < -sqrt(42339135)/3200) | (y < sqrt(67759)/128))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1895/2048, y=16675/8192
+DEBUG:__main__:---------pre-condition 160---------
+DEBUG:__main__:PRECOND_160: ((y > sqrt(10860187935)/51200) | (y > -sqrt(17380495)/2048)) & ((y > sqrt(10860187935)/51200) | (y < -sqrt(10860187935)/51200)) & ((y > -sqrt(17380495)/2048) | (y < sqrt(17380495)/2048)) & ((y < -sqrt(10860187935)/51200) | (y < sqrt(17380495)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1997/2048, y=4121/2048
+DEBUG:__main__:---------pre-condition 161---------
+DEBUG:__main__:PRECOND_161: ((y > 3*sqrt(1179119215)/51200) | (y > -sqrt(16983511)/2048)) & ((y > 3*sqrt(1179119215)/51200) | (y < -3*sqrt(1179119215)/51200)) & ((y > -sqrt(16983511)/2048) | (y < sqrt(16983511)/2048)) & ((y < -3*sqrt(1179119215)/51200) | (y < sqrt(16983511)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1009/1024, y=8221/4096
+DEBUG:__main__:---------pre-condition 162---------
+DEBUG:__main__:PRECOND_162: ((y > sqrt(2639844015)/25600) | (y > -sqrt(4224799)/1024)) & ((y > sqrt(2639844015)/25600) | (y < -sqrt(2639844015)/25600)) & ((y > -sqrt(4224799)/1024) | (y < sqrt(4224799)/1024)) & ((y < -sqrt(2639844015)/25600) | (y < sqrt(4224799)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=18307/8192, y=151/2048
+DEBUG:__main__:---------pre-condition 163---------
+DEBUG:__main__:PRECOND_163: ((y > sqrt(206851335)/204800) | (y > -sqrt(398071)/8192)) & ((y > sqrt(206851335)/204800) | (y < -sqrt(206851335)/204800)) & ((y > -sqrt(398071)/8192) | (y < sqrt(398071)/8192)) & ((y < -sqrt(206851335)/204800) | (y < sqrt(398071)/8192))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1823/2048, y=-16803/8192
+DEBUG:__main__:---------pre-condition 164---------
+DEBUG:__main__:PRECOND_164: ((y > sqrt(11027497935)/51200) | (y > -sqrt(17648191)/2048)) & ((y > sqrt(11027497935)/51200) | (y < -sqrt(11027497935)/51200)) & ((y > -sqrt(17648191)/2048) | (y < sqrt(17648191)/2048)) & ((y < -sqrt(11027497935)/51200) | (y < sqrt(17648191)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=253/256, y=8215/4096
+DEBUG:__main__:---------pre-condition 165---------
+DEBUG:__main__:PRECOND_165: ((y > 3*sqrt(18305935)/6400) | (y > -sqrt(263671)/256)) & ((y > 3*sqrt(18305935)/6400) | (y < -3*sqrt(18305935)/6400)) & ((y > -sqrt(263671)/256) | (y < sqrt(263671)/256)) & ((y < -3*sqrt(18305935)/6400) | (y < sqrt(263671)/256))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=18309/8192, y=135/2048
+DEBUG:__main__:---------pre-condition 166---------
+DEBUG:__main__:PRECOND_166: ((y > sqrt(161081335)/204800) | (y > -sqrt(324839)/8192)) & ((y > sqrt(161081335)/204800) | (y < -sqrt(161081335)/204800)) & ((y > -sqrt(324839)/8192) | (y < sqrt(324839)/8192)) & ((y < -sqrt(161081335)/204800) | (y < sqrt(324839)/8192))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=469/512, y=8355/4096
+DEBUG:__main__:---------pre-condition 167---------
+DEBUG:__main__:PRECOND_167: ((y > -sqrt(1090759)/512) | (y > sqrt(681560535)/12800)) & ((y > -sqrt(1090759)/512) | (y < sqrt(1090759)/512)) & ((y > sqrt(681560535)/12800) | (y < -sqrt(681560535)/12800)) & ((y < sqrt(1090759)/512) | (y < -sqrt(681560535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=951/1024, y=8331/4096
+DEBUG:__main__:---------pre-condition 168---------
+DEBUG:__main__:PRECOND_168: ((y > sqrt(2710894015)/25600) | (y > -sqrt(4338479)/1024)) & ((y > sqrt(2710894015)/25600) | (y < -sqrt(2710894015)/25600)) & ((y > -sqrt(4338479)/1024) | (y < sqrt(4338479)/1024)) & ((y < -sqrt(2710894015)/25600) | (y < sqrt(4338479)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=225/256, y=-8421/4096
+DEBUG:__main__:---------pre-condition 169---------
+DEBUG:__main__:PRECOND_169: ((y > sqrt(173118415)/6400) | (y > -sqrt(277055)/256)) & ((y > sqrt(173118415)/6400) | (y < -sqrt(173118415)/6400)) & ((y > -sqrt(277055)/256) | (y < sqrt(277055)/256)) & ((y < -sqrt(173118415)/6400) | (y < sqrt(277055)/256))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1989/2048, y=8249/4096
+DEBUG:__main__:---------pre-condition 170---------
+DEBUG:__main__:PRECOND_170: ((y > sqrt(10632002935)/51200) | (y > -sqrt(17015399)/2048)) & ((y > sqrt(10632002935)/51200) | (y < -sqrt(10632002935)/51200)) & ((y > -sqrt(17015399)/2048) | (y < sqrt(17015399)/2048)) & ((y < -sqrt(10632002935)/51200) | (y < sqrt(17015399)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1993/2048, y=4123/2048
+DEBUG:__main__:---------pre-condition 171---------
+DEBUG:__main__:PRECOND_171: ((y > sqrt(10622047935)/51200) | (y > -sqrt(16999471)/2048)) & ((y > sqrt(10622047935)/51200) | (y < -sqrt(10622047935)/51200)) & ((y > -sqrt(16999471)/2048) | (y < sqrt(16999471)/2048)) & ((y < -sqrt(10622047935)/51200) | (y < sqrt(16999471)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=451/512, y=-4209/2048
+DEBUG:__main__:---------pre-condition 172---------
+DEBUG:__main__:PRECOND_172: ((y > -sqrt(1107319)/512) | (y > sqrt(691910535)/12800)) & ((y > -sqrt(1107319)/512) | (y < sqrt(1107319)/512)) & ((y > sqrt(691910535)/12800) | (y < -sqrt(691910535)/12800)) & ((y < sqrt(1107319)/512) | (y < -sqrt(691910535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2037/2048, y=4101/2048
+DEBUG:__main__:---------pre-condition 173---------
+DEBUG:__main__:PRECOND_173: ((y > -sqrt(16822151)/2048) | (y > 43*sqrt(5684815)/51200)) & ((y > -sqrt(16822151)/2048) | (y < sqrt(16822151)/2048)) & ((y > 43*sqrt(5684815)/51200) | (y < -43*sqrt(5684815)/51200)) & ((y < sqrt(16822151)/2048) | (y < -43*sqrt(5684815)/51200))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=999/1024, y=8241/4096
+DEBUG:__main__:---------pre-condition 174---------
+DEBUG:__main__:PRECOND_174: ((y > sqrt(2652394015)/25600) | (y > -sqrt(4244879)/1024)) & ((y > sqrt(2652394015)/25600) | (y < -sqrt(2652394015)/25600)) & ((y > -sqrt(4244879)/1024) | (y < sqrt(4244879)/1024)) & ((y < -sqrt(2652394015)/25600) | (y < sqrt(4244879)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=63/64, y=8223/4096
+DEBUG:__main__:---------pre-condition 175---------
+DEBUG:__main__:PRECOND_175: ((y > sqrt(10316815)/1600) | (y > -sqrt(16511)/64)) & ((y > sqrt(10316815)/1600) | (y < -sqrt(10316815)/1600)) & ((y > -sqrt(16511)/64) | (y < sqrt(16511)/64)) & ((y < -sqrt(10316815)/1600) | (y < sqrt(16511)/64))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1867/2048, y=-8363/4096
+DEBUG:__main__:---------pre-condition 176---------
+DEBUG:__main__:PRECOND_176: ((y > sqrt(10926022935)/51200) | (y > -11*sqrt(144511)/2048)) & ((y > sqrt(10926022935)/51200) | (y < -sqrt(10926022935)/51200)) & ((y > -11*sqrt(144511)/2048) | (y < 11*sqrt(144511)/2048)) & ((y < -sqrt(10926022935)/51200) | (y < 11*sqrt(144511)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1893/2048, y=8339/4096
+DEBUG:__main__:---------pre-condition 177---------
+DEBUG:__main__:PRECOND_177: ((y > sqrt(10864922935)/51200) | (y > -sqrt(17388071)/2048)) & ((y > sqrt(10864922935)/51200) | (y < -sqrt(10864922935)/51200)) & ((y > -sqrt(17388071)/2048) | (y < sqrt(17388071)/2048)) & ((y < -sqrt(10864922935)/51200) | (y < sqrt(17388071)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1811/2048, y=-2103/1024
+DEBUG:__main__:---------pre-condition 178---------
+DEBUG:__main__:PRECOND_178: ((y > sqrt(11054752935)/51200) | (y > -sqrt(17691799)/2048)) & ((y > sqrt(11054752935)/51200) | (y < -sqrt(11054752935)/51200)) & ((y > -sqrt(17691799)/2048) | (y < sqrt(17691799)/2048)) & ((y < -sqrt(11054752935)/51200) | (y < sqrt(17691799)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=249/256, y=-8247/4096
+DEBUG:__main__:---------pre-condition 179---------
+DEBUG:__main__:PRECOND_179: ((y > sqrt(166008415)/6400) | (y > -sqrt(265679)/256)) & ((y > sqrt(166008415)/6400) | (y < -sqrt(166008415)/6400)) & ((y > -sqrt(265679)/256) | (y < sqrt(265679)/256)) & ((y < -sqrt(166008415)/6400) | (y < sqrt(265679)/256))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1851/2048, y=-8377/4096
+DEBUG:__main__:---------pre-condition 180---------
+DEBUG:__main__:PRECOND_180: ((y > sqrt(10963202935)/51200) | (y > -sqrt(17545319)/2048)) & ((y > sqrt(10963202935)/51200) | (y < -sqrt(10963202935)/51200)) & ((y > -sqrt(17545319)/2048) | (y < sqrt(17545319)/2048)) & ((y < -sqrt(10963202935)/51200) | (y < sqrt(17545319)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=499/512, y=8243/4096
+DEBUG:__main__:---------pre-condition 181---------
+DEBUG:__main__:PRECOND_181: ((y > -sqrt(1061719)/512) | (y > sqrt(663410535)/12800)) & ((y > -sqrt(1061719)/512) | (y < sqrt(1061719)/512)) & ((y > sqrt(663410535)/12800) | (y < -sqrt(663410535)/12800)) & ((y < sqrt(1061719)/512) | (y < -sqrt(663410535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1019/1024, y=8201/4096
+DEBUG:__main__:---------pre-condition 182---------
+DEBUG:__main__:PRECOND_182: ((y > sqrt(2627169015)/25600) | (y > -sqrt(4204519)/1024)) & ((y > sqrt(2627169015)/25600) | (y < -sqrt(2627169015)/25600)) & ((y > -sqrt(4204519)/1024) | (y < sqrt(4204519)/1024)) & ((y < -sqrt(2627169015)/25600) | (y < sqrt(4204519)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1805/2048, y=-8417/4096
+DEBUG:__main__:---------pre-condition 183---------
+DEBUG:__main__:PRECOND_183: ((y > sqrt(11068312935)/51200) | (y > -sqrt(17713495)/2048)) & ((y > sqrt(11068312935)/51200) | (y < -sqrt(11068312935)/51200)) & ((y > -sqrt(17713495)/2048) | (y < sqrt(17713495)/2048)) & ((y < -sqrt(11068312935)/51200) | (y < sqrt(17713495)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=509/512, y=8203/4096
+DEBUG:__main__:---------pre-condition 184---------
+DEBUG:__main__:PRECOND_184: ((y > -sqrt(1051639)/512) | (y > sqrt(657110535)/12800)) & ((y > -sqrt(1051639)/512) | (y < sqrt(1051639)/512)) & ((y > sqrt(657110535)/12800) | (y < -sqrt(657110535)/12800)) & ((y < sqrt(1051639)/512) | (y < -sqrt(657110535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=4579/2048, y=1/32
+DEBUG:__main__:---------pre-condition 185---------
+DEBUG:__main__:PRECOND_185: ((y > -sqrt(4279)/2048) | (y > sqrt(52935)/51200)) & ((y > -sqrt(4279)/2048) | (y < sqrt(4279)/2048)) & ((y > sqrt(52935)/51200) | (y < -sqrt(52935)/51200)) & ((y < sqrt(4279)/2048) | (y < -sqrt(52935)/51200))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1803/2048, y=-8419/4096
+DEBUG:__main__:---------pre-condition 186---------
+DEBUG:__main__:PRECOND_186: ((y > sqrt(11072822935)/51200) | (y > -29*sqrt(21071)/2048)) & ((y > sqrt(11072822935)/51200) | (y < -sqrt(11072822935)/51200)) & ((y > -29*sqrt(21071)/2048) | (y < 29*sqrt(21071)/2048)) & ((y < -sqrt(11072822935)/51200) | (y < 29*sqrt(21071)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=233/256, y=-8365/4096
+DEBUG:__main__:---------pre-condition 187---------
+DEBUG:__main__:PRECOND_187: ((y > 3*sqrt(18980935)/6400) | (y > -sqrt(273391)/256)) & ((y > 3*sqrt(18980935)/6400) | (y < -3*sqrt(18980935)/6400)) & ((y > -sqrt(273391)/256) | (y < sqrt(273391)/256)) & ((y < -3*sqrt(18980935)/6400) | (y < sqrt(273391)/256))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=997/1024, y=8245/4096
+DEBUG:__main__:---------pre-condition 188---------
+DEBUG:__main__:PRECOND_188: ((y > sqrt(2654889015)/25600) | (y > -sqrt(4248871)/1024)) & ((y > sqrt(2654889015)/25600) | (y < -sqrt(2654889015)/25600)) & ((y > -sqrt(4248871)/1024) | (y < sqrt(4248871)/1024)) & ((y < -sqrt(2654889015)/25600) | (y < sqrt(4248871)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1837/2048, y=-8389/4096
+DEBUG:__main__:---------pre-condition 189---------
+DEBUG:__main__:PRECOND_189: ((y > 3*sqrt(1221719215)/51200) | (y > -sqrt(17596951)/2048)) & ((y > 3*sqrt(1221719215)/51200) | (y < -3*sqrt(1221719215)/51200)) & ((y > -sqrt(17596951)/2048) | (y < sqrt(17596951)/2048)) & ((y < -3*sqrt(1221719215)/51200) | (y < sqrt(17596951)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1991/2048, y=-16495/8192
+DEBUG:__main__:---------pre-condition 190---------
+DEBUG:__main__:PRECOND_190: ((y > sqrt(10627027935)/51200) | (y > -sqrt(17007439)/2048)) & ((y > sqrt(10627027935)/51200) | (y < -sqrt(10627027935)/51200)) & ((y > -sqrt(17007439)/2048) | (y < sqrt(17007439)/2048)) & ((y < -sqrt(10627027935)/51200) | (y < sqrt(17007439)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1813/2048, y=-4205/2048
+DEBUG:__main__:---------pre-condition 191---------
+DEBUG:__main__:PRECOND_191: ((y > sqrt(11050222935)/51200) | (y > -sqrt(17684551)/2048)) & ((y > sqrt(11050222935)/51200) | (y < -sqrt(11050222935)/51200)) & ((y > -sqrt(17684551)/2048) | (y < sqrt(17684551)/2048)) & ((y < -sqrt(11050222935)/51200) | (y < sqrt(17684551)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=18313/8192, y=3/64
+DEBUG:__main__:---------pre-condition 192---------
+DEBUG:__main__:PRECOND_192: ((y > -sqrt(178351)/8192) | (y > sqrt(69526335)/204800)) & ((y > -sqrt(178351)/8192) | (y < sqrt(178351)/8192)) & ((y > sqrt(69526335)/204800) | (y < -sqrt(69526335)/204800)) & ((y < sqrt(178351)/8192) | (y < -sqrt(69526335)/204800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=113/128, y=-4207/2048
+DEBUG:__main__:---------pre-condition 193---------
+DEBUG:__main__:PRECOND_193: ((y > 3*sqrt(4801015)/3200) | (y > -sqrt(69151)/128)) & ((y > 3*sqrt(4801015)/3200) | (y < -3*sqrt(4801015)/3200)) & ((y > -sqrt(69151)/128) | (y < sqrt(69151)/128)) & ((y < -3*sqrt(4801015)/3200) | (y < sqrt(69151)/128))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=127/128, y=8207/4096
+DEBUG:__main__:---------pre-condition 194---------
+DEBUG:__main__:PRECOND_194: ((y > sqrt(41109135)/3200) | (y > -sqrt(65791)/128)) & ((y > sqrt(41109135)/3200) | (y < -sqrt(41109135)/3200)) & ((y > -sqrt(65791)/128) | (y < sqrt(65791)/128)) & ((y < -sqrt(41109135)/3200) | (y < sqrt(65791)/128))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=2289/1024, y=7/128
+DEBUG:__main__:---------pre-condition 195---------
+DEBUG:__main__:PRECOND_195: ((y > sqrt(1444015)/25600) | (y > -sqrt(3359)/1024)) & ((y > sqrt(1444015)/25600) | (y < -sqrt(1444015)/25600)) & ((y > -sqrt(3359)/1024) | (y < sqrt(3359)/1024)) & ((y < -sqrt(1444015)/25600) | (y < sqrt(3359)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=505/512, y=-8219/4096
+DEBUG:__main__:---------pre-condition 196---------
+DEBUG:__main__:PRECOND_196: ((y > -sqrt(1055695)/512) | (y > sqrt(659645535)/12800)) & ((y > -sqrt(1055695)/512) | (y < sqrt(1055695)/512)) & ((y > sqrt(659645535)/12800) | (y < -sqrt(659645535)/12800)) & ((y < sqrt(1055695)/512) | (y < -sqrt(659645535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=507/512, y=-8211/4096
+DEBUG:__main__:---------pre-condition 197---------
+DEBUG:__main__:PRECOND_197: ((y > -sqrt(1053671)/512) | (y > sqrt(658380535)/12800)) & ((y > -sqrt(1053671)/512) | (y < sqrt(1053671)/512)) & ((y > sqrt(658380535)/12800) | (y < -sqrt(658380535)/12800)) & ((y < sqrt(1053671)/512) | (y < -sqrt(658380535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1013/1024, y=-8213/4096
+DEBUG:__main__:---------pre-condition 198---------
+DEBUG:__main__:PRECOND_198: ((y > 3*sqrt(292754335)/25600) | (y > -sqrt(4216711)/1024)) & ((y > 3*sqrt(292754335)/25600) | (y < -3*sqrt(292754335)/25600)) & ((y > -sqrt(4216711)/1024) | (y < sqrt(4216711)/1024)) & ((y < -3*sqrt(292754335)/25600) | (y < sqrt(4216711)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1871/2048, y=-8359/4096
+DEBUG:__main__:---------pre-condition 199---------
+DEBUG:__main__:PRECOND_199: ((y > 3*sqrt(1212964215)/51200) | (y > -sqrt(17470879)/2048)) & ((y > 3*sqrt(1212964215)/51200) | (y < -3*sqrt(1212964215)/51200)) & ((y > -sqrt(17470879)/2048) | (y < sqrt(17470879)/2048)) & ((y < -3*sqrt(1212964215)/51200) | (y < sqrt(17470879)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1807/2048, y=-8415/4096
+DEBUG:__main__:---------pre-condition 200---------
+DEBUG:__main__:PRECOND_200: ((y > sqrt(11063797935)/51200) | (y > -sqrt(17706271)/2048)) & ((y > sqrt(11063797935)/51200) | (y < -sqrt(11063797935)/51200)) & ((y > -sqrt(17706271)/2048) | (y < sqrt(17706271)/2048)) & ((y < -sqrt(11063797935)/51200) | (y < sqrt(17706271)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1841/2048, y=4193/2048
+DEBUG:__main__:---------pre-condition 201---------
+DEBUG:__main__:PRECOND_201: ((y > sqrt(10986277935)/51200) | (y > -sqrt(17582239)/2048)) & ((y > sqrt(10986277935)/51200) | (y < -sqrt(10986277935)/51200)) & ((y > -sqrt(17582239)/2048) | (y < sqrt(17582239)/2048)) & ((y < -sqrt(10986277935)/51200) | (y < sqrt(17582239)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=905/1024, y=8413/4096
+DEBUG:__main__:---------pre-condition 202---------
+DEBUG:__main__:PRECOND_202: ((y > 3*sqrt(307139335)/25600) | (y > -sqrt(4423855)/1024)) & ((y > 3*sqrt(307139335)/25600) | (y < -3*sqrt(307139335)/25600)) & ((y > -sqrt(4423855)/1024) | (y < sqrt(4423855)/1024)) & ((y < -3*sqrt(307139335)/25600) | (y < sqrt(4423855)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=18311/8192, y=29/512
+DEBUG:__main__:---------pre-condition 203---------
+DEBUG:__main__:PRECOND_203: ((y > 9*sqrt(1423535)/204800) | (y > -sqrt(251599)/8192)) & ((y > 9*sqrt(1423535)/204800) | (y < -9*sqrt(1423535)/204800)) & ((y > -sqrt(251599)/8192) | (y < sqrt(251599)/8192)) & ((y < -9*sqrt(1423535)/204800) | (y < sqrt(251599)/8192))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1017/1024, y=8205/4096
+DEBUG:__main__:---------pre-condition 204---------
+DEBUG:__main__:PRECOND_204: ((y > sqrt(2629714015)/25600) | (y > -sqrt(4208591)/1024)) & ((y > sqrt(2629714015)/25600) | (y < -sqrt(2629714015)/25600)) & ((y > -sqrt(4208591)/1024) | (y < sqrt(4208591)/1024)) & ((y < -sqrt(2629714015)/25600) | (y < sqrt(4208591)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1015/1024, y=8209/4096
+DEBUG:__main__:---------pre-condition 205---------
+DEBUG:__main__:PRECOND_205: ((y > sqrt(2632254015)/25600) | (y > -sqrt(4212655)/1024)) & ((y > sqrt(2632254015)/25600) | (y < -sqrt(2632254015)/25600)) & ((y > -sqrt(4212655)/1024) | (y < sqrt(4212655)/1024)) & ((y < -sqrt(2632254015)/25600) | (y < sqrt(4212655)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1809/2048, y=-16827/8192
+DEBUG:__main__:---------pre-condition 206---------
+DEBUG:__main__:PRECOND_206: ((y > sqrt(11059277935)/51200) | (y > -sqrt(17699039)/2048)) & ((y > sqrt(11059277935)/51200) | (y < -sqrt(11059277935)/51200)) & ((y > -sqrt(17699039)/2048) | (y < sqrt(17699039)/2048)) & ((y < -sqrt(11059277935)/51200) | (y < sqrt(17699039)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=453/512, y=-8411/4096
+DEBUG:__main__:---------pre-condition 207---------
+DEBUG:__main__:PRECOND_207: ((y > -sqrt(1105511)/512) | (y > sqrt(690780535)/12800)) & ((y > -sqrt(1105511)/512) | (y < sqrt(1105511)/512)) & ((y > sqrt(690780535)/12800) | (y < -sqrt(690780535)/12800)) & ((y < sqrt(1105511)/512) | (y < -sqrt(690780535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=487/512, y=259/128
+DEBUG:__main__:---------pre-condition 208---------
+DEBUG:__main__:PRECOND_208: ((y > -sqrt(1073551)/512) | (y > sqrt(670805535)/12800)) & ((y > -sqrt(1073551)/512) | (y < sqrt(1073551)/512)) & ((y > sqrt(670805535)/12800) | (y < -sqrt(670805535)/12800)) & ((y < sqrt(1073551)/512) | (y < -sqrt(670805535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=907/1024, y=-8409/4096
+DEBUG:__main__:---------pre-condition 209---------
+DEBUG:__main__:PRECOND_209: ((y > sqrt(2761989015)/25600) | (y > -sqrt(4420231)/1024)) & ((y > sqrt(2761989015)/25600) | (y < -sqrt(2761989015)/25600)) & ((y > -sqrt(4420231)/1024) | (y < sqrt(4420231)/1024)) & ((y < -sqrt(2761989015)/25600) | (y < sqrt(4420231)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1965/2048, y=517/256
+DEBUG:__main__:---------pre-condition 210---------
+DEBUG:__main__:PRECOND_210: ((y > sqrt(10691312935)/51200) | (y > -sqrt(17110295)/2048)) & ((y > sqrt(10691312935)/51200) | (y < -sqrt(10691312935)/51200)) & ((y > -sqrt(17110295)/2048) | (y < sqrt(17110295)/2048)) & ((y < -sqrt(10691312935)/51200) | (y < sqrt(17110295)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1931/2048, y=519/256
+DEBUG:__main__:---------pre-condition 211---------
+DEBUG:__main__:PRECOND_211: ((y > sqrt(10774102935)/51200) | (y > -sqrt(17242759)/2048)) & ((y > sqrt(10774102935)/51200) | (y < -sqrt(10774102935)/51200)) & ((y > -sqrt(17242759)/2048) | (y < sqrt(17242759)/2048)) & ((y < -sqrt(10774102935)/51200) | (y < sqrt(17242759)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1957/2048, y=1035/512
+DEBUG:__main__:---------pre-condition 212---------
+DEBUG:__main__:PRECOND_212: ((y > sqrt(10710922935)/51200) | (y > -sqrt(17141671)/2048)) & ((y > sqrt(10710922935)/51200) | (y < -sqrt(10710922935)/51200)) & ((y > -sqrt(17141671)/2048) | (y < sqrt(17141671)/2048)) & ((y < -sqrt(10710922935)/51200) | (y < sqrt(17141671)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1875/2048, y=16711/8192
+DEBUG:__main__:---------pre-condition 213---------
+DEBUG:__main__:PRECOND_213: ((y > sqrt(10907312935)/51200) | (y > -sqrt(17455895)/2048)) & ((y > sqrt(10907312935)/51200) | (y < -sqrt(10907312935)/51200)) & ((y > -sqrt(17455895)/2048) | (y < sqrt(17455895)/2048)) & ((y < -sqrt(10907312935)/51200) | (y < sqrt(17455895)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1815/2048, y=-16817/8192
+DEBUG:__main__:---------pre-condition 214---------
+DEBUG:__main__:PRECOND_214: ((y > sqrt(11045687935)/51200) | (y > -sqrt(17677295)/2048)) & ((y > sqrt(11045687935)/51200) | (y < -sqrt(11045687935)/51200)) & ((y > -sqrt(17677295)/2048) | (y < sqrt(17677295)/2048)) & ((y < -sqrt(11045687935)/51200) | (y < sqrt(17677295)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1849/2048, y=-8379/4096
+DEBUG:__main__:---------pre-condition 215---------
+DEBUG:__main__:PRECOND_215: ((y > sqrt(10967827935)/51200) | (y > -sqrt(17552719)/2048)) & ((y > sqrt(10967827935)/51200) | (y < -sqrt(10967827935)/51200)) & ((y > -sqrt(17552719)/2048) | (y < sqrt(17552719)/2048)) & ((y < -sqrt(10967827935)/51200) | (y < sqrt(17552719)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1961/2048, y=2069/1024
+DEBUG:__main__:---------pre-condition 216---------
+DEBUG:__main__:PRECOND_216: ((y > 3*sqrt(1189014215)/51200) | (y > -sqrt(17125999)/2048)) & ((y > 3*sqrt(1189014215)/51200) | (y < -3*sqrt(1189014215)/51200)) & ((y > -sqrt(17125999)/2048) | (y < sqrt(17125999)/2048)) & ((y < -3*sqrt(1189014215)/51200) | (y < sqrt(17125999)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=913/1024, y=-8399/4096
+DEBUG:__main__:---------pre-condition 217---------
+DEBUG:__main__:PRECOND_217: ((y > 3*sqrt(306129335)/25600) | (y > -sqrt(4409311)/1024)) & ((y > 3*sqrt(306129335)/25600) | (y < -3*sqrt(306129335)/25600)) & ((y > -sqrt(4409311)/1024) | (y < sqrt(4409311)/1024)) & ((y < -3*sqrt(306129335)/25600) | (y < sqrt(4409311)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1923/2048, y=-1039/512
+DEBUG:__main__:---------pre-condition 218---------
+DEBUG:__main__:PRECOND_218: ((y > sqrt(10793372935)/51200) | (y > -sqrt(17273591)/2048)) & ((y > sqrt(10793372935)/51200) | (y < -sqrt(10793372935)/51200)) & ((y > -sqrt(17273591)/2048) | (y < sqrt(17273591)/2048)) & ((y < -sqrt(10793372935)/51200) | (y < sqrt(17273591)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1845/2048, y=4191/2048
+DEBUG:__main__:---------pre-condition 219---------
+DEBUG:__main__:PRECOND_219: ((y > sqrt(10977062935)/51200) | (y > -sqrt(17567495)/2048)) & ((y > sqrt(10977062935)/51200) | (y < -sqrt(10977062935)/51200)) & ((y > -sqrt(17567495)/2048) | (y < sqrt(17567495)/2048)) & ((y < -sqrt(10977062935)/51200) | (y < sqrt(17567495)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=921/1024, y=-8385/4096
+DEBUG:__main__:---------pre-condition 220---------
+DEBUG:__main__:PRECOND_220: ((y > sqrt(2745994015)/25600) | (y > -sqrt(4394639)/1024)) & ((y > sqrt(2745994015)/25600) | (y < -sqrt(2745994015)/25600)) & ((y > -sqrt(4394639)/1024) | (y < sqrt(4394639)/1024)) & ((y < -sqrt(2745994015)/25600) | (y < sqrt(4394639)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=9157/4096, y=5/128
+DEBUG:__main__:---------pre-condition 221---------
+DEBUG:__main__:PRECOND_221: ((y > sqrt(11658615)/102400) | (y > -sqrt(35431)/4096)) & ((y > sqrt(11658615)/102400) | (y < -sqrt(11658615)/102400)) & ((y > -sqrt(35431)/4096) | (y < sqrt(35431)/4096)) & ((y < -sqrt(11658615)/102400) | (y < sqrt(35431)/4096))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=115/128, y=8387/4096
+DEBUG:__main__:---------pre-condition 222---------
+DEBUG:__main__:PRECOND_222: ((y > sqrt(42924135)/3200) | (y > -sqrt(68695)/128)) & ((y > sqrt(42924135)/3200) | (y < -sqrt(42924135)/3200)) & ((y > -sqrt(68695)/128) | (y < sqrt(68695)/128)) & ((y < -sqrt(42924135)/3200) | (y < sqrt(68695)/128))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=229/256, y=-4197/2048
+DEBUG:__main__:---------pre-condition 223---------
+DEBUG:__main__:PRECOND_223: ((y > sqrt(171983415)/6400) | (y > -sqrt(275239)/256)) & ((y > sqrt(171983415)/6400) | (y < -sqrt(171983415)/6400)) & ((y > -sqrt(275239)/256) | (y < sqrt(275239)/256)) & ((y < -sqrt(171983415)/6400) | (y < sqrt(275239)/256))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1839/2048, y=-16775/8192
+DEBUG:__main__:---------pre-condition 224---------
+DEBUG:__main__:PRECOND_224: ((y > sqrt(10990877935)/51200) | (y > -sqrt(17589599)/2048)) & ((y > sqrt(10990877935)/51200) | (y < -sqrt(10990877935)/51200)) & ((y > -sqrt(17589599)/2048) | (y < sqrt(17589599)/2048)) & ((y < -sqrt(10990877935)/51200) | (y < sqrt(17589599)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=915/1024, y=-8395/4096
+DEBUG:__main__:---------pre-condition 225---------
+DEBUG:__main__:PRECOND_225: ((y > sqrt(2752879015)/25600) | (y > -sqrt(4405655)/1024)) & ((y > sqrt(2752879015)/25600) | (y < -sqrt(2752879015)/25600)) & ((y > -sqrt(4405655)/1024) | (y < sqrt(4405655)/1024)) & ((y < -sqrt(2752879015)/25600) | (y < sqrt(4405655)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=18315/8192, y=17/512
+DEBUG:__main__:---------pre-condition 226---------
+DEBUG:__main__:PRECOND_226: ((y > -sqrt(105095)/8192) | (y > sqrt(23741335)/204800)) & ((y > -sqrt(105095)/8192) | (y < sqrt(105095)/8192)) & ((y > sqrt(23741335)/204800) | (y < -sqrt(23741335)/204800)) & ((y < sqrt(105095)/8192) | (y < -sqrt(23741335)/204800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1831/2048, y=-16789/8192
+DEBUG:__main__:---------pre-condition 227---------
+DEBUG:__main__:PRECOND_227: ((y > sqrt(11009227935)/51200) | (y > -sqrt(17618959)/2048)) & ((y > sqrt(11009227935)/51200) | (y < -sqrt(11009227935)/51200)) & ((y > -sqrt(17618959)/2048) | (y < sqrt(17618959)/2048)) & ((y < -sqrt(11009227935)/51200) | (y < sqrt(17618959)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1833/2048, y=8393/4096
+DEBUG:__main__:---------pre-condition 228---------
+DEBUG:__main__:PRECOND_228: ((y > sqrt(11004647935)/51200) | (y > -sqrt(17611631)/2048)) & ((y > sqrt(11004647935)/51200) | (y < -sqrt(11004647935)/51200)) & ((y > -sqrt(17611631)/2048) | (y < sqrt(17611631)/2048)) & ((y < -sqrt(11004647935)/51200) | (y < sqrt(17611631)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=485/512, y=1037/512
+DEBUG:__main__:---------pre-condition 229---------
+DEBUG:__main__:PRECOND_229: ((y > -sqrt(1075495)/512) | (y > sqrt(672020535)/12800)) & ((y > -sqrt(1075495)/512) | (y < sqrt(1075495)/512)) & ((y > sqrt(672020535)/12800) | (y < -sqrt(672020535)/12800)) & ((y < sqrt(1075495)/512) | (y < -sqrt(672020535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=987/1024, y=1033/512
+DEBUG:__main__:---------pre-condition 230---------
+DEBUG:__main__:PRECOND_230: ((y > sqrt(2667289015)/25600) | (y > -sqrt(4268711)/1024)) & ((y > sqrt(2667289015)/25600) | (y < -sqrt(2667289015)/25600)) & ((y > -sqrt(4268711)/1024) | (y < sqrt(4268711)/1024)) & ((y < -sqrt(2667289015)/25600) | (y < sqrt(4268711)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=949/1024, y=8335/4096
+DEBUG:__main__:---------pre-condition 231---------
+DEBUG:__main__:PRECOND_231: ((y > 111*sqrt(220215)/25600) | (y > -sqrt(4342279)/1024)) & ((y > 111*sqrt(220215)/25600) | (y < -111*sqrt(220215)/25600)) & ((y > -sqrt(4342279)/1024) | (y < sqrt(4342279)/1024)) & ((y < -111*sqrt(220215)/25600) | (y < sqrt(4342279)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=985/1024, y=2067/1024
+DEBUG:__main__:---------pre-condition 232---------
+DEBUG:__main__:PRECOND_232: ((y > 3*sqrt(296639335)/25600) | (y > -sqrt(4272655)/1024)) & ((y > 3*sqrt(296639335)/25600) | (y < -3*sqrt(296639335)/25600)) & ((y > -sqrt(4272655)/1024) | (y < sqrt(4272655)/1024)) & ((y < -3*sqrt(296639335)/25600) | (y < sqrt(4272655)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1953/2048, y=-2071/1024
+DEBUG:__main__:---------pre-condition 233---------
+DEBUG:__main__:PRECOND_233: ((y > sqrt(10720697935)/51200) | (y > -sqrt(17157311)/2048)) & ((y > sqrt(10720697935)/51200) | (y < -sqrt(10720697935)/51200)) & ((y > -sqrt(17157311)/2048) | (y < sqrt(17157311)/2048)) & ((y < -sqrt(10720697935)/51200) | (y < sqrt(17157311)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=989/1024, y=2065/1024
+DEBUG:__main__:---------pre-condition 234---------
+DEBUG:__main__:PRECOND_234: ((y > sqrt(2664819015)/25600) | (y > -sqrt(4264759)/1024)) & ((y > sqrt(2664819015)/25600) | (y < -sqrt(2664819015)/25600)) & ((y > -sqrt(4264759)/1024) | (y < sqrt(4264759)/1024)) & ((y < -sqrt(2664819015)/25600) | (y < sqrt(4264759)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=923/1024, y=-8381/4096
+DEBUG:__main__:---------pre-condition 235---------
+DEBUG:__main__:PRECOND_235: ((y > 3*sqrt(304854335)/25600) | (y > -sqrt(4390951)/1024)) & ((y > 3*sqrt(304854335)/25600) | (y < -3*sqrt(304854335)/25600)) & ((y > -sqrt(4390951)/1024) | (y < sqrt(4390951)/1024)) & ((y < -3*sqrt(304854335)/25600) | (y < sqrt(4390951)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=475/512, y=8333/4096
+DEBUG:__main__:---------pre-condition 236---------
+DEBUG:__main__:PRECOND_236: ((y > -sqrt(1085095)/512) | (y > 3*sqrt(75335615)/12800)) & ((y > -sqrt(1085095)/512) | (y < sqrt(1085095)/512)) & ((y > 3*sqrt(75335615)/12800) | (y < -3*sqrt(75335615)/12800)) & ((y < sqrt(1085095)/512) | (y < -3*sqrt(75335615)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=939/1024, y=-8353/4096
+DEBUG:__main__:---------pre-condition 237---------
+DEBUG:__main__:PRECOND_237: ((y > sqrt(2725069015)/25600) | (y > -sqrt(4361159)/1024)) & ((y > sqrt(2725069015)/25600) | (y < -sqrt(2725069015)/25600)) & ((y > -sqrt(4361159)/1024) | (y < sqrt(4361159)/1024)) & ((y < -sqrt(2725069015)/25600) | (y < sqrt(4361159)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1847/2048, y=-16761/8192
+DEBUG:__main__:---------pre-condition 238---------
+DEBUG:__main__:PRECOND_238: ((y > sqrt(10972447935)/51200) | (y > -sqrt(17560111)/2048)) & ((y > sqrt(10972447935)/51200) | (y < -sqrt(10972447935)/51200)) & ((y > -sqrt(17560111)/2048) | (y < sqrt(17560111)/2048)) & ((y < -sqrt(10972447935)/51200) | (y < sqrt(17560111)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=461/512, y=8383/4096
+DEBUG:__main__:---------pre-condition 239---------
+DEBUG:__main__:PRECOND_239: ((y > -sqrt(1098199)/512) | (y > 9*sqrt(8471735)/12800)) & ((y > -sqrt(1098199)/512) | (y < sqrt(1098199)/512)) & ((y > 9*sqrt(8471735)/12800) | (y < -9*sqrt(8471735)/12800)) & ((y < sqrt(1098199)/512) | (y < -9*sqrt(8471735)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=247/256, y=4131/2048
+DEBUG:__main__:---------pre-condition 240---------
+DEBUG:__main__:PRECOND_240: ((y > sqrt(166628415)/6400) | (y > -sqrt(266671)/256)) & ((y > sqrt(166628415)/6400) | (y < -sqrt(166628415)/6400)) & ((y > -sqrt(266671)/256) | (y < sqrt(266671)/256)) & ((y < -sqrt(166628415)/6400) | (y < sqrt(266671)/256))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1865/2048, y=535303/262144
+DEBUG:__main__:---------pre-condition 241---------
+DEBUG:__main__:PRECOND_241: ((y > sqrt(10930687935)/51200) | (y > -sqrt(17493295)/2048)) & ((y > sqrt(10930687935)/51200) | (y < -sqrt(10930687935)/51200)) & ((y > -sqrt(17493295)/2048) | (y < sqrt(17493295)/2048)) & ((y < -sqrt(10930687935)/51200) | (y < sqrt(17493295)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=121/128, y=2075/1024
+DEBUG:__main__:---------pre-condition 242---------
+DEBUG:__main__:PRECOND_242: ((y > 3*sqrt(4671015)/3200) | (y > -sqrt(67279)/128)) & ((y > 3*sqrt(4671015)/3200) | (y < -3*sqrt(4671015)/3200)) & ((y > -sqrt(67279)/128) | (y < sqrt(67279)/128)) & ((y < -3*sqrt(4671015)/3200) | (y < sqrt(67279)/128))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=243/256, y=2073/1024
+DEBUG:__main__:---------pre-condition 243---------
+DEBUG:__main__:PRECOND_243: ((y > sqrt(167853415)/6400) | (y > -sqrt(268631)/256)) & ((y > sqrt(167853415)/6400) | (y < -sqrt(167853415)/6400)) & ((y > -sqrt(268631)/256) | (y < sqrt(268631)/256)) & ((y < -sqrt(167853415)/6400) | (y < sqrt(268631)/256))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1889/2048, y=8343/4096
+DEBUG:__main__:---------pre-condition 244---------
+DEBUG:__main__:PRECOND_244: ((y > 3*sqrt(1208264215)/51200) | (y > -sqrt(17403199)/2048)) & ((y > 3*sqrt(1208264215)/51200) | (y < -3*sqrt(1208264215)/51200)) & ((y > -sqrt(17403199)/2048) | (y < sqrt(17403199)/2048)) & ((y < -3*sqrt(1208264215)/51200) | (y < sqrt(17403199)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1869/2048, y=-8361/4096
+DEBUG:__main__:---------pre-condition 245---------
+DEBUG:__main__:PRECOND_245: ((y > sqrt(10921352935)/51200) | (y > -sqrt(17478359)/2048)) & ((y > sqrt(10921352935)/51200) | (y < -sqrt(10921352935)/51200)) & ((y > -sqrt(17478359)/2048) | (y < sqrt(17478359)/2048)) & ((y < -sqrt(10921352935)/51200) | (y < sqrt(17478359)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=959/1024, y=2079/1024
+DEBUG:__main__:---------pre-condition 246---------
+DEBUG:__main__:PRECOND_246: ((y > 3*sqrt(300149335)/25600) | (y > -sqrt(4323199)/1024)) & ((y > 3*sqrt(300149335)/25600) | (y < -3*sqrt(300149335)/25600)) & ((y > -sqrt(4323199)/1024) | (y < sqrt(4323199)/1024)) & ((y < -3*sqrt(300149335)/25600) | (y < sqrt(4323199)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=969/1024, y=-4149/2048
+DEBUG:__main__:---------pre-condition 247---------
+DEBUG:__main__:PRECOND_247: ((y > sqrt(2689294015)/25600) | (y > -sqrt(4303919)/1024)) & ((y > sqrt(2689294015)/25600) | (y < -sqrt(2689294015)/25600)) & ((y > -sqrt(4303919)/1024) | (y < sqrt(4303919)/1024)) & ((y < -sqrt(2689294015)/25600) | (y < sqrt(4303919)/1024))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1873/2048, y=-8357/4096
+DEBUG:__main__:---------pre-condition 248---------
+DEBUG:__main__:PRECOND_248: ((y > 3*sqrt(1212444215)/51200) | (y > -sqrt(17463391)/2048)) & ((y > 3*sqrt(1212444215)/51200) | (y < -3*sqrt(1212444215)/51200)) & ((y > -sqrt(17463391)/2048) | (y < sqrt(17463391)/2048)) & ((y < -3*sqrt(1212444215)/51200) | (y < sqrt(17463391)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1913/2048, y=8321/4096
+DEBUG:__main__:---------pre-condition 249---------
+DEBUG:__main__:PRECOND_249: ((y > sqrt(10817347935)/51200) | (y > -sqrt(17311951)/2048)) & ((y > sqrt(10817347935)/51200) | (y < -sqrt(10817347935)/51200)) & ((y > -sqrt(17311951)/2048) | (y < sqrt(17311951)/2048)) & ((y < -sqrt(10817347935)/51200) | (y < sqrt(17311951)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=477/512, y=-4163/2048
+DEBUG:__main__:---------pre-condition 250---------
+DEBUG:__main__:PRECOND_250: ((y > -sqrt(1083191)/512) | (y > sqrt(676830535)/12800)) & ((y > -sqrt(1083191)/512) | (y < sqrt(1083191)/512)) & ((y > sqrt(676830535)/12800) | (y < -sqrt(676830535)/12800)) & ((y < sqrt(1083191)/512) | (y < -sqrt(676830535)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=471/512, y=-8347/4096
+DEBUG:__main__:---------pre-condition 251---------
+DEBUG:__main__:PRECOND_251: ((y > sqrt(680385535)/12800) | (y > -11*sqrt(8999)/512)) & ((y > sqrt(680385535)/12800) | (y < -sqrt(680385535)/12800)) & ((y > -11*sqrt(8999)/512) | (y < 11*sqrt(8999)/512)) & ((y < -sqrt(680385535)/12800) | (y < 11*sqrt(8999)/512))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1927/2048, y=2077/1024
+DEBUG:__main__:---------pre-condition 252---------
+DEBUG:__main__:PRECOND_252: ((y > 3*sqrt(1198194215)/51200) | (y > -sqrt(17258191)/2048)) & ((y > 3*sqrt(1198194215)/51200) | (y < -3*sqrt(1198194215)/51200)) & ((y > -sqrt(17258191)/2048) | (y < sqrt(17258191)/2048)) & ((y < -3*sqrt(1198194215)/51200) | (y < sqrt(17258191)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=493/512, y=4133/2048
+DEBUG:__main__:---------pre-condition 253---------
+DEBUG:__main__:PRECOND_253: ((y > -31*sqrt(1111)/512) | (y > 3*sqrt(74125615)/12800)) & ((y > -31*sqrt(1111)/512) | (y < 31*sqrt(1111)/512)) & ((y > 3*sqrt(74125615)/12800) | (y < -3*sqrt(74125615)/12800)) & ((y < 31*sqrt(1111)/512) | (y < -3*sqrt(74125615)/12800))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1973/2048, y=8265/4096
+DEBUG:__main__:---------pre-condition 254---------
+DEBUG:__main__:PRECOND_254: ((y > sqrt(10671622935)/51200) | (y > -sqrt(17078791)/2048)) & ((y > sqrt(10671622935)/51200) | (y < -sqrt(10671622935)/51200)) & ((y > -sqrt(17078791)/2048) | (y < sqrt(17078791)/2048)) & ((y < -sqrt(10671622935)/51200) | (y < sqrt(17078791)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1885/2048, y=-16693/8192
+DEBUG:__main__:---------pre-condition 255---------
+DEBUG:__main__:PRECOND_255: ((y > sqrt(10883812935)/51200) | (y > -sqrt(17418295)/2048)) & ((y > sqrt(10883812935)/51200) | (y < -sqrt(10883812935)/51200)) & ((y > -sqrt(17418295)/2048) | (y < sqrt(17418295)/2048)) & ((y < -sqrt(10883812935)/51200) | (y < sqrt(17418295)/2048))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=235/256, y=-8351/4096
+DEBUG:__main__:---------pre-condition 256---------
+DEBUG:__main__:PRECOND_256: ((y > 3*sqrt(18915935)/6400) | (y > -sqrt(272455)/256)) & ((y > 3*sqrt(18915935)/6400) | (y < -3*sqrt(18915935)/6400)) & ((y > -sqrt(272455)/256) | (y < sqrt(272455)/256)) & ((y < -3*sqrt(18915935)/6400) | (y < sqrt(272455)/256))
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point: x=1911/2048, y=-8323/4096
+DEBUG:__main__:---------pre-condition 257---------
+DEBUG:__main__:PRECOND_257: ((y > sqrt(10822127935)/51200) | (y > -sqrt(17319599)/2048)) & ((y > sqrt(10822127935)/51200) | (y < -sqrt(10822127935)/51200)) & ((y > -sqrt(17319599)/2048) | (y < sqrt(17319599)/2048)) & ((y < -sqrt(10822127935)/51200) | (y < sqrt(17319599)/2048))

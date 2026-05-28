@@ -1,0 +1,1 @@
+delta > 0 /\ skoS2 > 0 /\ skoS2^2 - delta - 2 <= 0 /\ skoS2^2 + delta - 2 >= 0 /\ skoX > 0 /\ skoX - 1 < 0 /\ 4194304 skoX - 4194304 delta + 270465 <= 0 /\ 66588770304 skoS2^2 skoX + 68702699520 skoS2 skoX + 17720934400 skoX - 66588770304 delta skoS2^2 - 4293902340 skoS2^2 - 68702699520 delta skoS2 + 8794357236 skoS2 - 17720934400 delta + 5062659319 <= 0

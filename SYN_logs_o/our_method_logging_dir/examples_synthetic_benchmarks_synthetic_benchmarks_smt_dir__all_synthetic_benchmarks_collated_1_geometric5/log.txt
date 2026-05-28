@@ -1,0 +1,28 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_1_geometric5.smt
+DEBUG:__main__:ip_vars: ['r1', 'r2']
+DEBUG:__main__:op_vars: ['x', 'y']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 > 0 + 1*x + -1*y*y + -1*r1,
+            0 > 0 + 1*y + 1*x*y + 1*r2,
+            0 > 0 + -1*x)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 > -x) & (0 > r2 + x*y + y) & (0 > -r1 + x - y**2), {}
+DEBUG:__main__:DIRECTIONS: 2:[[1, 0], [0, 1]]
+DEBUG:__main__:vars sympy:['x', 'r1', 'r2', 'y']
+DEBUG:__main__:z3 vars:{'x': x, 'r2': r2, 'y': y, 'r1': r1}
+DEBUG:__main__:z3 post_condition:And(0 > -1*x, 0 > r2 + y + x*y, 0 > x + -1*r1 + -1*y**2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1, r2=-1, y=0, r1=2
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1, 0]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1, y: 0}
+DEBUG:__main__:PRECOND_0: r1 > 0 /\ r2 < 0
+DEBUG:__main__:---------pre-condition 1---------
+DEBUG:__main__:direction: [0, 1]
+DEBUG:__main__:substitution: {x: 1, y: lambda_var_0}
+DEBUG:__main__:PRECOND_1: TRUE
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(r1 > 0) & (r2 < 0) {'x': 1, 'r2': -1, 'y': 0, 'r1': 2} {x: lambda_var_0 + 1, y: 0}
+DEBUG:__main__:True {'x': 1, 'r2': -1, 'y': 0, 'r1': 2} {x: 1, y: lambda_var_0}

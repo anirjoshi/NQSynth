@@ -1,0 +1,22 @@
+DEBUG:__main__:Starting Log File: log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_2_2_annular_circles_25_9.smt
+DEBUG:__main__:ip_vars: ['y']
+DEBUG:__main__:op_vars: ['x']
+DEBUG:__main__:lambda_var: lambda_var_0
+DEBUG:__main__:post_condition_smt:And(And(And(0 >= 0 + 1*x*x + 1*y*y + -25,
+            0 >= 0 + -1*x*x + -1*y*y + 9)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 >= x**2 + y**2 - 25) & (0 >= -x**2 - y**2 + 9), {}
+DEBUG:__main__:DIRECTIONS: 1:[[1]]
+DEBUG:__main__:vars sympy:['x', 'y']
+DEBUG:__main__:z3 vars:{'x': x, 'y': y}
+DEBUG:__main__:z3 post_condition:And(0 >= -25 + x**2 + y**2, 0 >= 9 + -1*x**2 + -1*y**2)
+DEBUG:__main__:
+DEBUG:__main__:---------point-synthesis-------------
+DEBUG:__main__:RATIONAL point:, x=1/8, y=3
+DEBUG:__main__:---------pre-condition 0---------
+DEBUG:__main__:direction: [1]
+DEBUG:__main__:substitution: {x: lambda_var_0 + 1/8}
+DEBUG:__main__:PRECOND_0: y + 5 >= 0 /\ y - 5 <= 0
+DEBUG:__main__:WEAKEST_PRE_COND_SYNTHESIZED
+DEBUG:__main__:(y + 5 >= 0) & (y - 5 <= 0) {'x': 1/8, 'y': 3} {x: lambda_var_0 + 1/8}

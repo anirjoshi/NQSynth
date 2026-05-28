@@ -1,0 +1,11 @@
+DEBUG:__main__:Starting Log File: gus_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/synthetic_benchmarks/synthetic_benchmarks_smt_dir/_all_synthetic_benchmarks_collated_4_input12.smt
+DEBUG:__main__:ip_vars: ['x']
+DEBUG:__main__:op_vars: ['y']
+DEBUG:__main__:post_condition_smt:And(And(And(0 >= 0 + 1*y*y + 1*x*x + -8,
+            0 >= 0 + 1*y*y*y*y + 1*x*x*x + -2,
+            0 >= 0 + 1*y*y*y + 1*x*x*x*x + -2)))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 >= x**2 + y**2 - 8) & (0 >= x**3 + y**4 - 2) & (0 >= x**4 + y**3 - 2), {}
+DEBUG:__main__:vars sympy:['y', 'x']
+DEBUG:__main__:WEAKEST_PRECOND: x^3 + 2 x^2 + 2 x + 2 >= 0 /\ [ x^12 - x^11 + x^10 - x^9 - 5 x^8 + 3 x^7 - x^6 + 14 x^4 - 8 x^3 - 4 <= 0 \/ x - 1 < 0 ]

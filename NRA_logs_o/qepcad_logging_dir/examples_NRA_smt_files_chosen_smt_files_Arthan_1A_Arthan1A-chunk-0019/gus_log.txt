@@ -1,0 +1,24 @@
+DEBUG:__main__:Starting Log File: gus_log.txt
+INFO:__main__:
+INFO:__main__:input_file_name: examples/NRA/smt_files/chosen_smt_files_Arthan_1A_Arthan1A-chunk-0019.smt2
+DEBUG:__main__:ip_vars: ['delta', 'skoS', 'pi']
+DEBUG:__main__:op_vars: ['skoCOSS', 'skoSINS']
+DEBUG:__main__:post_condition_smt:And(0 <= delta,
+    And(Not(skoSINS*
+            (-3 +
+             skoCOSS*-2 +
+             skoS*(-4 + skoS*(2 + skoS)) +
+             skoSINS*(1 + skoS)) <=
+            2 +
+            skoCOSS*(-2 + skoCOSS*-2) +
+            skoS*
+            (skoCOSS*(-10 + skoCOSS*-2) +
+             skoS*(-6 + skoCOSS*-6 + skoS*-2))),
+        And(Not(pi*(1/2) <= skoS),
+            And(Not(pi <= 15707963/5000000),
+                And(Not(31415927/10000000 <= pi),
+                    And(0 <= skoS,
+                        And(0 <= skoCOSS, skoSINS <= skoS)))))))
+DEBUG:__main__:POST_CONDITION_SYMPY: (0 <= delta) & (0 <= skoCOSS) & (0 <= skoS) & (skoSINS <= skoS) & (31415927/10000000 > pi) & (pi > 15707963/5000000) & (pi/2 > skoS) & (skoSINS*(-2*skoCOSS + skoS*(skoS*(skoS + 2) - 4) + skoSINS*(skoS + 1) - 3) > skoCOSS*(-2*skoCOSS - 2) + skoS*(skoCOSS*(-2*skoCOSS - 10) + skoS*(-6*skoCOSS - 2*skoS - 6)) + 2), {}
+DEBUG:__main__:vars sympy:['skoCOSS', 'skoSINS', 'delta', 'skoS', 'pi']
+DEBUG:__main__:WEAKEST_PRECOND: delta >= 0 /\ 5000000 pi - 15707963 > 0 /\ 10000000 pi - 31415927 < 0 /\ skoS >= 0 /\ 2 skoS - pi < 0
