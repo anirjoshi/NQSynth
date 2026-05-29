@@ -131,7 +131,8 @@ Executing each individually should produce the following files:
 
 --
 # Cite
-```@misc{akshay2026programsynthesisnonlinearreal,
+```
+@misc{akshay2026programsynthesisnonlinearreal,
       title={Program Synthesis for Non-Linear Real Arithmetic: Going Beyond Realizability}, 
       author={S. Akshay and Supratik Chakraborty and R. Govind and Aniruddha R. Joshi},
       year={2026},
