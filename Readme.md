@@ -6,6 +6,7 @@
 1. [Benchmarks](#benchmarks)
 1. [File Format](#File-Format)
 1. [Reproducibility](#reproducibility-of-results)
+1. [Citation](#Cite)
 ---
 # Introduction to the Tool
 
@@ -127,3 +128,15 @@ Executing each individually should produce the following files:
 - qepcad_logging_dir: This file contains the log files for all the Phase 2 execution of the benchmarks
 - monniaux_logging_dir: This file contains the log files for all the David-Monniaux's execution of the benchmarks
 - table_log.txt: This file contains the table of results
+
+--
+# Cite
+```@misc{akshay2026programsynthesisnonlinearreal,
+      title={Program Synthesis for Non-Linear Real Arithmetic: Going Beyond Realizability}, 
+      author={S. Akshay and Supratik Chakraborty and R. Govind and Aniruddha R. Joshi},
+      year={2026},
+      eprint={2605.24263},
+      archivePrefix={arXiv},
+      primaryClass={cs.PL},
+      url={https://arxiv.org/abs/2605.24263}, 
+}```
